@@ -1,0 +1,11 @@
+# Font style metadata
+name = "Minimal"
+
+# Optional Google font URL
+google_fonts = "Barlow|Barlow+Condensed|Indie+Flower|Libre+Franklin|Open+Sans+Condensed:300|PT+Sans|Rubik|Titillium+Web|Ubuntu|Varela+Round|Lato"
+
+# Font families
+heading_font = "Montserrat" #"Montserrat"
+body_font = "Lato" #Barlow" #"Roboto"
+nav_font = "Lato" #Barlow" #"Roboto"
+mono_font = "Roboto Mono" #"Roboto Mono"

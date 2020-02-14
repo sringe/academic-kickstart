@@ -1,0 +1,8 @@
+[[main]]
+  name = "People"  # Title of the link.
+  url = "people"  # Widget Page folder name.
+  weight = 2  # Position of the link in the navigation bar.
+[[main]]
+  name = "Publications"  # Title of the link.
+  url = "publications/"  # Widget Page folder name.
+  weight = 2  # Position of the link in the navigation bar.

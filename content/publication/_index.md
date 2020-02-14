@@ -8,6 +8,8 @@ title: Publications
 #   4 = Citation
 view: 4
 
+citation_style: Nature
+
 # Optional header image (relative to `static/img/` folder).
 header:
   caption: ""
