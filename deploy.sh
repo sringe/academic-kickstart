@@ -32,4 +32,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 printf "\033[0;32mPushing to GitHub.\033[0m\n"
-git push upstream master
+git push origin master
