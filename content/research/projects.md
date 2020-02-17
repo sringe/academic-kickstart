@@ -45,7 +45,7 @@ subtitle = ""
   view = 5
 
   # For Showcase view, flip alternate rows?
-  flip_alt_rows = true
+  flip_alt_rows = false
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -75,3 +75,40 @@ subtitle = ""
  css_class = ""
 +++
 
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+
+<a href="../project_general/generalresearchgoals/" style="color: rgb(0,0,0)">
+<img src="featured.png" alt="" class="center" width=40%>
+</a>
+<figcaption><a href="../project_general/generalresearchgoals/" style="color: rgb(0,0,0)"><p style="font-size: 1.4rem"><b>General research interest</b></p></a><p style="font-size: 0.9rem">First-principles, multi-scale simulations for energy conversion and storage.</p></figcaption>
+
+<!--
+{{ $do_link := true }}
+{{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+  <img src="{{ $image.RelPermalink }}" alt="">
+{{if $do_link}}</a>{{end}}
+<img src="featured.png" alt>
+</a>
+<a href="project/GeneralResearchGoals/">
+<div class="col-12 col-md-3 order-first {{$order}}">
+  {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+  {{ with $resource }}
+  {{ $resource := 
+  {{ $image := .Resize "540x" }}
+  {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+    <img src="{{ $image.RelPermalink }}" alt="">
+  {{if $do_link}}</a>{{end}}
+  {{end}}
+</div>
+-->
+<hr>

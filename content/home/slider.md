@@ -16,6 +16,16 @@ height = "450px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
+  title = "DGIST"
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/dgist_by_night.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+[[item]]
   title = "Electrochemistry at electrified interfaces"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.
@@ -24,6 +34,16 @@ height = "450px"
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
   overlay_img = "headers/elchemcomplex.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+[[item]]
+  title = "Multi-scale design"
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/multi_scale_design.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
   # Call to action button (optional).
