@@ -12,8 +12,11 @@ primary = "#62a0cb"
 # dgist blue - #62a0cb
 # dark blue #34495e
 # 
-menu_primary = "#62a0cb"
-menu_text = "#fff"
+menu_primary = "#d5dee3"
+#"#dedede"
+#"#62a0cb"
+menu_text = "#62a0cb"
+#fff"
 menu_text_active = "#3d637d"
 menu_title = "#2b2b2b"
 
