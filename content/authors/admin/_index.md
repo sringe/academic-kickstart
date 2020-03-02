@@ -48,7 +48,7 @@ career:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:stefan.ringe.tum[at]gmail[.com]
+  link: mailto:sringe[at]dgist.ac.kr
 # url = "mailto:?subject={title}&body={url}
 
 - icon: twitter
