@@ -42,10 +42,10 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   5 = Showcase
-  view = 5
+  view = 3
 
   # For Showcase view, flip alternate rows?
-  flip_alt_rows = false
+  flip_alt_rows = true
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -87,10 +87,10 @@ img {
 </style>
 </head>
 
-<a href="../project_general/generalresearchgoals/" style="color: rgb(0,0,0)">
+<a href="../project_general/generalresearchgoals/" style="color: black">
 <img src="featured.png" alt="" class="center" width=40%>
 </a>
-<figcaption><a href="../project_general/generalresearchgoals/" style="color: rgb(0,0,0)"><p style="font-size: 1.4rem"><b>General research interest</b></p></a><p style="font-size: 0.9rem">First-principles, multi-scale simulations for energy conversion and storage.</p></figcaption>
+<figcaption><a href="../project_general/generalresearchgoals/" style="color: rgb(0,0,0)"><p style="font-size: 1.6rem"><b>General research interest</b></p></a><p style="font-size: 1.0rem">First-principles, multi-scale simulations for energy conversion and storage.</p></figcaption>
 
 <!--
 {{ $do_link := true }}

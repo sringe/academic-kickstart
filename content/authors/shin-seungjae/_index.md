@@ -14,8 +14,8 @@ role: External Graduate Student (Hyungjun Kim)
 
 # Organizations/Affiliations
 organizations:
-- name: DGIST
-  url: "https://dgist.ac.kr/en/"
+- name: KAIST
+  url: "https://kaist.ac.kr/en/"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
