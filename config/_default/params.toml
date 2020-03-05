@@ -82,8 +82,8 @@ edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir 
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "stefan.ringe.tum[at]gmail[.com]"
-phone = "+82 10 3545 5184"
+email = "sringe[at]dgist.ac.kr"
+phone = "+82 (53) 785-6450"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
