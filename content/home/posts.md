@@ -4,11 +4,15 @@
 
 widget = "pages"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = false  # Activate this widget? true/false
-weight = 60  # Order that this section will appear.
+active = true  # Activate this widget? true/false
+weight = 1  # Order that this section will appear.
 
-title = "Recent Posts"
+title = "News"
 subtitle = ""
+
+welcomemessage = "Welcome to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for carrying out cutting-edge research on energy conversion and storage. Contact our group leader if interested."
+
+includetwitter = true #include twitter in addition
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
@@ -36,7 +40,7 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 3
+  view = 1
   
 [design.background]
   # Apply a background color, gradient, or image.
