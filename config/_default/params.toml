@@ -1,5 +1,8 @@
 # SITE SETUP
 # Documentation: https://sourcethemes.com/academic/
+#
+# DONT MOVE THINGS IN THIS FILE< THIS WILL MESS THINGS UP!!!
+#
 
 ############################
 ## Theme
@@ -87,7 +90,7 @@ phone = "+82 (53) 785-6450"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Techno jungang-daero 333", city = "Daegu", region = "Hyeonpung-eup, Dalseong-gun", postcode = "42988", country = "Rep. of Korea", country_code = "KR"}
+address = {street = "Techno jungang-daero 333", city = "Daegu (KR)", region = "Hyeonpung-eup, Dalseong-gun", postcode = "42988", country = "Rep. of Korea", country_code = "KR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
@@ -175,7 +178,8 @@ plugins_js  = []
 
 # Available address formats.
 [address_formats]
-  en-us = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ' ', '']}
+  kr = {order = ['postcode','city','region','street'],delimiters=[' ',', ',', ']}
+  en-us = {order = ['postcode', 'city', 'region', 'street'], delimiters = [' ', ', ', ' ', '']}
   en-gb = {order = ['street', 'city', 'region', 'postcode'], delimiters = [', ', ', ', ', ', '']}
   de = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}
   fr-fr = {order = ['street', 'postcode', 'city'], delimiters = ['<br>', ' ', '']}

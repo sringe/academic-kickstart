@@ -1,11 +1,16 @@
 # Font style metadata
-name = "Minimal"
+name = "Custom"
 
 # Optional Google font URL
-google_fonts = "Barlow|Barlow+Condensed|Indie+Flower|Libre+Franklin|Open+Sans+Condensed:300|PT+Sans|Rubik|Titillium+Web|Ubuntu|Varela+Round|Lato"
+#google_fonts = "Barlow|Barlow+Condensed|Indie+Flower|Libre+Franklin|Open+Sans+Condensed:300|PT+Sans|Rubik|Titillium+Web|Ubuntu|Varela+Round|Lato"
+google_fonts = "Arapey:400,400i|Karla:400,700|Roboto+Mono|Liu+Jian+Mao+Cao|Titillium+Web|Dosis|Baloo+Chettan+2|Cabin|Arsenal|Jaldi:400,700|Average+Sans|Harmattan|Andika|Cagliostro|Baloo+Thambi+2"
 
 # Font families
-heading_font = "Montserrat" #"Montserrat"
-body_font = "Lato" #Barlow" #"Roboto"
-nav_font = "Lato" #Barlow" #"Roboto"
-mono_font = "Roboto Mono" #"Roboto Mono"
+heading_font = "Cabin" #Montserrat" #"Montserrat"
+#body_font = "Baloo 2" #Barlow" #"Roboto"
+#nav_font = "Baloo 2" #Barlow" #"Roboto"
+#mono_font = "Baloo 2" #"Roboto Mono"
+#heading_font = "Arapey"
+body_font = "Cabin"
+nav_font = "Baloo Thambi 2"
+mono_font = "Roboto Mono"
