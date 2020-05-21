@@ -17,7 +17,21 @@ height = "450px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Solvation effects via continuum embedding"
+  title = "General research scope"
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+  valign = "bottom"
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#fff"  # An HTML color value.
+  overlay_img = "headers/general.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+# link, must be small letters and relative to /content folder!
+  link = "project_general/generalresearchgoals/"
+  link_color = "white"
+[[item]]
+  title = "Solvation effects via continuum modeling"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.
   valign = "bottom"
@@ -26,7 +40,7 @@ height = "450px"
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
   #overlay_img = "headers/dgist_spring_2020_4.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_img = "headers/smpb_fhiaims9.png"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/smpb_fhiaims11.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
 # link, must be small letters and relative to /content folder!
   link = "software/mpbe"
@@ -39,7 +53,7 @@ height = "450px"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/elchemcomplex.png"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/qmmm_3.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "project/electrochemistrycomplexelectrifiedinterfaces"
   link_color = "white"
@@ -51,7 +65,7 @@ height = "450px"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/multi_scale_design.png"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/porous4.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "project/multiscaledesign"
   link_color = "white"
