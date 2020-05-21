@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Electrochemistry at electrified interfaces"
-summary: "DFT and machine learning guided search for the next generation of energy conversion catalysts and storage materials."
+summary: "Accelerated quantum chemical search for the next generation of energy conversion and storage materials."
 
 authors: [admin,shin-seungjae]
 tags: []
@@ -43,7 +43,7 @@ url_video: ""
 slides: ""
 
 # projecttitle: 
-projecttext: "Recently, a number of studies have found that electrochemical processes in batteries and electrolyzers are highly sensitive to the electrified solid-liquid interface. In addition, increasingly complex catalyst materials, such as carbon materials, single atom catalysts, 2D materials (MoS<sub>2</sub>, etc.) or semiconductors have been used. So far, adsorption energies of reaction intermediates have been used to rationalize catalyst activities on such materials, while the influence of the bias potential and solvation environment has been ignored. In this project, a recently published QM/MM framework will be applied to evaluate these materials under realistic environmental conditions. This comprises the optimization of force field parameters and the usage of a currently developed charging scheme. Eventually reactions will be modeled at these interfaces and conclusions drawn about activity descriptors which will lead to generalized catalyst and electrode material design principles."
+projecttext: "Recently, a number of studies have found that electrochemical processes in batteries and electrolyzers are highly sensitive to the electrified solid-liquid interface. In addition, increasingly complex catalyst materials, such as carbon materials, single atom catalysts, 2D materials (MoS<sub>2</sub>, etc.) or semiconductors have been used. So far, adsorption energies of reaction intermediates have been used to rationalize catalyst activities on such materials, while the influence of the bias potential and solvation environment has been ignored. In this project, we develop and apply several techniques from continuum over classical approaches up to full first-principles machine learning to upscale quantum chemical calculations with Density Functional Theory towards a full representation of the solid-liquid interface and its realistic reaction environment."
 projectimage: "featured_wide.png"
 projectimagecaption: "Snapshot of a classical water trajectory under the influence of the quantum field of the surface (Au(322)). The contours depict the average oxygen (red) and hydrogen (white) spatial density that effects surface electrochemistry, in this case examplarily depicted by the *CO<sub>2</sub> intermediate."
 projectimagecaptionshort: "Combined quantum-classical modeling of the solid-liquid interface."
