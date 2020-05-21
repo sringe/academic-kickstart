@@ -21,8 +21,9 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-- solid-liquid interfaces
+- Solid-liquid interfaces
 - electrocatalysis
+- CO2 reduction
 
 education:
   courses:

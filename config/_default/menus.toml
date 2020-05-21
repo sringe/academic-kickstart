@@ -60,14 +60,33 @@
   parent = "researchitems"
 
 [[main]]
-  name = "Publications"  # Title of the link.
-  url = "publications/"  # Widget Page folder name.
+  name = "Software"  # Title of the link.
+  url = "development/"  # Widget Page folder name.
   weight = 5  # Position of the link in the navigation bar.
+  hasChildren = true
+  identifier = "softwareitems"
+
+[[main]]
+  name = "MPBE/FHI-aims"
+  url = "software/mpbe/"
+  weight = 1
+  parent = "softwareitems"
+
+[[main]]
+  name = "CatINT/COMSOL"
+  url = "software/catint/"
+  weight = 2
+  parent = "softwareitems"
+
+[[main]]
+  name = "Publications"  # Title of the link.
+  url = "my-publications/"  # Widget Page folder name.
+  weight = 6  # Position of the link in the navigation bar.
 
 [[main]]
   name = "Contact"  # Title of the link.
   url = "contact/"  # Widget Page folder name.
-  weight = 6  # Position of the link in the navigation bar.
+  weight = 7  # Position of the link in the navigation bar.
 
 #[[main]]
 #  name = "Publications"

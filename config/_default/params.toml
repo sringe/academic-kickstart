@@ -162,6 +162,9 @@ link_authors = true
 #link related publications
 link_relatedpublications = true
 
+#link blog entries
+link_blog = false
+
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []

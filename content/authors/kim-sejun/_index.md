@@ -21,15 +21,15 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-- GW
-- self-consistent hybrid
-- photo-catalysis
+- GW/BSE
+- non-empirical hybrid functional for high throughput screening
+- energy conversion and storage
 
 education:
   courses:
-  - course: PhD (Hyungjun Kim)
-    institution: KAIST
-    year: (ongoing)
+  - course: MS+PhD (Hyungjun Kim)
+    institution: EEWS, KAIST
+    year: 2018 -- (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons

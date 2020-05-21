@@ -10,7 +10,7 @@ weight = 1  # Order that this section will appear.
 title = "News"
 subtitle = ""
 
-welcomemessage = "Welcome to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for carrying out cutting-edge research on energy conversion and storage. Contact our group leader if interested."
+welcomemessage = "... to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking great students (Intern, Master, PhD, Postdoc) for our lab, contact us if interested!"
 
 includetwitter = true #include twitter in addition
 
@@ -20,6 +20,8 @@ includetwitter = true #include twitter in addition
   
   # Choose how much pages you would like to display (0 = all pages)
   count = 5
+
+  link = false
   
   # Choose how many pages you would like to offset by
   offset = 0
@@ -49,7 +51,7 @@ includetwitter = true #include twitter in addition
   #   Any HTML color name or Hex value is valid.
   
   # Background color.
-  # color = "navy"
+  color = "white"
   
   # Background gradient.
   # gradient_start = "DeepSkyBlue"

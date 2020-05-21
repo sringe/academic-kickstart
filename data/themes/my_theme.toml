@@ -13,13 +13,21 @@ primary_dark = "#DA2536"
 ###2962ff"
 
 # Menu
-menu_primary = "#494949"
-menu_text = "#fff"
+menu_primary = "#fff"
+##494949"
+#fff"
+menu_text = "#494949"
+##fff"
 menu_text_active = "#328cc1"
-menu_title = "#fff"
+menu_title = "#494949"
+#"#fff"
 ## Menu
-## dgist blue - #62a0cb
-## dark blue #34495e
+## dark blue                    #34495e
+## dgist a bit darker blue      #328cc1
+## dgist very dark blue         #62a0cb
+## nice gray                    #494949
+## white                        #fffff, #fff
+## red                          #DA2536
 ## 
 #menu_primary = "#d5dee3"
 ##"#dedede"
