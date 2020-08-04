@@ -7,3 +7,57 @@ nav#navbar-main li.nav-item {
 nav#navbar-main li.nav-brand {
   font-size: 30px;
 }
+.lineHorizontal__container {
+  align-items: center;
+  background-color: firebrick;
+  display: flex;
+  height: 80px;
+}
+.lineHorizontal__container--leftAligned {
+  justify-content: flex-start;
+}
+.lineHorizontal__container--rightAligned {
+  justify-content: flex-end;
+}
+.lineHorizontal__container--detachedFromRight {
+  padding-right: 10%;
+}
+.lineHorizontal {
+  border-top: 1px solid azure;
+}
+.lineHorizontal--long {
+  width: 70%;
+}
+.lineHorizontal--short {
+  width: 40%;
+}
+hr.new1 {
+  border-top: 1px solid red;
+}
+
+/* Dashed red border */
+hr.new2 {
+  border-top: 2px solid #494949;
+}
+
+/* Dotted red border */
+hr.new3 {
+  border-top: 1px dotted red;
+}
+
+/* Thick red border */
+hr.new4 {
+  border: 1px solid red;
+}
+
+/* Large rounded green border */
+hr.new5 {
+  border: 10px solid green;
+  border-radius: 5px;
+}
+div.textcenter5 {
+  text-align: center;
+  font-weight: bold;
+  color: #494949;
+  font-size: 30px;
+}

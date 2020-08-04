@@ -1,6 +1,6 @@
 ---
 # Display name
-name: 김세준
+name: 김세준<br/> Sejun Kim
 
 # Username (this should match the folder name)
 authors:

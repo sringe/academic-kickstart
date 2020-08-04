@@ -1,35 +1,35 @@
 ---
 # Display name
-name: 신승재<br/> Seung-Jae Shin
+name: 강은경<br/> Eun-Kyung Kang
 
 # Username (this should match the folder name)
 authors:
-- shin-seungjae
+- gang-eunkyung
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: External Graduate Student (Hyungjun Kim)
+role: Research Intern
 
 # Organizations/Affiliations
 organizations:
-- name: KAIST
-  url: "https://kaist.ac.kr/en/"
+- name: Pusan National University
+  url: http://www.pusan.ac.kr"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
 #
 interests:
-- Solid-liquid interfaces
-- electrocatalysis
-- CO2 reduction
+- Lithium ion battery
+- Battery Performance & Safety
+- Electrode materials and technology
 
 education:
   courses:
-  - course: PhD (Hyungjun Kim)
-    institution: KAIST
-    year: (ongoing)
+  - course: BS
+    institution: Pusan National University
+    year: 2017 -- (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -39,7 +39,7 @@ social:
 - icon: envelope
   icon_pack: fas
   #link: '#contact'  # For a direct email link, use "
-  mailto: 'sjkim6370@kaist.ac.kr'
+  mailto: 'vhs4108@naver.com'
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
@@ -56,12 +56,12 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "sjkim6370@kaist.ac.kr"
+email: "vhs4108@naver.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "Intern"
 ---
 
 

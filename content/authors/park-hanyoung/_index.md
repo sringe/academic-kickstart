@@ -1,35 +1,32 @@
 ---
 # Display name
-name: 신승재<br/> Seung-Jae Shin
+name: 박한영
 
 # Username (this should match the folder name)
 authors:
-- shin-seungjae
+- park-hanyoung
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: External Graduate Student (Hyungjun Kim)
+role: Research Intern
 
 # Organizations/Affiliations
 organizations:
-- name: KAIST
-  url: "https://kaist.ac.kr/en/"
+- name: DGIST
+  url: "https://dgist.ac.kr/en/"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
 #
 interests:
-- Solid-liquid interfaces
-- electrocatalysis
-- CO2 reduction
 
 education:
   courses:
-  - course: PhD (Hyungjun Kim)
-    institution: KAIST
-    year: (ongoing)
+  - course: BS
+    institution: ESE, DGIST
+    year: 2020 -- (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -39,7 +36,7 @@ social:
 - icon: envelope
   icon_pack: fas
   #link: '#contact'  # For a direct email link, use "
-  mailto: 'sjkim6370@kaist.ac.kr'
+  mailto: 'prkhnyng@dgist.ac.kr'
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
@@ -56,12 +53,12 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "sjkim6370@kaist.ac.kr"
+email: "prkhnyng@dgist.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "Alumni"
 ---
 
 

@@ -1,16 +1,16 @@
 ---
 # Display name
-name: 신승재<br/> Seung-Jae Shin
+name: Yuewen Jia
 
 # Username (this should match the folder name)
 authors:
-- shin-seungjae
+- jia-yuewen
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: External Graduate Student (Hyungjun Kim)
+role: External Graduate Student (Seoktae Kang)
 
 # Organizations/Affiliations
 organizations:
@@ -21,15 +21,16 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-- Solid-liquid interfaces
-- electrocatalysis
-- CO2 reduction
+  - nanofiltration
+  - carbon materials, CNT's
+  - transport in nonaqueous solvents
+  - molecular dynamics
 
 education:
   courses:
-  - course: PhD (Hyungjun Kim)
+  - course: MS
     institution: KAIST
-    year: (ongoing)
+    year: -- (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -39,7 +40,7 @@ social:
 - icon: envelope
   icon_pack: fas
   #link: '#contact'  # For a direct email link, use "
-  mailto: 'sjkim6370@kaist.ac.kr'
+  mailto: 'jyw1004@kaist.ac.kr'
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
@@ -56,7 +57,7 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "sjkim6370@kaist.ac.kr"
+email: "jyw1004@kaist.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
