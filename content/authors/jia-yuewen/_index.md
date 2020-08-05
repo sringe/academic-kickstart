@@ -21,16 +21,19 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - nanofiltration
-  - carbon materials, CNT's
-  - transport in nonaqueous solvents
-  - molecular dynamics
+  - Nanofiltration
+  - Carbon materials, CNT's
+  - Transport in nonaqueous solvents
+  - Molecular dynamics
 
 education:
   courses:
   - course: MS
     institution: KAIST
-    year: -- (ongoing)
+    year: 2019 -- (ongoing)
+  - course: BS
+    institution: Dept. of Environment, Beijing Normal University
+    year: -- 2019
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
