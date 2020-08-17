@@ -1,6 +1,6 @@
 .dropdown-menu,
 nav#navbar-main li.nav-item {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -71,7 +71,7 @@ blockquote.twitter-tweet {
   border-color: #eee #ddd #bbb;
   border-radius: 5px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   margin: 10px 5px;
   padding: 0 16px 16px 16px;
@@ -90,7 +90,9 @@ blockquote.twitter-tweet a {
   text-decoration: none;
   outline: 0 none;
 }
-
+.myDiv {
+  background-color: rgba(0, 0, 0, 0.15);
+}
 blockquote.twitter-tweet a:hover,
 blockquote.twitter-tweet a:focus {
   text-decoration: underline;

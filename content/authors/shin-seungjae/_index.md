@@ -38,8 +38,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  #link: '#contact'  # For a direct email link, use "
-  mailto: 'sjkim6370@kaist.ac.kr'
+  link: mailto:sjkim6370[at]kaist.ac.kr
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan

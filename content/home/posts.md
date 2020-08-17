@@ -10,7 +10,7 @@ weight = 1  # Order that this section will appear.
 title = "News"
 subtitle = ""
 
-welcomemessage = "... to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking great students (Intern, Master, PhD, Postdoc) for our lab, contact us if interested!"
+welcomemessage = "... to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for our lab, contact us if you are interested!"
 
 includetwitter = true #include twitter in addition
 

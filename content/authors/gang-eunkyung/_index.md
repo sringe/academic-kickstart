@@ -38,8 +38,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  #link: '#contact'  # For a direct email link, use "
-  mailto: 'vhs4108@naver.com'
+  link: mailto:vhs4108[at]naver.com
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan

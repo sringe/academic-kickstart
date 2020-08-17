@@ -1,0 +1,27 @@
+.twitter-timeline {
+  max-width: 50%;
+  max-height: 10px;
+  font-size: 1px;
+}
+.twitter-timeline a{
+  font-size: 1px;
+}
+.fa {
+  font-size: 5px;
+  color: #FFFFFF;
+}
+.panel-title {
+ font-size: 5px; 
+ color: #FFFFFF;
+ font-family: 'Open Sans', sans-serif;
+}
+.panel-heading {
+ background-color: #1da1f2 !important;;
+ color: #1da1f2 !important;;
+}
+.panel-body {
+ font-size: 0.1px;
+}
+.panel {
+ margin-top: 25px;
+}
