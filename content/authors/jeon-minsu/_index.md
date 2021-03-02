@@ -25,7 +25,7 @@ interests:
 education:
   courses:
   - course: BS
-    institution: ESE, DGIST
+    institution: DGIST (Daegu, Rep. of Korea)
     year: 2020 -- (ongoing)
 
 # Social/Academic Networking

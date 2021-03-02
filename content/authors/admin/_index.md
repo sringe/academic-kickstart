@@ -28,16 +28,16 @@ organizations:
 education:
   courses:
   - course: PhD in Theoretical Chemistry (Karsten Reuter)
-    institution: Technical University of Munich (TUM)
+    institution: Technical University of Munich (TUM) (Dep. of Chemistry, Garching, Germany)
     year: 2017
 
 career:
   positions:
   - position: Postdoc (Jens K. Nørskov)
-    institution: Stanford University
+    institution: Stanford University (Dep. of Chemical Engineering, Stanford, CA, USA)
     year: 2017 - 2019
   - position: Postdoc (Hyungjun Kim)
-    institution: KAIST
+    institution: KAIST (Dep. of Chemistry, Daejeon, Rep. of Korea)
     year: 2019 - 2020
 
 # Social/Academic Networking

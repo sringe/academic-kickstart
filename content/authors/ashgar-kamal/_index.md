@@ -21,20 +21,19 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - First-principles simulation of electrochemical CO2 reduction
-  - Micro-kinetic modeling
+  - Mean-field micro-kinetic modeling for electrochemical CO2 reduction
 
 education:
   courses:
   - course: MS
     institution: ESE, DGIST
-    year: 2020 -- (ongoing)
+    year: 2020 - (ongoing)
   - course: BS (Chemistry)
     institution: Federal Urdu University of Arts, Science and Technology (FUUAST)
-    year: 2015 -- 2019
+    year: 2015 - 2019
   - course: BA 
     institution: Federal Urdu University of Arts, Science and Technology (FUUAST)
-    year: 2013 -- 2015
+    year: 2013 - 2015
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -65,7 +64,7 @@ email: "Kamal5asghar14@gmail.com"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "Master Students"
 ---
 
 

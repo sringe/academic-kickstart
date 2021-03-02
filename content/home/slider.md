@@ -17,6 +17,20 @@ height = "450px"
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
+  title = "Group picture @ DGIST"
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+  valign = "bottom"
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#fff"  # An HTML color value.
+  overlay_img = "headers/group_picture_02082021_mask.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+# link, must be small letters and relative to /content folder!
+  link = "project_general/generalresearchgoals/"
+  link_color = "white"
+[[item]]
   title = "General research scope"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.

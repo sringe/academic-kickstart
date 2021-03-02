@@ -29,11 +29,11 @@ interests:
 education:
   courses:
   - course: MS
-    institution: KAIST
-    year: 2019 -- (ongoing)
+    institution: KAIST (Department of Civil and Environmental Engineering, Daejeon, Rep. of Korea)
+    year: 2019 - (ongoing)
   - course: BS
-    institution: Dept. of Environment, Beijing Normal University
-    year: -- 2019
+    institution: Beijing Normal University (School of Environment, Bejing, China)
+    year: 2015 - 2019
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -64,7 +64,7 @@ email: "jyw1004@kaist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "Master Students"
 ---
 
 

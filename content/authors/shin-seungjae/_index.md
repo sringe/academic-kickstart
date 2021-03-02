@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: PhD (Hyungjun Kim)
-    institution: KAIST
+    institution: KAIST (Dep. of Chemistry, Daejeon, Rep. of Korea)
     year: (ongoing)
 
 # Social/Academic Networking
@@ -60,7 +60,7 @@ email: "sjkim6370@kaist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "PhD Students"
 ---
 
 

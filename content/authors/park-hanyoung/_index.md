@@ -1,6 +1,6 @@
 ---
 # Display name
-name: 박한영
+name: 박한영<br/> Hanyoung Park
 
 # Username (this should match the folder name)
 authors:
@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Research Intern
+role: Undergraduate Researcher
 
 # Organizations/Affiliations
 organizations:
@@ -21,12 +21,14 @@ organizations:
 #bio: My research interests include 
 #
 interests:
+- Machine learning
+- Dimensionality reduction
 
 education:
   courses:
   - course: BS
-    institution: ESE, DGIST
-    year: 2020 -- (ongoing)
+    institution: DGIST (Daegu, Rep. of Korea)
+    year: 2020 - (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -57,7 +59,7 @@ email: "prkhnyng@dgist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Alumni"
+- "Undergrad Students"
 ---
 
 

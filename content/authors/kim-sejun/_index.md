@@ -28,8 +28,8 @@ interests:
 education:
   courses:
   - course: MS+PhD (Hyungjun Kim)
-    institution: EEWS, KAIST
-    year: 2018 -- (ongoing)
+    institution: KAIST (Dep. of Chemistry, Daejeon, Rep. of Korea)
+    year: 2018 - (ongoing)
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -60,7 +60,7 @@ email: "sjkim6370@kaist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Grad Students"
+- "PhD Students"
 ---
 
 
