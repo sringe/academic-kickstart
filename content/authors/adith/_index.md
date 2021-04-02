@@ -29,7 +29,7 @@ education:
     institution: ESE, DGIST
     year: 2021 - (ongoing)
   - course: B.Tech (Chemical and Electrochemical Engineering)
-    institution: CSUR CSIR-Central Electrochemical Research Institute, India
+    institution: CSIR-Central Electrochemical Research Institute, India
     year: 2016-2020
   
 
