@@ -21,7 +21,8 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-
+    -DFT, Electrochemical CO2 reduction
+    
 education:
   courses:
   - course: BS
