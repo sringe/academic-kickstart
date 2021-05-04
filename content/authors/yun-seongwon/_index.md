@@ -23,6 +23,9 @@ organizations:
 interests:
    -DFT, Electrochemical CO2 reduction
 
+
+
+
 education:
   courses:
   - course: BS
