@@ -21,7 +21,7 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  -  Screening of electrocatalysts by Density Functional Theory
+  -  Catalyst screening for electrochemical CO2 reduction via DFT, micro-kinetic modeling and machine learning
 
 education:
   courses:
