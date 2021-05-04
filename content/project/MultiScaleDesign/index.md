@@ -4,7 +4,7 @@
 title: "Multi-scale electrochemical system design"
 summary: "Optimizing energy conversion systems at multiple time and size scales, from atomic to continuum."
 
-authors: [admin]
+authors: [admin,adith,ashgar-kamal]
 tags: []
 categories: []
 date: 2020-02-13T10:52:49+09:00

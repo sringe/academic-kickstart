@@ -4,7 +4,7 @@
 title: "Electrochemistry at electrified interfaces"
 summary: "Accelerated quantum chemical search for the next generation of energy conversion and storage materials."
 
-authors: [admin,shin-seungjae]
+authors: [admin,shin-seungjae,abbas,ryu-dongwhan]
 tags: []
 categories: []
 date: 2020-02-13T10:52:49+09:00
