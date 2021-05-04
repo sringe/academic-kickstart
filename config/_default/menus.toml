@@ -84,6 +84,11 @@
   weight = 6  # Position of the link in the navigation bar.
 
 [[main]]
+  name = "Gallery"  # Title of the link.
+  url = "gallery/"  # Widget Page folder name.
+  weight = 6  # Position of the link in the navigation bar.
+
+[[main]]
   name = "Contact"  # Title of the link.
   url = "contact/"  # Widget Page folder name.
   weight = 7  # Position of the link in the navigation bar.
