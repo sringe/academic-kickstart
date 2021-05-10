@@ -20,7 +20,7 @@ custom_css = ["css/custom.css"]
 
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
-<!--
+
 <br>
 <div class="w4-bar w4-black">
     <div class="w3-bar-item">03/2021: Group Picture Photo Shoot @DGIST</div>
@@ -28,5 +28,6 @@ custom_css = ["css/custom.css"]
 <br>
 
 {{< gallery album="2021_03_GroupPicture" >}}
--->
+
+
 
