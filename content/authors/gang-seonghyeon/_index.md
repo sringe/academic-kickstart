@@ -21,7 +21,7 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-- DFT, Electrochemical CO2 reduction
+- DFT, Electrochemical CO2 reduction, ORR/fuel cells
 
 
 education:
@@ -59,7 +59,7 @@ email: "kshksh3151@dgist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Intern"
+- "Undergrad Students"
 ---
 
 

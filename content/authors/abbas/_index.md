@@ -21,7 +21,9 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  -  Catalyst screening for electrochemical CO2 reduction via DFT, micro-kinetic modeling and machine learning
+  -  Computational modeling of 2D materials, piezoelectricity and ferroelectricity
+  -  XPS modeling
+  -  Computational modeling for electrochemical CO2 reduction via DFT
 
 education:
   courses:
@@ -46,9 +48,9 @@ social:
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
-#- icon: google-scholar
-#  icon_pack: ai
-#  link: https://scholar.google.com/citations?user=uSQ8J50AAAAJ&hl=en
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.co.kr/citations?hl=en&user=T3NvnLAAAAAJ&view_op=list_works&sortby=pubdate
 #- icon: github
 #  icon_pack: fab
 #  link: https://github.com/sringe
