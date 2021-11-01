@@ -38,7 +38,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 <div class="w4-bar w4-black">
-    <div class="w3-bar-item">05/2021: Group Dinner/div>
+    <div class="w3-bar-item">05/2021: Group Dinner</div>
 </div>
 <br>
 {{< gallery album="2021_05_GroupDinner" >}}
