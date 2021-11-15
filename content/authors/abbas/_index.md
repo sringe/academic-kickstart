@@ -61,7 +61,7 @@ social:
 #  link: files/cv.pdf
 - icon: cv
   icon_pack: ai
-  link: files/cv.pdf
+  link: authors/abbas/files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "hgabbas71@gmail.com"
