@@ -1,16 +1,16 @@
 ---
 # Display name
-name: Adith  Ramakrishnan Velmurugan 
+name: Seoyeong Kim
 
 # Username (this should match the folder name)
 authors:
-- adith
+- seoyeong-kim
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Master student
+role: Co-advised Master student(Jiwoong Yang)
 
 # Organizations/Affiliations
 organizations:
@@ -21,17 +21,16 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - Multiscale modeling for electrochemical CO2 reduction
+  -		
 
 education:
   courses:
   - course: MS
     institution: ESE, DGIST
     year: 2021 - (ongoing)
-  - course: B.Tech (Chemical and Electrochemical Engineering)
-    institution: CSIR-Central Electrochemical Research Institute, India
-    year: 2016-2020
-  
+  - course: BS
+    institution: DGIST
+    year: 2021
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -40,8 +39,8 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:gmadith64@gmail.com
-#- icon: twitter
+  link: mailto:seoyoung0323@dgist.ac.kr
+- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
 #- icon: google-scholar
@@ -57,7 +56,7 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "gmadith64@gmail.com"
+email: "seoyoung0323@dgist.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
