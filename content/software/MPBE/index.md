@@ -8,7 +8,7 @@ authors: [admin]
 tags: []
 categories: []
 date: 2020-05-20T10:52:49+09:00
-relatedpublications: [ringe-2016-ti,ringe-2017-dm,hille-2019-fn]
+relatedpublications: [ringe-2016-ti,ringe-2017-dm,hille-2019-fn,ringe-2021-xd]
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
