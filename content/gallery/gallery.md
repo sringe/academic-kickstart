@@ -23,6 +23,20 @@ custom_css = ["css/custom.css"]
 
 <br>
 <div class="w4-bar w4-black">
+    <div class="w3-bar-item">12/2021: 10th Anniversary</div>
+</div>
+<br>
+{{< gallery album="2021_12_10_Anniversary" >}}
+
+<br>
+<div class="w4-bar w4-black">
+    <div class="w3-bar-item">11/2021: Group Dinner & Bowling</div>
+</div>
+<br>
+{{< gallery album="2021_11_GroupDinner_and_Bowling" >}}
+
+<br>
+<div class="w4-bar w4-black">
     <div class="w3-bar-item">10/2021: Group Dinner @RaraCost</div>
 </div>
 <br>

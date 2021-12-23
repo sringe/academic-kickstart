@@ -21,7 +21,7 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  -		
+  - Quantum dots
 
 education:
   courses:
