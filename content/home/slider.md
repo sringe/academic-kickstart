@@ -16,11 +16,40 @@ height = "450px"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
+
+
+[[item]]
+  title = "...to everone of you! Check our video here."
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+  valign = "bottom"
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/xmas.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "gallery/gallery/2021_12_10_Anniversary/KakaoTalk_Video_2021-12-23-13-02-42.mp4"
+  link_color = "white"
+
+[[item]]
+  title = "Ringelab in nov. 2021"
+#  content = "- taming the key to energy conversion"
+  align = "right"  # Choose `center`, `left`, or `right`.
+  valign = "bottom"
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/11_21_bowling.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "gallery"
+  link_color = "white"
+
+
 [[item]]
   title = "Multi-scale design"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.
-
+#  valign="bottom"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
