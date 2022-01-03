@@ -142,4 +142,16 @@ blockquote.twitter-tweet a:focus {
    vertical-align: middle;
    float: none;
 }
-
+h2.headline {
+   width: 100%;
+   text-align: center;
+   border-bottom: 3px solid #999;
+   line-height: 0.0em;
+   color: #999;
+   font-weight: bold;
+   margin: 10px 0 20px;
+}
+h2.headline span {
+    background:#fff;
+    padding:0 10px;
+}
