@@ -21,48 +21,28 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
-<br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">12/2021: 10th Anniversary</div>
-</div>
-<br>
+<h2 class="headline"><span>12/2021: 10th Anniversary</span></h2>
 {{< gallery album="2021_12_10_Anniversary" >}}
 
 <br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">11/2021: Group Dinner & Bowling</div>
-</div>
-<br>
+<h2 class="headline"><span>11/2021: Group Dinner & Bowling</span></h2>
 {{< gallery album="2021_11_GroupDinner_and_Bowling" >}}
 
 <br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">10/2021: Group Dinner @RaraCost</div>
-</div>
-<br>
+<h2 class="headline"><span>10/2021: Group Dinner @RaraCost</span></h2>
 {{< gallery album="2021_10_GroupDinnerRara" >}}
 
 <br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">08/2021: ISE Conference 2021 @Jeju Island</div>
-</div>
-<br>
+<h2 class="headline"><span>08/2021: ISE Conference 2021 @Jeju Island</span></h2>
 {{< gallery album="2021_08_ISEConference_Jeju_Island" >}}
 
 
 <br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">05/2021: Group Dinner</div>
-</div>
-<br>
+<h2 class="headline"><span>05/2021: Group Dinner</span></h2>
 {{< gallery album="2021_05_GroupDinner" >}}
 
 <br>
-<div class="w4-bar w4-black">
-    <div class="w3-bar-item">03/2021: Group Picture Photo Shoot @DGIST</div>
-</div>
-<br>
-
+<h2 class="headline"><span>03/2021: Group Picture Photo Shoot @DGIST</span></h2>
 {{< gallery album="2021_03_GroupPicture" >}}
 
 
