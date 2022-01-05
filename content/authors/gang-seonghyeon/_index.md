@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Research Intern
+role: Undergraduate Researcher
 
 # Organizations/Affiliations
 organizations:
