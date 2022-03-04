@@ -20,8 +20,13 @@ custom_css = ["css/custom.css"]
 
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
+<h2 class="headline"><span>02/2022: Group Dinner and Prof's birthday celebration</span></h2>
+{{< gallery album="2022_02_VisitSejunKimProfBirthday" >}}
 
-<h2 class="headline"><span>02/2022: Group Dinner with our Visitor Beomgyun Jeong</span></h2>
+
+<br>
+
+<h2 class="headline"><span>02/2022: Group Dinner with our visitor Beomgyun Jeong (KBSI)</span></h2>
 {{< gallery album="2022_02_GroupDinnerCurryKingdom" >}}
 
 

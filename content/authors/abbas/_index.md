@@ -14,8 +14,8 @@ role: Postdoctoral researcher
 
 # Organizations/Affiliations
 organizations:
-- name: DGIST
-  url: "https://dgist.ac.kr/en/"
+- name: Korea University
+  url: "https://www.korea.edu"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 

@@ -10,12 +10,14 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Energy Science \& Engineering
+role: Assistant Professor of Chemistry
 
 # Organizations/Affiliations
 organizations:
-- name: DGIST
-  url: "https://dgist.ac.kr/en/"
+- name: Korea University
+  url: "https://www.korea.edu"
+- name: IBS Center for Molecular Spectroscopy and Dynamics
+  url: "https://cmsd.ibs.re.kr/html/cmsd_en/"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
@@ -33,12 +35,15 @@ education:
 
 career:
   positions:
-  - position: Postdoc (Jens K. Nørskov)
-    institution: Stanford University (Dep. of Chemical Engineering, Stanford, CA, USA)
-    year: 2017 - 2019
+  - position: Assistant Professor
+    institution: DGIST (Dep. of Energy Science and Engineering, Daegu, Rep. of Korea)
+    year: 2020 - 2022
   - position: Postdoc (Hyungjun Kim)
     institution: KAIST (Dep. of Chemistry, Daejeon, Rep. of Korea)
     year: 2019 - 2020
+  - position: Postdoc (Jens K. Nørskov)
+    institution: Stanford University (Dep. of Chemical Engineering, Stanford, CA, USA)
+    year: 2017 - 2019
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -77,5 +82,5 @@ email: "stefan.ringe.tum@gmail.com"
 user_groups:
 - "Professor"
 ---
-Stefan Ringe is an Assistant Professor at the Department of Energy Science \& Engineering at DGIST (Daegu, Korea). His research interest is on the computational discovery of electrochemical energy conversion catalysts and storage materials.
+Stefan Ringe is an Assistant Professor at the Department of Chemistry at Korea University and a research fellow at the IBS Center for Molecular Spectroscopy and Dynamics. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..
 

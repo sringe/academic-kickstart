@@ -10,8 +10,8 @@ weight = 1  # Order that this section will appear.
 title = "News"
 subtitle = ""
 
-welcomemessage = "... to the official website of the Ab initio multi-scale engineering (AIMS-E) lab at DGIST. We are currently seeking motivated students (Intern, Master, PhD) for our lab, contact us if you are interested!"
-welcomemessageKR = "대구경북과학기술원 (DGIST) Ab initio multi-scale 엔지니어링 연구실 홈페이지에 오신걸 환영합니다. 저희 연구실에서는 현재 인턴, 석/박사과정을 학생을 모집하고 있습니다. 관심있으신 분들은 연락 주시기 바랍니다."
+welcomemessage = "... to the official website of the 'Computational Modeling Lab' at Korea University and the IBS Center for Molecular Spectroscopy and Dynamics. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for our lab, contact us if you are interested!"
+welcomemessageKR = "고려대학교/IBS 'Computational Modeling Lab' 홈페이지에 오신걸 환영합니다. 저희 연구실에서는 현재 인턴, 석/박사과정을 학생하고 포닥을 모집하고 있습니다. 관심있으신 분들은 연락 주시기 바랍니다."
 
 
 includetwitter = true #include twitter in addition
