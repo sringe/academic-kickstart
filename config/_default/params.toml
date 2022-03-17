@@ -85,26 +85,26 @@ edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir 
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "sringe[at]dgist.ac.kr"
-phone = "+82 (53) 785-6450"
+email = "sringe[at]korea.ac.kr"
+# phone = "+82 (10) 3545-5184"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Techno jungang-daero 333", city = "Daegu (KR)", region = "Hyeonpung-eup, Dalseong-gun", postcode = "42988", country = "Rep. of Korea", country_code = "KR"}
+address = {street = "Anam-ro 145 Korea University R&D Center 636Ho", city = "Seoul (KR)", region = "Seongbuk-gu", postcode = "02841", country = "Rep. of Korea", country_code = "KR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "35.70721", longitude = "128.45337"}
+coordinates = {latitude = "37.59049", longitude = "127.02689"}
 
 # Directions for visitors to locate you.
-directions = "Building E6, Professor's office: 511, student's office: 521"
+directions = "Professor's office: 110, student's office: 217B"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
 office_hours = []
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "" #"https://calendly.com"
+# appointment_url = "" #"https://calendly.com"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.

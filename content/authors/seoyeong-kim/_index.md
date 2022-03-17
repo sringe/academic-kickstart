@@ -21,7 +21,9 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - Quantum dots
+  - Quantum dots, 2D materials
+  - Thermodynamics
+  - Density functional theory
 
 education:
   courses:

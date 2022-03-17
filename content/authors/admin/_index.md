@@ -53,7 +53,7 @@ career:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:sringe[at]dgist.ac.kr
+  link: mailto:sringe[at]korea.ac.kr
 # url = "mailto:?subject={title}&body={url}
 
 - icon: twitter
