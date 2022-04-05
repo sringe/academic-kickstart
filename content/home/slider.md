@@ -42,7 +42,7 @@ height = "450px"
   overlay_color = "#666"  # An HTML color value.
   overlay_img = "headers/porous4.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "project/multiscaledesign"
+  link = "project/multiscalemodeling"
   link_color = "white"
 
   # Call to action button (optional).
@@ -81,6 +81,18 @@ height = "450px"
 #  link = "project_general/generalresearchgoals/"
 #  link_color = "white"
 [[item]]
+  title = "Electrochemistry at electrified interfaces"
+#  content = "- taming the key to energy conversion"
+  align = "buttom"  # Choose `center`, `left`, or `right`.
+
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/qmmm_3.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "project/solvationandelectrifiedinterfaces"
+  link_color = "white"
+[[item]]
   title = "Solvation effects via continuum modeling"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.
@@ -94,18 +106,6 @@ height = "450px"
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
 # link, must be small letters and relative to /content folder!
   link = "software/mpbe"
-  link_color = "white"
-[[item]]
-  title = "Electrochemistry at electrified interfaces"
-#  content = "- taming the key to energy conversion"
-  align = "buttom"  # Choose `center`, `left`, or `right`.
-
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/qmmm_3.png"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "project/electrochemistrycomplexelectrifiedinterfaces"
   link_color = "white"
 
 #[[item]]
