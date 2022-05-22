@@ -36,6 +36,9 @@ education:
 career:
   positions:
   - position: Assistant Professor
+    institution: Korea University (Dep. of Chemistry, Seoul, Rep. of Korea)
+    year: 2022 -
+  - position: Assistant Professor
     institution: DGIST (Dep. of Energy Science and Engineering, Daegu, Rep. of Korea)
     year: 2020 - 2022
   - position: Postdoc (Hyungjun Kim)
