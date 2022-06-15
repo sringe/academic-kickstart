@@ -21,6 +21,13 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+<h2 class="headline"><span>06/2022: Research stay of Boeun Cho (University of Bristol)</span></h2>
+{{< gallery album="2022_06_VisitBoeun" >}}
+
+
+<br>
+
+
 <h2 class="headline"><span>05/2022: Master defense of Adith and Kamal</span></h2>
 {{< gallery album="2022_05_KamalAdithDefense" >}}
 
@@ -29,12 +36,6 @@ custom_css = ["css/custom.css"]
 
 <h2 class="headline"><span>02/2022: Group Dinner and Prof's birthday celebration</span></h2>
 {{< gallery album="2022_02_VisitSejunKimProfBirthday" >}}
-
-<br>
-
-<h2 class="headline"><span>05/2022: </span></h2>
-{{< gallery album="2022_05_KamalAdithDefense" >}}
-
 
 <br>
 
