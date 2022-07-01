@@ -21,6 +21,12 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+<h2 class="headline"><span>06/2022: Visit of Yevhen Horbatenko</span></h2>
+{{< gallery album="2022_06_VisitYevhen" >}}
+
+
+<br>
+
 <h2 class="headline"><span>06/2022: Research stay of Boeun Cho (University of Bristol)</span></h2>
 {{< gallery album="2022_06_VisitBoeun" >}}
 
