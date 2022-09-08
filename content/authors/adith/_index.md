@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Adith  Ramakrishnan Velmurugan 
+name: Adith Ramakrishnan Velmurugan 
 
 # Username (this should match the folder name)
 authors:
@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Master student
+role: PhD student
 
 # Organizations/Affiliations
 organizations:
-- name: DGIST
-  url: "https://dgist.ac.kr/en/"
+- name: Korea University
+  url: "https://www.korea.edu"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
@@ -25,9 +25,12 @@ interests:
 
 education:
   courses:
-  - course: MS
+  - course: PhD (Chemistry)
+    institution: Department of Chemistry, Korea University
+    year: 2022-ongoing
+  - course: MS (Energy Science and Engineering)
     institution: ESE, DGIST
-    year: 2021 - (ongoing)
+    year: 2021 - 2022
   - course: B.Tech (Chemical and Electrochemical Engineering)
     institution: CSIR-Central Electrochemical Research Institute, India
     year: 2016-2020
@@ -62,7 +65,7 @@ email: "gmadith64@gmail.com"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Master Students"
+- "PhD Students"
 ---
 
 

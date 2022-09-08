@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Preparatory internship for MS
+role: Master Student
 
 # Organizations/Affiliations
 organizations:
@@ -26,9 +26,13 @@ interests:
 
 education:
   courses:
+  - course: MS (Chemistry)
+    institution: Korea University 
+    year: 2022-ongoing
+
   - course: BS (Chemistry)
     institution: Pusan National University (Pusan, Rep. of Korea)
-    year: 2018 -- 2022
+    year: 2018 - 2022
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -59,7 +63,7 @@ email: "promptclr[at]naver.com"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Undergrads and Interns"
+- "Master Students"
 ---
 
 

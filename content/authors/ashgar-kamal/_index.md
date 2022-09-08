@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master student
+role: Alumni
 
 # Organizations/Affiliations
 organizations:
@@ -25,9 +25,9 @@ interests:
 
 education:
   courses:
-  - course: MS
+  - course: MS (Energy Science and Engineering)
     institution: ESE, DGIST
-    year: 2020 - (ongoing)
+    year: 2020 - 2022
   - course: BS (Chemistry)
     institution: Federal Urdu University of Arts, Science and Technology (FUUAST)
     year: 2015 - 2019
@@ -64,7 +64,7 @@ email: "Kamal5asghar14@gmail.com"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Master Students"
+- "Alumni"
 ---
 
 

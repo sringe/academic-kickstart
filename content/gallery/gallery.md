@@ -21,6 +21,18 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+<h2 class="headline"><span>08/2022: Farewell of Boeun Cho</span></h2>
+{{< gallery album="2022_08_FarewellBoeun" >}}
+
+
+<br>
+
+<h2 class="headline"><span>08/2022: Adith and Kamal's graduation</span></h2>
+{{< gallery album="2022_08_MSGraduation" >}}
+
+
+<br>
+
 <h2 class="headline"><span>06/2022: Visit of Yevhen Horbatenko</span></h2>
 {{< gallery album="2022_06_VisitYevhen" >}}
 
