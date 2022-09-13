@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Undergraduate Researcher
+role: Alumni
 
 # Organizations/Affiliations
 organizations:
@@ -60,7 +60,7 @@ email: "boeuncho514@gmail.com"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Undergrads and Interns"
+- "Alumni"
 ---
 
 
