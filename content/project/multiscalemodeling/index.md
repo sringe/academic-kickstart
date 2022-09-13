@@ -4,7 +4,7 @@
 title: "Multi-scale modeling"
 summary: "Optimizing energy conversion systems at multiple time and size scales, from atomistic to continuum."
 
-authors: [admin,adith,ashgar-kamal]
+authors: [admin,adith]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
