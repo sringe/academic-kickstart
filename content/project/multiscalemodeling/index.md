@@ -8,7 +8,7 @@ authors: [admin,adith]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [ringe-2020-yl]
+relatedpublications: [ringe-2020-yl,byun-2022]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2021R1C1C1008776 (신진연구)"]
 
 # Optional external URL for project (replaces project detail page).
