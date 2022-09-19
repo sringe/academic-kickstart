@@ -21,6 +21,15 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+
+
+<h2 class="headline"><span>08/2022: Adith's birthday celebration</span></h2>
+{{< gallery album="2022_09_AdithBirthday" >}}
+
+
+<br>
+
+
 <h2 class="headline"><span>08/2022: Farewell of Boeun Cho</span></h2>
 {{< gallery album="2022_08_FarewellBoeun" >}}
 
