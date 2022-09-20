@@ -3,7 +3,7 @@
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 66  # Order that this section will appear.
+weight = 100  # Order that this section will appear.
 
 title = "Gallery" 
 subtitle = ""
@@ -21,9 +21,10 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+<br>
+
 <h2 class="headline"><span>09/2022: Adith's birthday celebration</span></h2>
 {{< gallery album="2022_09_AdithBirthday" >}}
-
 
 <br>
 
