@@ -23,6 +23,11 @@ custom_css = ["css/custom.css"]
 
 <br>
 
+<h2 class="headline"><span>09/2022: POSCO Fellowship awarding ceremony for Adith</span></h2>
+{{< gallery album="2022_09_POSCOceremony" >}}
+
+<br>
+
 <h2 class="headline"><span>09/2022: Adith's birthday celebration</span></h2>
 {{< gallery album="2022_09_AdithBirthday" >}}
 
