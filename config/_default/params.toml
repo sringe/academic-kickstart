@@ -97,7 +97,7 @@ address = {street = "Anam-ro 145 Korea University R&D Center 636Ho", city = "Seo
 coordinates = {latitude = "37.59049", longitude = "127.02689"}
 
 # Directions for visitors to locate you.
-directions = "Korea University Campus : Professor's office: Asan Science Hall, Room 610; Student Office: Hana Science Hall, Room 716<br />R&D Center (IBS) : Professor's office: 110, Student office: 217B"
+directions = "Korea University Campus : Professor's office: Asan Science Hall, Room 610; Student Office: Hana Science Hall, Room 716<br />R&D Center (IBS) : Professor's office: 110, Student office: 219A"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
