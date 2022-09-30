@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Seoyeong Kim
+name: 김서영<br/> Seoyeong Kim
 
 # Username (this should match the folder name)
 authors:
