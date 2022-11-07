@@ -10,7 +10,7 @@ publication: "*Adv. Funct. Mater.*"
 tags: ["3D tomography; density functional theory; electrochemical carbon dioxide reduction; space confinement; sub-nanospacing"]
 doi: "10.1002/adfm.202107349"
 volume: "n/a"
-cover: "cover.png"
+cover: "cover.jpg"
 pages: "2107349"
 ---
 
