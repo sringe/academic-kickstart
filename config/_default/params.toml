@@ -90,11 +90,11 @@ phone = "02-3290-3124"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Anam-ro 145 Korea University R&D Center 636Ho", city = "Seoul (KR)", region = "Seongbuk-gu", postcode = "02841", country = "Rep. of Korea", country_code = "KR"}
+address = {street = "Anam-dong Anam-ro 145 Korea University Hana Science Hall", city = "Seoul (KR)", region = "Seongbuk-gu", postcode = "02841", country = "Rep. of Korea", country_code = "KR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "37.59049", longitude = "127.02689"}
+coordinates = {latitude = "37.585714", longitude = "127.024735"}
 
 # Directions for visitors to locate you.
 directions = "Korea University Campus : Professor's office: Asan Science building, Room 610; Student Office: Hana Science Hall, Room 716<br />R&D Center (IBS) : Professor's office: 110, Student office: 219A"
