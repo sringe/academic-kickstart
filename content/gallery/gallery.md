@@ -20,6 +20,10 @@ custom_css = ["css/custom.css"]
 
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
+<br>
+
+<h2 class="headline"><span>11/2022: Group Lunch</span></h2>
+{{< gallery album="2022_11_GroupLunch" >}}
 
 <br>
 
