@@ -50,31 +50,20 @@ custom_css = ["css/custom.css"]
 <h2 class="headline"><span>08/2022: Farewell of Boeun Cho</span></h2>
 {{< gallery album="2022_08_FarewellBoeun" >}}
 
-
 <br>
 
 <h2 class="headline"><span>08/2022: Adith and Kamal's graduation</span></h2>
 {{< gallery album="2022_08_MSGraduation" >}}
-
 
 <br>
 
 <h2 class="headline"><span>06/2022: Visit of Yevhen Horbatenko</span></h2>
 {{< gallery album="2022_06_VisitYevhen" >}}
 
-
 <br>
 
 <h2 class="headline"><span>06/2022: Research stay of Boeun Cho (University of Bristol)</span></h2>
 {{< gallery album="2022_06_VisitBoeun" >}}
-
-
-<br>
-
-
-<h2 class="headline"><span>05/2022: Master defense of Adith and Kamal</span></h2>
-{{< gallery album="2022_05_KamalAdithDefense" >}}
-
 
 <br>
 
@@ -86,8 +75,8 @@ custom_css = ["css/custom.css"]
 <h2 class="headline"><span>02/2022: Group Dinner with our visitor Beomgyun Jeong (KBSI)</span></h2>
 {{< gallery album="2022_02_GroupDinnerCurryKingdom" >}}
 
-
 <br>
+
 <h2 class="headline"><span>12/2021: 10th Anniversary</span></h2>
 {{< gallery album="2021_12_10_Anniversary" >}}
 
@@ -111,6 +100,5 @@ custom_css = ["css/custom.css"]
 <br>
 <h2 class="headline"><span>03/2021: Group Picture Photo Shoot @DGIST</span></h2>
 {{< gallery album="2021_03_GroupPicture" >}}
-
 
 

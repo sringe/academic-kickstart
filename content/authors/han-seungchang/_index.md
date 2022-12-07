@@ -14,8 +14,8 @@ role: Master Student
 
 # Organizations/Affiliations
 organizations:
-- name: IBS Center for Molecular Spectroscopy and Dynamics
-  url: "https://cmsd.ibs.re.kr/html/cmsd_en/"
+- name: Korea University
+  url: "https://www.korea.edu"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
