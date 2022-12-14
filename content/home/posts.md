@@ -10,8 +10,8 @@ weight = 1  # Order that this section will appear.
 title = "News"
 subtitle = ""
 
-welcomemessage = "... to the official website of the 'Computational Modeling Lab' at Korea University and the IBS Center for Molecular Spectroscopy and Dynamics. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for our lab. In particular, undergraduate students can apply for internships through advanced research courses in their major (URP : http://chem.korea.ac.kr/?module=file&act=procFileDownload&file_srl=6006&sid=f9c02289e0e213fb6f61b04e87411190&module_srl=3773 ), so we ask for your interest. Please do not hesitate to contact us!"
-welcomemessageKR = "고려대학교/IBS ‘Computational Modeling Lab’ 홈페이지에 오신 것을 환영합니다. 저희 연구실에서는 현재 학부생 인턴, 석/박사 과정 학생과 박사 후 연구원을 모집하고 있습니다. 특히, 학부생분들께서는 전공 심화 연구 과목(URP: http://chem.korea.ac.kr/?module=file&act=procFileDownload&file_srl=6008&sid=9935d747be03801cea62b422dcf57679&module_srl=3773)을 통해서도 인턴 지원이 가능하니, 많은 관심 부탁드립니다. 부담 가지지 마시고 연락해 주세요!"
+welcomemessage = "... to the official website of the 'Computational Modeling Lab' at Korea University and the IBS Center for Molecular Spectroscopy and Dynamics. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for our lab. In particular, undergraduate students can apply for internships through advanced research courses in their major (URP), so we ask for your interest. Please do not hesitate to contact us!"
+welcomemessageKR = "고려대학교/IBS ‘Computational Modeling Lab’ 홈페이지에 오신 것을 환영합니다. 저희 연구실에서는 현재 학부생 인턴, 석/박사 과정 학생과 박사 후 연구원을 모집하고 있습니다. 특히, 학부생분들께서는 전공 심화 연구 과목(URP)을 통해서도 인턴 지원이 가능하니, 많은 관심 부탁드립니다. 부담 가지지 마시고 연락해 주세요!"
 
 
 includetwitter = true #include twitter in addition
