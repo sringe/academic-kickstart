@@ -10,8 +10,8 @@ weight = 1  # Order that this section will appear.
 title = "News"
 subtitle = ""
 
-welcomemessage = "... to the official website of the 'Computational Modeling Lab' at Korea University and the IBS Center for Molecular Spectroscopy and Dynamics. We are currently seeking motivated students (Intern, Master, PhD, Postdoc) for our lab. In particular, undergraduate students can apply for internships through advanced research courses in their major (URP), so we ask for your interest. Please do not hesitate to contact us!"
-welcomemessageKR = "고려대학교/IBS ‘Computational Modeling Lab’ 홈페이지에 오신 것을 환영합니다. 저희 연구실에서는 현재 학부생 인턴, 석/박사 과정 학생과 박사 후 연구원을 모집하고 있습니다. 특히, 학부생분들께서는 전공 심화 연구 과목(URP)을 통해서도 인턴 지원이 가능하니, 많은 관심 부탁드립니다. 부담 가지지 마시고 연락해 주세요!"
+welcomemessage = "....to our homepage. Our lab is currently recruiting undergraduate interns, master's/doctoral students, and postdoctoral researchers to work with us at the forefront of battery and energy science  - at a well competitive salary. Undergraduate students apply here for the Advanced Research Course (URP). Contact us now."
+welcomemessageKR = "저희 홈페이지에 오신 것을 환영합니다. 저희 연구실에서는 현재 배터리 및 에너지 과학 분야 최전방에서 같이 연구하고자 하는 학부생 인턴, 석/박사 과정 학생과 박사 후 연구원을 경쟁력 있는 급여로 모집하고 있습니다. 특히, 학부생분들께서는 전공 심화 연구 과목(URP)을 통해서도 인턴 지원이 가능합니다. 연락해주세요."
 
 
 includetwitter = true #include twitter in addition
