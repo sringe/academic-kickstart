@@ -22,6 +22,26 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>12/2022: Visit of Dr.Yonghyeok Lee (Fritz Haber Institute)</span></h2>
+{{< gallery album="2022_12_Yonghyeok_Lee_Visit" >}}
+
+<br>
+
+<h2 class="headline"><span>12/2022: Sahar's farewell</span></h2>
+{{< gallery album="2022_12_Sahar's_farewell" >}}
+
+<br>
+
+<h2 class="headline"><span>12/2022: Seoyoung's defence passing celebrations</span></h2>
+{{< gallery album="2022_12_Seoyoung_defence_celebrations" >}}
+
+<br>
+
+<h2 class="headline"><span>12/2022: Group celebrations</span></h2>
+{{< gallery album="2022_12_Labcelebs" >}}
+
+<br>
+
 <h2 class="headline"><span>12/2022: Group celebrations</span></h2>
 {{< gallery album="2022_12_Labcelebs" >}}
 
