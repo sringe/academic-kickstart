@@ -42,11 +42,6 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>12/2022: Group celebrations</span></h2>
-{{< gallery album="2022_12_Labcelebs" >}}
-
-<br>
-
 <h2 class="headline"><span>11/2022: POSCO Science Seminar 2022</span></h2>
 {{< gallery album="2022_11_POSCO_Seminar" >}}
 <br>
