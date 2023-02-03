@@ -26,7 +26,7 @@ interests:
 education:
   courses:
   - course: PhD (Chemistry)
-    institution: Department of Chemistry, Korea University
+    institution: Korea University
     year: 2022-ongoing
   - course: MS (Energy Science and Engineering)
     institution: ESE, DGIST
