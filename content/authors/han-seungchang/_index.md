@@ -21,7 +21,9 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-- DFT, machine learning, electrochemical interfaces
+- Many-body electronic structure theory
+- DFT
+- CO2 reduction
 
 
 education:

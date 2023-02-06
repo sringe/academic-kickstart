@@ -21,9 +21,10 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  -  Computational modeling of 2D materials, piezoelectricity and ferroelectricity
-  -  XPS modeling
-  -  Computational modeling for electrochemical CO2 reduction via DFT
+  -  DFT applications
+  -  CO2 reduction
+  -  Electrochemistry
+  -  Machine Learning
 
 education:
   courses:
