@@ -11,7 +11,7 @@ interval = 7000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
-height = "450px"
+height = "500px"
 #height = "calc(100vh - 70px)"
 
 # Slides.
@@ -30,7 +30,19 @@ height = "450px"
 #  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
 #  link = "gallery"
 #  link_color = "white"
-
+[[item]]
+  title = "Group picture"
+#  content = "- taming the key to energy conversion"
+  align = "center"  # Choose `center`, `left`, or `right`.
+#  valign="bottom"
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/IMG_4847 (1).jpg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "gallery/#gallery-2023_02_GroupPicture"
+  link_color = "white"
+#[[item]]
 
 [[item]]
   title = "Multi-scale design"
@@ -44,7 +56,7 @@ height = "450px"
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "project/multiscalemodeling"
   link_color = "white"
-
+#[[item]]
   # Call to action button (optional).
   #   Activate the button by specifying a URL and button label below.
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
