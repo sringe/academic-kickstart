@@ -14,8 +14,8 @@ role: Long-time Postdoctoral researcher
 
 # Organizations/Affiliations
 organizations:
-- name: DGIST
-  url: "https://dgist.ac.kr/en/"
+- name: Korea University
+  url: "https://www.korea.edu"
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
@@ -27,16 +27,16 @@ education:
   courses:
   - course: PhD (Computer Science)
     institution: HPC Korea
-    year: 2020
+    year: 2022
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 #   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
 #   form "mailto:your-email@example.com" or "#contact" for contact widget.
 social:
-- icon: envelope
-  icon_pack: fas
-  link: mailto:hgabbas71@gmail.com
+- icon: 
+  icon_pack: 
+  link: 
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
