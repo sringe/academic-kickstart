@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Co-advised Master student(Jiwoong Yang)
+role: Co-advised Master student(Prof. Jiwoong Yang)
 
 # Organizations/Affiliations
 organizations:
