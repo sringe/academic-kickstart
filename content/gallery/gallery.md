@@ -22,7 +22,7 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>02/2023: Seungchang's birthday celebration</span></h2>
+<h2 class="headline"><span>03/2023: Seungchang's birthday celebration</span></h2>
 {{< gallery album="2023_03_Seungchang's_birthday" >}}
 
 <br>
