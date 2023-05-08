@@ -11,7 +11,7 @@ interval = 7000
 
 # Slide height (optional).
 # E.g. `500px` for 500 pixels or `calc(100vh - 70px)` for full screen.
-height = "600px"
+height = "650px"
 #height = "calc(100vh - 70px)"
 
 # Slides.
@@ -30,6 +30,18 @@ height = "600px"
 #  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
 #  link = "gallery"
 #  link_color = "white"
+[[item]]
+  title = ""
+#  content = "- taming the key to energy conversion"
+  align = "center"  # Choose `center`, `left`, or `right`.
+#  valign="bottom"
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/Pic_2.jpeg"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "gallery/#gallery-2023_04_Karsten_visit"
+  link_color = "white"
 [[item]]
   title = "Group picture"
 #  content = "- taming the key to energy conversion"
@@ -108,7 +120,7 @@ height = "600px"
   title = "Solvation effects via continuum modeling"
 #  content = "- taming the key to energy conversion"
   align = "right"  # Choose `center`, `left`, or `right`.
-  valign = "bottom"
+  valign = "top"
 
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
