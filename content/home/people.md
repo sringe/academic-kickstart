@@ -17,6 +17,7 @@ subtitle = ""
                  "Postdocs",
                  "PhD Students",
                  "Master Students",
+                 "Co-supervised Members",
                  "Undergrads and Interns",
                  "Administration",
                  "Visitors",
