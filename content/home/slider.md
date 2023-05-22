@@ -45,12 +45,12 @@ height = "650px"
 [[item]]
   title = "PZC- A descriptor in CO2RR electrocatalysis!"
 #  content = "- taming the key to energy conversion"
-  align = "left"  # Choose `center`, `left`, or `right`.
-  valign="bottom"
+  align = "right"  # Choose `center`, `left`, or `right`.
+  valign="top"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/Screening_paper_2.png"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/New_screening_paper_image_!.png"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "publication/ringe-2023-screening"
   link_color = "blue"
