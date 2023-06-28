@@ -23,6 +23,11 @@ custom_css = ["css/custom.css"]
 
 <br>
 
+<h2 class="headline"><span>06/2023: Group outing</span></h2>
+{{< gallery album="2023_06_Group_outing" >}}
+
+<br>
+
 <h2 class="headline"><span>05/2023: Teachers' day</span></h2>
 {{< gallery album="2023_05_Benedikt_visit" >}}
 
