@@ -64,7 +64,7 @@ height = "650px"
   overlay_color = "#666"  # An HTML color value.
   overlay_img = "headers/1677057816403.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "gallery/#gallery-2023_02_GroupPicture_IBS"
+  link = "gallery/#gallery-2023_07_Group_picture"
   link_color = "white"
 #[[item]]
 
