@@ -8,7 +8,7 @@ authors: [admin,abbas,han-seungchang]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: []
+relatedpublications: [ringe-2023-screening]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2020M3H7A1096388 (CtoX)"]
 
 # Optional external URL for project (replaces project detail page).

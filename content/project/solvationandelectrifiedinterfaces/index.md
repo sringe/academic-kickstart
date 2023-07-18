@@ -8,7 +8,7 @@ authors: [admin,abbas,horbatenko-yevhen,dianwei-hou,han-seungchang,seoyeong-kim,
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [ringe-2019-dm,shin-2022-ks,ringe-2021-xd,wu-2019-bq]
+relatedpublications: [ringe-2019-dm,shin-2022-ks,ringe-2021-xd,wu-2019-bq,ringe-2023-cation]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2021R1C1C1008776 (신진연구)","Institute for Basic Science (IBS) for Molecular Spectroscopy and Dynamics"]
 
 # Optional external URL for project (replaces project detail page).
