@@ -85,7 +85,7 @@ edit_page = {repo_url = "https://github.com/gcushen/hugo-academic", content_dir 
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "sringe[at]korea.ac.kr"
+email = "sringe@korea.ac.kr"
 phone = "02-3290-3124"
 
 # Address
@@ -97,7 +97,7 @@ address = {street = "Anam-dong Anam-ro 145 Korea University Hana Science Hall", 
 coordinates = {latitude = "37.58588635", longitude = "127.02544529731489"}
 
 # Directions for visitors to locate you.
-directions = "Korea University Campus : Professor's office: Asan Science building, Room 316; Student Office: Hana Science Hall, Room 716<br />R&D Center (IBS) : Professor's office: 110, Student office: 219A"
+directions = "<b>Korea University Campus : Professor's office</b>: Asan Science building, Room 316, <b>Student Office:</b> Hana Science Hall, Room 716<br /><b>R&D Center (IBS)</b> : Professor's office: 110, <b>Student office:</b> 219A"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.

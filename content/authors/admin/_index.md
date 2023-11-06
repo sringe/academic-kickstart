@@ -75,7 +75,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: authors/admin/files/cv.pdf
+  link: authors/admin/files/cv_homepage_small.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "stefan.ringe.tum@gmail.com"
