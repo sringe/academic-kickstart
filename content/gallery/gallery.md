@@ -22,6 +22,12 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>11/2023: Group Picture</span></h2>
+{{< gallery album="2023_11_Group_Picture" >}}
+<br>
+
+<br>
+
 <h2 class="headline"><span>09/2023: Visit of Benedikt Klein</span></h2>
 {{< gallery album="2023_09_Group_Lunch" >}}
 <br>
