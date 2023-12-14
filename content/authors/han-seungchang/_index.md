@@ -23,7 +23,7 @@ organizations:
 interests:
 - Many-body electronic structure theory
 - DFT
-- CO2 reduction
+- CO<sub>2</sub> reduction
 
 
 education:
