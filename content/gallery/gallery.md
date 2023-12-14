@@ -22,7 +22,7 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>11/2023: Group Picture</span></h2>
+<h2 class="headline"><span>11/2023: Pre Christmas party</span></h2>
 {{< gallery album="2023_11_Pre_Christmas_party" >}}
 
 <br>
