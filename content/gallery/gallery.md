@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>12/2023: Visit of Dr. Hyunwook Jung</span></h2>
+{{< gallery album="2023_12_Visit_of_Hyunwook" >}}
+
+<br>
+
 <h2 class="headline"><span>11/2023: Pre Christmas party</span></h2>
 {{< gallery album="2023_11_Pre_Christmas_party" >}}
 
