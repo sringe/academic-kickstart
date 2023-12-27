@@ -22,7 +22,7 @@ organizations:
 #
 interests:
   -  DFT applications
-  -  CO2 reduction
+  -  CO<sub>2</sub> reduction
   -  Electrochemistry
   -  Machine Learning
 

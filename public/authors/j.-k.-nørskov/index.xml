@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J. K.  Nørskov | RingeLab</title>
+    <link>https://ringelab.com/authors/j.-k.-n%C3%B8rskov/</link>
+      <atom:link href="https://ringelab.com/authors/j.-k.-n%C3%B8rskov/index.xml" rel="self" type="application/rss+xml" />
+    <description>J. K.  Nørskov</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>J. K.  Nørskov</title>
+      <link>https://ringelab.com/authors/j.-k.-n%C3%B8rskov/</link>
+    </image>
+    
+    <item>
+      <title>Atomistic Insight into Cation Effects on Binding Energies in Cu-Catalyzed Carbon Dioxide Reduction</title>
+      <link>https://ringelab.com/publication/ludwig-2020-atomistic/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/ludwig-2020-atomistic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Solvent--Adsorbate Interactions and Adsorbate-Specific Solvent Structure in Carbon Dioxide Reduction on a Stepped Cu Surface</title>
+      <link>https://ringelab.com/publication/ludwig-2019-gt/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/ludwig-2019-gt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Challenges in Modeling Electrochemical Reaction Energetics with Polarizable Continuum Models</title>
+      <link>https://ringelab.com/publication/gauthier-2019-wt/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/gauthier-2019-wt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pH effects on the electrochemical reduction of CO&lt;sub&gt;2&lt;/sub&gt; towards C&lt;sub&gt;2&lt;/sub&gt; products on stepped copper</title>
+      <link>https://ringelab.com/publication/liu-2019-ng/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/liu-2019-ng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theoretical Approaches to Describing the Oxygen Reduction Reaction Activity of Single-Atom Catalysts</title>
+      <link>https://ringelab.com/publication/patel-2018-tq/</link>
+      <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/patel-2018-tq/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

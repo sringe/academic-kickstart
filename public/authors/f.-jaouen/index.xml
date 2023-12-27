@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>F.  Jaouen | RingeLab</title>
+    <link>https://ringelab.com/authors/f.-jaouen/</link>
+      <atom:link href="https://ringelab.com/authors/f.-jaouen/index.xml" rel="self" type="application/rss+xml" />
+    <description>F.  Jaouen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>F.  Jaouen</title>
+      <link>https://ringelab.com/authors/f.-jaouen/</link>
+    </image>
+    
+    <item>
+      <title>Selective electrochemical reduction of nitric oxide to hydroxylamine by atomically dispersed iron catalyst</title>
+      <link>https://ringelab.com/publication/kim-2021-mw/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/kim-2021-mw/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

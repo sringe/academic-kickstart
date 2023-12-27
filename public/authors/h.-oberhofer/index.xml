@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H.  Oberhofer | RingeLab</title>
+    <link>https://ringelab.com/authors/h.-oberhofer/</link>
+      <atom:link href="https://ringelab.com/authors/h.-oberhofer/index.xml" rel="self" type="application/rss+xml" />
+    <description>H.  Oberhofer</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>H.  Oberhofer</title>
+      <link>https://ringelab.com/authors/h.-oberhofer/</link>
+    </image>
+    
+    <item>
+      <title>Implicit Solvation Methods for Catalysis at Electrified Interfaces</title>
+      <link>https://ringelab.com/publication/ringe-2022-xd/</link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/ringe-2022-xd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Generalized molecular solvation in non-aqueous solutions by a single parameter implicit solvation scheme</title>
+      <link>https://ringelab.com/publication/hille-2019-fn/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/hille-2019-fn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Transferable ionic parameters for first-principles Poisson-Boltzmann solvation calculations: Neutral solutes in aqueous monovalent salt solutions</title>
+      <link>https://ringelab.com/publication/ringe-2017-dm/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/ringe-2017-dm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Function-Space-Based Solution Scheme for the Size-Modified Poisson-Boltzmann Equation in Full-Potential DFT</title>
+      <link>https://ringelab.com/publication/ringe-2016-ti/</link>
+      <pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/ringe-2016-ti/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
