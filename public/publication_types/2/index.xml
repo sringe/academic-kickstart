@@ -5,12 +5,20 @@
     <link>https://ringelab.com/publication_types/2/</link>
       <atom:link href="https://ringelab.com/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Nov 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>2</title>
       <link>https://ringelab.com/publication_types/2/</link>
     </image>
+    
+    <item>
+      <title>An implicit electrolyte model for plane wave density functional theory exhibiting nonlinear response and a nonlocal cavity definition</title>
+      <link>https://ringelab.com/publication/islam-2023/</link>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/islam-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Heterogeneous Catalyst as a Functional Substrate Governing the Shape of Electrochemical Precipitates in Oxygen-Fueled Rechargeable Batteries</title>
