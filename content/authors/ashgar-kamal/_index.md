@@ -21,7 +21,7 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - Mean-field micro-kinetic modeling for electrochemical CO2 reduction
+  - Mean-field micro-kinetic modeling for electrochemical CO<sub>2</sub> reduction
 
 education:
   courses:
