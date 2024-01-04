@@ -28,8 +28,7 @@ education:
   courses:
   - course: B.S (Chemistry)
     institution: Korea University
-    year: 2018-ongoing
-  
+    year: 2018-2024
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
