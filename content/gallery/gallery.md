@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>01/2024: KIM Conference @Busan</span></h2>
+{{< gallery album="2024_1_KIM_conference" >}}
+
+<br>
+
 <h2 class="headline"><span>12/2023: Visit of Dr. Hyunwook Jung</span></h2>
 {{< gallery album="2023_12_Visit_of_Hyunwook" >}}
 
