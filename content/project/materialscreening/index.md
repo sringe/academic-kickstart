@@ -4,7 +4,7 @@
 title: "High-throughput computational search for high performance energy materials"
 summary: "Developing descriptors for electrochemical conversion processes which can be used to initialize high-throughput search for new materials, driven by fast machine learning techniques."
 
-authors: [admin,abbas,han-seungchang]
+authors: [admin,abbas,han-seungchang,chanjin-kim,hoseong]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00

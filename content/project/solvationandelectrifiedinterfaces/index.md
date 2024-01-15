@@ -4,7 +4,7 @@
 title: "Tackling electrified interfaces using density functional theory and machine learning"
 summary: "Employing machine learning techniques for accelerated sampling of liquid molecules phase space to understand the nature of electrified interfaces in energy conversion and storage applications."
 
-authors: [admin,abbas,horbatenko-yevhen,dianwei-hou,han-seungchang,seoyeong-kim,sayeon-lee,dongjin,hoseong]
+authors: [admin,horbatenko-yevhen,dianwei-hou,sayeon-lee,dongjin,sahar]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
