@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>01/2024: KU BK21 Chem Fair</span></h2>
+{{< gallery album="2024_01_BKChem_Fair" >}}
+
+<br>
+
 <h2 class="headline"><span>01/2024: CECAM-Lorentz Workshop, Netherlands</span></h2>
 {{< gallery album="2024_1_Netherlands_conference" >}}
 
@@ -39,6 +44,11 @@ custom_css = ["css/custom.css"]
 
 <h2 class="headline"><span>11/2023: Pre Christmas party</span></h2>
 {{< gallery album="2023_11_Pre_Christmas_party" >}}
+
+<br>
+
+<h2 class="headline"><span>11/2023: Lab-to-life Research festival</span></h2>
+{{< gallery album="2023_11_BKFair" >}}
 
 <br>
 
