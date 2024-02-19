@@ -22,6 +22,13 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>02/2024: Professor's birthday celebrations</span></h2>
+{{< gallery album="2024_2_Professor's_birthday" >}}
+
+<br>
+
+<br>
+
 <h2 class="headline"><span>01/2024: KU BK21 Chem Fair</span></h2>
 {{< gallery album="2024_01_BKChem_Fair" >}}
 
