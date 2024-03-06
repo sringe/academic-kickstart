@@ -22,10 +22,18 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>02/2024: Professor's birthday celebrations</span></h2>
-{{< gallery album="2024_2_Professor's_birthday" >}}
+<h2 class="headline"><span>03/2024: Dayun's farewell</span></h2>
+{{< gallery album="2024_3_Dayun's_farewell" >}}
 
 <br>
+
+<h2 class="headline"><span>02/2024: Hoseong and Dongjin's graduation</span></h2>
+{{< gallery album="2024_2_Hoseong_and_Dongjin_graduation" >}}
+
+<br>
+
+<h2 class="headline"><span>02/2024: Professor's birthday celebrations</span></h2>
+{{< gallery album="2024_2_Professor's_birthday" >}}
 
 <br>
 
