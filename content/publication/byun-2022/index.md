@@ -8,7 +8,8 @@ abstract: "The increasing demand for short charging time on electric vehicles ha
 featured: true
 publication: "*Energy Environ. Mater.*"
 doi: "10.1002/eem2.12509"
-volume: "0"
+volume: "7"
+issue: "1"
 pages: "e12509"
 ---
 
