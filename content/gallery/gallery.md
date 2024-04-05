@@ -22,6 +22,16 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>03/2024: Abbas' farewell</span></h2>
+{{< gallery album="2024_3_Farewell_of_Abbas" >}}
+
+<br>
+
+<h2 class="headline"><span>03/2024: DPG Spring Meeting 2024, Germany</span></h2>
+{{< gallery album="2024_3_DPG_2024" >}}
+
+<br>
+
 <h2 class="headline"><span>03/2024: Dayun's farewell</span></h2>
 {{< gallery album="2024_3_Dayun's_farewell" >}}
 
