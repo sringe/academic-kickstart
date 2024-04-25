@@ -1,6 +1,6 @@
 ---
 title: "Tuning the C<sub>1</sub>/C<sub>2</sub> Selectivity of Electrochemical CO<sub>2</sub> Reduction on Cu-CeO<sub>2</sub> Nanorods by Oxidation State Control"
-date: 2022-11-19
+date: 
 publishDate: 2023-02-23
 authors: [S. Hong† , <b>H. G. Abbas†</b> , K. Jang†, K. K. Patra, B. Kim, B. U. Choi, H. Song, K. S. Lee, P. P. Choi*, <b>S. Ringe*</b> , J. Oh*]
 publication_types: ["2"]
