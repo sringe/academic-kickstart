@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>05/2024: Teachers' day</span></h2>
+{{< gallery album="2024_05_Teachers_day" >}}
+
+<br>
+
 <h2 class="headline"><span>03/2024: Visit of Sejun Kim + Abbas' farewell</span></h2>
 {{< gallery album="2024_3_Farewell_of_Abbas" >}}
 
