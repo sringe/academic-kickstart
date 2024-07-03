@@ -25,9 +25,13 @@ interests:
 
 education:
   courses:
-  - course: B.S (Chemistry)
-    institution: Korea University
-    year: 2018-ongoing
+    - course: PhD (Physical Chemistry)
+      institution: University of California, Berkeley
+      year: 2024-ongoing
+
+    - course: B.S (Chemistry)
+      institution: Korea University
+      year: 2018-2023
   
 
 # Social/Academic Networking
@@ -59,7 +63,7 @@ email: " ben124123@korea.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Undergrads and Interns"
+- "Alumni"
 ---
 
 

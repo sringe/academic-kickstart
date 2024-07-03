@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>07/2024: Group picture</span></h2>
+{{< gallery album="2024_07_Group_picture" >}}
+
+<br>
+
 <h2 class="headline"><span>05/2024: Teachers' day</span></h2>
 {{< gallery album="2024_05_Teachers_day" >}}
 
