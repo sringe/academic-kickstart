@@ -38,7 +38,7 @@ height = "650px"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/Pic_1.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/Image_2960.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "gallery/#gallery-2023_11_Group_Picture"
   link_color = "white"
