@@ -8,8 +8,8 @@ abstract: " Lithium−oxygen batteries have the potential to become the most emi
 featured: false
 publication: "*J. Am. Chem. Soc.*"
 doi: "10.1021/jacs.3c03619"
-volume: ""
+volume: "145"
 cover: ""
-pages: ""
+pages: "15425-15434"
 ---
 
