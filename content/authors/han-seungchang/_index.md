@@ -28,7 +28,7 @@ interests:
 
 education:
   courses:
-  - course: MS (Chemistry)
+  - course: MS & PhD (Chemistry)
     institution: Korea University 
     year: 2022-ongoing
 
