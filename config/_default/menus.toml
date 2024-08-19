@@ -36,21 +36,27 @@
   identifier = "researchitems"
 
   [[main]]
+  name = "Research Overview"
+  url = "research/"
+  weight = 1
+  parent = "researchitems"
+
+  [[main]]
   name = "Solvation and Electrified Interfaces"
   url = "project/solvationandelectrifiedinterfaces/"
-  weight = 1
+  weight = 2
   parent = "researchitems"
 
   [[main]]
   name = "Materials Screening"
   url = "project/materialscreening/"
-  weight = 2
+  weight = 3
   parent = "researchitems"
 
   [[main]]
   name = "Multiscale modeling"
   url = "project/multiscalemodeling/"
-  weight = 3
+  weight = 4
   parent = "researchitems"
 
 #[[main]]
