@@ -25,9 +25,12 @@ interests:
 
 education:
   courses:
-  - course: B.S (Chemistry and Electrical Engineering)
-    institution: Sookmyung Women's University
-    year: 2021-ongoing
+   - course: PhD (Chemistry)
+     institution: Cornell University
+     year: 2024-ongoing
+   - course: B.S (Chemistry and Electrical Engineering)
+     institution: Sookmyung Women's University
+     year: 2021-2024
   
 
 # Social/Academic Networking
