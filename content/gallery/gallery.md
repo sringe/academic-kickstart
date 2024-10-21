@@ -27,13 +27,18 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>10/2024: ECS Prime conference, Hawaii</span></h2>
+<h2 class="headline"><span>10/2024: ECS Prime 2024, Hawaii</span></h2>
 {{< gallery album="2024_10_ECS_Conference" >}}
 
 <br>
 
 <h2 class="headline"><span>09/2024: Visit of Prof. Bohak Yoon (Baylor University, USA)</span></h2>
 {{< gallery album="2024_09_ProfBohak_visit" >}}
+
+<br>
+
+<h2 class="headline"><span>07/2024: Nano Korea 2024 Symposium</span></h2>
+{{< gallery album="2024_07_NanoKorea" >}}
 
 <br>
 
