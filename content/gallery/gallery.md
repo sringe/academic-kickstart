@@ -22,7 +22,12 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>10/2024: Visit of Prof. Mischa Bonn to the IBS(Max-Planck University)</span></h2>
+<h2 class="headline"><span>10/2024: Group outing 2024</span></h2>
+{{< gallery album="2024_10_Group_outing" >}}
+
+<br>
+
+<h2 class="headline"><span>10/2024: Visit of Prof. Mischa Bonn (Max-Planck Inst. for Polymer Research)</span></h2>
 {{< gallery album="2024_10_ProfBonn_visit" >}}
 
 <br>
@@ -133,7 +138,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>06/2023: Group outing</span></h2>
+<h2 class="headline"><span>06/2023: Group outing 2023</span></h2>
 {{< gallery album="2023_06_Group_outing" >}}
 
 <br>

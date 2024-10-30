@@ -55,16 +55,16 @@ height = "650px"
   link = "publication/ringe-2023-screening"
   link_color = "blue"
 [[item]]
-  title = "Group picture"
+  title = "Group outing 2024"
 #  content = "- taming the key to energy conversion"
   align = "center"  # Choose `center`, `left`, or `right`.
 #  valign="bottom"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/Pic_2.jpeg"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/Pic_3.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "gallery/#gallery-2023_04_Karsten_visit"
+  link = "gallery/#gallery-2024_10_Group_outing"
   link_color = "white"
 #[[item]]
 
