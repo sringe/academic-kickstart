@@ -31,30 +31,6 @@ height = "650px"
 #  link = "gallery"
 #  link_color = "white"
 [[item]]
-  title = ""
-#  content = "- taming the key to energy conversion"
-  align = "center"  # Choose `center`, `left`, or `right`.
-#  valign="bottom"
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/Image_2960.jpg"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "gallery/#gallery-2023_11_Group_Picture"
-  link_color = "white"
-[[item]]
-  title = "PZC- A descriptor in CO2RR electrocatalysis!"
-#  content = "- taming the key to energy conversion"
-  align = "right"  # Choose `center`, `left`, or `right`.
-  valign="top"
-  # Overlay a color or image (optional).
-  #   Deactivate an option by commenting out the line, prefixing it with `#`.
-  overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/New_screening_paper_image_!.png"  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "publication/ringe-2023-screening"
-  link_color = "blue"
-[[item]]
   title = "Group outing 2024"
 #  content = "- taming the key to energy conversion"
   align = "center"  # Choose `center`, `left`, or `right`.
@@ -66,6 +42,19 @@ height = "650px"
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
   link = "gallery/#gallery-2024_10_Group_outing"
   link_color = "white"
+[[item]]
+  title = "Some insights on CO2RR to methanol"
+#  content = "- taming the key to energy conversion"
+  align = "center"  # Choose `center`, `left`, or `right`.
+  valign="top"
+  # Overlay a color or image (optional).
+  #   Deactivate an option by commenting out the line, prefixing it with `#`.
+  overlay_color = "#666"  # An HTML color value.
+  overlay_img = "headers/opinion_paper_image.png"  # Image path relative to your `static/img/` folder.
+  overlay_filter = 0.0  # Darken the image. Value in range 0-1.
+  link = "publication/ringe-2024"
+  link_color = "blue"
+
 #[[item]]
 
 [[item]]
