@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>10/2024: Lab-to-life Research festival 2024</span></h2>
+{{< gallery album="2024_11_Labtolife_festival" >}}
+
+<br>
+
 <h2 class="headline"><span>10/2024: Group outing 2024</span></h2>
 {{< gallery album="2024_10_Group_outing" >}}
 
@@ -107,7 +112,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>11/2023: Lab-to-life Research festival</span></h2>
+<h2 class="headline"><span>11/2023: Lab-to-life Research festival 2023</span></h2>
 {{< gallery album="2023_11_BKFair" >}}
 
 <br>
