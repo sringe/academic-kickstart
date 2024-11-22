@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>11/2024: Visit of Prof. Ulrich Hoefer (Philipps University of Marburg)</span></h2>
+{{< gallery album="2024_11_ProfHofer_visit" >}}
+
+<br>
+
 <h2 class="headline"><span>10/2024: Lab-to-life Research festival 2024</span></h2>
 {{< gallery album="2024_11_Labtolife_festival" >}}
 
