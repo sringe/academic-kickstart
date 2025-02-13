@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>K. Kim† | RingeLab</title>
+    <title>K. Kim | RingeLab</title>
     <link>https://ringelab.com/authors/k.-kim/</link>
       <atom:link href="https://ringelab.com/authors/k.-kim/index.xml" rel="self" type="application/rss+xml" />
-    <description>K. Kim†</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate>
+    <description>K. Kim</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>K. Kim†</title>
+      <title>K. Kim</title>
       <link>https://ringelab.com/authors/k.-kim/</link>
     </image>
+    
+    <item>
+      <title>CO Cryo-sorption as a Surface-sensitive Spectroscopic Probe of the Active Site Density of Single-atom Catalysts</title>
+      <link>https://ringelab.com/publication/beomgyun-2025/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/beomgyun-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Alkali Metal Ion Substituted Carboxymethyl Cellulose as Anode Polymeric Binders for Rapidly Chargeable Lithium-Ion Batteries</title>

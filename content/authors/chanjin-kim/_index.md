@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master Student
+role: Integrated Master and PhD Student
 
 # Organizations/Affiliations
 organizations:
@@ -28,7 +28,7 @@ interests:
 
 education:
   courses:
-  - course: MS (Chemistry)
+  - course: MS & PhD (Chemistry)
     institution: Korea University 
     year: 2023-ongoing
 
@@ -65,7 +65,7 @@ email: "chanjin@korea.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Master Students"
+- "PhD Students"
 ---
 
 

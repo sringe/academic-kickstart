@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>&lt;b&gt;H. G. Abbas&lt;/b&gt; | RingeLab</title>
+    <title>&lt;b&gt;H. G. Abbas&lt;/b&gt;† | RingeLab</title>
     <link>https://ringelab.com/authors/bh.-g.-abbas/b/</link>
       <atom:link href="https://ringelab.com/authors/bh.-g.-abbas/b/index.xml" rel="self" type="application/rss+xml" />
-    <description>&lt;b&gt;H. G. Abbas&lt;/b&gt;</description>
+    <description>&lt;b&gt;H. G. Abbas&lt;/b&gt;†</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
-      <title>&lt;b&gt;H. G. Abbas&lt;/b&gt;</title>
+      <title>&lt;b&gt;H. G. Abbas&lt;/b&gt;†</title>
       <link>https://ringelab.com/authors/bh.-g.-abbas/b/</link>
     </image>
+    
+    <item>
+      <title>CO Cryo-sorption as a Surface-sensitive Spectroscopic Probe of the Active Site Density of Single-atom Catalysts</title>
+      <link>https://ringelab.com/publication/beomgyun-2025/</link>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/beomgyun-2025/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Nucleation-Controlled Doping of II–VI Semiconductor Nanocrystals Mediated by Magic-Sized Clusters</title>
