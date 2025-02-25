@@ -4,7 +4,7 @@ name: 이세연<br/> Saeyeon Lee
 
 # Username (this should match the folder name)
 authors:
-- sayeon-lee
+- bsayeon-lee
 
 # Is this the primary user of the site?
 superuser: true
