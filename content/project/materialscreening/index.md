@@ -4,11 +4,11 @@
 title: "High-throughput computational search for high performance energy materials"
 summary: "Developing descriptors for electrochemical conversion processes which can be used to initialize high-throughput search for new materials, driven by fast machine learning techniques."
 
-authors: [admin,han-seungchang,chanjin-kim,hoseong,hana,seonjeong,suyeon]
+authors: [admin,han-seungchang,chanjin-kim,hoseong,suyeon]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [ringe-2023-screening]
+relatedpublications: [beomgyun-2025, ji-2024, sejun-2024, ringe-2023-screening, park-2023, beomil-2023, hong-2023, hoon-2023, jae-2022, patra-2022, kim-2022-sv, tetteh-2022-rm, song-2021-xo, kim-2021-mw, ludwig-2020-atomistic, sa-2020-thermal, lee-2020, xia-2020-ld,gauthier-2019-us,gauthier-2019-ig,ringe-2019-dm,wu-2019-bq,clark-2019-xk,ludwig-2019-gt,gauthier-2019-wt,patel-2018-tq]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2020M3H7A1096388 (CtoX)"]
 
 # Optional external URL for project (replaces project detail page).

@@ -4,11 +4,11 @@
 title: "Multi-scale modeling"
 summary: "Optimizing energy conversion systems at multiple time and size scales, from atomistic to continuum."
 
-authors: [admin,adith,sumin-choi,byungmin-chun,kwak-dongvin,kim-sung-yeon]
+authors: [admin,adith,sumin-choi,byungmin-chun,kwak-dongvin]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [ringe-2020-yl,byun-2022]
+relatedpublications: [won-2024,byun-2022, kastlunger-2022-uy, shin-2022-ks, ringe-2020-yl, ringe-2019-dm,liu-2019-ng]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2021R1C1C1008776 (신진연구)"]
 
 # Optional external URL for project (replaces project detail page).
