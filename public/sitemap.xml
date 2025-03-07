@@ -582,11 +582,6 @@
   </url>
   
   <url>
-    <loc>https://ringelab.com/authors/hana/</loc>
-    <lastmod>2022-04-05T10:52:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ringelab.com/authors/horbatenko-yevhen/</loc>
     <lastmod>2022-04-05T10:52:49+09:00</lastmod>
   </url>
@@ -602,11 +597,6 @@
   </url>
   
   <url>
-    <loc>https://ringelab.com/authors/kim-sung-yeon/</loc>
-    <lastmod>2022-04-05T10:52:49+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://ringelab.com/authors/kwak-dongvin/</loc>
     <lastmod>2022-04-05T10:52:49+09:00</lastmod>
   </url>
@@ -618,11 +608,6 @@
   
   <url>
     <loc>https://ringelab.com/authors/sayeon-lee/</loc>
-    <lastmod>2022-04-05T10:52:49+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ringelab.com/authors/seonjeong/</loc>
     <lastmod>2022-04-05T10:52:49+09:00</lastmod>
   </url>
   
@@ -1217,7 +1202,15 @@
   </url>
   
   <url>
+    <loc>https://ringelab.com/authors/hana/</loc>
+  </url>
+  
+  <url>
     <loc>https://ringelab.com/authors/jeon-minsu/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ringelab.com/authors/kim-sung-yeon/</loc>
   </url>
   
   <url>
@@ -1242,6 +1235,10 @@
   
   <url>
     <loc>https://ringelab.com/authors/ryu-yeonkyeong/</loc>
+  </url>
+  
+  <url>
+    <loc>https://ringelab.com/authors/seonjeong/</loc>
   </url>
   
   <url>
