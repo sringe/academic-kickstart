@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Chemistry
+role: Associate Professor of Chemistry
 
 # Organizations/Affiliations
 organizations:
