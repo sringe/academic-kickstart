@@ -35,9 +35,12 @@ education:
 
 career:
   positions:
+  - position: Associate Professor
+    institution: Korea University (Dep. of Chemistry, Seoul, Rep. of Korea)
+    year: 2024 - present
   - position: Assistant Professor
     institution: Korea University (Dep. of Chemistry, Seoul, Rep. of Korea)
-    year: 2022 -
+    year: 2022 - 2024
   - position: Assistant Professor
     institution: DGIST (Dep. of Energy Science and Engineering, Daegu, Rep. of Korea)
     year: 2020 - 2022
