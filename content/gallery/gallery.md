@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>03/2025: Visit of Prof. Dr. Hye Ryung Byon (KAIST)</span></h2>
+{{< gallery album="2025_03_Prof_ByunHaeRyeong" >}}
+
+<br>
+
 <h2 class="headline"><span>02/2025: Byungmin's graduation</span></h2>
 {{< gallery album="2025_02_Byungmin_graduation" >}}
 
@@ -32,7 +37,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>11/2024: Visit of Prof. Ulrich Hoefer (Philipps University of Marburg)</span></h2>
+<h2 class="headline"><span>11/2024: Visit of Prof. Dr. Ulrich Hoefer (Philipps University of Marburg)</span></h2>
 {{< gallery album="2024_11_ProfHofer_visit" >}}
 
 <br>
