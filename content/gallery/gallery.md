@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>05/2025: Teacher's day 2025</span></h2>
+{{< gallery album="2025_05_Teachersday_2025" >}}
+
+<br>
+
 <h2 class="headline"><span>03/2025: Visit of Prof. Dr. Hye Ryung Byon (KAIST)</span></h2>
 {{< gallery album="2025_03_Prof_ByunHaeRyeong" >}}
 
