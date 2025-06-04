@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>05/2025: Korea University Fest 2025</span></h2>
+{{< gallery album="2025_05_UniversityFest" >}}
+
+<br>
+
 <h2 class="headline"><span>05/2025: Teacher's day 2025</span></h2>
 {{< gallery album="2025_05_Teachersday_2025" >}}
 
