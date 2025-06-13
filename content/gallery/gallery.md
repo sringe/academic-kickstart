@@ -22,6 +22,16 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>06/2025: URP 2025</span></h2>
+{{< gallery album="2025_06_URP_2025" >}}
+
+<br>
+
+<h2 class="headline"><span>06/2025: Dongjin's visit</span></h2>
+{{< gallery album="2025_06_Visitof_Dongjin" >}}
+
+<br>
+
 <h2 class="headline"><span>05/2025: Korea University Fest 2025</span></h2>
 {{< gallery album="2025_05_UniversityFest" >}}
 
