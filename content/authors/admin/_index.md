@@ -88,5 +88,5 @@ email: "stefan.ringe.tum@gmail.com"
 user_groups:
 - "Professor"
 ---
-Stefan Ringe is an Assistant Professor at the Department of Chemistry at Korea University and a research fellow at the IBS Center for Molecular Spectroscopy and Dynamics. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..
+Stefan Ringe is an Asssociate Professor at the Department of Chemistry at Korea University and a research fellow at the IBS Center for Molecular Spectroscopy and Dynamics. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..
 

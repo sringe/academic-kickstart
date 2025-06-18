@@ -1,166 +1,36 @@
-.w3-bar {
-background: rgb(223,223,223);
-background: radial-gradient(circle, rgba(223,223,223,1) 0%, rgba(223,223,223,1) 24%, rgba(0,0,0,0) 50%);
- height: 120px;
- text-align: center;
- padding: 13px 0;
- font-size: 3rem;
-}
-.w4-bar {
-background: rgb(223,223,223);
-background: radial-gradient(circle, rgba(223,223,223,1) 0%, rgba(223,223,223,1) 24%, rgba(0,0,0,0) 50%);
- height: 60px;
- text-align: center;
- padding: 13px 0;
- font-size: 1.5rem;
-}
-.dropdown-menu,
-nav#navbar-main li.nav-item {
-  font-size: 20px;
-  font-weight: bold;
+/* Styles for Two Featured Images Side-by-Side */
+.featured-images-side-by-side {
+    display: flex; /* Enables Flexbox for side-by-side layout */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    justify-content: center; /* Centers images horizontally if there's extra space */
+    align-items: flex-start; /* Aligns images to the top of the container */
+    gap: 20px; /* Adds 20px space between the images */
+    margin-top: 20px; /* Space above the image section */
+    margin-bottom: 30px; /* Space below the image section */
+    width: 100%; /* Ensure the container takes full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 0 15px; /* Add some padding on sides to prevent images from touching edges */
 }
 
-nav#navbar-main li.nav-brand {
-  font-size: 30px;
-}
-.lineHorizontal__container {
-  align-items: center;
-  background-color: firebrick;
-  display: flex;
-  height: 80px;
-}
-.lineHorizontal__container--leftAligned {
-  justify-content: flex-start;
-}
-.lineHorizontal__container--rightAligned {
-  justify-content: flex-end;
-}
-.lineHorizontal__container--detachedFromRight {
-  padding-right: 10%;
-}
-.lineHorizontal {
-  border-top: 1px solid azure;
-}
-.lineHorizontal--long {
-  width: 70%;
-}
-.lineHorizontal--short {
-  width: 40%;
-}
-hr.new1 {
-  border-top: 1px solid red;
+.featured-image-item {
+    flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis: Allows images to grow/shrink, starting at 45% width */
+    max-width: 48%; /* Each image will not exceed 48% of the container width */
+    height: auto; /* Maintains the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers its area without distortion, cropping if necessary */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-/* Dashed red border */
-hr.new2 {
-  border-top: 2px solid #494949;
-}
-
-/* Dotted red border */
-hr.new3 {
-  border-top: 1px dotted red;
-}
-
-/* Thick red border */
-hr.new4 {
-  border: 1px solid red;
-}
-
-/* Large rounded green border */
-hr.new5 {
-  border: 10px solid green;
-  border-radius: 5px;
-}
-div.textcenter5 {
-  text-align: center;
-  font-weight: bold;
-  color: #494949;
-  font-size: 30px;
-}
-
-blockquote.twitter-tweet {
-  display: inline-block;
-  font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 16px;
-  border-color: #eee #ddd #bbb;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  margin: 10px 5px;
-  padding: 0 16px 16px 16px;
-  max-width: 468px;
-}
-
-blockquote.twitter-tweet p {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 20px;
-}
-
-blockquote.twitter-tweet a {
-  color: inherit;
-  font-weight: normal;
-  text-decoration: none;
-  outline: 0 none;
-}
-.myDiv {
-  background-color: rgba(0, 0, 0, 0.15);
-}
-blockquote.twitter-tweet a:hover,
-blockquote.twitter-tweet a:focus {
-  text-decoration: underline;
-}
-
-.twitter_update_list {
-	font-size: 13px;
-	line-height: 21px;
-	list-style: none;
-	}
-.twitter_update_list li {
-	background: url('images/twitter-divider.gif') bottom left repeat-x;
-	padding-bottom: 7px;
-	margin-bottom: 9px;
-	}
-/*changes color of twitter*/
-.twitter_update_list span, #twitter_update_list span a {
-	color: #ababab;
-	text-decoration: none;
-	}
-.twitter_update_list a {
-	color: #6f7276;
-	}
-
-.row1{
-    text-align:center;
-    margin:0 auto;
-}
-.row1 .col-md-3{
-   display:inline-block;
-   vertical-align: middle;
-   float: none;
-}
-.rowcover{
-    text-align:center;
-    margin:0 auto;
-}
-.rowcover .col-md-2{
-   display:inline-block;
-   vertical-align: middle;
-   float: none;
-}
-h2.headline {
-   width: 100%;
-   text-align: center;
-   border-bottom: 3px solid #999;
-   line-height: 0.0em;
-   color: #999;
-   font-weight: bold;
-   margin: 10px 0 20px;
-}
-h2.headline span {
-    background:#fff;
-    padding:0 10px;
+/* Media query for smaller screens: stack images vertically */
+@media (max-width: 768px) {
+    .featured-images-side-by-side {
+        flex-direction: column; /* Stacks images vertically on screens up to 768px wide */
+        align-items: center; /* Centers the stacked images */
+        gap: 15px; /* Adjust gap for vertical stacking */
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+    .featured-image-item {
+        max-width: 90%; /* Images take up more width when stacked */
+        width: 100%; /* Ensure they fully utilize available width within the max-width limit */
+    }
 }
