@@ -5,7 +5,7 @@
     <link>https://ringelab.com/</link>
       <atom:link href="https://ringelab.com/index.xml" rel="self" type="application/rss+xml" />
     <description>RingeLab</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 23 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0900</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>RingeLab</title>
@@ -18,6 +18,80 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://ringelab.com/professor/about/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Alumni</title>
+      <link>https://ringelab.com/alumni/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0900</pubDate>
+      <guid>https://ringelab.com/alumni/</guid>
+      <description>&lt;table class=&#34;alumni-table&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+      &lt;th&gt;Research in Ringelab&lt;/th&gt;
+      &lt;th&gt;Period&lt;/th&gt;
+      &lt;th&gt;Position After Leaving the Group&lt;/th&gt;
+      &lt;th&gt;Current Position&lt;/th&gt;
+      &lt;th&gt;Profile&lt;/th&gt;
+      &lt;th&gt;Contact Info&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Hafiz Ghulam Abbas&lt;/td&gt;
+      &lt;td&gt;Postdoctoral researcher&lt;/td&gt;
+      &lt;td&gt;Materials screening&lt;/td&gt;
+      &lt;td&gt;Mar 2021 - Mar 2024&lt;/td&gt;
+      &lt;td&gt;Postdoc at University of Toronto (Prof. Ted Sargent&#39;s group)&lt;/td&gt;
+      &lt;td&gt;Postdoc at University of Toronto (Prof. Ted Sargent&#39;s group)&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://www.linkedin.com/in/hafiz-ghulam-abbas-29206790/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;hgabbas71@gmail.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Kamal Asghar&lt;/td&gt;
+      &lt;td&gt;Master Student&lt;/td&gt;
+      &lt;td&gt;Multiscale modeling&lt;/td&gt;
+      &lt;td&gt;Sep 2020 - Aug 2022&lt;/td&gt;
+      &lt;td&gt;PhD Student at KAERI (Prof. Chungyun Roh&#39;s group)&lt;/td&gt;
+      &lt;td&gt;PhD Student at KAERI (Prof. Chungyun Roh&#39;s group)&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://kaeri.ust.ac.kr/post/kamal-asghar-%EC%B9%B4%EB%A7%90-%EC%95%84%EC%8A%A4%EA%B0%80%EB%A5%B4&#34;&gt;Profile&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;kamal14@kaeri.re.kr&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dongjin Kim&lt;/td&gt;
+      &lt;td&gt;Undergrad Intern&lt;/td&gt;
+      &lt;td&gt;Solvation &amp; Electrified Interfaces&lt;/td&gt;
+      &lt;td&gt;Feb 2023 - Jun 2024&lt;/td&gt;
+      &lt;td&gt;PhD Student at UC Berkeley (Prof. Bingqing Cheng&#39;s group)&lt;/td&gt;
+      &lt;td&gt;PhD Student at UC Berkeley (Prof. Bingqing Cheng&#39;s group)&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://www.linkedin.com/in/dongjin-kim-5aaa7330a/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;dongjin.kim@berkeley.edu&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dayun Hwang&lt;/td&gt;
+      &lt;td&gt;Undergrad Intern&lt;/td&gt;
+      &lt;td&gt;Solvation &amp; Electrified Interfaces&lt;/td&gt;
+      &lt;td&gt;Feb 2023 - Nov 2023&lt;/td&gt;
+      &lt;td&gt;PhD Student at Cornell University (Prof. Andrew J Musser&#39;s group)&lt;/td&gt;
+      &lt;td&gt;PhD Student at Cornell University (Prof. Andrew J Musser&#39;s group)&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://www.linkedin.com/in/dayun-hwang-b84478211/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;dh755@cornell.edu&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dongvin Kwak&lt;/td&gt;
+      &lt;td&gt;Co-supervised PhD Student&lt;/td&gt;
+      &lt;td&gt;Multiscale modeling&lt;/td&gt;
+      &lt;td&gt;Mar 2023 - Aug 2024&lt;/td&gt;
+      &lt;td&gt;PhD Student at Korea University (Prof. Hugh I. Kim&#39;s group)&lt;/td&gt;
+      &lt;td&gt;PhD Student at Korea University (Prof. Hugh I. Kim&#39;s group)&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&#34;https://www.hughkimlab.com/currentmembers&#34;&gt;Lab Page&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;evaidn98@korea.ac.kr&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
     </item>
     
     <item>
