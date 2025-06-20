@@ -1,0 +1,62 @@
+/*************************************************
+ *  List items
+ **************************************************/
+
+.view-list-item {
+  margin-bottom: 1rem;
+}
+
+.pub-icon {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.81em;
+  padding-right: 6px;
+}
+
+.view-list-item .article-metadata {
+  margin-bottom: 0;
+}
+
+.pub-list-item .pub-abstract {
+  font-size: 0.2rem;
+}
+
+.pub-list-item .btn-links {
+  padding-top: 10px;
+}
+
+/*************************************************
+ *  Compact (stream) list view
+ **************************************************/
+
+.media.stream-item {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  /*border-bottom: 2px solid #cfcfcf;*/
+}
+
+.media.stream-item .article-title,
+.card-simple .article-title {
+  font-size: 1.0rem;
+}
+
+.media.stream-item .article-style,
+.card-simple .article-style {
+  margin-top: 2px;
+  font-size: 0.4rem;
+}
+
+.media.stream-item .stream-meta {
+  margin-top: 12px;
+}
+
+.media.stream-item img {
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .media.stream-item img {
+    max-width: 80px;
+  }
+}

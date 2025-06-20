@@ -1,0 +1,35 @@
+{{/* Display list of related publications. */}}
+<br>
+<b><span> Related publications: </span></b><br>
+{{ $taxonomy := "relatedpublications" }}
+{{ $dateformat := site.Params.publications.date_format }}
+<!-->
+{{ with .Param $taxonomy }}
+<-->
+  {{ $link_relatedpublications := site.Params.link_relatedpublications | default true }}
+  <!--> for list-->
+  <ul>
+  {{ range $index, $value := . }}
+    {{- $profile_page := site.GetPage (printf "/%s/%s" "publication" (. | anchorize)) -}}
+    {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
+    <!--
+    {{- if gt $index 0 }} <br>{{ end -}}
+    -->
+    {{ with site.GetPage (printf "%s" $name) }}
+    {{ $date := .Date.Format ($dateformat | default "2006") }}
+    <li>
+    <span>
+    <a href="../../publication/{{$name}}">{{ index .Params.authors 0 | markdownify }} <i>et al.</i>, <i>{{.Title | markdownify}}</i>, <i>{{.Params.publication | markdownify}}</i> <b> {{$date | markdownify}}</b>, {{.Params.volume}}, {{.Params.pages}}.</a>
+    </span>
+    </li>
+    {{ end }}
+  <!-->
+  central dot
+  <br>
+  <span>&#183;</span>
+  -->
+  {{- end -}}
+  </ul>
+<!-->
+{{ end }}
+<-->
