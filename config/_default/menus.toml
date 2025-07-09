@@ -27,19 +27,6 @@
   name = "Members"  # Title of the link.
   url = "people/"  # Widget Page folder name.
   weight = 3  # Position of the link in the navigation bar.
-  identifier = "people"
-
-[[main]]
-  name = "Current members"  # Title of the link.
-  url = "people/"  # Widget Page folder name.
-  weight = 1  # Position of the link in the navigation bar.
-  parent = "people"
-
-  [[main]]
-  name = "Alumni"  # Title of the link.
-  url = "alumni/"  # Widget Page folder name.
-  weight = 2  # Position of the link in the navigation bar.
-  parent = "people"
 
 [[main]]
   name = "Research"  # Title of the link.
