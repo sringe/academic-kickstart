@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H. Kim* | RingeLab</title>
+    <link>https://ringelab.com/authors/h.-kim/</link>
+      <atom:link href="https://ringelab.com/authors/h.-kim/index.xml" rel="self" type="application/rss+xml" />
+    <description>H. Kim*</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 17 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>H. Kim*</title>
+      <link>https://ringelab.com/authors/h.-kim/</link>
+    </image>
+    
+    <item>
+      <title>Elucidating Solvatochromic Shifts in Two-Dimensional Photocatalysts by Solving the Bethe–Salpeter Equation Coupled with Implicit Solvation Method</title>
+      <link>https://ringelab.com/publication/sejun-2024/</link>
+      <pubDate>Wed, 17 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/sejun-2024/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Active and stable PtP&lt;sub&gt;2&lt;/sub&gt;-based electrocatalysts solve the phosphate poisoning issue of high temperature fuel cells</title>
+      <link>https://ringelab.com/publication/hoon-2023/</link>
+      <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/hoon-2023/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GW Quasiparticle Energies and Bandgaps of Two-Dimensional Materials Immersed in Water</title>
+      <link>https://ringelab.com/publication/kim-2022-sv/</link>
+      <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/kim-2022-sv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the importance of the electric double layer structure in aqueous electrocatalysis</title>
+      <link>https://ringelab.com/publication/shin-2022-ks/</link>
+      <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/shin-2022-ks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selective electrochemical reduction of nitric oxide to hydroxylamine by atomically dispersed iron catalyst</title>
+      <link>https://ringelab.com/publication/kim-2021-mw/</link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/kim-2021-mw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thermal Transformation of Molecular Ni&lt;sup&gt;2&#43;&lt;/sup&gt;--N&lt;sub&gt;4&lt;/sub&gt; Sites for Enhanced CO&lt;sub&gt;2&lt;/sub&gt; Electroreduction Activity</title>
+      <link>https://ringelab.com/publication/sa-2020-thermal/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/sa-2020-thermal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Electric field mediated selectivity switching of electrochemical CO&lt;sub&gt;2&lt;/sub&gt; reduction from formate to CO on carbon supported Sn</title>
+      <link>https://ringelab.com/publication/lee-2020/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/lee-2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

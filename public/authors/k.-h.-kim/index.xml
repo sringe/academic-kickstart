@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K. H. Kim | RingeLab</title>
+    <link>https://ringelab.com/authors/k.-h.-kim/</link>
+      <atom:link href="https://ringelab.com/authors/k.-h.-kim/index.xml" rel="self" type="application/rss+xml" />
+    <description>K. H. Kim</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 10 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>K. H. Kim</title>
+      <link>https://ringelab.com/authors/k.-h.-kim/</link>
+    </image>
+    
+    <item>
+      <title>Heterogeneous Catalyst as a Functional Substrate Governing the Shape of Electrochemical Precipitates in Oxygen-Fueled Rechargeable Batteries</title>
+      <link>https://ringelab.com/publication/park-2023/</link>
+      <pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/park-2023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

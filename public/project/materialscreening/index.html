@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Adith Ramakrishnan Velmurugan">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Developing descriptors for electrochemical conversion processes which can be used to initialize high-throughput search for new materials, driven by fast machine learning techniques.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://ringelab.com/project/materialscreening/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo+2%7CArapey:400,400i%7CKarla:400,700%7CRoboto+Mono%7CLiu+Jian+Mao+Cao%7CTitillium+Web%7CDosis%7CBaloo+Chettan+2%7CCabin%7CArsenal%7CJaldi:400,700%7CAverage+Sans%7CHarmattan%7CAndika%7CCagliostro%7CBaloo+Thambi+2&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hub4511a7a53b68a692bfd3505f81db8a7_1687_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hub4511a7a53b68a692bfd3505f81db8a7_1687_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://ringelab.com/project/materialscreening/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="RingeLab">
+  <meta property="og:url" content="https://ringelab.com/project/materialscreening/">
+  <meta property="og:title" content="High-throughput computational search for high performance energy materials | RingeLab">
+  <meta property="og:description" content="Developing descriptors for electrochemical conversion processes which can be used to initialize high-throughput search for new materials, driven by fast machine learning techniques."><meta property="og:image" content="https://ringelab.com/project/materialscreening/featured.png">
+  <meta property="twitter:image" content="https://ringelab.com/project/materialscreening/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2022-04-05T10:52:49&#43;09:00">
+    
+    <meta property="article:modified_time" content="2022-04-05T10:52:49&#43;09:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ringelab.com/project/materialscreening/"
+  },
+  "headline": "High-throughput computational search for high performance energy materials",
+  
+  "image": [
+    "https://ringelab.com/project/materialscreening/featured.png"
+  ],
+  
+  "datePublished": "2022-04-05T10:52:49+09:00",
+  "dateModified": "2022-04-05T10:52:49+09:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Stefan Ringe"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "RingeLab",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ringelab.com/images/icon_hub4511a7a53b68a692bfd3505f81db8a7_1687_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Developing descriptors for electrochemical conversion processes which can be used to initialize high-throughput search for new materials, driven by fast machine learning techniques."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>High-throughput computational search for high performance energy materials | RingeLab</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/"><span style="font-family: 'Baloo 2', cursive;font-size:28px;text-align: center;">Ringe<span style="color: #b0b0b0">Lab</span><span style="font-size: 0.7rem;color: #b0b0b0"><i>Computational Modeling Lab</i></span></span>
+        
+        </a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">
+      <span style="font-family: 'Baloo 2'">Ringe<span style="color: #b0b0b0">Lab</span></span></a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Members</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/people/"><span>Current Members</span></a>
+            
+              <a class="dropdown-item" href="/alumni/"><span>Alumni</span></a>
+            
+          </div>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Research</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/research/"><span>Research Overview</span></a>
+            
+              <a class="dropdown-item" href="/project/solvationandelectrifiedinterfaces/"><span>Solvation and Electrified Interfaces</span></a>
+            
+              <a class="dropdown-item" href="/project/materialscreening/"><span>Materials Screening</span></a>
+            
+              <a class="dropdown-item" href="/project/multiscalemodeling/"><span>Multiscale modeling</span></a>
+            
+          </div>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Software</span><span class="caret"></span>
+          </a>
+          <div class="dropdown-menu">
+            
+              <a class="dropdown-item" href="/software/mpbe/"><span>MPBE/FHI-aims</span></a>
+            
+              <a class="dropdown-item" href="/software/catint/"><span>CatINT/COMSOL</span></a>
+            
+          </div>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/gallery/"><span>Gallery</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/my-publications/"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact/"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article article-project">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+  
+<div class="container pt-3">
+        
+
+  
+
+  
+    
+
+
+
+
+<div class="metadata">
+
+  
+  
+  
+  <div>
+    
+
+<h1>High-throughput computational search for high performance energy materials</h1>
+<figure>
+        <img src="featured.png" alt="Trulli" style="width:">
+  <figcaption>
+  <b>
+  Schematic depiction of the electrocatalyst screening approach.
+  </b>
+  The figure shows an exemplary activity volcano plotted as a function of two descriptors which accurately depict the activity trends across different electrocatalysts (shown as dots).
+  </figcaption>
+</figure>
+
+
+  <p style="color:black">The development of new materials for energy conversion and storage processes is significantly limited by the time it takes to synthesize new materials. Computational techniques can provide insights into a much wider range of materials in a short time-scale, but quantum chemical methods remain too slow to tackle the vast chemical material space. In this project, we are aiming therefore from detailed quantum chemical calculations and kinetic modeling to develop insights into descriptors that accurately depict catalytic activity and selectivity trends across materials. Such descriptors are planned to be learned by high-performance machine learning algorithms, so that they can be quickly estimated for a giant class of materials.</p>
+
+<hr>
+
+
+  </div>
+  
+  
+
+  
+  
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <span><b>Apr 5, 2022</b></span>
+  </span>
+  
+  
+
+  
+  
+  
+  
+  <br>
+  <br>
+  <b><span>Related research projects/funds:</span></b>
+  <br>
+  
+  
+    <ul><li>
+            
+       NRF (한국연구재단) Grant No. 2020M3H7A1096388 (CtoX)
+    </li>
+    
+    </ul>
+  
+  
+  
+
+  
+  
+  
+  
+  <div>
+    
+
+
+<br>
+
+<b><span> Subgroup members: </span></b>
+
+<br>
+
+
+
+  
+  <span><a href="/authors/admin/">Stefan Ringe</a></span>, <span><a href="/authors/han-seungchang/">한승창<br/> Seungchang Han</a></span>, <span><a href="/authors/chanjin-kim/">김찬진<br/> Chanjin Kim</a></span>, <span><a href="/authors/hoseong/">설호성<br/> Hoseong Seol</a></span>, <span><a href="/authors/suyeon/">유수연<br/> Suyeon Yoo</a></span>, <span><a href="/authors/kim-minjae/">김민재<br/> Minjae Kim</a></span>
+
+  </div>
+  
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  <div>
+    
+<br>
+<b><span> Related publications: </span></b><br>
+
+
+
+  
+  
+  <ul>
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/beomgyun-2025">B.  Jeong*† <i>et al.</i>, <i>CO Cryo-sorption as a Surface-sensitive Spectroscopic Probe of the Active Site Density of Single-atom Catalysts</i>, <i><em>Angew Chem Int Ed Engl</em></i> <b> 2025</b>, , e202420673.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/ji-2024">S. Ji† <i>et al.</i>, <i>Nucleation-Controlled Doping of II–VI Semiconductor Nanocrystals Mediated by Magic-Sized Clusters</i>, <i><em>Small Sci.</em></i> <b> 2024</b>, , 2400300.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/sejun-2024">S.  Kim† <i>et al.</i>, <i>Elucidating Solvatochromic Shifts in Two-Dimensional Photocatalysts by Solving the Bethe–Salpeter Equation Coupled with Implicit Solvation Method</i>, <i><em>J. Phys. Chem. Lett.</em></i> <b> 2024</b>, 15, 4575-4580.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/ringe-2023-screening"><b>S. Ringe*</b> <i>et al.</i>, <i>The importance of a charge transfer descriptor for screening potential CO<sub>2</sub> reduction electrocatalysts</i>, <i><em>Nat. Commun.</em></i> <b> 2023</b>, 14, 2598.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/park-2023">M.  Park† <i>et al.</i>, <i>Heterogeneous Catalyst as a Functional Substrate Governing the Shape of Electrochemical Precipitates in Oxygen-Fueled Rechargeable Batteries</i>, <i><em>J. Am. Chem. Soc.</em></i> <b> 2023</b>, 145, 15425-15434.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/beomil-2023">B.  Kim† <i>et al.</i>, <i>Trace-Level Cobalt Dopants Enhance CO<sub>2</sub> Electroreduction and Ethylene Formation on Copper</i>, <i><em>ACS Energy Lett.</em></i> <b> 2023</b>, 8, 3356–3364.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/hong-2023">S. Hong† <i>et al.</i>, <i>Tuning the C<sub>1</sub>/C<sub>2</sub> Selectivity of Electrochemical CO<sub>2</sub> Reduction on Cu-CeO<sub>2</sub> Nanorods by Oxidation State Control</i>, <i><em>Adv. Mater.</em></i> <b> 2023</b>, 35, 2208996.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/hoon-2023">J.H. Yu† <i>et al.</i>, <i>Active and stable PtP<sub>2</sub>-based electrocatalysts solve the phosphate poisoning issue of high temperature fuel cells</i>, <i><em>J. Mater. Chem. A.</em></i> <b> 2023</b>, 11, 6413-6427.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/jae-2022">S. J Shin† <i>et al.</i>, <i>A unifying mechanism for cation effect modulating C<sub>1</sub> and C<sub>2</sub> productions from CO<sub>2</sub> electroreduction</i>, <i><em>Nat. Commun.</em></i> <b> 2022</b>, 13, 5482.</a>
+    </span>
+    </li>
+    
+  
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/kim-2022-sv"><b>S.  Kim</b> <i>et al.</i>, <i>GW Quasiparticle Energies and Bandgaps of Two-Dimensional Materials Immersed in Water</i>, <i><em>J. Phys. Chem. Lett.</em></i> <b> 2022</b>, 13, 7574 - 7582.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/tetteh-2022-rm">E. B.  Tetteh† <i>et al.</i>, <i>Strained Pt(221) Facet in a PtCo@Pt-Rich Catalyst Boosts Oxygen Reduction and Hydrogen Evolution Activity</i>, <i><em>ACS Appl. Mater. Interfaces</em></i> <b> 2022</b>, 14, 25246 - 25256.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/song-2021-xo">H.  Song <i>et al.</i>, <i>Tunable Product Selectivity in Electrochemical CO2 Reduction on Well-Mixed Ni-Cu Alloys</i>, <i><em>ACS Appl. Mater. Interfaces</em></i> <b> 2021</b>, 13, 55272 - 55280.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/kim-2021-mw">D. H.  Kim† <i>et al.</i>, <i>Selective electrochemical reduction of nitric oxide to hydroxylamine by atomically dispersed iron catalyst</i>, <i><em>Nat. Commun.</em></i> <b> 2021</b>, 12, 1 - 11.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/ludwig-2020-atomistic">T.  Ludwig <i>et al.</i>, <i>Atomistic Insight into Cation Effects on Binding Energies in Cu-Catalyzed Carbon Dioxide Reduction</i>, <i><em>J. Phys. Chem. C</em></i> <b> 2020</b>, 124, 24765–24775.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/sa-2020-thermal">Y. J.  Sa† <i>et al.</i>, <i>Thermal Transformation of Molecular Ni<sup>2+</sup>&ndash;N<sub>4</sub> Sites for Enhanced CO<sub>2</sub> Electroreduction Activity</i>, <i><em>ACS Catal.</em></i> <b> 2020</b>, 10, 10920 - 10931.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/lee-2020">M.  Lee† <i>et al.</i>, <i>Electric field mediated selectivity switching of electrochemical CO<sub>2</sub> reduction from formate to CO on carbon supported Sn</i>, <i><em>ACS Energy Lett.</em></i> <b> 2020</b>, 5, 2987 - 2994.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/xia-2020-ld">C.  Xia† <i>et al.</i>, <i>Confined local oxygen gas promotes electrochemical water oxidation to hydrogen peroxide</i>, <i><em>Nature Catalysis</em></i> <b> 2020</b>, 1, 1 - 10.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/gauthier-2019-us">J. A.  Gauthier <i>et al.</i>, <i>Unified Approach to Implicit and Explicit Solvent Simulations of Electrochemical Reaction Energetics</i>, <i><em>J. Chem. Theory Comput.</em></i> <b> 2019</b>, 15, 6895 - 6906.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/gauthier-2019-ig">J. A.  Gauthier† <i>et al.</i>, <i>Practical Considerations for Continuum Models Applied to Surface Electrochemistry</i>, <i><em>Chemphyschem</em></i> <b> 2019</b>, 20, 3074 - 3080.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/ringe-2019-dm"><b>S.  Ringe†*</b> <i>et al.</i>, <i>Understanding cation effects in electrochemical CO<sub>2</sub> reduction</i>, <i><em>Energy Environ. Sci.</em></i> <b> 2019</b>, 12, 3001 - 3014.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/wu-2019-bq">Y.  Wu† <i>et al.</i>, <i>A Two-Dimensional MoS<sub>2</sub> Catalysis Transistor by Solid-State Ion Gating Manipulation and Adjustment (SIGMA)</i>, <i><em>Nano Lett.</em></i> <b> 2019</b>, 19, 7293 - 7300.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/clark-2019-xk">E. L.  Clark† <i>et al.</i>, <i>Influence of Atomic Surface Structure on the Activity of Ag for the Electrochemical Reduction of CO<sub>2</sub> to CO</i>, <i><em>ACS Catal.</em></i> <b> 2019</b>, 9, 4006 - 4014.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/ludwig-2019-gt">T.  Ludwig <i>et al.</i>, <i>Solvent&ndash;Adsorbate Interactions and Adsorbate-Specific Solvent Structure in Carbon Dioxide Reduction on a Stepped Cu Surface</i>, <i><em>J. Phys. Chem. C</em></i> <b> 2019</b>, 123, 5999 - 6009.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/gauthier-2019-wt">J. A.  Gauthier <i>et al.</i>, <i>Challenges in Modeling Electrochemical Reaction Energetics with Polarizable Continuum Models</i>, <i><em>ACS Catal.</em></i> <b> 2019</b>, 9, 920 - 931.</a>
+    </span>
+    </li>
+    
+  
+    
+    
+    <li>
+    <span>
+    <a href="../../publication/patel-2018-tq">A. M.  Patel <i>et al.</i>, <i>Theoretical Approaches to Describing the Oxygen Reduction Reaction Activity of Single-Atom Catalysts</i>, <i><em>J. Phys. Chem. C</em></i> <b> 2018</b>, 122, 29307 - 29318.</a>
+    </span>
+    </li>
+    
+  </ul>
+
+
+  </div>
+  
+  
+</div>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+    <div class="project-related-pages content-widget-hr">
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+
+      
+      
+      
+    </div>
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
