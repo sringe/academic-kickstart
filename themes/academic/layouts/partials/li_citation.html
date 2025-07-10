@@ -1,0 +1,49 @@
+<div class="pub-list-item" style="margin-bottom: 1rem">
+  <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
+  {{/* APA Style */}}
+  {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" . }}, 
+  </span>
+  <!--
+  ({{- .Date.Format "2006" -}}).
+  -->
+  <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+  <span>,</span>
+  {{ if .Params.publication_short }}
+  {{- .Params.publication_short | markdownify -}}
+  {{ else if .Params.publication }}
+  {{- .Params.publication | markdownify -}}
+  {{ end }}
+  <!-- date -->
+  {{ $date := .Lastmod.Format site.Params.date_format }}
+  {{ $date = .Date.Format (.Params.publications.date_format | default "2006") }}
+  <span><b>{{$date}}</b></span>
+  {{ $volume := .Params.volume}}
+  <span><i>{{ $volume }}</i>,</span>
+  {{ $pages := .Params.pages }}
+  {{ $pages }}
+  <span>.</span>
+  <p>{{ partial "page_links" (dict "page" . "is_list" 1) }}</p>
+
+  {{/* MLA Style */}}
+  {{ else }}
+
+  <span class="article-metadata li-cite-author">
+    {{ partial "page_metadata_authors" . }}
+  </span>.
+  <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>.
+  {{ if .Params.publication_short }}
+  {{- .Params.publication_short | markdownify -}},
+  {{ else if .Params.publication }}
+  {{- .Params.publication | markdownify -}},
+  {{ end }}
+  {{- .Date.Format "2006" -}}.
+  {{ $pages := .Params.pages }}
+  {{ $pages }}
+  <p>{{ partial "page_links" (dict "page" . "is_list" 1) }}</p>
+
+  {{ end }}
+
+</div>

@@ -1,0 +1,258 @@
+{{/* Pages Widget */}}
+<!--
+file path {{ .File.Path }}
+-->
+
+
+
+{{/* Initialise */}}
+{{ $ := .root }}
+{{ $st := .page }}
+{{ $items_type := $st.Params.content.page_type | default "post" }}
+{{ $items_offset := $st.Params.content.offset | default 0 }}
+{{ $items_count := $st.Params.content.count }}
+{{ if eq $items_count 0 }}
+  {{ $items_count = 65535 }}
+{{ else }}
+  {{ $items_count = $items_count | default 5 }}
+{{ end }}
+{{ $items_sort := $st.Params.content.order | default "desc" }}
+
+{{/* Query */}}
+{{ $query := where site.RegularPages "Type" $items_type }}
+{{ $archive_page := site.GetPage "Section" $items_type }}
+
+<!--
+HERE are the scratch modifications
+-->
+{{ $st.Scratch.Set "previousdate" "0" }}
+{{ $indexScratch := $st.Scratch }}
+
+{{/* Filters */}}
+{{ if $st.Params.content.filters.tag }}
+  {{ $archive_page = site.GetPage (printf "tags/%s" (urlize $st.Params.content.filters.tag)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $st.Params.content.filters.category }}
+  {{ $archive_page = site.GetPage (printf "categories/%s" (urlize $st.Params.content.filters.category)) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $st.Params.content.filters.publication_type }}
+  {{ $archive_page = site.GetPage (printf "publication_types/%s" $st.Params.content.filters.publication_type) }}
+  {{ $query = $query | intersect $archive_page.Pages }}
+{{ end }}
+{{ if $st.Params.content.filters.exclude_featured }}
+  {{ $query = where $query "Params.featured" "!=" true }}
+{{ end }}
+{{ if $st.Params.content.filters.exclude_past }}
+  {{ $query = where $query "Date" ">=" now }}
+{{ end }}
+{{ if $st.Params.content.filters.exclude_future }}
+  {{ $query = where $query "Date" "<" now }}
+{{ end }}
+
+
+
+{{ $count := len $query }}
+
+{{/* Sort */}}
+{{ $sort_by := "Date" }}
+{{ $query = sort $query $sort_by $items_sort }}
+
+{{/* Offset and Limit */}}
+{{ if gt $items_offset 0 }}
+  {{ $query = first $items_count (after $items_offset $query) }}
+{{ else }}
+  {{ $query = first $items_count $query }}
+{{ end }}
+
+{{/* Localisation */}}
+{{ $i18n := "" }}
+{{ if eq $items_type "post" }}
+  {{ $i18n = "more_posts" }}
+{{ else if eq $items_type "talk" }}
+  {{ $i18n = "more_talks" }}
+{{ else if eq $items_type "publication" }}
+  {{ $i18n = "more_publications" }}
+{{ else }}
+  {{ $i18n = "more_pages" }}
+{{ end }}
+
+<div class="row">
+    {{ if eq $items_type "post" }}
+    <h2 class="headline"><span>WELCOME</span></h2>
+    {{ end }}
+<center>
+         {{ if $st.Params.welcomemessage }}
+                <span>
+                {{ $st.Params.welcomemessage | markdownify }}
+                </span>
+                 <br/>
+         {{ end }}
+
+
+         {{ if $st.Params.welcomemessageKR }}
+                <span>
+                {{ $st.Params.welcomemessageKR | markdownify }}
+                </span>
+                <br/>
+         {{ end }}
+<!--
+<a href="{{ "mailto:sringe[at]korea.ac.kr" | safeURL }}" {{ "" | safeHTMLAttr }}>
+  <i class="fas fa-envelope fa-2x"></i>
+</a>
+<a href="{{ "https://scholar.google.com/citations?user=uSQ8J50AAAAJ&hl=en" | safeURL }}" {{ "" | safeHTMLAttr }}>
+  <i class="ai ai-google-scholar fa-2x"></i>
+</a>
+-->
+</center>
+</div>
+
+<div class="rowcover">
+{{ with $st.Content }}{{ . }}{{ end }}
+{{ range $post := $query }}
+ {{ partial "li_cover_list" . }}
+{{ end }}
+</div>
+<br>
+
+<!--
+{{ if ne $items_type "publication"}}
+<hr class="new2">
+{{ end }}-->
+<div class="row">
+
+{{ with $st.Params.subtitle }} <h2 class="headline"  style="font-size:1.0rem"><span>{{ . | markdownify | emojify }}</span></h2> {{ end }}
+
+<!--
+    <div class="myDiv col-12 col-lg-3">
+    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
+    {{ with $st.Params.subtitle }}<p style="font-size:0.8rem">{{ . | markdownify | emojify }}</p>{{ end }}
+  </div>
+-->
+  {{ if $st.Params.includetwitter }}
+  <!--
+    <div class="col-12 col-lg-12">
+
+      {{ with $st.Content }}{{ . }}{{ end }}
+      {{ range $post := $query }}
+        {{ if eq $st.Params.design.view 1 }}
+          {{ partial "li_list" . }}
+        {{ else if eq $st.Params.design.view 3 }}
+          {{ partial "li_card" . }}
+        {{ else if eq $st.Params.design.view 4 | and (eq $items_type "publication") }}
+          {{ partial "li_citation" . }}
+        {{ else }}
+          {{ partial "li_compact" . }}
+        {{ end }}
+      {{end}}
+
+      {{ if gt $count $items_count }}
+      <div class="see-all">
+        <a href="{{ $archive_page.RelPermalink }}">
+          {{ i18n $i18n | default "See all" }}
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </div>
+      {{ end }}
+    </div>
+  -->
+    {{ if eq $items_type "post" }}
+    <h2 class="headline"><span>NEWS</span></h2>
+    {{ end }}
+    <div class="col-12 col-lg-12">
+                <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
+                <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+                <!-- Twitter Embed Code,  check options here: https://developer.twitter.com/en/docs/twitter-for-websites/timelines/overview -->
+                <div class="twitter-feed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                              <!-- Twitter Embed Code -->
+                                <a class="twitter-timeline" href="https://twitter.com/RingeStefan" 
+                                data-chrome="nofooter noborders transparent noscrollbar"
+                                data-dnt="true"
+                                data-show-replies="false"
+                                data-tweet-limit="8" >RingeLab Live</a>
+                                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                               <!-- / Twitter Embed Code -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Twitter Embed Code -->
+                <script>
+                        $('.twitter-feed').delegate('#twitter-widget-0', 'DOMSubtreeModified propertychange', function () {
+                            customizeTweetMedia();
+                        });
+                        
+                        var customizeTweetMedia = function () {
+                            // CSS Overrides
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Header').css('display','none');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Header').css('background-color','#e6e6e6');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Header-title').css('border-collapse','separate');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Header-title').css('border-radius','25px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-').css('border-radius','25px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Header-byline').remove();
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-InformationCircle').remove();
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('img.Avatar').css('display', 'none');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-author').remove();
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-media').css('width','80%');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-media').css('margin','auto');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('span.TweetAuthor-avatar.Identity-avatar').remove();
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('span.TweetAuthor-screenName').css('font-size', '18px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('span.TweetAuthor-screenName').css('font-family', 'Arial');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-TweetList-tweet').css('border-bottom','2px solid #cfcfcf');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('margin-bottom', '0px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('margin-left', '12px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('margin-inline-start', '12px');
+//                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-metadata').css('float','left');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Tweet-timestamp').css('font-size','18px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('font-family', 'Arial');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('font-size', '18px');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('p.timeline-tweet-text').css('line-height', '1.6');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('ul.timeline-tweet-actions').css('display', 'none');
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-Footer u-cf').css('display','block');
+                        
+                            // Call the function on dynamic updates in addition to page load
+                            $('.twitter-feed').find('.twitter-timeline').contents().find('.timeline-TweetList').bind('DOMSubtreeModified propertychange', function () {
+                                customizeTweetMedia(this);
+                            });
+                         }
+                </script>
+
+    </div>
+  {{ else }}
+  <div class="col-12 col-lg-12">
+
+    {{ with $st.Content }}{{ . }}{{ end }}
+
+    <h2 class="headline"><span>2022</span></h2>
+    {{ range $post := $query }}
+      <!--
+      HERE ALSO
+      {{ partial "page_metadata.html" (dict "indexScratch" $indexScratch "page" .) }}
+      -->
+      {{ if eq $st.Params.design.view 1 }}
+        {{ partial "li_list" . }}
+      {{ else if eq $st.Params.design.view 3 }}
+        {{ partial "li_card" . }}
+      {{ else if eq $st.Params.design.view 4 | and (eq $items_type "publication") }}
+        {{ partial "li_citation" . }}
+      {{ else }}
+        {{ partial "li_compact" . }}
+      {{ end }}
+    {{end}}
+
+    {{ if gt $count $items_count }}
+    <div class="see-all">
+      <a href="{{ $archive_page.RelPermalink }}">
+        {{ i18n $i18n | default "See all" }}
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    {{ end }}
+
+  </div>
+  {{ end }}
+</div>

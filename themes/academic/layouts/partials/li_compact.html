@@ -1,0 +1,107 @@
+{{ $item := . }}
+
+{{/* Dynamic view adjusts to content type. */}}
+{{ $show_authors_only := false }}{{/* Show authors only or full metadata? */}}
+{{ $show_buttons := false }}
+{{ $link := $item.RelPermalink }}
+{{ $target := "" }}
+{{ if $item.Params.external_link }}
+  {{ $link = $item.Params.external_link }}
+  {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+{{ end }}
+{{ if eq $item.Type "talk" }}
+  {{ $show_authors_only = true }}
+  {{ $show_buttons = true }}
+{{ else if eq $item.Type "publication" }}
+  {{ $show_authors_only = true }}
+  {{ $show_buttons = true }}
+{{ else if eq $item.Type "project" }}
+  {{ $show_authors_only = true }}
+  {{ $show_buttons = true }}
+{{ end }}
+{{ $show_authors_only := false }}{{/* Show authors only or full metadata? */}}
+
+{{/* Get summary. */}}
+{{ $summary := "" }}
+{{ if $item.Params.summary }}
+  {{ $summary = $item.Params.summary | markdownify | emojify }}
+{{ else if .Params.abstract }}
+  {{ $summary = .Params.abstract | markdownify | emojify }}
+{{ else if $item.Truncated }}
+  {{ $summary = $item.Summary }}
+{{ end }}
+
+
+<div class="media stream-item">
+  <div class="media-body">
+      <h1 class="article-title mb-0 mt-0">
+       <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title | markdownify}}</a>
+         <!--        {{ $item.Title | markdownify}} -->
+      </h1>
+
+<!--    {{ with $summary }}
+    <div class="article-style">
+      {{ . | truncate 135 }}
+    </div>
+    {{ end }} -->
+
+
+    <div class="stream-meta article-metadata">
+
+      {{ if eq $item.Type "talk" }}
+      <div>
+        <span>
+          {{ partial "functions/get_event_dates" $item }}
+        </span>
+        {{ with $item.Params.location }}
+        <span class="middot-divider"></span>
+        <span>{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ if and $show_authors_only $item.Params.authors }}
+      <div>
+        {{ partial "page_metadata_authors" $item }}
+      </div> 
+      {{ else if not $show_authors_only }} 
+        {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
+      {{ end }}
+    </div>
+
+    {{ if $show_buttons }}
+    <div class="btn-links">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+
+  </div>
+  <div class="ml-4">
+    <!--
+    <img src="featured_wide.png" alt="Trulli" style="width:200%">
+    -->
+    {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ with $resource }}
+    {{ $image := .Resize "500x" }}
+    <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
+            <img src="{{ $image.RelPermalink }}" alt="" height="500" width="500">
+    </a>
+    {{end}}
+  </div>
+</div>
+<!-- this is hacky but currently don't have time to do this automatically. introduce a year line before the first publicaiton of the year-->
+{{ if eq $item.Params.doi "10.1038/s41467-021-27909-x" }}
+<h2 class="headline"><span>2021</span></h2>
+{{ else if eq $item.Params.doi "10.1038/s41467-021-22147-7" }}
+<!--
+<div class="w3-bar w3-black">
+    <div class="w3-bar-item">2021</div>
+</div>
+-->
+<h2 class="headline"><span>2020</span></h2>
+{{ else if eq $item.Params.doi "10.1038/s41467-019-13777-z" }}
+<h2 class="headline"><span>2019</span></h2>
+{{ else if eq $item.Params.doi "10.1038/s41467-018-07970-9" }}
+<h2 class="headline"><span>before 2019</span></h2>
+{{ else }}
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+{{ end }}

@@ -1,0 +1,18 @@
+{{/* Display project description. */}}
+
+<h1>{{ .Params.title  | markdownify}}</h1>
+<figure>
+        <img src="{{ .Params.projectimage }}" alt="Trulli" style="width:{{ .Params.projectimagespan }}">
+  <figcaption>
+  <b>
+  {{ .Params.projectimagecaptionshort  | markdownify}}
+  </b>
+  {{ .Params.projectimagecaption  | markdownify}}
+  </figcaption>
+</figure>
+{{ $taxonomy := "projecttext" }}
+{{ with .Param $taxonomy }}
+  <p style="color:black">{{ . | markdownify }}</p>
+{{ end }}
+<hr>
+
