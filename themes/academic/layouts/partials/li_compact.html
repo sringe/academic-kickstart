@@ -89,7 +89,15 @@
   </div>
 </div>
 <!-- this is hacky but currently don't have time to do this automatically. introduce a year line before the first publicaiton of the year-->
-{{ if eq $item.Params.doi "10.1038/s41467-021-27909-x" }}
+ {{ if eq $item.Params.doi "10.1002/anie.202420673" }}
+ <h2 class="headline"><span>2024</span></h2>
+ {{ else if eq $item.Params.doi "10.1021/acs.jpclett.4c00752" }}
+ <h2 class="headline"><span>2023</span></h2>
+ {{ else if eq $item.Params.doi "10.1039/D2TA09110K" }}
+ <h2 class="headline"><span>2022</span></h2>
+ {{ else if eq $item.Params.doi "10.1039/D2TA09110K" }}
+ <h2 class="headline"><span>2022</span></h2>
+{{ else if eq $item.Params.doi "10.1038/s41467-021-27909-x" }}
 <h2 class="headline"><span>2021</span></h2>
 {{ else if eq $item.Params.doi "10.1038/s41467-021-22147-7" }}
 <!--

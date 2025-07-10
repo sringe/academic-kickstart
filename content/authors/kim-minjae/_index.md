@@ -60,7 +60,7 @@ email: "kmj0710@korea.ac.k"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Undergrads and Interns"
+- ""
 ---
 
 

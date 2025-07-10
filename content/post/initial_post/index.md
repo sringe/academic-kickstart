@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "The group is going to officially start at the 24th of February 2020, looking already now for bright students! 어서오세요!"
-subtitle: "Please contact Prof. Ringe regarding project details for internships, Master and Ph.D. and attach a CV."
+title: "Please follow Prof. Stefan Ringe on Linkedin"
+subtitle: "https://www.linkedin.com/in/stefan-ringe-7b604877/"
 summary: ""
 authors: []
 tags: []
