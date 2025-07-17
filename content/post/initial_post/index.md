@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Please follow Prof. Stefan Ringe on Linkedin"
-subtitle: "https://www.linkedin.com/in/stefan-ringe-7b604877/"
+title: "Please follow Prof. Stefan Ringe on [<span style='color: #4C98C8;'>Linkedin</span>](https://www.linkedin.com/in/stefan-ringe-7b604877/)"
+subtitle: ""
 summary: ""
 authors: []
 tags: []
