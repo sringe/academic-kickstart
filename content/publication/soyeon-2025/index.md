@@ -8,7 +8,7 @@ abstract: "Atomically precise (CdSe)<sub>13</sub> clusters, the smallest CdSe se
 featured: true
 publication: "*Nano Lett.*"
 doi: "10.1021/acs.nanolett.5c00529"
-volume: ""
-pages: ""
+volume: "25"
+pages: "7351-7360"
 ---
 

@@ -8,7 +8,7 @@ abstract: "Doping quantum-confined semiconductor nanocrystals offers an effectiv
 featured: false
 publication: "*Small Sci.*"
 doi: "10.1002/smsc.202400300"
-volume: ""
+volume: "5"
 pages: "2400300"
 ---
 

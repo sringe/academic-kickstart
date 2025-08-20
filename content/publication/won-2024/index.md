@@ -8,7 +8,7 @@ abstract: "Nitric oxide (NO) is a gaseous molecule intricately implicated in onc
 featured: false
 publication: "*Angew Chem Int Ed Engl*"
 doi: "10.1002/anie.202411260 "
-volume: ""
+volume: "63"
 pages: "e202411260"
 ---
 
