@@ -79,7 +79,7 @@ current variable{{ .indexScratch.Get "previousdate" }}
 
   {{ if and (eq $is_list 0) (eq $page.Type "publication") }}
   <span class="article-publication">
-    <span>,</span>
+    <span></span>
     {{ $journal := $page.Params.publication }}
     {{ $journal | markdownify }}
   </span>

@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>08/2025: China Visit</span></h2>
+{{< gallery album="2025_09_China_visit" >}}
+
+<br>
+
 <h2 class="headline"><span>06/2025: Visit of Dr. Sungwoo Kang (KIST)</span></h2>
 {{< gallery album="2025_06_Visit_of_DrSungwoo_Kang" >}}
 
