@@ -22,12 +22,12 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>09/2025: Lennard-Jones-Centre-CECAM Meeting and DPG 2025</span></h2>
+<h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge) and DPG 2025 (Göettingen) </span></h2>
 {{< gallery album="2025_09_CECAM_and_DPG" >}}
 
 <br>
 
-<h2 class="headline"><span>08/2025: Invited talks at NanoChina (Beijing) and ICCSH (Hangzhou)</span></h2>
+<h2 class="headline"><span>08/2025: Invited talks at NanoChina (Beijing) and ICCSH (Hangzhou), China</span></h2>
 {{< gallery album="2025_09_China_visit" >}}
 
 <br>
@@ -97,7 +97,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>10/2024: ECS Prime 2024, Hawaii</span></h2>
+<h2 class="headline"><span>10/2024: ECS Prime 2024, Hawaii, USA</span></h2>
 {{< gallery album="2024_10_ECS_Conference" >}}
 
 <br>
@@ -127,7 +127,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>03/2024: DPG Spring Meeting 2024, Germany</span></h2>
+<h2 class="headline"><span>03/2024: DPG Spring Meeting 2024, Berlin, Germany</span></h2>
 {{< gallery album="2024_3_DPG_2024" >}}
 
 <br>
