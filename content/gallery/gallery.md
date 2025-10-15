@@ -22,7 +22,7 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
-<h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge) and DPG 2025 (Göettingen) </span></h2>
+<h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge, UK) and DPG 2025 (Göettingen, Germany) </span></h2>
 {{< gallery album="2025_09_CECAM_and_DPG" >}}
 
 <br>
@@ -37,12 +37,12 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>06/2025: URP 2025</span></h2>
+<h2 class="headline"><span>06/2025: Undergraduate Research Project Prize 2025 (Suyeon Kim)</span></h2>
 {{< gallery album="2025_06_URP_2025" >}}
 
 <br>
 
-<h2 class="headline"><span>06/2025: Dongjin's visit</span></h2>
+<h2 class="headline"><span>06/2025: Visit of Dongjin Kim (UC Berkeley, USA)</span></h2>
 {{< gallery album="2025_06_Visitof_Dongjin" >}}
 
 <br>
