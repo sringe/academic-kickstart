@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>10/2025: IPAM Workshop, (UCLA, Los Angeles, USA) </span></h2>
+{{< gallery album="2025_10_IPAM_2_LA" >}}
+
+<br>
+
 <h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge, UK) and DPG 2025 (Göettingen, Germany) </span></h2>
 {{< gallery album="2025_09_CECAM_and_DPG" >}}
 
