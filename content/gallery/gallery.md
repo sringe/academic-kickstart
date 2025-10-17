@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>10/2025: Visit of Prof. Wenxing Yang (Westlake University, China) </span></h2>
+{{< gallery album="2025_10_Wenxing_Yang_visit" >}}
+
+<br>
+
 <h2 class="headline"><span>10/2025: IPAM Workshop, (UCLA, Los Angeles, USA) </span></h2>
 {{< gallery album="2025_10_IPAM_2_LA" >}}
 
