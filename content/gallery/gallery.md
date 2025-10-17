@@ -32,7 +32,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge, UK) and DPG 2025 (Göettingen, Germany) </span></h2>
+<h2 class="headline"><span>09/2025: CECAM Meeting (Cambridge, UK) and DPG 2025 (Göttingen, Germany) </span></h2>
 {{< gallery album="2025_09_CECAM_and_DPG" >}}
 
 <br>
