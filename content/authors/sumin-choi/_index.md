@@ -2,6 +2,8 @@
 # Display name
 name: 최수민<br/> Sumin Choi 
 
+weight: 2
+
 # Username (this should match the folder name)
 authors:
 - sumin-choi

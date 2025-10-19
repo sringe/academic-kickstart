@@ -2,6 +2,8 @@
 # Display name
 name: 전병민<br/> Byungmin Chun
 
+weight: 4
+
 # Username (this should match the folder name)
 authors:
 - byungmin-chun

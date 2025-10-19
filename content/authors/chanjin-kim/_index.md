@@ -2,6 +2,8 @@
 # Display name
 name: 김찬진<br/> Chanjin Kim 
 
+weight: 4
+
 # Username (this should match the folder name)
 authors:
 - chanjin-kim

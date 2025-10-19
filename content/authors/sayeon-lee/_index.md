@@ -2,6 +2,8 @@
 # Display name
 name: 이세연<br/> Saeyeon Lee 
 
+weight: 3
+
 # Username (this should match the folder name)
 authors:
 - bsayeon-lee
@@ -30,7 +32,7 @@ education:
   courses:
   - course: MS & PhD (Chemistry)
     institution: Korea University 
-    year: 2022-ongoing
+    year: 2023-ongoing
 
   - course: BS (Physics and Chemistry)
     institution: Ewha Womans University 

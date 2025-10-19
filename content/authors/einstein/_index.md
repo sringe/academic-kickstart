@@ -2,6 +2,8 @@
 # Display name
 name: Einstein
 
+weight: 3
+
 # Username (this should match the folder name)
 authors:
 - einstein

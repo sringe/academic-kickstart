@@ -2,6 +2,8 @@
 # Display name
 name: 한승창<br/> Seungchang Han
 
+weight: 2
+
 # Username (this should match the folder name)
 authors:
 - han-seungchang

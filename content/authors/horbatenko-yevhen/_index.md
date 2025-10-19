@@ -2,6 +2,8 @@
 # Display name
 name: Yevhen Horbatenko
 
+weight: 1
+
 # Username (this should match the folder name)
 authors:
 - yevhen

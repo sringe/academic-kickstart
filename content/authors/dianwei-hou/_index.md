@@ -2,6 +2,8 @@
 # Display name
 name: Dianwei Hou 
 
+weight: 2
+
 # Username (this should match the folder name)
 authors:
 - dianwei-hou

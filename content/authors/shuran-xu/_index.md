@@ -2,6 +2,8 @@
 # Display name
 name: Shuran Xu
 
+weight: 5
+
 # Username (this should match the folder name)
 authors:
 - shuran-xu

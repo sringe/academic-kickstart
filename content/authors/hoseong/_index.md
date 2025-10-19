@@ -2,6 +2,8 @@
 # Display name
 name: 설호성<br/> Hoseong Seol 
 
+weight: 1
+
 # Username (this should match the folder name)
 authors:
 - hoseong

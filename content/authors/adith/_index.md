@@ -2,6 +2,7 @@
 # Display name
 name: Adith Ramakrishnan Velmurugan 
 
+weight: 1
 # Username (this should match the folder name)
 authors:
 - adith

@@ -2,6 +2,8 @@
 # Display name
 name: 김주희<br/> Juhee Kim 
 
+weight: 3
+
 # Username (this should match the folder name)
 authors:
 - juhee
