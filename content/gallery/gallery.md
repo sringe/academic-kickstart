@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>1/2026: Visit to Prof. Francesco Paesani's group, UCSD, San Diego </span></h2>
+{{< gallery album="2026_1_UCSD_Visit" >}}
+
+<br>
+
 <h2 class="headline"><span>10/2025: KCS Fall Meeting 2025 </span></h2>
 {{< gallery album="2025_10_KCS_Fall" >}}
 
