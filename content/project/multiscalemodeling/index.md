@@ -8,8 +8,8 @@ authors: [admin,adith,sumin-choi,byungmin-chun]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [won-2024,byun-2022, kastlunger-2022-uy, shin-2022-ks, ringe-2020-yl, ringe-2019-dm,liu-2019-ng]
-relatedfunds: ["NRF (한국연구재단) Grant No. 2021R1C1C1008776 (신진연구)"]
+relatedpublications: [yjung-2025,won-2024,byun-2022, kastlunger-2022-uy, shin-2022-ks, ringe-2020-yl, ringe-2019-dm,liu-2019-ng]
+relatedfunds: ["Samsung Electronics collaboration fund"]
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

@@ -9,7 +9,7 @@ abstract: "We investigate the electrochemical reduction of carbon dioxide (CO<su
 featured: false
 publication: "*J. Am. Chem. Soc.*"
 doi: "10.1021/jacs.5c14093"
-volume: ""
-pages: ""
+volume: "147"
+pages: "39796-39804"
 ---
 
