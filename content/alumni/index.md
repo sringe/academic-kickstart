@@ -7,21 +7,21 @@ layout = "page"
 
 <style>
 .full-width-table-wrapper {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow-x: auto;
+  width: 100%;
+  max-width: 20000px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 .alumni-table {
   width: 100%;
   table-layout: auto;
+  border-collapse: collapse;
 }
 .alumni-table th, .alumni-table td {
-  padding: 8px;
+  padding: 8px 10px;
   text-align: left;
+  vertical-align: top;
+  white-space: normal;
 }
 </style>
 

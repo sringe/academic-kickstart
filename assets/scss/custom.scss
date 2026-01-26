@@ -155,7 +155,7 @@ h2.headline {
    width: 100%;
    text-align: center;
    border-bottom: 3px solid #999;
-   line-height: 0.0em;
+   line-height: 0.1em;
    color: #999;
    font-weight: bold;
    margin: 10px 0 20px;
@@ -164,3 +164,20 @@ h2.headline span {
     background:#fff;
     padding:0 10px;
 }
+.home-section#posts  .row,
+#posts .row,
+#posts .article-list,
+#posts .col-12 {
+  max-height: 280px !important;
+  overflow-y: auto !important;
+}
+
+.home-section {
+  overflow: visible !important;
+}
+.article-container {
+  max-width: 1400px;
+}
+
+
+

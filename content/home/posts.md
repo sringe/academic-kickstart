@@ -68,8 +68,13 @@ welcomemessageKR = "고려대학교/IBS ‘Computational Modeling Lab’ 홈페�
   # text_color_light = true  
   
 [advanced]
- # Custom CSS. 
- css_style = ""
+css_style = """
+.section-heading { 
+  margin-top: 0 !important;
+  padding-top: 0.75rem;
+}
+
+"""
  
  # CSS class.
  css_class = ""
