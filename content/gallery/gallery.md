@@ -22,6 +22,11 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>1/2026: Visit of Jeseok Lee / Group Dinner </span></h2>
+{{< gallery album="2026_1_Group_dinner" >}}
+
+<br>
+
 <h2 class="headline"><span>1/2026: Visit to Prof. Francesco Paesani's group, UCSD, San Diego </span></h2>
 {{< gallery album="2026_1_UCSD_Visit" >}}
 
@@ -57,7 +62,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>06/2025: Undergraduate Research Project Prize 2025 (Suyeon Kim)</span></h2>
+<h2 class="headline"><span>06/2025: Undergraduate Research Project Prize 2025 (Suyeon Yoo)</span></h2>
 {{< gallery album="2025_06_URP_2025" >}}
 
 <br>

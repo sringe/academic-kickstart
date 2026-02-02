@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Our new paper in Advanced Energy Materials is out! A big congrats to Shuran Xu!"
-subtitle: ""
+subtitle: "This work shows that ionically engineered n-type conjugated polyelectrolytes enable controlled Pt deposition and reduction on organic photocathodes. An iodide-functionalized CPE enables halide exchange with Pt precursors, promotes stepwise Pt(IV) → Pt(II) → Pt(0) reduction, and anchors Pt(II) intermediates on the substrate via strong electrostatic interactions, collectively leading to enhanced photoelectrochemical hydrogen evolution. The resulting photocathode produces a high photocurrent density of 17.7 mA cm⁻², a record ABPE of 8.88%, and significantly improved operational stability."
 summary: ""
 authors: [shuran-xu]
 tags: []
