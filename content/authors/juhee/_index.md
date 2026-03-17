@@ -2,7 +2,7 @@
 # Display name
 name: 김주희<br/> Juhee Kim 
 
-weight: 3
+weight: 6
 
 # Username (this should match the folder name)
 authors:
@@ -12,7 +12,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master Student
+role: Integrated Master and PhD Student
 
 # Organizations/Affiliations
 organizations:
@@ -27,7 +27,7 @@ interests:
 
 education:
   courses:
-  - course: MS (Chemistry)
+  - course: MS & PhD (Chemistry)
     institution: Korea University 
     year: 2024-ongoing
 
@@ -42,7 +42,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:guppy5330@naver.com
+  link: mailto:guppy5330@korea.ac.kr
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
@@ -59,12 +59,12 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "guppy5330@naver.com"
+email: "guppy5330@korea.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Master Students"
+- "PhD Students"
 ---
 
 

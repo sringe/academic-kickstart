@@ -43,18 +43,18 @@ height = "650px"
   link = "gallery/#gallery-2024_10_Group_outing"
   link_color = "white"
 [[item]]
-  title = "Role of gas diffusion electrode parameters in steering CO2RR selectivity"
+  title = "Iodide substitution stabilizes Pt intermediates and enables facile reduction"
 #  content = "- taming the key to energy conversion"
   align = "center"  # Choose `center`, `left`, or `right`.
   valign="top"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/GDE_paper_pic.png"  
+  overlay_img = "headers/Shuran_paper_pic.png"  
   # Image path relative to your `static/img/` folder.
   overlay_filter = 0.0  # Darken the image. Value in range 0-1.
-  link = "publication/yjung-2025"
-  link_color = "black"
+  link = "publication/minha-2026"
+  link_color = "white"
 
 #[[item]]
 

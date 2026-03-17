@@ -45,7 +45,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:moonspath[at]korea.ac.kr 
+  link: mailto:moonspath@korea.ac.kr 
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
@@ -62,7 +62,7 @@ social:
 #  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "promptclr[at]naver.com"
+email: "moonspath@korea.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.

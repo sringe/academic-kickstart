@@ -85,6 +85,16 @@ layout = "page"
         <td><a href="https://www.hughkimlab.com/currentmembers">Lab Page</a></td>
         <td>evaidn98@korea.ac.kr</td>
       </tr>
+      <tr>
+        <td>Hoseong Seol</td>
+        <td>MS Student</td>
+        <td>Materials screening</td>
+        <td>Mar 2024 - Feb 2026</td>
+        <td>Employee at Samsung SDI</td>
+        <td>Employee at Samsung SDI</td>
+        <td></td>
+        <td>chaenda99@gmail.com</td>
+      </tr>
     </tbody>
   </table>
 </div>

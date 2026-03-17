@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Research Intern
+role: Master Student
 
 # Organizations/Affiliations
 organizations:
@@ -25,9 +25,12 @@ interests:
 
 education:
   courses:
+  - course: M.S (Chemistry)
+    institution: Korea University
+    year: 2026-ongoing
   - course: B.S (Chemistry)
     institution: Korea University
-    year: 2021-ongoing
+    year: 2021-2026
   
 
 # Social/Academic Networking
@@ -59,7 +62,7 @@ email: "willo5780@korea.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- "Undergrads and Interns"
+- "Master Students"
 ---
 
 

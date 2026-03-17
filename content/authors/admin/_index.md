@@ -59,7 +59,7 @@ career:
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:sringe[at]korea.ac.kr
+  link: mailto:sringe@korea.ac.kr
 # url = "mailto:?subject={title}&body={url}
 
 - icon: twitter
@@ -81,7 +81,7 @@ social:
   link: authors/admin/files/cv_homepage_small.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "stefan.ringe.tum@gmail.com"
+email: "sringe@korea.ac.kr"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.

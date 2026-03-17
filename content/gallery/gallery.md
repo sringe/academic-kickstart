@@ -20,6 +20,12 @@ custom_css = ["css/custom.css"]
 
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
+
+<br>
+
+<h2 class="headline"><span>2/2026: Hoseong's graduation </span></h2>
+{{< gallery album="2026_02_Hoseong_graduation" >}}
+
 <br>
 
 <h2 class="headline"><span>1/2026: Visit of Jeseok Lee / Group Dinner </span></h2>
