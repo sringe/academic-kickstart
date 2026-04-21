@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "A big congrats to Sumin, for winning the 우수 Prize in the 2026 KU BK21 Chem Fair!"
-subtitle: ""
+title: "Chanjin's visit to Molsim 2026 workshop!"
+subtitle: "Our student Chanjin Kim attended the MolSim 2026 workshop conducted in the University of Amsterdam, thus obtaining insights on basic and advanced molecular simulation methods"
 summary: ""
-authors: [sumin-choi]
+authors: [chanjin-kim]
 tags: []
 categories: []
-date: 2026-01-26
-lastmod: 2026-01-26
+date: 2026-01-20T10:20:10+09:00
+lastmod: 2026-01-20T10:20:10+09:00
 featured: false
 draft: false
 

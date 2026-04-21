@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "The ritualistic cake ceremony of Ringelab! - this time for Shuran!"
-subtitle: "Celebrating Xu Shuran's paper on Advanced Functional Materials!"
+title: "The ritualistic cake ceremony of Ringelab!"
+subtitle: "A small celebration for Adith's Nano Energy publication!"
 summary: ""
-authors: [shuran-xu]
+authors: [adith]
 tags: []
 categories: []
-date: 2026-04-03T10:20:10+09:00
-lastmod: 2026-04-03T10:20:10+09:00
+date: 2026-03-27T10:20:10+09:00
+lastmod: 2026-03-27T10:20:10+09:00
 featured: false
 draft: false
 

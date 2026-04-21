@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Congratulations to Hoseong on his graduation. We wish him all the very best in his future endeavours!"
-subtitle: "PS: Since our professor wasn't in Korea during the graduation ceremony, we had to make a portrait, as we couldn't afford to miss him!"
+title: "Saeyeon Lee completes her 6 month research stay in UCSD!"
+subtitle: "Our student Saeyeon Lee completed her 6 month research stay in Prof. Francesco Paesani's group in University of California, San Diego, gaining valuable experience, scientific knowledge and collaboration."
 summary: ""
-authors: [hoseong]
+authors: [saeyeon-lee]
 tags: []
 categories: []
-date: 2026-02-25
-lastmod: 2026-02-25
+date: 2026-04-03T10:20:10+09:00
+lastmod: 2026-04-03T10:20:10+09:00
 featured: false
 draft: false
 

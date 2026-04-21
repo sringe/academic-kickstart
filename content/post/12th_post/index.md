@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Congratulations to Hoseong on his graduation. We wish him all the very best in his future endeavours!"
-subtitle: "PS: Since our professor wasn't in Korea during the graduation ceremony, we had to make a portrait, as we couldn't afford to miss him!"
+title: "A big congrats to Sumin, for winning the 우수 Prize in the 2026 KU BK21 Chem Fair!"
+subtitle: ""
 summary: ""
-authors: [hoseong]
+authors: [sumin-choi]
 tags: []
 categories: []
-date: 2026-02-25
-lastmod: 2026-02-25
+date: 2026-01-26
+lastmod: 2026-01-26
 featured: false
 draft: false
 

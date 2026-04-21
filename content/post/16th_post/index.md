@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Congratulations to Hoseong on his graduation. We wish him all the very best in his future endeavours!"
-subtitle: "PS: Since our professor wasn't in Korea during the graduation ceremony, we had to make a portrait, as we couldn't afford to miss him!"
+title: "The ritualistic cake ceremony of Ringelab! - this time for Shuran!"
+subtitle: "Celebrating Xu Shuran's paper on Advanced Functional Materials!"
 summary: ""
-authors: [hoseong]
+authors: [shuran-xu]
 tags: []
 categories: []
-date: 2026-02-25
-lastmod: 2026-02-25
+date: 2026-04-03T10:20:10+09:00
+lastmod: 2026-04-03T10:20:10+09:00
 featured: false
 draft: false
 
