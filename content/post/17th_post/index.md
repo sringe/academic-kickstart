@@ -4,7 +4,7 @@
 title: "Saeyeon Lee completes her 6 month research stay in UCSD!"
 subtitle: "Our student Saeyeon Lee completed her 6 month research stay in Prof. Francesco Paesani's group in University of California, San Diego, gaining valuable experience, scientific knowledge and collaboration."
 summary: ""
-authors: [saeyeon-lee]
+authors: [sayeon-lee]
 tags: []
 categories: []
 date: 2026-04-03T10:20:10+09:00
