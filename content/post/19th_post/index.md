@@ -1,14 +1,14 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "The ritualistic cake ceremony of Ringelab! - this time for Shuran!"
-subtitle: "Celebrating Xu Shuran's paper in Advanced Functional Materials!"
+title: "Time for another cake, from Dianwei!"
+subtitle: "Time to celebrate Dianwei's paper in Nature Communications!"
 summary: ""
-authors: [shuran-xu]
+authors: [dianwei-hou,horbatenko-yevhen]
 tags: []
 categories: []
-date: 2026-04-03T10:20:10+09:00
-lastmod: 2026-04-03T10:20:10+09:00
+date: 2026-04-24T10:20:10+09:00
+lastmod: 2026-04-24T10:20:10+09:00
 featured: false
 draft: false
 
