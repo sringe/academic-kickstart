@@ -21,7 +21,7 @@ organizations:
 #bio: My research interests include 
 #
 interests:
-  - Cluster expansion 
+  - Metropolis Kinetic modeling 
 
 education:
   courses:
