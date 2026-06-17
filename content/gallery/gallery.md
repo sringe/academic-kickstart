@@ -22,6 +22,16 @@ custom_css = ["css/custom.css"]
 -->
 <br>
 
+<h2 class="headline"><span>6/2026: Visit of Dr. Bergmann and Dr. Türk</span></h2>
+{{< gallery album="2026_06_VisitofBergmann" >}}
+
+<br>
+
+<h2 class="headline"><span>5/2026: Adith at 249th ECS Meeting, Seattle, USA </span></h2>
+{{< gallery album="2026_05_Adith_ECS" >}}
+
+<br>
+
 <h2 class="headline"><span>4/2026: Visit of Prof. Timo Jacob, Ulm University </span></h2>
 {{< gallery album="2026_04_Prof_Timo_Jacob_visit" >}}
 

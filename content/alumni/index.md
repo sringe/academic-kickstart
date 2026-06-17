@@ -49,7 +49,7 @@ layout = "page"
         <td>Hafiz Ghulam Abbas</td>
         <td>Postdoctoral researcher</td>
         <td>Mar 2021 - Mar 2024</td>
-        <td>Postdoc at University of Toronto (Prof. Ted Sargent's group)</td>
+        <td>Researcher at KIMM, Daejeon</td>
         <td><a href="https://www.linkedin.com/in/hafiz-ghulam-abbas-29206790/">LinkedIn</a></td>
         <td>hgabbas71@gmail.com</td>
       </tr>
@@ -89,7 +89,7 @@ layout = "page"
         <td>Hoseong Seol</td>
         <td>Master Student</td>
         <td>Mar 2024 - Feb 2026</td>
-        <td>Employee at Samsung SDI</td>
+        <td>Engineer at Samsung SDI, Small Sized Li-ion Battery business, Development Team, Simulation group</td>
         <td></td>
         <td>chaenda99@gmail.com</td>
       </tr>

@@ -9,7 +9,7 @@ featured: true
 publication: "*Nat. Catal.*"
 doi: "10.1038/s41929-026-01526-7"
 pdf: ""
-volume: ""
-pages: ""
+volume: "9"
+pages: "471-481"
 ---
 

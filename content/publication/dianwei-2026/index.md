@@ -9,7 +9,7 @@ featured: true
 publication: "*Nat. Commun.*"
 doi: "10.1038/s41467-026-71053-3"
 pdf: ""
-volume: ""
-pages: ""
+volume: "17"
+pages: "4792"
 ---
 
