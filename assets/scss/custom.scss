@@ -213,5 +213,113 @@ h2.headline span {
   margin-bottom: 0;
 }
 
+#profile-page .pub-citation-count {
+  margin-left: 0.4em;
+}
+
+/* ---------------------------------------------------------------------------
+   Alumni page (layouts/shortcodes/alumni.html)
+   --------------------------------------------------------------------------- */
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.alumni-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 6px;
+  background: #fff;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.alumni-card:hover {
+  border-color: rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.alumni-avatar {
+  flex: 0 0 80px;
+}
+
+.alumni-avatar img,
+.alumni-avatar-blank {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Shown when a profile has no avatar image: their first initial. */
+.alumni-avatar-blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eceff3;
+  color: #7a8290;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.alumni-body {
+  min-width: 0;   /* let long positions wrap instead of stretching the grid */
+}
+
+.alumni-name {
+  margin: 0 0 0.15rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.alumni-role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.alumni-period {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.alumni-position {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.alumni-links {
+  margin-top: 0.55rem;
+  font-size: 0.8rem;
+}
+
+.alumni-links a {
+  display: inline-block;
+  margin: 0.15rem 0.4rem 0 0;
+  padding: 0.05em 0.55em;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.75em;
+  white-space: nowrap;
+}
+
+.alumni-links a:hover {
+  border-color: $sta-primary;
+  text-decoration: none;
+}
+
+.dark .alumni-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.dark .alumni-role  { color: rgba(255, 255, 255, 0.72); }
+.dark .alumni-period { color: rgba(255, 255, 255, 0.48); }
+.dark .alumni-links a { border-color: rgba(255, 255, 255, 0.28); }
+.dark .alumni-avatar-blank { background: rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6); }
+
 
 

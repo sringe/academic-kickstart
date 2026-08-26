@@ -131,6 +131,25 @@
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
   DOI
 </a>
+{{/* Citation count. The number rendered here comes from data/pubmeta.json and is
+     only a fallback for browsers without JavaScript; assets/js/citations.js
+     refreshes it live from OpenAlex, keyed on data-doi. Hidden until there is a
+     count to show, so uncited papers get no empty button. */}}
+{{ $cites := 0 }}
+{{ with site.Data.pubmeta }}
+  {{ $pubmeta := . }}
+  {{ with $page.File }}
+    {{ with index $pubmeta.publications (path.Base (path.Clean .Dir)) }}
+      {{ $cites = .citations | default 0 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+<a class="btn btn-outline-secondary my-1 mr-1 js-citation-count{{ if $is_list }} btn-sm{{end}}"
+   data-doi="{{ . }}"
+   href="https://doi.org/{{ . }}" target="_blank" rel="noopener"
+   title="Citations, via OpenAlex"{{ if lt $cites 1 }} hidden{{ end }}>
+  Cited by <span class="js-citation-value">{{ $cites }}</span>
+</a>
 {{ end }}
 {{ with $page.Params.highlight }}
 <a class="btn btn-outline-danger my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">

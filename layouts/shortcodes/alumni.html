@@ -1,0 +1,67 @@
+{{/* Alumni listing.
+
+     Renders one card per author page carrying `user_groups: "Alumni"`, so the
+     page keeps itself in sync: it replaces a hand-edited HTML table that had
+     drifted away from the profiles it described.
+
+     Each card links to the profile, which is where that person's publications
+     are listed. Period, current position and external link come from the
+     `alumni_*` front matter fields; anything not filled in is omitted rather
+     than rendered as an empty cell.
+
+     Sorted alphabetically. The `alumni_period` values are free text
+     ("Mar 2021 - Mar 2024"), so they cannot be sorted chronologically without
+     inventing a machine-readable end date.
+*/}}
+
+{{ $people := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice "Alumni") }}
+
+{{ if not $people }}
+  <p>No alumni are listed yet.</p>
+{{ else }}
+<div class="alumni-grid">
+  {{ range sort $people ".Params.name" }}
+    {{ if .File }}
+      {{ $p := . }}
+      {{ $slug := path.Base (path.Clean .File.Dir) }}
+      {{ $role := .Params.alumni_role | default .Params.role }}
+      <div class="alumni-card">
+        <a class="alumni-avatar" href="{{ $p.RelPermalink }}" tabindex="-1" aria-hidden="true">
+          {{ with .Resources.GetMatch "avatar*" }}
+            {{ with .Fill "160x160 Center" }}
+              <img src="{{ .RelPermalink }}" width="80" height="80" alt="" loading="lazy">
+            {{ end }}
+          {{ else }}
+            <span class="alumni-avatar-blank">
+              {{- substr (printf "%s?" (.Params.name | default .Title | plainify | replaceRE "[^A-Za-z]" "")) 0 1 -}}
+            </span>
+          {{ end }}
+        </a>
+
+        <div class="alumni-body">
+          <h3 class="alumni-name"><a href="{{ $p.RelPermalink }}">{{ .Params.name | default .Title | markdownify }}</a></h3>
+
+          {{ with $role }}<div class="alumni-role">{{ . | markdownify }}</div>{{ end }}
+          {{ with .Params.alumni_period }}<div class="alumni-period">{{ . }}</div>{{ end }}
+          {{ with .Params.alumni_position }}<div class="alumni-position">{{ . | markdownify }}</div>{{ end }}
+
+          <div class="alumni-links">
+            {{/* Papers co-authored with the group, from data/pubmeta.json. */}}
+            {{ with site.Data.pubmeta }}
+              {{ with index .members $slug }}
+                <a href="{{ $p.RelPermalink }}">{{ len . }} publication{{ if ne (len .) 1 }}s{{ end }}</a>
+              {{ end }}
+            {{ end }}
+            {{ with .Params.alumni_link }}
+              <a href="{{ . }}" target="_blank" rel="noopener">{{ $p.Params.alumni_link_label | default "Profile" }}</a>
+            {{ end }}
+            {{ with .Params.email }}
+              <a href="mailto:{{ . | trim " " }}">Email</a>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

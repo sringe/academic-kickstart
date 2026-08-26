@@ -59,10 +59,17 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "evaidn98@korea.ac.kr"
 
+# Alumni details, shown on the Alumni page.
+alumni_role: "Co-supervised PhD Student"
+alumni_period: "Mar 2023 - Aug 2024"
+alumni_position: "PhD Student at Korea University (Prof. Hugh I. Kim's group)"
+alumni_link: "https://www.hughkimlab.com/currentmembers"
+alumni_link_label: "Lab Page"
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- ""
+- "Alumni"
 ---
 
 

@@ -61,10 +61,17 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "Kamal5asghar14@gmail.com"
 
+# Alumni details, shown on the Alumni page.
+alumni_role: "Master Student"
+alumni_period: "Sept 2020 - Aug 2022"
+alumni_position: "PhD Student at KAERI (Prof. Chungyun Roh's group)"
+alumni_link: "https://kaeri.ust.ac.kr/post/kamal-asghar-%EC%B9%B4%EB%A7%90-%EC%95%84%EC%8A%A4%EA%B0%80%EB%A5%B4"
+alumni_link_label: "Profile"
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- ""
+- "Alumni"
 ---
 
 

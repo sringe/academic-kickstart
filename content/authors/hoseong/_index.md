@@ -61,10 +61,15 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "chaenda99@gmail.com"
 
+# Alumni details, shown on the Alumni page.
+alumni_role: "Master Student"
+alumni_period: "Mar 2024 - Feb 2026"
+alumni_position: "Engineer at Samsung SDI, Small Sized Li-ion Battery business, Development Team, Simulation group"
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- ""
+- "Alumni"
 ---
 
 

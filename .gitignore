@@ -5,3 +5,7 @@
 resources/
 #public/
 
+
+# Python
+__pycache__/
+*.pyc

@@ -60,6 +60,13 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: " ben124123@korea.ac.kr"
 
+# Alumni details, shown on the Alumni page.
+alumni_role: "Undergrad Intern"
+alumni_period: "Feb 2023 - Jun 2024"
+alumni_position: "PhD Student at UC Berkeley (Prof. Bingqing Cheng's group)"
+alumni_link: "https://www.linkedin.com/in/dongjin-kim-5aaa7330a/"
+alumni_link_label: "LinkedIn"
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:

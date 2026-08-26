@@ -16,6 +16,8 @@ role: Alumnus
 #bio: My research interests include
 #
 
+# Alumni details, shown on the Alumni page.
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:

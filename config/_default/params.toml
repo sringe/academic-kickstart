@@ -167,7 +167,7 @@ link_blog = false
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = []
+plugins_js  = ["citations"]
 
 # Avatars.
 # An avatar is an image that appears next to a user's name.
@@ -196,6 +196,10 @@ plugins_js  = []
 
   # Citation style ("apa" or "mla")
   citation_style = "apa"
+
+  # Profiles that should NOT show a publication list, by username.
+  # Stefan co-authors every paper, so the list would say nothing on his page.
+  hide_profile_list = ["admin"]
 
 # Configuration of project pages.
 [projects]

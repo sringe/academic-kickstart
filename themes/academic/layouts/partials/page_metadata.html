@@ -124,23 +124,7 @@ current variable{{ .indexScratch.Get "previousdate" }}
     <span>.</span>
   </span>
 
-  {{/* Google Scholar citation count, from data/pubmeta.json (see scripts/update_pub_meta.py). */}}
-  {{ with site.Data.pubmeta }}
-    {{ $pubmeta := . }}
-    {{ with $page.File }}
-      {{ with index $pubmeta.publications (path.Base (path.Clean .Dir)) }}
-        {{ if gt (.citations | default 0) 0 }}
-        <span class="article-citations">
-          <a href="https://scholar.google.com/citations?user={{ $pubmeta.meta.scholar_user }}&hl=en"
-             target="_blank" rel="noopener"
-             title="Citations on Google Scholar, updated {{ $pubmeta.meta.generated }}">
-            Cited by {{ .citations }}
-          </a>
-        </span>
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
+  {{/* The citation count lives with the CITE/DOI buttons -- see page_links.html. */}}
 
   {{end}}
   {{ if and (eq $page.Type "post") (not (or (eq site.Params.reading_time false) (eq $page.Params.reading_time false))) }}

@@ -36,44 +36,57 @@
     {{ end }}
     -->
 
-    {{/* Publications this member co-authored. The list comes from data/pubmeta.json,
-         built from the per-publication cite.bib files by scripts/update_pub_meta.py,
-         because publication front matter stores display names rather than usernames.
-         Members with no publications get no heading at all. */}}
+    {{/* Publications this member co-authored, as a full citation:
+           First Author et al., Journal Year, Volume, Pages.
+         The list comes from data/pubmeta.json, built from the per-paper cite.bib
+         files by scripts/sync_publications.py, because publication front matter
+         stores display names rather than usernames. Members with no publications
+         get no heading at all. `volume` is used for the number slot: it is filled
+         on 49 of 50 papers, whereas `issue` is set on only 2. */}}
     {{ with .File }}
       {{ $username := path.Base (path.Clean .Dir) }}
-      {{ with site.Data.pubmeta }}
-        {{ $pubmeta := . }}
-        {{ with index .members $username }}
-        <div class="article-widget content-widget-hr">
-          <h3>{{ i18n "publications" | default "Publications" }}</h3>
-          <div class="pub-list">
-          {{ range . }}
-            {{ with site.GetPage (printf "/publication/%s" .) }}
-            {{ $cites := 0 }}
-            {{ with index $pubmeta.publications (path.Base (path.Clean .File.Dir)) }}
-              {{ $cites = .citations | default 0 }}
-            {{ end }}
-            <div class="pub-list-item">
-              <a href="{{ .RelPermalink }}"><b>{{ .Title | markdownify }}</b></a>
-              <div class="article-metadata">
-                {{ with .Params.publication }}<span><i>{{ . | markdownify }}</i></span>{{ end }}
-                <span><b>{{ .Date.Format (site.Params.publications.date_format | default "2006") }}</b></span>
-                {{ if gt $cites 0 }}
-                <span class="article-citations">
-                  <a href="https://scholar.google.com/citations?user={{ $pubmeta.meta.scholar_user }}&hl=en"
-                     target="_blank" rel="noopener"
-                     title="Citations on Google Scholar, updated {{ $pubmeta.meta.generated }}">
-                    Cited by {{ $cites }}
+      {{/* Stefan co-authors every paper, so a list on his profile says nothing. */}}
+      {{ if not (in site.Params.publications.hide_profile_list $username) }}
+        {{ with site.Data.pubmeta }}
+          {{ $pubmeta := . }}
+          {{ with index .members $username }}
+          <div class="article-widget content-widget-hr">
+            <h3>{{ i18n "publications" | default "Publications" }}</h3>
+            <div class="pub-list">
+            {{ range . }}
+              {{ with site.GetPage (printf "/publication/%s" .) }}
+              {{ $authors := .Params.authors | default slice }}
+              {{ $first := "" }}
+              {{ if gt (len $authors) 0 }}
+                {{ $first = index $authors 0 | plainify | replaceRE "[†*‡§]" "" }}
+              {{ end }}
+              {{ $cites := 0 }}
+              {{ with index $pubmeta.publications (path.Base (path.Clean .File.Dir)) }}
+                {{ $cites = .citations | default 0 }}
+              {{ end }}
+              <div class="pub-list-item">
+                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                <div class="article-metadata pub-citation">
+                  {{- with $first }}{{ . }}{{ end -}}
+                  {{- if gt (len $authors) 1 }} <i>et al.</i>{{ end -}}
+                  {{- with .Params.publication }}, {{ . | markdownify | chomp }}{{ end }}
+                  {{ .Date.Format (site.Params.publications.date_format | default "2006") -}}
+                  {{- with .Params.volume }}, {{ . }}{{ end -}}
+                  {{- with .Params.pages }}, {{ . }}{{ end -}}.
+                  {{ with .Params.doi }}
+                  <a class="js-citation-count pub-citation-count" data-doi="{{ . }}"
+                     href="https://doi.org/{{ . }}" target="_blank" rel="noopener"
+                     title="Citations, via OpenAlex"{{ if lt $cites 1 }} hidden{{ end }}>
+                    Cited by <span class="js-citation-value">{{ $cites }}</span>
                   </a>
-                </span>
-                {{ end }}
+                  {{ end }}
+                </div>
               </div>
-            </div>
+              {{ end }}
             {{ end }}
-          {{ end }}
+            </div>
           </div>
-        </div>
+          {{ end }}
         {{ end }}
       {{ end }}
     {{ end }}

@@ -60,6 +60,9 @@ social:
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: "seoyoung0323@dgist.ac.kr"
 
+# Alumni details, shown on the Alumni page.
+alumni_role: "Co-supervised Master Student (Prof. Jiwoong Yang)"
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:

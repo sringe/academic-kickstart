@@ -15,28 +15,68 @@ so `view.sh` uses a pinned `hugo 0.111.3 extended` binary rather than whatever i
 [the Hugo releases page](https://github.com/gohugoio/hugo/releases/tag/v0.111.3);
 the default location is `/Users/ringe/software/bin/hugo-0.111.3`.
 
-## Refresh citation counts and publication↔member links
+## Add a publication
+
+Append its BibTeX entry to [`publications.bib`](publications.bib) and run:
 
 ```bash
-python3 scripts/update_pub_meta.py
+python3 scripts/sync_publications.py
 ```
 
-This regenerates `data/pubmeta.json`, which holds two things the site cannot work out
-at build time:
+That is the whole workflow. The script will
 
-- **Google Scholar citation counts.** Scholar has no API, so the script parses the
-  profile page. It blocks datacentre traffic — run it from a normal machine, never
-  from CI. `--offline` rebuilds only the member links and keeps existing counts;
-  a failed fetch leaves the counts on disk untouched rather than zeroing them.
-- **Which group members co-authored which paper.** Publication front matter stores
-  formatted display names (`<b>S. Y. Kim</b>†`), not usernames, so the links are
-  derived from the full names in each publication's `cite.bib` and matched against
-  `content/authors/*/`. Ambiguous names are reported as warnings and left unlinked
-  rather than guessed at.
+1. create `content/publication/<key>/index.md` and `cite.bib` — the entry key
+   becomes the URL slug — filling gaps from Crossref, abbreviating the journal,
+   subscripting formulae (`CO2` → `CO<sub>2</sub>`), and writing the author line in
+   the site's style with group members in bold;
+2. rebuild `data/pubmeta.json`, linking each paper to the group members who
+   co-authored it, so their names hyperlink to their profiles and the paper appears
+   on each of their pages.
 
-Run it after adding a publication or a member page, then commit the JSON. Read any
-warnings it prints — they mean a name needs an entry in the `ALIASES` table at the
-top of the script.
+Existing pages are never rewritten, so hand-edits are safe. Useful flags:
+`--dry-run` (report only), `--no-fetch` (no network), `--migrate-bib` (rebuild
+`publications.bib` from the per-paper `cite.bib` files).
+
+Two things BibTeX cannot express, so add them by hand if you want them: `featured:
+true`, and a cover image (`featured.png` in the paper's folder). Equal-contribution
+and corresponding-author markers **do** carry through if you write them in the bib
+entry, attached to the surname — `author = {Ringe†*, Stefan and ...}`.
+
+Read any warnings the script prints. They mean either a name needs an entry in the
+`ALIASES` table or a journal needs one in `JOURNAL_SHORT`, both at the top of the
+script. An ambiguous name is always reported and left unlinked rather than guessed
+at, so nobody's paper is attributed to the wrong person.
+
+## How citation counts stay current
+
+Counts come from **OpenAlex**, refreshed in the visitor's browser by
+[`assets/js/citations.js`](assets/js/citations.js) — one request covers every paper
+on the page. **The site never needs rebuilding for the numbers to be current.**
+
+`data/pubmeta.json` also carries a count from the same source, rendered at build
+time so that browsers without JavaScript still show something. Because both come
+from OpenAlex, the number never jumps when the page loads.
+
+Google Scholar is deliberately not used: it publishes no API, sends no CORS header
+(so a browser can never read it), and blocks automated traffic. Its counts run
+roughly 15–20% higher than OpenAlex because it also counts preprints and theses.
+Matching Scholar would mean a scheduled scrape from a real machine, which cannot
+be done from CI and is against Scholar's terms.
+
+## Members and alumni
+
+The Members and Alumni pages are both generated from `content/authors/*/`; neither
+contains a hand-written list. A person appears wherever their `user_groups` says:
+
+- Members page — `Professor`, `Postdocs`, `PhD Students`, `Master Students`,
+  `Undergrads and Interns`, `Co-supervised Members`, … (see
+  [`content/people/people.md`](content/people/people.md))
+- Alumni page — `Alumni`, rendered as cards by
+  [`layouts/shortcodes/alumni.html`](layouts/shortcodes/alumni.html)
+
+An empty `user_groups` means the person appears on **neither** page. Alumni cards
+read the optional `alumni_role`, `alumni_period`, `alumni_position`, `alumni_link`
+and `alumni_link_label` fields; whatever is missing is simply left out.
 
 ## Publish
 
