@@ -58,6 +58,10 @@
     var model = build();
     if (!model) return;
 
+    // Lets the stylesheet drop the now-duplicated panel headings and tighten
+    // the spacing, but only when the tabs actually exist.
+    document.body.classList.add('has-home-tabs');
+
     var bar = document.createElement('nav');
     bar.className = 'home-tabs';
     bar.setAttribute('aria-label', 'Sections');

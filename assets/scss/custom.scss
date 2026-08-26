@@ -1371,10 +1371,28 @@ body.is-translating { top: 0 !important; }
 .dark .home-tab { color: rgba(255, 255, 255, 0.6); }
 .dark .home-tab:hover { color: rgba(255, 255, 255, 0.9); }
 
-/* A tabbed panel already has the tab as its label, so the big repeated heading
-   directly under the bar is redundant. */
-.home-tabs ~ .home-section [data-home-tab] > h2.headline:first-child {
-  margin-top: 1.25rem;
+/* The tab already names the panel, so the panel's own heading would repeat it
+   immediately below the bar. Hiding it also removes most of the gap that the
+   heading's 2.5rem top margin left under the tabs. */
+body.has-home-tabs [data-home-tab] > h2.headline {
+  display: none;
+}
+
+/* Close the remaining gap between the bar and the panel content. */
+body.has-home-tabs .home-tabs ~ .home-section {
+  padding-top: 1.25rem;
+}
+
+/* The subtitle was nudged up under its heading; with the heading gone it does
+   not need to be. */
+body.has-home-tabs .video-section-subtitle {
+  margin-top: 0;
+}
+
+/* When the Welcome panel is hidden, the bare <br> after the covers row would
+   still take a line. */
+body.has-home-tabs .rowcover[hidden] + br {
+  display: none;
 }
 
 @media screen and (max-width: 767px) {
