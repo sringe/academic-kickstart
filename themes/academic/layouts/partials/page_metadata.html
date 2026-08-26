@@ -111,18 +111,16 @@ current variable{{ .indexScratch.Get "previousdate" }}
   {{ end }}
 
   {{ if (eq $page.Type "publication") }}
-  <span class="article-volume">
-    <span>,</span>
-    {{ $volume := $page.Params.volume }}
-    <span><i>{{ $volume }}</i></span>
-  </span>
-
-  <span class="article-pages">
-    <span>,</span>
-    {{ $pages := $page.Params.pages }}
-    {{ $pages }}
-    <span>.</span>
-  </span>
+  {{/* Only emit a separator when there is something after it: papers with no
+       volume or page numbers (in press, article-number only) used to render as
+       "Energy Environ. Sci. 2026 , , ." */}}
+  {{ with $page.Params.volume }}
+  <span class="article-volume"><span>,</span> <span><i>{{ . }}</i></span></span>
+  {{ end }}
+  {{ with $page.Params.pages }}
+  <span class="article-pages"><span>,</span> {{ . }}</span>
+  {{ end }}
+  <span>.</span>
 
   {{/* The citation count lives with the CITE/DOI buttons -- see page_links.html. */}}
 

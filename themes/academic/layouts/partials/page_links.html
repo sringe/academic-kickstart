@@ -31,8 +31,11 @@
 {{ end }}
 {{ $resource := $page.Resources.GetMatch "cite.bib" }}
 {{ with $resource }}
+{{/* data-citation carries the short form so the Cite dialog can offer both it
+     and the BibTeX -- see assets/js/cite_toggle.js. */}}
 <button type="button" class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal"
-        data-filename="{{ .RelPermalink }}">
+        data-filename="{{ .RelPermalink }}"
+        data-citation="{{ partial "citation_nature.html" $page }}">
   {{ i18n "btn_cite" }}
 </button>
 {{ end }}
@@ -136,18 +139,22 @@
      refreshes it live from OpenAlex, keyed on data-doi. Hidden until there is a
      count to show, so uncited papers get no empty button. */}}
 {{ $cites := 0 }}
+{{/* Falls back to a Scholar title search when the cited-by link has not been
+     fetched yet (see --scholar in scripts/sync_publications.py). */}}
+{{ $cites_url := printf "https://scholar.google.com/scholar?q=%s" (urlquery ($page.Title | plainify)) }}
 {{ with site.Data.pubmeta }}
   {{ $pubmeta := . }}
   {{ with $page.File }}
     {{ with index $pubmeta.publications (path.Base (path.Clean .Dir)) }}
       {{ $cites = .citations | default 0 }}
+      {{ with .cites_url }}{{ $cites_url = . }}{{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
 <a class="btn btn-outline-secondary my-1 mr-1 js-citation-count{{ if $is_list }} btn-sm{{end}}"
    data-doi="{{ . }}"
-   href="https://doi.org/{{ . }}" target="_blank" rel="noopener"
-   title="Citations, via OpenAlex"{{ if lt $cites 1 }} hidden{{ end }}>
+   href="{{ $cites_url }}" target="_blank" rel="noopener"
+   title="Citing articles on Google Scholar (count via OpenAlex)"{{ if lt $cites 1 }} hidden{{ end }}>
   Cited by <span class="js-citation-value">{{ $cites }}</span>
 </a>
 {{ end }}

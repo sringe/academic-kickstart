@@ -151,18 +151,48 @@ blockquote.twitter-tweet a:focus {
    vertical-align: middle;
    float: none;
 }
+/* Section headings — used for gallery captions, People group names and the year
+   separators on the publications list.
+
+   This replaced a "rule straight through the text" treatment built from
+   `border-bottom` + `line-height: 0.1em` + a white-backed span. That broke in
+   three ways: any heading long enough to wrap had its lines overlap and clip
+   (visible on the gallery), the hard-coded white span background showed as a
+   white slab in dark mode, and the full-width rule left no room for text on a
+   phone. A short accent bar under centred text has none of those problems and
+   wraps at any width. */
 h2.headline {
-   width: 100%;
-   text-align: center;
-   border-bottom: 3px solid #999;
-   line-height: 0.1em;
-   color: #999;
-   font-weight: bold;
-   margin: 10px 0 20px;
+  width: 100%;
+  margin: 2.5rem 0 1.5rem;
+  border-bottom: 0;
+  line-height: 1.25;
+  text-align: center;
+  color: #2f3237;
+  font-weight: 700;
+  letter-spacing: 0.005em;
 }
+
 h2.headline span {
-    background:#fff;
-    padding:0 10px;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0.5rem;
+  background: none;
+}
+
+h2.headline span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2.75rem;
+  height: 3px;
+  border-radius: 3px;
+  background: $sta-primary;
+  transform: translateX(-50%);
+}
+
+.dark h2.headline {
+  color: rgba(255, 255, 255, 0.9);
 }
 .home-section#posts  .row,
 #posts .row,
@@ -215,6 +245,38 @@ h2.headline span {
 
 #profile-page .pub-citation-count {
   margin-left: 0.4em;
+}
+
+/* Publication count beside the "Publications" heading on a profile. */
+.pub-count {
+  display: inline-block;
+  min-width: 1.6em;
+  margin-left: 0.4em;
+  padding: 0.1em 0.45em;
+  border-radius: 1em;
+  background: rgba(0, 0, 0, 0.07);
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.62em;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.dark .pub-count {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* BibTeX / Citation switch in the Cite dialog (assets/js/cite_toggle.js). */
+.js-cite-format {
+  margin-left: auto;
+  margin-right: 0.75rem;
+}
+
+#modal .modal-body code {
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 /* ---------------------------------------------------------------------------
@@ -323,3 +385,182 @@ h2.headline span {
 
 
 
+
+/* ===========================================================================
+   Small screens.
+
+   Everything above this block was written for a wide desktop window and the
+   file contained no media queries at all, so the same fixed heights and font
+   sizes applied on a phone. These are the corrections.
+   =========================================================================== */
+
+/* Content images (gallery, software pages) were unconstrained — `max-width:
+   none` let them render wider than the viewport. */
+.article-style img,
+.docs-article-container img,
+.universal-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Below the 320px card minimum, drop to a single column. (Written as a media
+   query rather than `minmax(min(320px, 100%), 1fr)`: Sass resolves `min()`
+   itself and rejects mixing px with %.) */
+@media screen and (max-width: 400px) {
+  .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* The slider height comes from `height` in content/home/slider.md as an inline
+     style, so overriding it needs !important. At 650px it filled almost a whole
+     phone screen with a letterboxed image. */
+  .home-section.wg-slider,
+  .wg-slider .carousel-item {
+    height: 62vh !important;
+    max-height: 420px !important;
+    min-height: 260px !important;
+  }
+
+  .wg-slider .hero-title {
+    line-height: 1.2 !important;
+    font-size: 1.6rem;
+  }
+
+  /* The news/posts section is clamped to 280px with ~900px of content inside.
+     On a phone that is a scroll box inside a scrolling page, which is very hard
+     to use, so let it flow to its natural height instead. */
+  .home-section#posts .row,
+  #posts .row,
+  #posts .article-list,
+  #posts .col-12 {
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+
+  /* Fixed 20px/30px nav text crowded out the brand on narrow screens. */
+  .dropdown-menu,
+  nav#navbar-main li.nav-item {
+    font-size: 1rem;
+  }
+
+  nav#navbar-main li.nav-brand {
+    font-size: 1.25rem;
+  }
+
+  /* 3rem type in a fixed 120px bar overflowed its box. */
+  .w3-bar {
+    height: auto;
+    padding: 0.75rem 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .w4-bar {
+    height: auto;
+    padding: 0.6rem 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  div.textcenter5 {
+    font-size: 1.25rem;
+  }
+
+  h2.headline {
+    margin: 1.75rem 0 1.1rem;
+    font-size: 1.2rem;
+  }
+
+  /* Long titles and citation lines need to break rather than push the page. */
+  .pub-list-item a,
+  .article-title,
+  .article-metadata {
+    overflow-wrap: break-word;
+  }
+
+  /* Publication buttons wrap to their own lines instead of a squeezed row. */
+  .btn-links .btn {
+    margin-bottom: 0.35rem;
+  }
+
+  /* Profile pages: the two-column about widget stacks, so drop the tall gutter. */
+  #profile-page {
+    padding-top: 1.5rem !important;
+  }
+
+  .alumni-card {
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* Phones in portrait: the avatar column costs too much of the line length. */
+@media screen and (max-width: 400px) {
+  .alumni-avatar {
+    flex-basis: 56px;
+  }
+
+  .alumni-avatar img,
+  .alumni-avatar-blank {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Gallery thumbnails.
+
+   The theme pins them to `height: 250px; width: auto; max-width: inherit`, so a
+   panoramic photo renders as wide as its aspect ratio demands and runs off the
+   side of the container. Capping the width and cropping instead of stretching
+   keeps every album inside the page, and the rounded corners plus a small hover
+   lift replace the flat, flush-cut grid.
+   --------------------------------------------------------------------------- */
+.gallery a[data-fancybox] img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gallery a[data-fancybox]:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width: 767px) {
+  /* Two square-cropped thumbnails per row reads far better on a phone than one
+     very wide strip per photo. */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    margin: 0.75rem 0 1.5rem;
+  }
+
+  .gallery a[data-fancybox] {
+    display: block;
+    min-width: 0;
+  }
+
+  .gallery a[data-fancybox] img {
+    width: 100%;
+    height: 120px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Journal covers above the publication list. Bootstrap's `col-md-2` is
+     full-width below the `md` breakpoint, so each cover filled an entire phone
+     screen and pushed the publications themselves several swipes down. Sized to
+     three per row instead. Only the cover columns are touched, so the widget's
+     own text (the †/* legend) still flows normally. */
+  .rowcover .col-md-2 {
+    display: inline-block;
+    width: 31.5%;
+    max-width: 31.5%;
+    padding: 0 2px;
+    vertical-align: middle;
+  }
+}

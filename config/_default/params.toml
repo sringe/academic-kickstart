@@ -167,7 +167,7 @@ link_blog = false
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = ["citations"]
+plugins_js  = ["citations", "cite_toggle"]
 
 # Avatars.
 # An avatar is an image that appears next to a user's name.

@@ -51,32 +51,27 @@
           {{ $pubmeta := . }}
           {{ with index .members $username }}
           <div class="article-widget content-widget-hr">
-            <h3>{{ i18n "publications" | default "Publications" }}</h3>
+            <h3>
+              {{ i18n "publications" | default "Publications" }}
+              <span class="pub-count">{{ len . }}</span>
+            </h3>
             <div class="pub-list">
             {{ range . }}
               {{ with site.GetPage (printf "/publication/%s" .) }}
-              {{ $authors := .Params.authors | default slice }}
-              {{ $first := "" }}
-              {{ if gt (len $authors) 0 }}
-                {{ $first = index $authors 0 | plainify | replaceRE "[†*‡§]" "" }}
-              {{ end }}
               {{ $cites := 0 }}
+              {{ $cites_url := printf "https://scholar.google.com/scholar?q=%s" (urlquery (.Title | plainify)) }}
               {{ with index $pubmeta.publications (path.Base (path.Clean .File.Dir)) }}
                 {{ $cites = .citations | default 0 }}
+                {{ with .cites_url }}{{ $cites_url = . }}{{ end }}
               {{ end }}
               <div class="pub-list-item">
                 <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
                 <div class="article-metadata pub-citation">
-                  {{- with $first }}{{ . }}{{ end -}}
-                  {{- if gt (len $authors) 1 }} <i>et al.</i>{{ end -}}
-                  {{- with .Params.publication }}, {{ . | markdownify | chomp }}{{ end }}
-                  {{ .Date.Format (site.Params.publications.date_format | default "2006") -}}
-                  {{- with .Params.volume }}, {{ . }}{{ end -}}
-                  {{- with .Params.pages }}, {{ . }}{{ end -}}.
+                  {{ partial "citation_nature.html" . }}
                   {{ with .Params.doi }}
                   <a class="js-citation-count pub-citation-count" data-doi="{{ . }}"
-                     href="https://doi.org/{{ . }}" target="_blank" rel="noopener"
-                     title="Citations, via OpenAlex"{{ if lt $cites 1 }} hidden{{ end }}>
+                     href="{{ $cites_url }}" target="_blank" rel="noopener"
+                     title="Citing articles on Google Scholar (count via OpenAlex)"{{ if lt $cites 1 }} hidden{{ end }}>
                     Cited by <span class="js-citation-value">{{ $cites }}</span>
                   </a>
                   {{ end }}

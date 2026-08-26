@@ -1,0 +1,40 @@
+{{/* Short citation for one publication, as a plain string:
+
+         First Author et al., Journal Year, Volume, Pages.
+
+     Used on member profiles and offered next to the BibTeX in the Cite dialog,
+     so there is exactly one definition of the format.
+
+     `volume` fills the number slot: it is set on 49 of 50 papers, whereas
+     `issue` is set on 2. Any missing part is dropped along with its separator
+     rather than leaving a stray comma.
+
+     Call with a publication page:  {{ partial "citation_nature.html" . }}
+*/}}
+{{- $authors := .Params.authors | default slice -}}
+{{- $out := slice -}}
+
+{{- if gt (len $authors) 0 -}}
+  {{/* Several author lines contain double spaces ("E. L.  Clark"); collapse them. */}}
+  {{- $first := index $authors 0 | plainify | replaceRE "[†*‡§]" "" | replaceRE "\\s+" " " | chomp -}}
+  {{- if gt (len $authors) 1 -}}
+    {{- $out = $out | append (printf "%s et al." $first) -}}
+  {{- else -}}
+    {{- $out = $out | append $first -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* "*Nat. Commun.*" -> "Nat. Commun."; the year rides along so the journal and
+     year are not separated by a comma. */}}
+{{- $year := .Date.Format (site.Params.publications.date_format | default "2006") -}}
+{{- with .Params.publication -}}
+  {{- $journal := . | plainify | replaceRE "\\*" "" | chomp -}}
+  {{- $out = $out | append (printf "%s %s" $journal $year) -}}
+{{- else -}}
+  {{- $out = $out | append $year -}}
+{{- end -}}
+
+{{- with .Params.volume }}{{ $out = $out | append (printf "%v" .) }}{{ end -}}
+{{- with .Params.pages }}{{ $out = $out | append (printf "%v" .) }}{{ end -}}
+
+{{- return printf "%s." (delimit $out ", ") -}}

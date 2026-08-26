@@ -370,6 +370,45 @@ def crossref(doi: str) -> dict:
     return {}
 
 
+SCHOLAR_USER = "uSQ8J50AAAAJ"
+SCHOLAR_URL = (f"https://scholar.google.com/citations?user={SCHOLAR_USER}"
+               "&hl=en&cstart=0&pagesize=100")
+
+
+def scholar_cites_urls() -> dict[str, str]:
+    """Map normalised title -> Google Scholar "cited by" listing URL.
+
+    Only the *links* are taken from Scholar; the counts come from OpenAlex. Each
+    link embeds the paper's Scholar cluster id(s), which are stable, so this
+    needs re-running only when a paper is added -- which is why it sits behind
+    --scholar rather than running every time. Scholar publishes no API and
+    blocks datacentre traffic, so this works from a personal machine only.
+    """
+    import requests
+    ua = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/120.0 Safari/537.36")
+    try:
+        r = requests.get(SCHOLAR_URL, headers={"User-Agent": ua}, timeout=45)
+        r.raise_for_status()
+    except Exception as exc:                                   # noqa: BLE001
+        warn(f"Google Scholar fetch failed: {exc}; keeping the stored links")
+        return {}
+    page = r.text
+    if re.search(r"(?i)captcha|unusual traffic|not a robot", page):
+        warn("Google Scholar served a bot check; keeping the stored links")
+        return {}
+    out = {}
+    for tr in re.findall(r'<tr class="gsc_a_tr">(.*?)</tr>', page, re.S):
+        t = re.search(r'class="gsc_a_at"[^>]*>(.*?)</a>', tr, re.S)
+        # The href is HTML-escaped ("&amp;cites="), so do not anchor on "?" or "&".
+        a = re.search(r'href="([^"]*cites=[^"]*)"', tr)
+        if t and a:
+            out[title_key(re.sub(r"<[^>]+>", "", t.group(1)))] = html.unescape(a.group(1))
+    if not out:
+        warn("no Scholar cited-by links found; the profile markup may have changed")
+    return out
+
+
 def openalex_counts(dois: list[str]) -> dict[str, int]:
     """One request per 50 DOIs. Same source the browser uses, so the fallback
     number and the live number never disagree."""
@@ -589,13 +628,15 @@ def create_pages(entries: list[dict], pages: list[dict], members: dict,
     return created
 
 
-def build_pubmeta(pages: list[dict], members: dict, dry: bool, fetch: bool) -> None:
+def build_pubmeta(pages: list[dict], members: dict, dry: bool, fetch: bool,
+                  scholar: bool) -> None:
     previous = json.loads(read(OUT)) if os.path.exists(OUT) else {}
     prev_pubs = previous.get("publications", {})
 
     counts = openalex_counts([p["doi"] for p in pages]) if fetch else {}
     if fetch and not counts:
         warn("no citation counts fetched; keeping the values already on disk")
+    cites_urls = scholar_cites_urls() if scholar else {}
 
     out_pubs, out_members = {}, {}
     for p in pages:
@@ -619,6 +660,16 @@ def build_pubmeta(pages: list[dict], members: dict, dry: bool, fetch: bool) -> N
         c = counts.get(p["doi"], prev_pubs.get(p["slug"], {}).get("citations"))
         if c is not None:
             rec["citations"] = c
+        # Link to Scholar's cited-by listing. Kept from the previous run unless
+        # --scholar refreshed it, so the normal path needs no Scholar request.
+        url = cites_urls.get(title_key(p["title"]))
+        if not url and cites_urls:
+            near = difflib.get_close_matches(title_key(p["title"]),
+                                             list(cites_urls), n=1, cutoff=0.85)
+            url = cites_urls[near[0]] if near else None
+        url = url or prev_pubs.get(p["slug"], {}).get("cites_url")
+        if url:
+            rec["cites_url"] = url
         out_pubs[p["slug"]] = rec
 
     order = {p["slug"]: p["date"] for p in pages}
@@ -644,7 +695,9 @@ def build_pubmeta(pages: list[dict], members: dict, dry: bool, fetch: bool) -> N
     cited = sum(1 for v in out_pubs.values() if v.get("citations") is not None)
     print(f"  member authorships linked : {linked}")
     print(f"  members with publications : {len(out_members)}")
+    linked_urls = sum(1 for v in out_pubs.values() if v.get("cites_url"))
     print(f"  publications with a count : {cited}/{len(pages)}")
+    print(f"  Scholar cited-by links    : {linked_urls}/{len(pages)}")
     if dry:
         print("  (dry run, data/pubmeta.json not written)")
         return
@@ -660,6 +713,9 @@ def main() -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-fetch", action="store_true")
     ap.add_argument("--migrate-bib", action="store_true")
+    ap.add_argument("--scholar", action="store_true",
+                    help="also refresh the Google Scholar cited-by links "
+                         "(run from a personal machine, not CI)")
     args = ap.parse_args()
     fetch = not args.no_fetch
 
@@ -683,7 +739,7 @@ def main() -> int:
         pages = load_pages()
 
     print("\nrebuilding data/pubmeta.json")
-    build_pubmeta(pages, members, args.dry_run, fetch)
+    build_pubmeta(pages, members, args.dry_run, fetch, args.scholar)
 
     if WARNINGS:
         print(f"\n{len(WARNINGS)} warning(s):")
