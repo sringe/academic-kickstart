@@ -1,14 +1,12 @@
-{{/* Hero: three separate panels — research render, group photo, research render.
+{{/* Hero: the group photo, with a research render rotating beside it.
 
-     Each panel is its own framed image with its own corners and shadow, rather
-     than one composite with the renders dissolved into the photo. The crops come
-     from scripts/make_hero.py, which does the zooming and framing that CSS
-     cannot; the layout, gaps and shadows are done here and in custom.scss.
+     Two framed panels. The side panel holds every slide stacked on top of one
+     another; assets/js/hero_slideshow.js crossfades between them. Without
+     JavaScript the first slide simply stays put, which is why it is the one
+     marked active in the markup rather than left to the script.
 
-     Only `image` is required. The side panels are optional and are dropped on
-     narrow screens, where there is no room for them.
-
-     Configured in content/home/hero_card.md.
+     The crops come from scripts/make_hero.py. Configured in
+     content/home/hero_card.md.
 */}}
 
 {{ $page := .page }}
@@ -21,15 +19,6 @@
 
 <div class="container">
   <div class="hero-panels">
-
-    {{ with $page.Params.image_left }}
-      {{ with resources.Get (printf "media/%s" .) }}
-      <figure class="hero-panel hero-panel-side">
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
-             alt="{{ $page.Params.alt_left | default "" }}" loading="lazy">
-      </figure>
-      {{ end }}
-    {{ end }}
 
     <figure class="hero-panel hero-panel-main">
       {{ with $img }}
@@ -50,13 +39,28 @@
       </figcaption>
     </figure>
 
-    {{ with $page.Params.image_right }}
-      {{ with resources.Get (printf "media/%s" .) }}
-      <figure class="hero-panel hero-panel-side">
-        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
-             alt="{{ $page.Params.alt_right | default "" }}" loading="lazy">
-      </figure>
+    {{ with $page.Params.slides }}
+    <div class="hero-panel hero-panel-side js-hero-slideshow"
+         data-interval="{{ $page.Params.slide_interval | default 6000 }}">
+      {{ range $i, $slide := . }}
+        {{ with resources.Get (printf "media/%s" $slide.image) }}
+        <img class="hero-slide{{ if eq $i 0 }} is-active{{ end }}"
+             src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+             alt="{{ $slide.alt | default "" }}"
+             {{ if ne $i 0 }}loading="lazy" aria-hidden="true"{{ end }}>
+        {{ end }}
       {{ end }}
+
+      {{ if gt (len .) 1 }}
+      <div class="hero-slide-dots" role="tablist" aria-label="Research images">
+        {{ range $i, $slide := . }}
+        <button type="button" class="hero-slide-dot{{ if eq $i 0 }} is-active{{ end }}"
+                role="tab" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}"
+                aria-label="{{ $slide.alt | default (printf "Image %d" (add $i 1)) }}"></button>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
     {{ end }}
 
   </div>
