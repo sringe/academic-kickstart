@@ -80,7 +80,10 @@
     {{ $ctnr = "universal-wrapper" }}
   {{end}}
 <div class="{{$ctnr}} pt-3">
-        <!--  <h1>{{ $title }}</h1> -->
+  {{/* This was commented out, which left every page without a featured image
+       (Alumni, Contact, Research, Software, ...) with no heading at all. It is
+       back, styled like the section headings elsewhere on the site. */}}
+  {{ with $title }}<h1 class="page-title"><span>{{ . | markdownify }}</span></h1>{{ end }}
 
   {{ with $page.Params.subtitle }}
   <p class="page-subtitle">{{ . | markdownify | emojify }}</p>

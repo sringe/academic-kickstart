@@ -526,22 +526,30 @@ h2.headline > span::after {
   max-width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  /* The theme sets `box-shadow: none` on these, hence the override. */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16) !important;
+  /* The theme sets `box-shadow: none` and `padding: 4px` on these. The padding
+     goes so the shadow sits on the picture's edge rather than 4px out from it,
+     and the shadow is deliberately strong: at 8px/0.16 it was invisible. */
+  padding: 0 !important;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.32) !important;
   transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
+.gallery a[data-fancybox] {
+  display: inline-block;
+  margin: 5px;         /* replaces the padding that used to space them apart */
+}
+
 .gallery a[data-fancybox]:hover img {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42) !important;
 }
 
 .dark .gallery a[data-fancybox] img {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.62) !important;
 }
 
 .dark .gallery a[data-fancybox]:hover img {
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.65) !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.75) !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -557,6 +565,7 @@ h2.headline > span::after {
   .gallery a[data-fancybox] {
     display: block;
     min-width: 0;
+    margin: 0;
   }
 
   .gallery a[data-fancybox] img {
@@ -991,7 +1000,10 @@ h2.headline > span::after {
 .hero-panels {
   display: flex;
   gap: 14px;
-  align-items: stretch;
+  /* Centred, not stretched: the side panels are square (see make_hero.py — a
+     3.4:1 render needs a square frame to be legible) and stretching them would
+     re-crop those squares back into tall slices. */
+  align-items: center;
 }
 
 .hero-panel {
@@ -1009,7 +1021,12 @@ h2.headline > span::after {
 }
 
 .hero-panel-side {
-  flex: 0 0 17%;
+  flex: 0 0 23%;
+  aspect-ratio: 1 / 1;
+}
+
+@supports not (aspect-ratio: 1) {
+  .hero-panel-side { height: 260px; }
 }
 
 .hero-panel img {
@@ -1022,6 +1039,11 @@ h2.headline > span::after {
 
 .hero-panel-side img {
   object-position: center;
+}
+
+/* Keep faces in the upper part of the frame, clear of the caption. */
+.hero-panel-main img {
+  object-position: center 38%;
 }
 
 /* Darkens the lower part of the main panel only, so the caption stays readable
@@ -1092,7 +1114,7 @@ h2.headline > span::after {
 /* Tablets: give the photo more of the row. */
 @media screen and (max-width: 991.98px) {
   .hero-panels { gap: 10px; }
-  .hero-panel-side { flex-basis: 14%; }
+  .hero-panel-side { flex-basis: 20%; }
   .hero-panel img { max-height: 340px; }
 }
 
@@ -1902,4 +1924,59 @@ body.has-home-tabs .rowcover[hidden] + br {
   .home-tabs { top: 50px; }
   .home-tabs-inner { justify-content: flex-start; padding: 0.4rem 0.5rem; }
   .home-tab { padding: 0.45rem 0.75rem; font-size: 0.78rem; }
+}
+
+/* ===========================================================================
+   Page titles.
+
+   Pages without a featured image had their <h1> commented out in
+   themes/.../page_header.html, so Alumni, Contact, Research and Software
+   rendered with no heading at all. The heading is restored and given the same
+   centred accent-bar treatment as the homepage sections and the publication
+   year separators, so every page is topped the same way.
+   =========================================================================== */
+.page-title {
+  width: 100%;
+  margin: 0.5rem 0 1.75rem;
+  line-height: 1.25;
+  text-align: center;
+  color: #2f3237;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+}
+
+.page-title > span {
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0.55rem;
+}
+
+.page-title > span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 2.75rem;
+  height: 3px;
+  border-radius: 3px;
+  background: $sta-primary;
+  transform: translateX(-50%);
+}
+
+.dark .page-title { color: rgba(255, 255, 255, 0.9); }
+
+.page-title + .page-subtitle {
+  margin-top: -1.25rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.dark .page-title + .page-subtitle { color: rgba(255, 255, 255, 0.55); }
+
+@media screen and (max-width: 767px) {
+  .page-title {
+    margin: 0.25rem 0 1.25rem;
+    font-size: 1.5rem;
+  }
 }

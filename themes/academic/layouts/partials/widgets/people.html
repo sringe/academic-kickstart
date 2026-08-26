@@ -17,8 +17,10 @@
   {{ with $page.Title }}
   </p>
   <div class="col-md-12 section-heading">
-          <!--  <h1>{{ . | markdownify | emojify }}</h1>-->
-    {{ if $page.Params.subtitle }}<p>{{ $page.Params.subtitle | markdownify | emojify }}</p>{{ end }}
+    {{/* The page title was commented out, so Members opened straight onto the
+         first group name. Uses the site's standard heading. */}}
+    <h2 class="headline"><span>{{ . | markdownify | emojify }}</span></h2>
+    {{ if $page.Params.subtitle }}<p class="widget-subtitle">{{ $page.Params.subtitle | markdownify | emojify }}</p>{{ end }}
   </div>
   {{ end }}
   {{ with $page.Content }}
