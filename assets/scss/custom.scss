@@ -179,5 +179,39 @@ h2.headline span {
   max-width: 1400px;
 }
 
+/* Google Scholar citation count (data/pubmeta.json via scripts/update_pub_meta.py). */
+.article-citations {
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+
+.article-citations a {
+  display: inline-block;
+  padding: 0.05em 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.75em;
+  font-size: 0.92em;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.article-citations a:hover {
+  border-color: $sta-primary;
+  text-decoration: none;
+}
+
+.dark .article-citations a {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+/* Publication list on a member's profile page. */
+#profile-page .pub-list-item {
+  margin-bottom: 0.9rem;
+}
+
+#profile-page .pub-list-item .article-metadata {
+  margin-bottom: 0;
+}
+
 
 

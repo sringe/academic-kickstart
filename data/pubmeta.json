@@ -1,0 +1,752 @@
+{
+ "members": {
+  "abbas": [
+   "yujin-2025",
+   "soyeon-2025",
+   "beomgyun-2025",
+   "ji-2024",
+   "beomil-2023",
+   "hong-2023",
+   "patra-2022-ln"
+  ],
+  "adith": [
+   "adith-2026-ees",
+   "yjung-2025",
+   "beomgyun-2025",
+   "won-2024"
+  ],
+  "admin": [
+   "adith-2026-ees",
+   "beomil-2026",
+   "dianwei-2026",
+   "sourav-2026",
+   "minha-2026",
+   "yjung-2025",
+   "yujin-2025",
+   "soyeon-2025",
+   "ringe-2025",
+   "beomgyun-2025",
+   "ji-2024",
+   "ringe-2024",
+   "won-2024",
+   "sejun-2024",
+   "islam-2023",
+   "park-2023",
+   "beomil-2023",
+   "ringe-2023-screening",
+   "ringe-2023-cation",
+   "hong-2023",
+   "hoon-2023",
+   "jae-2022",
+   "byun-2022",
+   "kim-2022-sv",
+   "patra-2022-ln",
+   "tetteh-2022-rm",
+   "ringe-2022-xd",
+   "kastlunger-2022-uy",
+   "shin-2022-ks",
+   "song-2021-xo",
+   "ringe-2021-iz",
+   "kim-2021-qz",
+   "kim-2021-mw",
+   "ludwig-2020-atomistic",
+   "sa-2020-thermal",
+   "lee-2020",
+   "xia-2020-ld",
+   "ringe-2020-yl",
+   "gauthier-2019-us",
+   "gauthier-2019-ig",
+   "wu-2019-bq",
+   "ringe-2019-dm",
+   "ludwig-2019-gt",
+   "clark-2019-xk",
+   "gauthier-2019-wt",
+   "liu-2019-ng",
+   "hille-2019-fn",
+   "patel-2018-tq",
+   "ringe-2017-dm",
+   "ringe-2016-ti"
+  ],
+  "ashgar-kamal": [
+   "adith-2026-ees"
+  ],
+  "dianwei-hou": [
+   "dianwei-2026"
+  ],
+  "gang-seonghyeon": [
+   "tetteh-2022-rm"
+  ],
+  "han-seungchang": [
+   "beomil-2026"
+  ],
+  "horbatenko-yevhen": [
+   "dianwei-2026"
+  ],
+  "kim-sejun": [
+   "sejun-2024",
+   "hoon-2023",
+   "kim-2022-sv",
+   "kim-2021-mw"
+  ],
+  "kwak-dongvin": [
+   "won-2024"
+  ],
+  "ryu-yeonkyeong": [
+   "beomil-2023"
+  ],
+  "sayeon-lee": [
+   "sourav-2026"
+  ],
+  "seoyeong-kim": [
+   "soyeon-2025",
+   "ji-2024"
+  ],
+  "shuran-xu": [
+   "minha-2026"
+  ]
+ },
+ "meta": {
+  "citations_total": 6578,
+  "generated": "2026-08-26",
+  "h_index": 32,
+  "i10_index": 39,
+  "scholar_user": "uSQ8J50AAAAJ",
+  "script": "scripts/update_pub_meta.py",
+  "source": "Google Scholar profile uSQ8J50AAAAJ"
+ },
+ "publications": {
+  "adith-2026-ees": {
+   "citations": 0,
+   "members": [
+    {
+     "bib": "Ramakrishnan Velmurugan, Adith",
+     "display": "<b>R. V. Adith†</b>",
+     "slug": "adith"
+    },
+    {
+     "bib": "Asghar, Kamal",
+     "display": "K. Asghar",
+     "slug": "ashgar-kamal"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "S. Ringe*",
+     "slug": "admin"
+    }
+   ]
+  },
+  "beomgyun-2025": {
+   "citations": 6,
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas</b>†",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Velmurugan, Adith Ramakrishnan",
+     "display": "<b>Adith. R. V</b>",
+     "slug": "adith"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "beomil-2023": {
+   "citations": 73,
+   "members": [
+    {
+     "bib": "Ryu, Yeonkyeong",
+     "display": "<b>Y. Ryu†</b>",
+     "slug": "ryu-yeonkyeong"
+    },
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas</b>",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "beomil-2026": {
+   "citations": 5,
+   "members": [
+    {
+     "bib": "Han, Seungchang",
+     "display": "<b>S. Han†</b>",
+     "slug": "han-seungchang"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "byun-2022": {
+   "citations": 17,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "clark-2019-xk": {
+   "citations": 228,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "dianwei-2026": {
+   "citations": 3,
+   "members": [
+    {
+     "bib": "Hou, Dianwei",
+     "display": "<b>D. Hou†</b>",
+     "slug": "dianwei-hou"
+    },
+    {
+     "bib": "Horbatenko, Yevhen",
+     "display": "<b>Y. Horbatenko</b>",
+     "slug": "horbatenko-yevhen"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "gauthier-2019-ig": {
+   "citations": 83,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "gauthier-2019-us": {
+   "citations": 185,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "gauthier-2019-wt": {
+   "citations": 282,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "hille-2019-fn": {
+   "citations": 59,
+   "members": [
+    {
+     "bib": "Ringe†*, Stefan",
+     "display": "<b>S.  Ringe†*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "hong-2023": {
+   "citations": 130,
+   "match": "fuzzy",
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas†</b>",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "hoon-2023": {
+   "citations": 22,
+   "members": [
+    {
+     "bib": "Kim, Se-Jun",
+     "display": "S. Kim",
+     "slug": "kim-sejun"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "islam-2023": {
+   "citations": 155,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "jae-2022": {
+   "citations": 266,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ji-2024": {
+   "citations": 6,
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas</b>†",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Kim, Seo Young",
+     "display": "<b>S. Y. Kim</b>†",
+     "slug": "seoyeong-kim"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe</b>*",
+     "slug": "admin"
+    }
+   ]
+  },
+  "kastlunger-2022-uy": {
+   "citations": 182,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "kim-2021-mw": {
+   "citations": 247,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    },
+    {
+     "bib": "Kim, Sejun",
+     "display": "<b>S.  Kim</b>",
+     "slug": "kim-sejun"
+    }
+   ]
+  },
+  "kim-2021-qz": {
+   "citations": 67,
+   "members": [
+    {
+     "bib": "Ringe*, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "kim-2022-sv": {
+   "citations": 10,
+   "members": [
+    {
+     "bib": "Kim, Se-Jun",
+     "display": "<b>S.  Kim</b>",
+     "slug": "kim-sejun"
+    },
+    {
+     "bib": "Ringe*, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "lee-2020": {
+   "citations": 59,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "liu-2019-ng": {
+   "citations": 736,
+   "match": "fuzzy",
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ludwig-2019-gt": {
+   "citations": 97,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ludwig-2020-atomistic": {
+   "citations": 42,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "minha-2026": {
+   "citations": 3,
+   "members": [
+    {
+     "bib": "Xu, Shuran",
+     "display": "<b>S. Xu†</b>",
+     "slug": "shuran-xu"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "park-2023": {
+   "citations": 12,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "patel-2018-tq": {
+   "citations": 117,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "patra-2022-ln": {
+   "citations": 111,
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "H. G.  Abbas",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2016-ti": {
+   "citations": 103,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2017-dm": {
+   "citations": 50,
+   "members": [
+    {
+     "bib": "Ringe†*, Stefan",
+     "display": "<b>S.  Ringe†*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2019-dm": {
+   "citations": 993,
+   "members": [
+    {
+     "bib": "Ringe†*, Stefan",
+     "display": "<b>S.  Ringe†*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2020-yl": {
+   "citations": 418,
+   "members": [
+    {
+     "bib": "Ringe†*, Stefan",
+     "display": "<b>S.  Ringe†*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2021-iz": {
+   "citations": 4,
+   "members": [
+    {
+     "bib": "Ringe*, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2022-xd": {
+   "citations": 312,
+   "members": [
+    {
+     "bib": "Ringe†*, Stefan",
+     "display": "<b>S.  Ringe†*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2023-cation": {
+   "citations": 70,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2023-screening": {
+   "citations": 116,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2024": {
+   "citations": 4,
+   "match": "fuzzy",
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "ringe-2025": {
+   "citations": 4,
+   "members": [
+    {
+     "bib": "Stefan Ringe",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "sa-2020-thermal": {
+   "citations": 133,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "sejun-2024": {
+   "citations": 5,
+   "members": [
+    {
+     "bib": "Kim, Se-Jun",
+     "display": "S.  Kim†",
+     "slug": "kim-sejun"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "shin-2022-ks": {
+   "citations": 370,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S.  Ringe</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "song-2021-xo": {
+   "citations": 44,
+   "members": [
+    {
+     "bib": "Ringe*, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "sourav-2026": {
+   "citations": 0,
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe</b>",
+     "slug": "admin"
+    },
+    {
+     "bib": "Lee, Saeyeon",
+     "display": "<b>S. Lee</b>",
+     "slug": "sayeon-lee"
+    }
+   ]
+  },
+  "soyeon-2025": {
+   "citations": 17,
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas</b>†",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Kim, Seo Young",
+     "display": "<b>S. Y. Kim</b>",
+     "slug": "seoyeong-kim"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "tetteh-2022-rm": {
+   "citations": 72,
+   "members": [
+    {
+     "bib": "Kang, Seonghyeon",
+     "display": "S.  Kang",
+     "slug": "gang-seonghyeon"
+    },
+    {
+     "bib": "Ringe*, Stefan",
+     "display": "<b>S.  Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "won-2024": {
+   "citations": 12,
+   "members": [
+    {
+     "bib": "Kwak, Dongvin",
+     "display": "<b>D. Kwak</b>†",
+     "slug": "kwak-dongvin"
+    },
+    {
+     "bib": "Adith, Ramakrishnan Velmurugan",
+     "display": "<b>Adith. R. V</b>",
+     "slug": "adith"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "wu-2019-bq": {
+   "citations": 61,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "xia-2020-ld": {
+   "citations": 508,
+   "members": [
+    {
+     "bib": "Ringe†, Stefan",
+     "display": "<b>S.  Ringe†</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "yjung-2025": {
+   "citations": 3,
+   "members": [
+    {
+     "bib": "Adith Ramakrishnan Velmurugan",
+     "display": "<b>Adith.R.V</b>†",
+     "slug": "adith"
+    },
+    {
+     "bib": "Stefan Ringe",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
+  "yujin-2025": {
+   "citations": 36,
+   "members": [
+    {
+     "bib": "Abbas, Hafiz Ghulam",
+     "display": "<b>H. G. Abbas</b>†",
+     "slug": "abbas"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  }
+ }
+}

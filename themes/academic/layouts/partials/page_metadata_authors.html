@@ -10,14 +10,42 @@
 <br>
 {{ end }}
 {{ $taxonomy := "authors" }}
+
+{{/* Publications spell authors as formatted display strings ("<b>S. Y. Kim</b>†"),
+     not usernames, so the anchorize lookup below can never resolve them. Map each
+     entry to a member profile via data/pubmeta.json, which is generated from the
+     per-publication cite.bib files by scripts/update_pub_meta.py. */}}
+{{ $members := dict }}
+{{ with site.Data.pubmeta }}
+  {{ $pubmeta := . }}
+  {{ with $.File }}
+    {{ with index $pubmeta.publications (path.Base (path.Clean .Dir)) }}
+      {{ range .members }}
+        {{ $slug := .slug }}
+        {{ with .display }}
+          {{ $members = merge $members (dict . $slug) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ with .Param $taxonomy }}
   {{ $link_authors := site.Params.link_authors | default true }}
   {{ range $index, $value := . }}
     {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | anchorize)) -}}
     {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
     {{- if gt $index 0 }}, {{ end -}}
+    {{- $member := index $members $value -}}
     <span>
-      {{- if and $profile_page $link_authors -}}
+      {{- if and $member $link_authors -}}
+        {{/* Keep the paper's own spelling of the name, just make it a link. */}}
+        {{- with site.GetPage (printf "/%s/%s" $taxonomy $member) -}}
+          <a href="{{ .RelPermalink }}">{{ $value | markdownify }}</a>
+        {{- else -}}
+          {{ $value | markdownify }}
+        {{- end -}}
+      {{- else if and $profile_page $link_authors -}}
         <a href="{{$profile_page.RelPermalink}}">{{$name | markdownify}}</a>
       {{- else -}}
         {{$name | markdownify}}

@@ -42,7 +42,7 @@ social:
 - icon: envelope
   icon_pack: fas
   link: mailto:seoyoung0323@dgist.ac.kr
-- icon: twitter
+#- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/RingeStefan
 #- icon: google-scholar
@@ -63,7 +63,7 @@ email: "seoyoung0323@dgist.ac.kr"
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- ""
+- "Alumni"
 ---
 
 

@@ -35,6 +35,48 @@
     </div>
     {{ end }}
     -->
+
+    {{/* Publications this member co-authored. The list comes from data/pubmeta.json,
+         built from the per-publication cite.bib files by scripts/update_pub_meta.py,
+         because publication front matter stores display names rather than usernames.
+         Members with no publications get no heading at all. */}}
+    {{ with .File }}
+      {{ $username := path.Base (path.Clean .Dir) }}
+      {{ with site.Data.pubmeta }}
+        {{ $pubmeta := . }}
+        {{ with index .members $username }}
+        <div class="article-widget content-widget-hr">
+          <h3>{{ i18n "publications" | default "Publications" }}</h3>
+          <div class="pub-list">
+          {{ range . }}
+            {{ with site.GetPage (printf "/publication/%s" .) }}
+            {{ $cites := 0 }}
+            {{ with index $pubmeta.publications (path.Base (path.Clean .File.Dir)) }}
+              {{ $cites = .citations | default 0 }}
+            {{ end }}
+            <div class="pub-list-item">
+              <a href="{{ .RelPermalink }}"><b>{{ .Title | markdownify }}</b></a>
+              <div class="article-metadata">
+                {{ with .Params.publication }}<span><i>{{ . | markdownify }}</i></span>{{ end }}
+                <span><b>{{ .Date.Format (site.Params.publications.date_format | default "2006") }}</b></span>
+                {{ if gt $cites 0 }}
+                <span class="article-citations">
+                  <a href="https://scholar.google.com/citations?user={{ $pubmeta.meta.scholar_user }}&hl=en"
+                     target="_blank" rel="noopener"
+                     title="Citations on Google Scholar, updated {{ $pubmeta.meta.generated }}">
+                    Cited by {{ $cites }}
+                  </a>
+                </span>
+                {{ end }}
+              </div>
+            </div>
+            {{ end }}
+          {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      {{ end }}
+    {{ end }}
   </div>
 </section>
 

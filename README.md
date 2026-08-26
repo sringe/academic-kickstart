@@ -1,3 +1,55 @@
+# RingeLab site — maintenance notes
+
+Source for **ringelab.com**. Everything below the horizontal rule is the upstream
+Academic Kickstart README, kept for reference.
+
+## Preview locally
+
+```bash
+./view.sh          # http://localhost:1313, live-reloads on save
+```
+
+The Academic theme is pinned to Hugo 0.64 and does **not** build with current Hugo,
+so `view.sh` uses a pinned `hugo 0.111.3 extended` binary rather than whatever is on
+`PATH`. Override with `HUGO=/path/to/hugo ./view.sh`. Get the binary from
+[the Hugo releases page](https://github.com/gohugoio/hugo/releases/tag/v0.111.3);
+the default location is `/Users/ringe/software/bin/hugo-0.111.3`.
+
+## Refresh citation counts and publication↔member links
+
+```bash
+python3 scripts/update_pub_meta.py
+```
+
+This regenerates `data/pubmeta.json`, which holds two things the site cannot work out
+at build time:
+
+- **Google Scholar citation counts.** Scholar has no API, so the script parses the
+  profile page. It blocks datacentre traffic — run it from a normal machine, never
+  from CI. `--offline` rebuilds only the member links and keeps existing counts;
+  a failed fetch leaves the counts on disk untouched rather than zeroing them.
+- **Which group members co-authored which paper.** Publication front matter stores
+  formatted display names (`<b>S. Y. Kim</b>†`), not usernames, so the links are
+  derived from the full names in each publication's `cite.bib` and matched against
+  `content/authors/*/`. Ambiguous names are reported as warnings and left unlinked
+  rather than guessed at.
+
+Run it after adding a publication or a member page, then commit the JSON. Read any
+warnings it prints — they mean a name needs an entry in the `ALIASES` table at the
+top of the script.
+
+## Publish
+
+```bash
+./deploy.sh
+```
+
+Builds into `public/` and pushes that to `sringe/sringe.github.io`, which GitHub
+Pages serves at ringelab.com. `public/` is a submodule and must be initialised first
+(`git submodule update --init --depth 1 public`) or the script fails.
+
+---
+
 <p align="center"><a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener"><img src="https://sourcethemes.com/academic/img/logo_200px.png" alt="Academic logo"></a></p>
 
 # Academic Kickstart: The Template for [Academic Website Builder](https://sourcethemes.com/academic/)

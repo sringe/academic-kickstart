@@ -93,6 +93,23 @@ layout = "page"
         <td></td>
         <td>chaenda99@gmail.com</td>
       </tr>
+      <!-- Period / Current Position still to be filled in for the two rows below. -->
+      <tr>
+        <td>Seoyeong Kim</td>
+        <td>Co-supervised Master Student (Prof. Jiwoong Yang)</td>
+        <td></td>
+        <td></td>
+        <td><a href="/authors/seoyeong-kim/">Profile</a></td>
+        <td>seoyoung0323@dgist.ac.kr</td>
+      </tr>
+      <tr>
+        <td>Sejun Kim</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><a href="/authors/kim-sejun/">Profile</a></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 </div>
