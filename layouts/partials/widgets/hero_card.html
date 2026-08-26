@@ -1,49 +1,63 @@
-{{/* Hero card.
+{{/* Hero: three separate panels — research render, group photo, research render.
 
-     Replaces the full-bleed slider on the homepage with a single contained
-     image. The slider ran the full window width at a fixed 650px and showed the
-     group photo letterboxed inside it; this crops to a fixed aspect ratio
-     instead, so the photo fills its frame at every window size, and sits inside
-     the page container rather than edge to edge.
+     Each panel is its own framed image with its own corners and shadow, rather
+     than one composite with the renders dissolved into the photo. The crops come
+     from scripts/make_hero.py, which does the zooming and framing that CSS
+     cannot; the layout, gaps and shadows are done here and in custom.scss.
+
+     Only `image` is required. The side panels are optional and are dropped on
+     narrow screens, where there is no room for them.
 
      Configured in content/home/hero_card.md.
 */}}
 
 {{ $page := .page }}
+
 {{ $img := "" }}
 {{ with $page.Params.image }}
   {{ $img = resources.Get (printf "media/%s" .) }}
-  {{ if not $img }}
-    {{ errorf "hero_card: couldn't find `assets/media/%s`" . }}
-  {{ end }}
+  {{ if not $img }}{{ errorf "hero_card: no assets/media/%s" . }}{{ end }}
 {{ end }}
 
 <div class="container">
-  <div class="hero-card">
-    {{ with $img }}
-      {{/* Two widths so phones do not fetch the desktop crop. Forced to JPEG:
-           the source is a 17MB PNG and the 1600px crop came out at 1.1MB as
-           PNG, versus roughly a tenth of that as JPEG for a photograph. */}}
-      {{ $wide := .Fill "1600x760 Center jpg q82" }}
-      {{ $narrow := .Fill "800x380 Center jpg q82" }}
-      <img class="hero-card-img"
-           src="{{ $wide.RelPermalink }}"
-           srcset="{{ $narrow.RelPermalink }} 800w, {{ $wide.RelPermalink }} 1600w"
-           sizes="(max-width: 767px) 100vw, 1140px"
-           width="{{ $wide.Width }}" height="{{ $wide.Height }}"
-           alt="{{ $page.Params.alt | default $page.Title }}">
+  <div class="hero-panels">
+
+    {{ with $page.Params.image_left }}
+      {{ with resources.Get (printf "media/%s" .) }}
+      <figure class="hero-panel hero-panel-side">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+             alt="{{ $page.Params.alt_left | default "" }}" loading="lazy">
+      </figure>
+      {{ end }}
     {{ end }}
 
-    <div class="hero-card-veil"></div>
-
-    <div class="hero-card-text">
-      {{ with $page.Title }}<h1 class="hero-card-title">{{ . | markdownify }}</h1>{{ end }}
-      {{ with $page.Params.subtitle }}<p class="hero-card-subtitle">{{ . | markdownify }}</p>{{ end }}
-      {{ with $page.Params.cta_link }}
-        <a class="hero-card-cta" href="{{ . | relURL }}">
-          {{ $page.Params.cta_text | default "See more" }} &rarr;
-        </a>
+    <figure class="hero-panel hero-panel-main">
+      {{ with $img }}
+      <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+           alt="{{ $page.Params.alt | default $page.Title }}">
       {{ end }}
-    </div>
+
+      <div class="hero-card-veil"></div>
+
+      <figcaption class="hero-card-text">
+        {{ with $page.Title }}<h1 class="hero-card-title">{{ . | markdownify }}</h1>{{ end }}
+        {{ with $page.Params.subtitle }}<p class="hero-card-subtitle">{{ . | markdownify }}</p>{{ end }}
+        {{ with $page.Params.cta_link }}
+          <a class="hero-card-cta" href="{{ . | relURL }}">
+            {{ $page.Params.cta_text | default "See more" }} &rarr;
+          </a>
+        {{ end }}
+      </figcaption>
+    </figure>
+
+    {{ with $page.Params.image_right }}
+      {{ with resources.Get (printf "media/%s" .) }}
+      <figure class="hero-panel hero-panel-side">
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+             alt="{{ $page.Params.alt_right | default "" }}" loading="lazy">
+      </figure>
+      {{ end }}
+    {{ end }}
+
   </div>
 </div>

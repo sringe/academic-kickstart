@@ -172,14 +172,16 @@ h2.headline {
   letter-spacing: 0.005em;
 }
 
-h2.headline span {
+h2.headline > span {
   position: relative;
   display: inline-block;
   padding: 0 0 0.5rem;
   background: none;
 }
 
-h2.headline span::after {
+/* Direct child only: gallery_headers.js splits the heading into a date chip and
+   a title span, and an unscoped `span::after` gave all three an accent bar. */
+h2.headline > span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -524,12 +526,22 @@ h2.headline span::after {
   max-width: 100%;
   object-fit: cover;
   border-radius: 5px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  /* The theme sets `box-shadow: none` on these, hence the override. */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.16) !important;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
 
 .gallery a[data-fancybox]:hover img {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26) !important;
+}
+
+.dark .gallery a[data-fancybox] img {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.dark .gallery a[data-fancybox]:hover img {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.65) !important;
 }
 
 @media screen and (max-width: 767px) {
@@ -614,6 +626,497 @@ h2.headline span::after {
 
 .pub-list-links .btn {
   margin-bottom: 0.25rem;
+}
+
+/* ===========================================================================
+   Video highlights (layouts/partials/widgets/videos.html)
+   =========================================================================== */
+.video-section-subtitle {
+  margin-top: -0.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.05rem;
+}
+
+.dark .video-section-subtitle { color: rgba(255, 255, 255, 0.55); }
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.13);
+}
+
+/* The frame is a <button> so keyboard users can reach it; strip the chrome. */
+.video-card-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #0f1115;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.video-card-poster,
+.video-card-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* Fallback for browsers without aspect-ratio. */
+@supports not (aspect-ratio: 1) {
+  .video-card-poster,
+  .video-card-player { height: 200px; }
+}
+
+.video-card-poster-blank { background: #22262e; }
+
+.video-card-frame.is-playing .video-card-poster,
+.video-card-frame.is-playing .video-card-play { display: none; }
+
+/* Play badge. */
+.video-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.video-card-play::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  border-style: solid;
+  border-width: 11px 0 11px 18px;
+  border-color: transparent transparent transparent #1c1f26;
+  transform: translate(-50%, -50%);
+}
+
+.video-card-frame:hover .video-card-play {
+  background: #fff;
+  transform: translate(-50%, -50%) scale(1.09);
+}
+
+.video-card-badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  padding: 0.16em 0.6em;
+  border-radius: 1em;
+  background: rgba(15, 17, 21, 0.72);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.video-card-body {
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.video-card-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.video-card-caption {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.62);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.video-card-link {
+  display: inline-block;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.dark .video-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dark .video-card-caption { color: rgba(255, 255, 255, 0.66); }
+
+/* ===========================================================================
+   Navigation bar.
+
+   Fixes three things about the stock behaviour:
+
+   1. The theme sets `opacity: .9` on the whole bar, which fades the *text* as
+      well as the background and makes the menu look washed out. Replaced with a
+      translucent background plus a backdrop blur, so the type stays crisp.
+   2. Dropdowns only opened on click. On a pointer device they now open on hover
+      as well; click and keyboard focus still work.
+   3. On phones and tablets the bar is `position: fixed` with a hard 50px
+      height, so the expanded menu was drawn outside its own box, and
+      `d-md-inline-flex` laid the items out in a horizontal strip. The collapsed
+      menu is now a normal vertical list in a panel that can scroll.
+   =========================================================================== */
+
+#navbar-main.navbar {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.86);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.dark #navbar-main.navbar {
+  background-color: rgba(28, 31, 38, 0.86);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Sliding underline on the top-level items. Scoped to .main-menu-item so the
+   search icon and the brand are left alone. */
+#navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link {
+  position: relative;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+#navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.05rem;
+  left: 0.5rem;
+  height: 2px;
+  border-radius: 2px;
+  background: $sta-primary;
+  opacity: 0;
+  transform: scaleX(0.4);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+#navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link:hover::after,
+#navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Dropdown panels. */
+#navbar-main .dropdown-menu {
+  margin-top: 0;
+  padding: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+}
+
+#navbar-main .dropdown-item {
+  padding: 0.45rem 0.7rem;
+  border-radius: 5px;
+  white-space: normal;
+}
+
+/* The theme sets `.dropdown-item { background: #fff !important }`, so these
+   have to be !important too, regardless of specificity. */
+#navbar-main .dropdown-item:hover,
+#navbar-main .dropdown-item:focus {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.dark #navbar-main .dropdown-item:hover,
+.dark #navbar-main .dropdown-item:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+@media screen and (min-width: 992px) {
+  /* Open on hover, not only on click. `:focus-within` keeps it reachable by
+     keyboard; the bridge on ::before stops the panel closing when the pointer
+     crosses the gap between the link and the menu. */
+  @media (hover: hover) {
+    #navbar-main .nav-item.dropdown:hover > .dropdown-menu,
+    #navbar-main .nav-item.dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+
+    #navbar-main .nav-item.dropdown > .dropdown-menu::before {
+      content: "";
+      position: absolute;
+      top: -0.5rem;
+      right: 0;
+      left: 0;
+      height: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  #navbar-main.navbar {
+    padding: 0 0.75rem;
+  }
+
+  /* The bar is `position: fixed` with a hard 50px height, so an expanded menu
+     spills outside it. Rather than fight that, the menu is presented as what it
+     actually is: an opaque panel hanging below the bar, with its own background
+     (the bar's blur does not apply to a child) and its own scrollbar so a long
+     menu can never run off the bottom of the screen. */
+  #navbar-main .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+  }
+
+  .dark #navbar-main .navbar-collapse {
+    background: #1c1f26;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Beat `d-md-inline-flex` so the items stack instead of forming a strip. */
+  #navbar-main .navbar-collapse .navbar-nav {
+    display: block !important;
+    width: 100%;
+    overflow: visible;
+    white-space: normal;
+    padding: 0.35rem 0 0.6rem;
+  }
+
+  #navbar-main .navbar-collapse .nav-item {
+    display: block;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  #navbar-main .navbar-collapse .nav-item:first-child { border-top: 0; }
+
+  /* Comfortable tap targets. The theme sets `padding: 5px 15px !important` on
+     `#navbar-main .main-menu-item .nav-item .nav-link` at this breakpoint, so
+     this has to match that selector's specificity to win. */
+  #navbar-main .main-menu-item .nav-item .nav-link {
+    padding: 0.8rem 1rem !important;
+    font-size: 1rem;
+  }
+
+  #navbar-main .navbar-collapse .nav-link::after { display: none; }
+
+  /* Submenus read as an indented continuation of their parent. */
+  #navbar-main .navbar-collapse .dropdown-menu {
+    display: block;
+    margin: 0 0 0.35rem;
+    padding: 0 0 0 0.5rem;
+    border: 0;
+    border-left: 2px solid rgba(0, 0, 0, 0.09);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    float: none;
+    position: static;
+  }
+
+  #navbar-main .navbar-collapse .dropdown-item {
+    padding: 0.55rem 1rem;
+    font-size: 0.94rem;
+  }
+
+  /* The caret is meaningless once submenus are always expanded. */
+  #navbar-main .navbar-collapse .caret { display: none; }
+
+  .dark #navbar-main .navbar-collapse .nav-item { border-top-color: rgba(255, 255, 255, 0.08); }
+  .dark #navbar-main .navbar-collapse .dropdown-menu { border-left-color: rgba(255, 255, 255, 0.12); }
+}
+
+/* ===========================================================================
+   Gallery album headings — date chip + title (assets/js/gallery_headers.js)
+   =========================================================================== */
+.headline-date {
+  display: inline-block;
+  margin-right: 0.55rem;
+  padding: 0.1em 0.6em;
+  border-radius: 1em;
+  background: rgba($sta-primary, 0.12);
+  color: darken($sta-primary, 8%);
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+}
+
+.dark .headline-date {
+  background: rgba($sta-primary, 0.22);
+  color: lighten($sta-primary, 18%);
+}
+
+/* ===========================================================================
+   Hero: three separate panels (layouts/partials/widgets/hero_card.html)
+
+   Replaced a full-width 650px slider, and then a single composite in which the
+   renders were dissolved into the photo. Distinct framed panels read more
+   deliberately, and the side panels can simply be dropped on a phone.
+   =========================================================================== */
+.hero-panels {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.hero-panel {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #11141a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.hero-panel-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hero-panel-side {
+  flex: 0 0 17%;
+}
+
+.hero-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 440px;
+  object-fit: cover;
+}
+
+.hero-panel-side img {
+  object-position: center;
+}
+
+/* Darkens the lower part of the main panel only, so the caption stays readable
+   without dulling the photograph. */
+.hero-card-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+              rgba(8, 10, 14, 0.82) 0%,
+              rgba(8, 10, 14, 0.45) 26%,
+              rgba(8, 10, 14, 0) 58%);
+  pointer-events: none;
+}
+
+.hero-card-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem 1.8rem 1.4rem;
+  color: #fff;
+  text-align: left;
+}
+
+.hero-card-title {
+  margin: 0;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.hero-card-subtitle {
+  margin: 0.35rem 0 0;
+  max-width: 44rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.45;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card-cta {
+  display: inline-block;
+  margin-top: 0.85rem;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2em;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.16s ease, border-color 0.16s ease;
+}
+
+.hero-card-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-section.wg-hero-card {
+  padding-top: 1.75rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Tablets: give the photo more of the row. */
+@media screen and (max-width: 991.98px) {
+  .hero-panels { gap: 10px; }
+  .hero-panel-side { flex-basis: 14%; }
+  .hero-panel img { max-height: 340px; }
+}
+
+/* Phones: the side panels would be slivers, so drop them. */
+@media screen and (max-width: 767px) {
+  .hero-panel-side { display: none; }
+
+  .hero-panel { border-radius: 10px; }
+
+  .hero-panel img { max-height: 260px; }
+
+  .hero-card-text { padding: 1.1rem 1.15rem 1rem; }
+
+  .hero-card-title { font-size: 1.6rem; }
+
+  .hero-card-subtitle {
+    margin-top: 0.3rem;
+    font-size: 0.88rem;
+  }
+
+  .hero-card-cta {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+  }
 }
 
 /* ===========================================================================
