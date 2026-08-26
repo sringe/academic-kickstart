@@ -64,6 +64,10 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   quality = 90
   anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
 
+[security]
+  # Allow rendering .html files placed directly in content/ (e.g. content/software/MPBE/table.html)
+  allowContent = ['.*']
+
 # Taxonomies.
 [taxonomies]
   tag = "tags"

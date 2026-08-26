@@ -15,7 +15,6 @@ role: PhD student (Priv. -Doz. Dr.-Ing. Gabriele Raabe)
 # Organizations/Affiliations
 organizations:
 - name: Technische Universität Braunschweig
-  url: "https://www.tu-braunschweig.de/en/"
   url: "https://www.tu-braunschweig.de/ift/institut/arbeitsgruppen/arbeitsgruppe-molekulare-thermodynamik"
 
 ## Short bio (displayed in user profile at end of posts)

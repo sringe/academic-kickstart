@@ -143,7 +143,7 @@
 </a>
 {{ end }}
 {{ with $page.Params.cover }}
-{{ $resource := $page.ContentBaseName }}
+{{ $resource := $page.File.ContentBaseName }}
 <!--<a class="btn btn-outline-secondary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="../publication/{{$resource}}/cover.jpg" target="_blank" rel="noopener">-->
 <a class="btn btn-outline-secondary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="../publication/{{$resource}}/{{ . }}" target="_blank" rel="noopener">
   COVER
