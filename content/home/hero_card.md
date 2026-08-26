@@ -10,8 +10,10 @@ title = "RingeLab"
 subtitle = "Computational modeling of electrified interfaces — Korea University / IBS"
 
 # Image path relative to `assets/media/`.
-image = "headers/Pic_3.jpg"
-alt = "The RingeLab group, 2026"
+# Built by scripts/make_hero.py from Pic_3.jpg + smpb_fhiaims11.png.
+# Re-run that script after changing either source.
+image = "headers/hero_blend.jpg"
+alt = "The RingeLab group, 2026, alongside a continuum solvation model"
 
 cta_link = "gallery/#gallery-2026_08_Group_pic"
 cta_text = "More from the group"

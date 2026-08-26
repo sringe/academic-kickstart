@@ -9,6 +9,10 @@ weight = 15      # Order on the page (slider is 1, posts is 1).
 title = "Simulations"
 subtitle = "Our work, in motion"
 
+# Link shown under the cards.
+cta_link = "/research/"
+cta_text = "More on our research"
+
 [design.background]
   color = "white"
 

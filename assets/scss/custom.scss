@@ -615,13 +615,8 @@ h2.headline span::after {
 /* ===========================================================================
    Video highlights (layouts/partials/widgets/videos.html)
    =========================================================================== */
-.video-section-title {
-  margin-bottom: 0.15rem;
-  text-align: center;
-  font-weight: 700;
-}
-
 .video-section-subtitle {
+  margin-top: -0.75rem;
   margin-bottom: 2rem;
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
@@ -1241,4 +1236,38 @@ h2.headline span::after {
   width: 3px;
   border-radius: 3px;
   background: $sta-primary;
+}
+
+.video-section-cta {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ===========================================================================
+   Publication word cloud (layouts/partials/widgets/wordcloud.html)
+   =========================================================================== */
+.wordcloud {
+  margin: 0 auto;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.wordcloud img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.wordcloud-caption {
+  margin-top: 0.5rem;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.82rem;
+}
+
+.dark .wordcloud-caption { color: rgba(255, 255, 255, 0.5); }
+
+/* The PNG is transparent, so on a dark background the darkest blues lose
+   contrast; lift them a little. */
+.dark .wordcloud img {
+  filter: brightness(1.35) saturate(1.1);
 }

@@ -1,0 +1,365 @@
+{
+ "generated_from": "content/publication/*/index.md",
+ "terms": [
+  {
+   "term": "electrochemical",
+   "count": 52
+  },
+  {
+   "term": "model",
+   "count": 50
+  },
+  {
+   "term": "catalyst",
+   "count": 48
+  },
+  {
+   "term": "reaction",
+   "count": 47
+  },
+  {
+   "term": "surface",
+   "count": 44
+  },
+  {
+   "term": "CO",
+   "count": 41
+  },
+  {
+   "term": "activity",
+   "count": 40
+  },
+  {
+   "term": "effect",
+   "count": 35
+  },
+  {
+   "term": "potential",
+   "count": 33
+  },
+  {
+   "term": "electrolyte",
+   "count": 32
+  },
+  {
+   "term": "selectivity",
+   "count": 31
+  },
+  {
+   "term": "reduction",
+   "count": 31
+  },
+  {
+   "term": "product",
+   "count": 30
+  },
+  {
+   "term": "site",
+   "count": 29
+  },
+  {
+   "term": "structure",
+   "count": 29
+  },
+  {
+   "term": "energy",
+   "count": 29
+  },
+  {
+   "term": "CO2",
+   "count": 28
+  },
+  {
+   "term": "ion",
+   "count": 26
+  },
+  {
+   "term": "design",
+   "count": 25
+  },
+  {
+   "term": "simulation",
+   "count": 25
+  },
+  {
+   "term": "solvation",
+   "count": 25
+  },
+  {
+   "term": "carbon",
+   "count": 25
+  },
+  {
+   "term": "calculation",
+   "count": 24
+  },
+  {
+   "term": "water",
+   "count": 23
+  },
+  {
+   "term": "process",
+   "count": 22
+  },
+  {
+   "term": "production",
+   "count": 22
+  },
+  {
+   "term": "Cu",
+   "count": 22
+  },
+  {
+   "term": "charge",
+   "count": 22
+  },
+  {
+   "term": "adsorbate",
+   "count": 22
+  },
+  {
+   "term": "electrochemical CO2 reduction",
+   "count": 20
+  },
+  {
+   "term": "interface",
+   "count": 20
+  },
+  {
+   "term": "electrode",
+   "count": 19
+  },
+  {
+   "term": "density",
+   "count": 19
+  },
+  {
+   "term": "intermediate",
+   "count": 19
+  },
+  {
+   "term": "density functional theory",
+   "count": 18
+  },
+  {
+   "term": "step",
+   "count": 18
+  },
+  {
+   "term": "material",
+   "count": 18
+  },
+  {
+   "term": "implicit",
+   "count": 18
+  },
+  {
+   "term": "solvent",
+   "count": 18
+  },
+  {
+   "term": "cation",
+   "count": 18
+  },
+  {
+   "term": "experimental",
+   "count": 17
+  },
+  {
+   "term": "CO2RR",
+   "count": 17
+  },
+  {
+   "term": "hydrogen",
+   "count": 17
+  },
+  {
+   "term": "cell",
+   "count": 16
+  },
+  {
+   "term": "parameter",
+   "count": 16
+  },
+  {
+   "term": "electrocatalyst",
+   "count": 16
+  },
+  {
+   "term": "insight",
+   "count": 16
+  },
+  {
+   "term": "doping",
+   "count": 16
+  },
+  {
+   "term": "DFT",
+   "count": 16
+  },
+  {
+   "term": "interaction",
+   "count": 16
+  },
+  {
+   "term": "interfacial",
+   "count": 16
+  },
+  {
+   "term": "Pt",
+   "count": 16
+  },
+  {
+   "term": "pH",
+   "count": 16
+  },
+  {
+   "term": "chemical",
+   "count": 15
+  },
+  {
+   "term": "active",
+   "count": 15
+  },
+  {
+   "term": "formation",
+   "count": 15
+  },
+  {
+   "term": "C2",
+   "count": 15
+  },
+  {
+   "term": "metal",
+   "count": 14
+  },
+  {
+   "term": "rate",
+   "count": 14
+  },
+  {
+   "term": "challenge",
+   "count": 14
+  },
+  {
+   "term": "computational",
+   "count": 14
+  },
+  {
+   "term": "promising",
+   "count": 14
+  },
+  {
+   "term": "property",
+   "count": 13
+  },
+  {
+   "term": "catalytic",
+   "count": 13
+  },
+  {
+   "term": "efficient",
+   "count": 13
+  },
+  {
+   "term": "Ag",
+   "count": 13
+  },
+  {
+   "term": "field",
+   "count": 13
+  },
+  {
+   "term": "local",
+   "count": 13
+  },
+  {
+   "term": "molecule",
+   "count": 12
+  },
+  {
+   "term": "adsorption",
+   "count": 12
+  },
+  {
+   "term": "descriptor",
+   "count": 12
+  },
+  {
+   "term": "application",
+   "count": 12
+  },
+  {
+   "term": "constant",
+   "count": 12
+  },
+  {
+   "term": "solution",
+   "count": 12
+  },
+  {
+   "term": "oxide",
+   "count": 12
+  },
+  {
+   "term": "stability",
+   "count": 12
+  },
+  {
+   "term": "hydrogen evolution",
+   "count": 11
+  },
+  {
+   "term": "gas",
+   "count": 11
+  },
+  {
+   "term": "performance",
+   "count": 11
+  },
+  {
+   "term": "condition",
+   "count": 11
+  },
+  {
+   "term": "technique",
+   "count": 11
+  },
+  {
+   "term": "enhanced",
+   "count": 11
+  },
+  {
+   "term": "continuum",
+   "count": 11
+  },
+  {
+   "term": "cluster",
+   "count": 11
+  },
+  {
+   "term": "ORR",
+   "count": 11
+  },
+  {
+   "term": "mechanism",
+   "count": 11
+  },
+  {
+   "term": "concentration",
+   "count": 11
+  },
+  {
+   "term": "rate-limiting",
+   "count": 11
+  },
+  {
+   "term": "Ni",
+   "count": 11
+  },
+  {
+   "term": "CO2 reduction",
+   "count": 10
+  }
+ ]
+}
