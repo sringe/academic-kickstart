@@ -1,0 +1,48 @@
+{{/* Video highlights widget.
+
+     Cards show a poster image with a play button; the <video> element is only
+     created when the visitor clicks (assets/js/video_cards.js). That matters
+     here because the clips are several MB each — nothing is downloaded until
+     someone actually asks for it, so the homepage stays light on mobile data.
+
+     Items are configured in content/home/videos.md, not here.
+*/}}
+
+{{ $page := .page }}
+
+<div class="container">
+  {{ with $page.Title }}<h1 class="video-section-title">{{ . | markdownify }}</h1>{{ end }}
+  {{ with $page.Params.subtitle }}<p class="video-section-subtitle">{{ . | markdownify }}</p>{{ end }}
+  {{ with $page.Content }}<div class="video-section-intro">{{ . }}</div>{{ end }}
+
+  <div class="video-grid">
+    {{ range $page.Params.item }}
+      {{ $item := . }}
+      {{ with $item.video }}
+      <figure class="video-card">
+        <button type="button" class="video-card-frame js-video-play"
+                data-video="{{ . | relURL }}"
+                aria-label="Play{{ with $item.title }}: {{ . }}{{ end }}">
+          {{ with $item.poster }}
+            <img class="video-card-poster" src="{{ . | relURL }}" alt="" loading="lazy">
+          {{ else }}
+            <span class="video-card-poster video-card-poster-blank"></span>
+          {{ end }}
+          <span class="video-card-play" aria-hidden="true"></span>
+          {{ with $item.badge }}<span class="video-card-badge">{{ . }}</span>{{ end }}
+        </button>
+
+        <figcaption class="video-card-body">
+          {{ with $item.title }}<h3 class="video-card-title">{{ . | markdownify }}</h3>{{ end }}
+          {{ with $item.caption }}<p class="video-card-caption">{{ . | markdownify }}</p>{{ end }}
+          {{ with $item.link }}
+            <a class="video-card-link" href="{{ . | relURL }}">
+              {{ $item.link_text | default "Read more" }} &rarr;
+            </a>
+          {{ end }}
+        </figcaption>
+      </figure>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

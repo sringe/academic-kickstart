@@ -48,38 +48,31 @@
       {{/* Stefan co-authors every paper, so a list on his profile says nothing. */}}
       {{ if not (in site.Params.publications.hide_profile_list $username) }}
         {{ with site.Data.pubmeta }}
-          {{ $pubmeta := . }}
           {{ with index .members $username }}
           <div class="article-widget content-widget-hr">
             <h3>
               {{ i18n "publications" | default "Publications" }}
               <span class="pub-count">{{ len . }}</span>
             </h3>
-            <div class="pub-list">
-            {{ range . }}
-              {{ with site.GetPage (printf "/publication/%s" .) }}
-              {{ $cites := 0 }}
-              {{ $cites_url := printf "https://scholar.google.com/scholar?q=%s" (urlquery (.Title | plainify)) }}
-              {{ with index $pubmeta.publications (path.Base (path.Clean .File.Dir)) }}
-                {{ $cites = .citations | default 0 }}
-                {{ with .cites_url }}{{ $cites_url = . }}{{ end }}
-              {{ end }}
-              <div class="pub-list-item">
-                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+            {{/* Numbered newest-first, so [1] is the most recent paper. The
+                 buttons come from the same `page_links` partial the publications
+                 page uses, so Cite / DOI / Cited by behave identically here --
+                 including the BibTeX/citation switch and the live count. */}}
+            <ol class="pub-list pub-list-numbered">
+            {{ range $slug := . }}
+              {{ with site.GetPage (printf "/publication/%s" $slug) }}
+              <li class="pub-list-item">
+                <a class="pub-list-title" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
                 <div class="article-metadata pub-citation">
                   {{ partial "citation_nature.html" . }}
-                  {{ with .Params.doi }}
-                  <a class="js-citation-count pub-citation-count" data-doi="{{ . }}"
-                     href="{{ $cites_url }}" target="_blank" rel="noopener"
-                     title="Citing articles on Google Scholar (count via OpenAlex)"{{ if lt $cites 1 }} hidden{{ end }}>
-                    Cited by <span class="js-citation-value">{{ $cites }}</span>
-                  </a>
-                  {{ end }}
                 </div>
-              </div>
+                <div class="btn-links pub-list-links">
+                  {{ partial "page_links" (dict "page" . "is_list" 1) }}
+                </div>
+              </li>
               {{ end }}
             {{ end }}
-            </div>
+            </ol>
           </div>
           {{ end }}
         {{ end }}
