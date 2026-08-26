@@ -834,14 +834,16 @@ h2.headline span::after {
   white-space: normal;
 }
 
+/* The theme sets `.dropdown-item { background: #fff !important }`, so these
+   have to be !important too, regardless of specificity. */
 #navbar-main .dropdown-item:hover,
 #navbar-main .dropdown-item:focus {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.05) !important;
 }
 
 .dark #navbar-main .dropdown-item:hover,
 .dark #navbar-main .dropdown-item:focus {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08) !important;
 }
 
 @media screen and (min-width: 992px) {
@@ -966,4 +968,277 @@ h2.headline span::after {
 .dark .headline-date {
   background: rgba($sta-primary, 0.22);
   color: lighten($sta-primary, 18%);
+}
+
+/* ===========================================================================
+   Hero card (layouts/partials/widgets/hero_card.html)
+
+   The old slider was full-window-width and 650px tall, with the group photo
+   letterboxed inside it. This is contained to the page width and crops to a
+   fixed ratio, so the photo fills its frame and takes far less vertical space.
+   =========================================================================== */
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #11141a;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
+}
+
+.hero-card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+/* Darkens the lower half only, so the caption stays readable without dulling
+   the whole photograph. */
+.hero-card-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+              rgba(8, 10, 14, 0.82) 0%,
+              rgba(8, 10, 14, 0.45) 26%,
+              rgba(8, 10, 14, 0) 58%);
+  pointer-events: none;
+}
+
+.hero-card-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.6rem 1.9rem 1.5rem;
+  color: #fff;
+}
+
+.hero-card-title {
+  margin: 0;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.hero-card-subtitle {
+  margin: 0.4rem 0 0;
+  max-width: 46rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.02rem;
+  line-height: 1.45;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card-cta {
+  display: inline-block;
+  margin-top: 0.9rem;
+  padding: 0.4rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2em;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  backdrop-filter: blur(3px);
+  transition: background 0.16s ease, border-color 0.16s ease;
+}
+
+.hero-card-cta:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* The homepage sections sit flush; give the hero a little breathing room. */
+.home-section.wg-hero-card {
+  padding-top: 1.75rem;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-card { border-radius: 10px; }
+
+  .hero-card-img { max-height: 260px; }
+
+  .hero-card-text { padding: 1.1rem 1.15rem 1rem; }
+
+  .hero-card-title { font-size: 1.6rem; }
+
+  .hero-card-subtitle {
+    margin-top: 0.3rem;
+    font-size: 0.88rem;
+  }
+
+  .hero-card-cta {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* ===========================================================================
+   Welcome message (themes/.../widgets/pages.html)
+   =========================================================================== */
+.welcome-block {
+  max-width: 46rem;      /* a readable measure instead of the full container */
+  margin: 0 auto 0.5rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+
+.welcome-lead {
+  margin-bottom: 0.9rem;
+  color: rgba(0, 0, 0, 0.82);
+  font-size: 1.12rem;
+  line-height: 1.62;
+}
+
+.welcome-lead::first-line {
+  font-weight: 600;
+}
+
+.welcome-kr {
+  margin-bottom: 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.58);
+  font-size: 0.96rem;
+  line-height: 1.7;
+  word-break: keep-all;   /* Korean wraps on word, not mid-word */
+}
+
+.dark .welcome-lead { color: rgba(255, 255, 255, 0.86); }
+.dark .welcome-kr {
+  border-top-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.welcome-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.welcome-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5rem 1.05rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 2em;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.welcome-action:hover {
+  border-color: $sta-primary;
+  color: $sta-primary;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.welcome-action-primary {
+  border-color: transparent;
+  background: $sta-primary;
+  color: #fff;
+}
+
+.welcome-action-primary:hover {
+  background: darken($sta-primary, 7%);
+  border-color: transparent;
+  color: #fff;
+}
+
+.dark .welcome-action {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 767px) {
+  .welcome-block { text-align: left; }
+  .welcome-lead { font-size: 1rem; }
+  .welcome-kr { font-size: 0.9rem; }
+  .welcome-actions { justify-content: stretch; }
+  .welcome-action { flex: 1 1 auto; justify-content: center; }
+}
+
+/* ===========================================================================
+   Navigation: focus the item in play, dim the rest.
+   =========================================================================== */
+@media screen and (min-width: 992px) {
+  #navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link {
+    opacity: 0.62;
+    transition: opacity 0.16s ease, color 0.16s ease;
+  }
+
+  /* The current page stays lit... */
+  #navbar-main .main-menu-item .navbar-nav > .nav-item > .nav-link.active {
+    opacity: 1;
+  }
+
+  /* ...and while the pointer is in the menu, only the item under it is lit. */
+  #navbar-main .main-menu-item .navbar-nav:hover > .nav-item > .nav-link {
+    opacity: 0.42;
+  }
+
+  #navbar-main .main-menu-item .navbar-nav > .nav-item:hover > .nav-link,
+  #navbar-main .main-menu-item .navbar-nav > .nav-item:focus-within > .nav-link {
+    opacity: 1 !important;
+  }
+}
+
+/* The caret should point the way the menu opens. */
+#navbar-main .nav-item.dropdown > .nav-link .caret {
+  display: inline-block;
+  margin-left: 0.3em;
+  vertical-align: 0.15em;
+  border-top: 0.32em solid currentColor;
+  border-right: 0.28em solid transparent;
+  border-left: 0.28em solid transparent;
+  opacity: 0.7;
+  transition: transform 0.16s ease;
+}
+
+#navbar-main .nav-item.dropdown:hover > .nav-link .caret {
+  transform: rotate(-180deg);
+}
+
+/* Dropdown: a little lift, and a clear marker on the current child. */
+#navbar-main .dropdown-menu {
+  animation: navdrop 0.15s ease-out;
+}
+
+@keyframes navdrop {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+#navbar-main .dropdown-item {
+  position: relative;
+  font-weight: 500;
+}
+
+#navbar-main .dropdown-item.active {
+  background: rgba($sta-primary, 0.1) !important;
+  color: $sta-primary;
+  font-weight: 700;
+}
+
+#navbar-main .dropdown-item.active::before {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  left: 0;
+  width: 3px;
+  border-radius: 3px;
+  background: $sta-primary;
 }

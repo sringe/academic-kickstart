@@ -71,14 +71,28 @@
         {{ range site.Menus.main }}
 
         {{ if .HasChildren }}
+        {{/* A parent used to render as `href="#"`, so top-level entries that have
+             their own page (Members -> people/, Research -> project/) could not
+             be opened at all -- only their children were reachable. The parent
+             now links to its own URL; the submenu opens on hover on the desktop
+             and is always expanded on mobile, so nothing is lost.
+             `data-toggle` is deliberately omitted: with it, Bootstrap swallows
+             the click instead of following the link. */}}
+        {{ $parent_url := .URL | default "#" }}
+        {{ $parent_active := and (ne $parent_url "#") (hasPrefix $current_page.RelPermalink ($parent_url | relLangURL)) }}
+        {{ range .Children }}
+          {{ if hasPrefix $current_page.RelPermalink (.URL | relLangURL) }}{{ $parent_active = true }}{{ end }}
+        {{ end }}
         <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+          <a href="{{ $parent_url | relLangURL }}" class="nav-link dropdown-toggle{{ if $parent_active }} active{{ end }}"
+             aria-haspopup="true" aria-expanded="false">
             {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
             <span class="caret"></span>
           </a>
           <div class="dropdown-menu">
             {{ range .Children }}
-              <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+              {{ $child_active := hasPrefix $current_page.RelPermalink (.URL | relLangURL) }}
+              <a class="dropdown-item{{ if $child_active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
                 {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
               </a>
             {{ end }}

@@ -2,7 +2,10 @@
 # Slider widget.
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
+#   Superseded by the hero_card widget (content/home/hero_card.md), which shows
+#   the group photo cropped and contained instead of a full-width carousel.
+#   To restore the carousel: set this back to true and hero_card to false.
 weight = 1  # Order that this section will appear.
 
 # Slide interval.
