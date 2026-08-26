@@ -1,6 +1,6 @@
 {{/* Display project description. */}}
 
-<h1>{{ .Params.title  | markdownify}}</h1>
+<h1 class="page-title"><span>{{ .Params.title | markdownify }}</span></h1>
 <figure>
         <img src="{{ .Params.projectimage }}" alt="Trulli" style="width:{{ .Params.projectimagespan }}">
   <figcaption>

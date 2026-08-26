@@ -1000,10 +1000,8 @@ h2.headline > span::after {
 .hero-panels {
   display: flex;
   gap: 14px;
-  /* Centred, not stretched: the side panels are square (see make_hero.py — a
-     3.4:1 render needs a square frame to be legible) and stretching them would
-     re-crop those squares back into tall slices. */
-  align-items: center;
+  /* Stretched, so the three panels are exactly as tall as one another. */
+  align-items: stretch;
 }
 
 .hero-panel {
@@ -1022,11 +1020,6 @@ h2.headline > span::after {
 
 .hero-panel-side {
   flex: 0 0 23%;
-  aspect-ratio: 1 / 1;
-}
-
-@supports not (aspect-ratio: 1) {
-  .hero-panel-side { height: 260px; }
 }
 
 .hero-panel img {

@@ -18,7 +18,7 @@ from __future__ import annotations
 import os
 import sys
 
-from PIL import Image, ImageEnhance
+from PIL import Image, ImageEnhance, ImageFilter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADERS = os.path.join(ROOT, "assets", "media", "headers")
@@ -26,11 +26,11 @@ QUALITY = 84
 
 # Output sizes. CSS scales these with object-fit: cover, so they only need the
 # right aspect ratio and enough resolution for a retina screen.
-# Square, not tall and narrow. These renders are ~3.4:1; in a 1:2 panel any
-# crop that fills the frame is a ~15% slice, i.e. an unrecognisable close-up,
-# and fitting the whole figure instead leaves it tiny between stretched edges.
-# A square panel shows nearly a third of the width, enough to read the object.
-SIDE_SIZE = (760, 760)
+# Tall, to match the height of the centre panel. These renders are ~3.4:1, so a
+# crop this shape shows only a narrow vertical band of the source -- which is
+# why `bias` below is set deliberately, to put the subject of each figure in the
+# middle of that band rather than at its edge.
+SIDE_SIZE = (520, 880)
 # ~1.25:1, which is the shape the middle panel actually occupies once the two
 # square side panels and the gaps are taken out of the row. Generating it wider
 # meant the group was cropped at the sides on display.
@@ -40,9 +40,14 @@ PANELS = {
     "hero_left.jpg": {
         "image": "smpb_fhiaims11.png",   # continuum solvation
         "size": SIDE_SIZE,
+        # Fitted, not cropped: the whole cavity is wider than any panel-shaped
+        # crop of this source can contain.
+        "mode": "fit",
+        "span": (0.33, 0.90),    # the whole cavity, with a little air around it
+        "vspan": (0.03, 0.87),   # the object's full height, above its soft reflection
         "zoom": 1.0,
         "focus": (0.5, 0.5),
-        "bias": 0.62,          # place the square over the cavity
+        "bias": 0.545,
         "brightness": 1.02,
     },
     "hero_center.jpg": {
@@ -56,11 +61,12 @@ PANELS = {
     "hero_right.jpg": {
         "image": "qmmm_3.png",           # electrified interface
         "size": SIDE_SIZE,
-        # No zoom needed once the panel is square; `bias` slides the square over
-        # the slab and the water column, which sit well right of centre.
-        "zoom": 1.0,
+        # Slight zoom and a right-shifted band, to clear the dark background
+        # outside this render's white ellipse -- it showed as a grey wedge in
+        # the top corner.
+        "zoom": 1.15,
         "focus": (0.5, 0.5),
-        "bias": 0.86,
+        "bias": 0.87,
         "brightness": 1.02,
     },
 }
@@ -77,31 +83,46 @@ def zoom_in(im: Image.Image, factor: float, focus: tuple[float, float]) -> Image
     return im.crop((int(left), int(top), int(left + w), int(top + h)))
 
 
-def fit_width(im: Image.Image, size: tuple[int, int]) -> Image.Image:
-    """Show the whole figure: scale it to the panel width, centre it, and fill
-    the space above and below by stretching the image's own edge rows.
+def fit_blur(im: Image.Image, size: tuple[int, int],
+             span: tuple[float, float],
+             vspan: tuple[float, float] = (0.0, 1.0)) -> Image.Image:
+    """Show a whole wide object in a tall panel.
 
-    `cover` is wrong for a very wide figure in a tall panel — it crops a narrow
-    vertical slice, which reads as an unrecognisable close-up however the focus
-    is placed. This shows the entire object instead, and because these renders
-    sit on a smooth gradient the stretched edges are invisible.
+    `cover` cannot do this: the source is only 1554px tall, so any crop with the
+    panel's aspect spans barely a sixth of its width and always cuts the object.
+    Here the slice between `span` (fractions of the source width) is scaled to
+    the panel width and centred, and the bands above and below are filled by
+    repeating that slice's own top and bottom rows.
+
+    That is seamless for these renders because their background is a gradient
+    that varies across the image but not down it. `vspan` trims the source
+    vertically first: without it the bottom row falls inside the object's mirror
+    reflection, which then repeats downwards as vertical streaks. Filling the bands
+    with a blurred copy instead, tried first, left a visible horizontal seam
+    where the blur met the sharp image.
     """
     tw, th = size
-    scaled = im.resize((tw, max(1, round(im.height * tw / im.width))), Image.LANCZOS)
-    if scaled.height >= th:
-        top = (scaled.height - th) // 2
-        return scaled.crop((0, top, tw, top + th))
+    x0, x1 = int(im.width * span[0]), int(im.width * span[1])
+    y0, y1 = int(im.height * vspan[0]), int(im.height * vspan[1])
+    fg = im.crop((x0, y0, x1, y1))
+    fg = fg.resize((tw, max(1, round(fg.height * tw / fg.width))), Image.LANCZOS)
+    if fg.height >= th:
+        top = (fg.height - th) // 2
+        return fg.crop((0, top, tw, top + th))
 
     canvas = Image.new("RGB", size)
-    top = (th - scaled.height) // 2
-    # Extend the top and bottom edge rows over the empty bands.
-    canvas.paste(scaled.crop((0, 0, tw, 1)).resize((tw, top)), (0, 0))
-    bottom_h = th - top - scaled.height
-    if bottom_h > 0:
-        canvas.paste(
-            scaled.crop((0, scaled.height - 1, tw, scaled.height)).resize((tw, bottom_h)),
-            (0, top + scaled.height))
-    canvas.paste(scaled, (0, top))
+    top = (th - fg.height) // 2
+    if top > 0:
+        canvas.paste(fg.crop((0, 0, tw, 1)).resize((tw, top)), (0, 0))
+    bottom = th - top - fg.height
+    if bottom > 0:
+        # Both bands are filled from the TOP row. The bottom row still catches
+        # the edge of the object's shadow, which repeated downwards as a faint
+        # pale column; the background itself is the same all the way down, so
+        # the clean top row is the right source for both ends.
+        canvas.paste(fg.crop((0, 0, tw, 1)).resize((tw, bottom)),
+                     (0, top + fg.height))
+    canvas.paste(fg, (0, top))
     return canvas
 
 
@@ -128,7 +149,8 @@ def main() -> int:
         im = Image.open(src).convert("RGB")
         im = zoom_in(im, cfg["zoom"], cfg["focus"])
         if cfg.get("mode") == "fit":
-            im = fit_width(im, cfg["size"])
+            im = fit_blur(im, cfg["size"], cfg.get("span", (0.0, 1.0)),
+                          cfg.get("vspan", (0.0, 1.0)))
         else:
             im = cover(im, cfg["size"], cfg["bias"])
         if cfg.get("brightness", 1.0) != 1.0:
