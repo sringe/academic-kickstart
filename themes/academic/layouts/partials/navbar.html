@@ -164,6 +164,24 @@
       </li>
       {{ end }}
 
+      {{/* Korean/English toggle, driven by assets/js/translate.js. Google's
+           translate script is fetched only once this is clicked, so no
+           third-party JavaScript loads for visitors who never use it. */}}
+      {{ with site.Params.translate }}
+      {{ if .enable }}
+      <li class="nav-item nav-item-translate">
+        <button type="button" class="nav-link js-translate-toggle" aria-pressed="false"
+                data-source="{{ .source | default "en" }}"
+                data-target="{{ .target | default "ko" }}"
+                data-label-target="{{ .label_target | default "한국어" }}"
+                data-label-original="{{ .label_original | default "EN" }}">
+          <i class="fas fa-language" aria-hidden="true"></i>
+          <span class="js-translate-label">{{ .label_target | default "한국어" }}</span>
+        </button>
+      </li>
+      {{ end }}
+      {{ end }}
+
       {{ if site.Params.day_night }}
       <li class="nav-item">
         <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>

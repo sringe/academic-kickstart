@@ -21,7 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HEADERS = os.path.join(ROOT, "assets", "media", "headers")
 
 PHOTO = "Pic_3.jpg"                 # group photo (un-padded original)
-RENDER = "smpb_fhiaims11.png"       # research render blended in on the right
+RENDER = "qmmm_3.png"               # research render blended in on the right
 OUT = "hero_blend.jpg"
 
 SIZE = (1600, 760)                  # hero crop
@@ -32,6 +32,11 @@ SIZE = (1600, 760)                  # hero crop
 PHOTO_SHARE = 0.58                  # fraction of the width belonging to the photo
 OVERLAP = 180                       # px over which one dissolves into the other
 RENDER_CROP_BIAS = 0.50             # which part of the wide render to keep (0=left, 1=right)
+# Zoom into the render before cropping, so a busy figure reads as one clear
+# object instead of a field of small atoms. FOCUS is the point to keep centred,
+# as fractions of the source width/height.
+RENDER_ZOOM = 2.15
+RENDER_FOCUS = (0.775, 0.50)
 RENDER_BRIGHTNESS = 1.02
 QUALITY = 82
 
@@ -45,6 +50,17 @@ def cover(im: Image.Image, size: tuple[int, int]) -> Image.Image:
     left = (im.width - tw) // 2
     top = (im.height - th) // 2
     return im.crop((left, top, left + tw, top + th))
+
+
+def zoom_in(im: Image.Image, factor: float, focus: tuple[float, float]) -> Image.Image:
+    """Crop to 1/factor of the frame around `focus`, i.e. an optical zoom."""
+    if factor <= 1.0:
+        return im
+    w, h = im.width / factor, im.height / factor
+    cx, cy = im.width * focus[0], im.height * focus[1]
+    left = min(max(cx - w / 2, 0), im.width - w)
+    top = min(max(cy - h / 2, 0), im.height - h)
+    return im.crop((int(left), int(top), int(left + w), int(top + h)))
 
 
 def cover_biased(im: Image.Image, size: tuple[int, int], bias: float) -> Image.Image:
@@ -94,7 +110,9 @@ def main() -> int:
     base = Image.new("RGB", SIZE)
     base.paste(photo_panel, (0, 0))
 
-    render_panel = cover_biased(Image.open(render_path).convert("RGB"),
+    render_src = zoom_in(Image.open(render_path).convert("RGB"),
+                         RENDER_ZOOM, RENDER_FOCUS)
+    render_panel = cover_biased(render_src,
                                 (w - seam + OVERLAP // 2, h), RENDER_CROP_BIAS)
     render_panel = ImageEnhance.Brightness(render_panel).enhance(RENDER_BRIGHTNESS)
     render_full = Image.new("RGB", SIZE)

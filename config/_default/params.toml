@@ -167,7 +167,19 @@ link_blog = false
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = ["citations", "cite_toggle", "video_cards", "gallery_headers"]
+plugins_js  = ["citations", "cite_toggle", "video_cards", "gallery_headers", "translate", "section_tabs"]
+
+# Korean/English toggle in the navbar.
+#   Uses the Google Website Translator widget, which is a deprecated Google
+#   product: it still works, but it could be withdrawn. Google's script is only
+#   fetched once a visitor clicks the toggle. Browsers' own "translate page"
+#   feature does the same job without this, so set enable = false to drop it.
+[translate]
+  enable = true
+  source = "en"
+  target = "ko"
+  label_target = "한국어"     # shown when the page is in English
+  label_original = "EN"      # shown when the page has been translated
 
 # Avatars.
 # An avatar is an image that appears next to a user's name.

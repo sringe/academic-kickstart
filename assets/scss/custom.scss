@@ -194,12 +194,16 @@ h2.headline span::after {
 .dark h2.headline {
   color: rgba(255, 255, 255, 0.9);
 }
-.home-section#posts  .row,
+/* The news list used to be clamped to 280px with its own scrollbar, i.e. a
+   scrolling box inside a scrolling page. The homepage tabs
+   (assets/js/section_tabs.js) show one block at a time instead, so the clamp is
+   gone; these selectors are kept, neutralised, as a signpost. */
+.home-section#posts .row,
 #posts .row,
 #posts .article-list,
 #posts .col-12 {
-  max-height: 280px !important;
-  overflow-y: auto !important;
+  max-height: none;
+  overflow-y: visible;
 }
 
 .home-section {
@@ -1270,4 +1274,111 @@ h2.headline span::after {
    contrast; lift them a little. */
 .dark .wordcloud img {
   filter: brightness(1.35) saturate(1.1);
+}
+
+/* ===========================================================================
+   Language toggle (assets/js/translate.js)
+   =========================================================================== */
+.nav-item-translate .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  /* Without this the CJK label wraps to one character per line in a tight nav. */
+  white-space: nowrap;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  opacity: 0.62;
+}
+
+.nav-item-translate .nav-link:hover,
+.nav-item-translate .nav-link.is-active {
+  opacity: 1 !important;
+}
+
+.nav-item-translate .nav-link.is-active {
+  color: $sta-primary;
+  font-weight: 700;
+}
+
+.nav-item-translate .js-translate-label {
+  white-space: nowrap;
+}
+
+/* Google injects a toolbar and shifts the whole document down by 40px, which
+   pushes a fixed navbar off the top of the window. */
+body.is-translating .skiptranslate iframe { display: none !important; }
+body.is-translating { top: 0 !important; }
+
+#google_translate_element { display: none; }
+
+/* ===========================================================================
+   Homepage section tabs (assets/js/section_tabs.js)
+   =========================================================================== */
+.home-tabs {
+  position: sticky;
+  top: 70px;                 /* clears the fixed navbar */
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.home-tabs-inner {
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.home-tabs-inner::-webkit-scrollbar { display: none; }
+
+.home-tab {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  border: 0;
+  border-radius: 2em;
+  background: none;
+  color: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.home-tab:hover { color: rgba(0, 0, 0, 0.85); }
+
+.home-tab.is-active {
+  background: rgba($sta-primary, 0.12);
+  color: $sta-primary;
+}
+
+.dark .home-tabs {
+  background: rgba(28, 31, 38, 0.9);
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .home-tab { color: rgba(255, 255, 255, 0.6); }
+.dark .home-tab:hover { color: rgba(255, 255, 255, 0.9); }
+
+/* A tabbed panel already has the tab as its label, so the big repeated heading
+   directly under the bar is redundant. */
+.home-tabs ~ .home-section [data-home-tab] > h2.headline:first-child {
+  margin-top: 1.25rem;
+}
+
+@media screen and (max-width: 767px) {
+  .home-tabs { top: 50px; }
+  .home-tabs-inner { justify-content: flex-start; padding: 0.4rem 0.5rem; }
+  .home-tab { padding: 0.45rem 0.75rem; font-size: 0.78rem; }
 }
