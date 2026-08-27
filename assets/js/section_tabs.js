@@ -51,7 +51,22 @@
       });
     });
 
-    return { order: order, targets: targets };
+    // A section holding panels for two different tabs (the pages widget owns
+    // both Welcome and News) is never hidden itself -- only the panels inside
+    // it are -- so when neither is on, its own padding is left behind as an
+    // empty 42px strip under the tab bar. Collect those shells so select() can
+    // collapse them. Sections that are targets in their own right are left
+    // out: they are already shown and hidden directly.
+    var shells = [];
+    order.forEach(function (name) {
+      targets[name].forEach(function (el) {
+        if (el.tagName === 'SECTION') return;
+        var sec = el.closest('section.home-section');
+        if (sec && shells.indexOf(sec) === -1) shells.push(sec);
+      });
+    });
+
+    return { order: order, targets: targets, shells: shells };
   }
 
   function run() {
@@ -111,6 +126,15 @@
           if (on) wake(el);
         });
       });
+      model.shells.forEach(function (sec) {
+        var on = false;
+        Array.prototype.forEach.call(sec.querySelectorAll('[' + ATTR + ']'), function (p) {
+          if (p.style.display !== 'none') on = true;
+        });
+        sec.hidden = !on;
+        sec.style.display = on ? '' : 'none';
+      });
+
       if (fromClick) {
         if (history.replaceState) {
           history.replaceState(null, '', '#' + slug(name));
@@ -119,11 +143,15 @@
       }
     }
 
-    // Place the bar directly after the hero, else before the first panel.
-    var hero = document.querySelector('section.home-section.wg-hero-card');
+    // The bar goes above the first panel -- i.e. directly under the navbar --
+    // so it is on screen whatever is open. It used to sit under the hero, but
+    // once a panel opened the hero was above the bar and out of reach: the
+    // panel is a scroll container with `overscroll-behavior: contain`, so
+    // scrolling up in it does not chain to the page. The hero is now a panel
+    // of its own instead (data-home-tab="Group" in the hero_card widget).
     var firstSection = model.targets[model.order[0]][0];
-    var anchor = hero || (firstSection.closest('section.home-section') || firstSection);
-    anchor.parentNode.insertBefore(bar, anchor.nextSibling);
+    var anchor = firstSection.closest('section.home-section') || firstSection;
+    anchor.parentNode.insertBefore(bar, anchor);
 
     // Publish the height of the fixed navbar plus the tab bar, so the panel
     // below can be told to fill exactly the rest of the window and the snap

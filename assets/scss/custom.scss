@@ -1939,9 +1939,26 @@ body.has-home-tabs [data-home-tab] > h2.headline {
   display: none;
 }
 
-/* Close the remaining gap between the bar and the panel content. */
+/* Close the remaining gap between the bar and the panel content. The right
+   amount differs per panel because their first elements do not carry the same
+   leading: Welcome and News share the pages widget's section and start with
+   text that needs a little air under the bar, while Simulations and What we
+   work on open with a subtitle and a figure that already bring their own. */
 body.has-home-tabs .home-tabs ~ .home-section {
-  padding-top: 1.25rem;
+  padding-top: 0.75rem;
+}
+
+body.has-home-tabs .home-tabs ~ .home-section.wg-videos,
+body.has-home-tabs .home-tabs ~ .home-section.wg-wordcloud {
+  padding-top: 0.15rem;
+}
+
+/* The hero is a panel too now, and it is a photo rather than text: it wants
+   the same tight frame top and bottom, not the leading a paragraph needs.
+   The figure below subtracts this total. */
+body.has-home-tabs .home-tabs ~ .home-section.wg-hero-card {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /* The subtitle was nudged up under its heading; with the heading gone it does
@@ -2385,15 +2402,14 @@ h2.headline:first-child,
 }
 
 /* ===========================================================================
-   Hero sized so the homepage fills exactly one screen on load: navbar, hero,
-   and the section tab bar sitting on the bottom edge.
+   Hero sized so its panel fills exactly one screen: navbar, tab bar, photo.
 
    --home-tabs-offset is the navbar plus the tab bar, measured and published by
-   assets/js/section_tabs.js, so this follows both across breakpoints. The
-   2.25rem is the hero section's own padding (1.75 top + 0.5 bottom).
+   assets/js/section_tabs.js, so this follows both across breakpoints. The 1rem
+   is the hero section's own padding under the tabs (0.5 top + 0.5 bottom).
    =========================================================================== */
 body.has-home-tabs .wg-hero-card .hero-panel-main img {
-  height: calc(100vh - var(--home-tabs-offset, 143px) - 2.25rem);
+  height: calc(100vh - var(--home-tabs-offset, 143px) - 1rem);
   max-height: none;
   min-height: 240px;
 }
@@ -2523,11 +2539,11 @@ body.has-home-tabs .video-card-caption {
    The subtitle sat under the panel's own top padding with a 2rem margin below
    it, which pushed the videos down and left the posters smaller than the space
    allowed.
-   =========================================================================== */
-body.has-home-tabs .home-tabs ~ .home-section {
-  padding-top: 0.9rem;
-}
 
+   The panel's own top padding is set once, per panel, with the tab rules
+   further up this file -- an unscoped override here beat that rule for every
+   panel, not just this one.
+   =========================================================================== */
 body.has-home-tabs .video-section-subtitle {
   margin-bottom: 0.6rem;
   font-size: 0.95rem;
