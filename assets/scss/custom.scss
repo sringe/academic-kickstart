@@ -2130,10 +2130,15 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1.5rem;
-  align-items: start;
+  /* No `align-items: start`: the cards stretch to the tallest in the row, so
+     the three boxes end level however long each summary runs. The head below
+     is a flex column that absorbs the slack, which also lines the Details rows
+     up with each other. */
 }
 
 .subgroup-card {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-top: 4px solid var(--subgroup-color, #5a6b7c);
@@ -2155,7 +2160,10 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 
 /* The whole head is the control, so the figure is clickable too. */
 .subgroup-head {
-  display: block;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: stretch;
   width: 100%;
   padding: 1rem 1.15rem 1.1rem;
   border: 0;
@@ -2165,21 +2173,33 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
   text-align: left;
 }
 
+/* A fixed band with the panel centred in it, rather than a box that shrinks to
+   whatever the image is: the three source panels differ in aspect ratio, so
+   sizing to the image left the titles at three different heights. No plate
+   behind it -- the panels are cut from the overview figure on white, so a tint
+   read as a grey rectangle around artwork that has no edge of its own. */
 .subgroup-figure {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(190px, 34vh, 340px);
   margin-bottom: 0.75rem;
-  padding: 0.5rem;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.02);
 }
 
 .subgroup-figure img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.subgroup-head-text { display: block; }
+/* Takes the leftover height, so Details sits at the bottom of every card. */
+.subgroup-head-text {
+  display: block;
+  flex: 1 1 auto;
+}
 
 .subgroup-title {
   display: block;
@@ -2344,7 +2364,13 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 .dark .subgroup-people-label { color: rgba(255, 255, 255, 0.5); }
 
 /* The figure is a line drawing on transparency; lift it out of a dark page. */
-.dark .subgroup-figure { background: rgba(255, 255, 255, 0.9); }
+/* The panels are line art on transparent white, so in dark mode they need a
+   light plate to stay legible -- here it is the image that gets it, tight to
+   the artwork, rather than the whole band. */
+.dark .subgroup-figure img {
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+}
 
 @media screen and (max-width: 767px) {
   .subgroup-grid { gap: 1rem; }
@@ -2591,17 +2617,11 @@ body.has-home-tabs .video-card-caption {
   padding: 0.8rem 1rem 0.9rem;
 }
 
-/* The figure is the tall part of a card; let it scale with the window. */
+/* The figure is the tall part of a card. It scales with the window through the
+   clamp on .subgroup-figure; the flat `max-height: 18vh` that used to be here
+   held the panels to about a third of the card even on a large screen. */
 .wg-subgroups .subgroup-figure {
   margin-bottom: 0.6rem;
-  padding: 0.35rem;
-}
-
-.wg-subgroups .subgroup-figure img {
-  max-height: 18vh;
-  width: auto;
-  max-width: 100%;
-  margin: 0 auto;
 }
 
 .wg-subgroups .subgroup-more {
@@ -2626,6 +2646,6 @@ body.has-home-tabs .video-card-caption {
 @media screen and (max-width: 767px) {
   /* On a phone these pages scroll anyway; give the figures and map their size
      back rather than squeezing them into a short viewport. */
-  .wg-subgroups .subgroup-figure img { max-height: none; }
+  .wg-subgroups .subgroup-figure { height: auto; }
   .wg-contact .leaflet-container { height: 300px !important; }
 }

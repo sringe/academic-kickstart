@@ -1,7 +1,9 @@
 +++
 # Research subgroups (layouts/partials/widgets/subgroups.html).
 # The panel images are cut from the group's overview figure by
-# scripts/make_research_panels.py -- re-run it if the figure changes.
+# scripts/make_research_panels.py, then cropped to the circle alone, at one
+# diameter and centred, by scripts/make_subgroup_circles.py -- re-run both if
+# the figure changes. The full annotated panels are the _circle-less names.
 widget = "subgroups"
 headless = true
 active = true
@@ -13,7 +15,7 @@ subtitle = "We work across three connected scales, from the electronic structure
 [[group]]
   title = "Materials"
   color = "#b07a5c"
-  image = "research/subgroup_materials.png"
+  image = "research/subgroup_materials_circle.png"
   summary = "What the catalyst is made of, and how it changes while it works."
   description = "Electronic-structure calculations of the catalyst itself: which sites are active, how adsorbates bind, and how the surface reorganises under reaction conditions. The questions that set everything downstream are decided here — activity and selectivity descriptors, the reaction mechanism, and whether a material stays intact at operating potential."
   topics = [
@@ -23,7 +25,7 @@ subtitle = "We work across three connected scales, from the electronic structure
     "Grain boundaries and surface reconstruction",
     "High-throughput screening for activity and selectivity descriptors",
   ]
-  members = ["abbas", "adith"]
+  members = ["han-seungchang", "chanjin-kim", "suyeon"]
 
   [[group.links]]
     name = "Materials screening"
@@ -33,7 +35,7 @@ subtitle = "We work across three connected scales, from the electronic structure
 [[group]]
   title = "Reactive solid–liquid interfaces"
   color = "#3f9184"
-  image = "research/subgroup_interfaces.png"
+  image = "research/subgroup_interfaces_circle.png"
   summary = "The electrified interface where the reaction actually happens."
   description = "The region between catalyst and electrolyte, where the electric double layer, the local pH and the ion distribution together decide the rate. We model the interface explicitly and with continuum theory, and connect the two so that the atomistic picture can be carried into conditions an experiment can reach."
   topics = [
@@ -43,7 +45,7 @@ subtitle = "We work across three connected scales, from the electronic structure
     "Ion diffusion, migration and steric repulsion",
     "Implicit solvent methods for electrified interfaces",
   ]
-  members = ["admin", "dianwei-hou", "horbatenko-yevhen"]
+  members = ["horbatenko-yevhen", "dianwei-hou", "juhee", "shuran-xu", "bosung", "sayeon-lee", "sahar"]
 
   [[group.links]]
     name = "Solvation and electrified interfaces"
@@ -57,7 +59,7 @@ subtitle = "We work across three connected scales, from the electronic structure
 [[group]]
   title = "Multi-scale modeling"
   color = "#4a648c"
-  image = "research/subgroup_multiscale.png"
+  image = "research/subgroup_multiscale_circle.png"
   summary = "From a single active site to a working electrolyser."
   description = "Coupling the interface description to transport across a whole device: reactions, diffusion, migration and convection through a porous gas diffusion electrode. This is where a catalyst that looks good on paper meets the cell it has to work in, and where cell design turns out to govern which products come out."
   topics = [
@@ -67,10 +69,19 @@ subtitle = "We work across three connected scales, from the electronic structure
     "Digital twins of reported experimental electrolysers",
     "Product selectivity across the catalyst layer",
   ]
-  members = ["adith", "han-seungchang"]
+  members = ["adith", "byungmin-chun", "sumin-choi"]
 
   [[group.links]]
     name = "Multi-scale modeling"
     url = "/project/multiscalemodeling/"
     primary = true
+
+  # The two packages this subgroup builds the models with.
+  [[group.links]]
+    name = "CatmapInterface.jl"
+    url = "/software/catmapinterface/"
+
+  [[group.links]]
+    name = "CatINT"
+    url = "/software/catint/"
 +++
