@@ -25,7 +25,7 @@ subtitle = "We work across three connected scales, from the electronic structure
     "Grain boundaries and surface reconstruction",
     "High-throughput screening for activity and selectivity descriptors",
   ]
-  members = ["han-seungchang", "chanjin-kim", "suyeon"]
+  members = ["han-seungchang", "chanjin-kim", "suyeon", "dongwonkim"]
 
   [[group.links]]
     name = "Materials screening"
