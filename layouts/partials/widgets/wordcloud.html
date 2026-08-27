@@ -12,9 +12,13 @@
   {{ with $page.Params.subtitle }}<p class="video-section-subtitle">{{ . | markdownify }}</p>{{ end }}
 
   <figure class="wordcloud">
-    <img src="{{ $page.Params.image | default "/media/wordcloud.png" | relURL }}"
-         alt="{{ $page.Params.alt | default "Terms appearing most often in the group's publications, sized by frequency" }}"
-         loading="lazy">
+    {{/* From assets/ so the dimensions are known: without width/height the
+         figure collapsed to the height of its caption while the image loaded,
+         which read as a large empty gap in the panel. */}}
+    {{ with resources.Get ($page.Params.image | default "media/wordcloud.png") }}
+    <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+         alt="{{ $page.Params.alt | default "Terms appearing most often in the group's publications, sized by frequency" }}">
+    {{ end }}
     {{ with $page.Params.caption }}
     <figcaption class="wordcloud-caption">{{ . | markdownify }}</figcaption>
     {{ end }}

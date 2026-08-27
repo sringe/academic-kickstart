@@ -85,6 +85,19 @@
       buttons[name] = b;
     });
 
+    // A lazily-loaded image inside a display:none panel is never fetched, and
+    // stays unfetched when the panel is shown. Nudge them when a panel opens.
+    function wake(el) {
+      var imgs = el.querySelectorAll('img[loading="lazy"]');
+      Array.prototype.forEach.call(imgs, function (img) {
+        img.setAttribute('loading', 'eager');
+        if (!img.complete || img.naturalWidth === 0) {
+          var src = img.getAttribute('src');
+          if (src) img.setAttribute('src', src);
+        }
+      });
+    }
+
     function select(name, fromClick) {
       if (!model.targets[name]) return;
       model.order.forEach(function (other) {
@@ -95,6 +108,7 @@
           el.hidden = !on;
           // `hidden` is easily beaten by a display rule from the theme.
           el.style.display = on ? '' : 'none';
+          if (on) wake(el);
         });
       });
       if (fromClick) {

@@ -9,7 +9,7 @@ weight = 20
 title = "What we work on"
 subtitle = "Terms across our publications, sized by how often they appear"
 
-image = "/media/wordcloud.png"
+image = "media/wordcloud.png"   # relative to assets/
 caption = "Built from the titles and abstracts of all group publications."
 
 cta_link = "/my-publications/"

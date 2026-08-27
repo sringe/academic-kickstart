@@ -2040,9 +2040,45 @@ body.has-home-tabs .home-tabs {
   scroll-margin-top: var(--navbar-h, 70px);
 }
 
+/* Each panel is capped at the height left below the docked bar and scrolls
+   inside if it needs to, so the homepage is exactly one screen from the bar
+   down. `max-height` rather than `min-height`: forcing the height instead left
+   several hundred pixels of white under the short panels.
+   The `overflow` needs !important to beat `.home-section { overflow: visible
+   !important }` higher up this file. */
 body.has-home-tabs .home-tabs ~ .home-section {
-  min-height: calc(100vh - var(--home-tabs-offset, 143px));
+  max-height: calc(100vh - var(--home-tabs-offset, 143px));
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;   /* do not chain to the page at the ends */
 }
+
+/* Slimmer scrollbar so it reads as part of the panel. */
+body.has-home-tabs .home-tabs ~ .home-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.has-home-tabs .home-tabs ~ .home-section::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+body.has-home-tabs .home-tabs ~ .home-section:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dark body.has-home-tabs .home-tabs ~ .home-section::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Trim the section padding that showed as white space above and below the
+   shorter panels now that the panel is a fixed-height box. */
+body.has-home-tabs .home-tabs ~ .home-section {
+  padding-bottom: 1.25rem;
+}
+
+body.has-home-tabs .video-grid { margin-bottom: 0.5rem; }
+body.has-home-tabs .wordcloud { margin-bottom: 0; }
 
 /* A snap point per panel would fight the reader inside a long one. */
 body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
@@ -2051,4 +2087,271 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 
 @media (prefers-reduced-motion: reduce) {
   html.has-home-tabs { scroll-snap-type: none; }
+}
+
+/* ===========================================================================
+   Research subgroups (layouts/partials/widgets/subgroups.html)
+
+   Three cards, each showing its own panel cut from the group's overview figure.
+   Clicking one expands its detail underneath. Each card carries its subgroup's
+   colour as --subgroup-color, taken from the figure itself.
+   =========================================================================== */
+.subgroups-intro {
+  max-width: 48rem;
+  margin: -0.5rem auto 2rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.dark .subgroups-intro { color: rgba(255, 255, 255, 0.62); }
+
+.subgroup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.subgroup-card {
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-top: 4px solid var(--subgroup-color, #5a6b7c);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.subgroup-card:hover {
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.11);
+  transform: translateY(-2px);
+}
+
+.subgroup-card.is-open {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+  transform: none;
+}
+
+/* The whole head is the control, so the figure is clickable too. */
+.subgroup-head {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.15rem 1.1rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.subgroup-figure {
+  display: block;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.subgroup-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.subgroup-head-text { display: block; }
+
+.subgroup-title {
+  display: block;
+  color: var(--subgroup-color, #333);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.subgroup-summary {
+  display: block;
+  margin-top: 0.3rem;
+  color: rgba(0, 0, 0, 0.62);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.dark .subgroup-summary { color: rgba(255, 255, 255, 0.66); }
+
+.subgroup-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  margin-top: 0.8rem;
+  color: var(--subgroup-color, #333);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subgroup-chevron {
+  width: 0;
+  height: 0;
+  border-top: 5px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.subgroup-card.is-open .subgroup-chevron { transform: rotate(-180deg); }
+
+/* Collapsed only once the script has taken over, so the content is readable
+   with JavaScript off.
+
+   Plain show/hide, no height animation. Two animated approaches were tried and
+   both failed to open in the browser: transitioning max-height to a measured
+   pixel value (the computed value stayed at 0 whatever was set, inline or not),
+   and transitioning a grid track from 0fr to 1fr (the track resolved to 0px
+   even with the rule matching and the stylesheet freshly loaded). A panel that
+   opens reliably is worth more than one that slides. */
+.js-subgroups.is-enhanced .subgroup-detail {
+  display: none;
+}
+
+.js-subgroups.is-enhanced .subgroup-card.is-open .subgroup-detail {
+  display: block;
+  animation: subgroup-fade 0.22s ease;
+}
+
+@keyframes subgroup-fade {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.subgroup-detail-inner {
+  padding: 0 1.15rem 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  margin-top: 0.2rem;
+  padding-top: 1rem;
+}
+
+.subgroup-text {
+  margin-bottom: 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.subgroup-topics {
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.subgroup-topics li {
+  position: relative;
+  padding-left: 1.05rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.subgroup-topics li::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--subgroup-color, #999);
+}
+
+.subgroup-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.subgroup-link {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 2em;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.subgroup-link:hover {
+  border-color: var(--subgroup-color, #333);
+  color: var(--subgroup-color, #333);
+  text-decoration: none;
+}
+
+.subgroup-link.is-primary {
+  border-color: transparent;
+  background: var(--subgroup-color, #333);
+  color: #fff;
+}
+
+.subgroup-link.is-primary:hover {
+  color: #fff;
+  filter: brightness(0.92);
+}
+
+.subgroup-people {
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.subgroup-people-label {
+  margin-right: 0.4rem;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.subgroup-person + .subgroup-person::before {
+  content: "·";
+  margin: 0 0.35rem;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.dark .subgroup-card {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dark .subgroup-detail-inner { border-top-color: rgba(255, 255, 255, 0.1); }
+.dark .subgroup-people-label { color: rgba(255, 255, 255, 0.5); }
+
+/* The figure is a line drawing on transparency; lift it out of a dark page. */
+.dark .subgroup-figure { background: rgba(255, 255, 255, 0.9); }
+
+@media screen and (max-width: 767px) {
+  .subgroup-grid { gap: 1rem; }
+  .subgroup-head { padding: 0.85rem 1rem 1rem; }
+  .subgroup-detail-inner { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* ===========================================================================
+   Site logo in the navbar (assets/images/logo.png)
+   =========================================================================== */
+.navbar-brand .navbar-logo {
+  display: inline-block;
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar-tagline {
+  margin-left: 0.5rem;
+  color: #b0b0b0;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 991.98px) {
+  .navbar-brand .navbar-logo { height: 24px; }
+  .navbar-tagline { display: none; }
 }

@@ -167,7 +167,7 @@ link_blog = false
 
 # Load JS plugins
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
-plugins_js  = ["citations", "cite_toggle", "video_cards", "gallery_headers", "translate", "section_tabs", "hero_slideshow"]
+plugins_js  = ["citations", "cite_toggle", "video_cards", "gallery_headers", "translate", "section_tabs", "hero_slideshow", "subgroups"]
 
 # Korean/English toggle in the navbar.
 #   Uses the Google Website Translator widget, which is a deprecated Google

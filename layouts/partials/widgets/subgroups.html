@@ -1,0 +1,90 @@
+{{/* Research subgroups.
+
+     One card per subgroup, each showing its own panel cut out of the group's
+     overview figure by scripts/make_research_panels.py. Clicking a card expands
+     a detail panel underneath it: a longer description, the topics that
+     subgroup works on, and links on to the project page and anything else
+     listed for it.
+
+     The detail panels are in the markup, not fetched — with JavaScript off they
+     are simply all open, so nothing is unreachable.
+
+     Configured in content/research/subgroups.md.
+*/}}
+
+{{ $page := .page }}
+
+<div class="container">
+  {{ with $page.Title }}<h2 class="headline"><span>{{ . | markdownify | upper }}</span></h2>{{ end }}
+  {{ with $page.Params.subtitle }}<p class="subgroups-intro">{{ . | markdownify }}</p>{{ end }}
+  {{ with $page.Content }}<div class="subgroups-intro">{{ . }}</div>{{ end }}
+
+  <div class="subgroup-grid js-subgroups">
+    {{ range $i, $g := $page.Params.group }}
+      {{ $id := printf "subgroup-%d" (add $i 1) }}
+      <section class="subgroup-card" style="--subgroup-color: {{ $g.color | default "#5a6b7c" }}">
+
+        <button type="button" class="subgroup-head js-subgroup-toggle"
+                aria-expanded="false" aria-controls="{{ $id }}">
+          {{ with $g.image }}
+            {{ with resources.Get (printf "media/%s" .) }}
+            <span class="subgroup-figure">
+              <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                   alt="{{ $g.title }}" loading="lazy">
+            </span>
+            {{ end }}
+          {{ end }}
+
+          <span class="subgroup-head-text">
+            <span class="subgroup-title">{{ $g.title | markdownify }}</span>
+            {{ with $g.summary }}<span class="subgroup-summary">{{ . | markdownify }}</span>{{ end }}
+          </span>
+
+          <span class="subgroup-more" aria-hidden="true">
+            <span class="subgroup-more-label">Details</span>
+            <span class="subgroup-chevron"></span>
+          </span>
+        </button>
+
+        <div class="subgroup-detail" id="{{ $id }}">
+          {{/* The clip wrapper is the grid child that collapses; the padding
+               lives one level further in, or it would still take up space when
+               the track is at 0fr. */}}
+          <div class="subgroup-detail-clip">
+            <div class="subgroup-detail-inner">
+            {{ with $g.description }}<p class="subgroup-text">{{ . | markdownify }}</p>{{ end }}
+
+            {{ with $g.topics }}
+            <ul class="subgroup-topics">
+              {{ range . }}<li>{{ . | markdownify }}</li>{{ end }}
+            </ul>
+            {{ end }}
+
+            {{ with $g.links }}
+            <div class="subgroup-links">
+              {{ range . }}
+              <a class="subgroup-link{{ if .primary }} is-primary{{ end }}"
+                 href="{{ .url | relURL }}">{{ .name }} &rarr;</a>
+              {{ end }}
+            </div>
+            {{ end }}
+
+            {{/* People in this subgroup, resolved from their profile pages. */}}
+            {{ with $g.members }}
+            <div class="subgroup-people">
+              <span class="subgroup-people-label">Members</span>
+              {{ range . }}
+                {{ with site.GetPage (printf "/authors/%s" .) }}
+                <a class="subgroup-person" href="{{ .RelPermalink }}">{{ .Params.name | default .Title | markdownify }}</a>
+                {{ end }}
+              {{ end }}
+            </div>
+            {{ end }}
+            </div>
+          </div>
+        </div>
+
+      </section>
+    {{ end }}
+  </div>
+</div>

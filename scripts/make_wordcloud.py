@@ -31,8 +31,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUB_DIR = os.path.join(ROOT, "content", "publication")
-OUT_PNG = os.path.join(ROOT, "static", "media", "wordcloud.png")
-OUT_JSON = os.path.join(ROOT, "static", "media", "wordcloud.json")
+# In assets/, not static/: Hugo then knows the image's dimensions and can
+# emit width/height, which reserves its box before it loads.
+OUT_PNG = os.path.join(ROOT, "assets", "media", "wordcloud.png")
+OUT_JSON = os.path.join(ROOT, "assets", "media", "wordcloud.json")
 
 SIZE = (1500, 620)          # logical size; rendered at 2x
 SCALE = 2
