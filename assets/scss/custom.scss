@@ -2381,9 +2381,28 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 /* ===========================================================================
    Site logo in the navbar (assets/images/logo.png)
    =========================================================================== */
+/* The logo is a lockup, so the icon and the wordmark scale together and one
+   height has to serve both. It is set from the wordmark: the menu links are
+   bold 20px Baloo 2, whose capital measures a 12.69px cap, and in
+   assets/images/logo.png the wordmark's capital L is 294 of the image's 757px,
+   i.e. 0.3884 of the height. 32px therefore renders a 12.75px cap -- measured
+   off the rendered bitmap, not just calculated -- so the brand reads at the
+   same size as Home, Members, Research beside it.
+
+   Measure a capital that clears the rule, not the R: the horizontal line out
+   of the icon runs underneath R through to 0.67 of the width, and including it
+   makes the R scan 26% taller than it is.
+
+   The icon is the full height of the image, so this puts it at 32px in a 70px
+   bar -- larger than the 30px it had, and much more prominent relative to the
+   text than before: this lockup draws the icon at 2.57x the cap height where
+   the previous one had 1.63x. At the old 30px that previous logo rendered an
+   18.4px cap, half again the size of the menu, which is what made the brand
+   look oversized. Sizing the icon past this point means splitting the lockup
+   into an icon element and real text. */
 .navbar-brand .navbar-logo {
   display: inline-block;
-  height: 30px;
+  height: 32px;
   width: auto;
   vertical-align: middle;
 }
@@ -2397,7 +2416,11 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 }
 
 @media screen and (max-width: 991.98px) {
-  .navbar-brand .navbar-logo { height: 24px; }
+  /* No logo rule here: below 992px the navbar swaps to its own centred brand,
+     whose <img> carries no class, so `.navbar-logo` cannot match it. The theme
+     already sizes that one -- `height: stretch` capped at max-height 40px --
+     which fills the 50px bar with its 10px of padding. This rule sat here set
+     to 24px and had never applied to anything. */
   .navbar-tagline { display: none; }
 }
 
