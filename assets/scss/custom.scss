@@ -163,7 +163,9 @@ blockquote.twitter-tweet a:focus {
    wraps at any width. */
 h2.headline {
   width: 100%;
-  margin: 2.5rem 0 1.5rem;
+  /* 2.5rem/1.5rem left a 115px hole between a page title and the first content
+     heading below it, which was most of the "white space" on these pages. */
+  margin: 1.5rem 0 1.1rem;
   border-bottom: 0;
   line-height: 1.25;
   text-align: center;
@@ -2434,4 +2436,53 @@ body.has-home-tabs .video-card-player {
 
 body.has-home-tabs .video-card-body {
   padding: 0.85rem 1rem 0.95rem;
+}
+
+/* ===========================================================================
+   Tabbed panels: fit at any window height.
+
+   The earlier trims were sized against one window (1280x860) and stopped
+   working on a shorter one. These cap the tall media against the space actually
+   available — the same --home-tabs-offset the hero uses — so Simulations and
+   the word cloud shrink to fit instead of overflowing. News is left alone: it
+   is meant to scroll.
+   =========================================================================== */
+
+/* Word cloud: scale to whatever is left after the subtitle and the link. */
+body.has-home-tabs .wordcloud img {
+  max-height: calc(100vh - var(--home-tabs-offset, 143px) - 12rem);
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Video cards: the poster is the tall part, so bound it the same way and let
+   the caption take the rest. */
+body.has-home-tabs .video-card-poster,
+body.has-home-tabs .video-card-player {
+  max-height: calc(100vh - var(--home-tabs-offset, 143px) - 22rem);
+}
+
+/* Keep a long caption from pushing the card past the panel. Three lines is
+   enough for the ones written so far; the full text stays in the front matter. */
+body.has-home-tabs .video-card-caption {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  /* On a phone the panels scroll with the page, so let the media be itself. */
+  body.has-home-tabs .wordcloud img,
+  body.has-home-tabs .video-card-poster,
+  body.has-home-tabs .video-card-player {
+    max-height: none;
+  }
+
+  body.has-home-tabs .video-card-caption {
+    -webkit-line-clamp: none;
+    display: block;
+    overflow: visible;
+  }
 }

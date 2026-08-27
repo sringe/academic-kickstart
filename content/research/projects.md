@@ -2,7 +2,11 @@
 # A Projects section created with the Portfolio widget.
 widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
+#   The subgroups overview (content/research/subgroups.md) replaced this. It
+#   rendered a second "Research" heading on the same page and a flat list of the
+#   same projects the subgroup cards already link to. Set back to true to
+#   restore the old portfolio listing.
 weight = 65  # Order that this section will appear.
 external_link = true 
 title = "Research"

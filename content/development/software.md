@@ -2,7 +2,10 @@
 # A Projects section created with the Portfolio widget.
 widget = "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
+#   The overview (content/development/overview.md) replaced this: it rendered a
+#   second "Software" heading and a flat list of the same packages the overview
+#   cards already link to. Set back to true to restore the listing.
 weight = 65  # Order that this section will appear.
 
 title = "Software"
