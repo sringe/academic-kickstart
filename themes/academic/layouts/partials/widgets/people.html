@@ -56,7 +56,10 @@
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}
   {{ $link := "" }}
-  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .Path).Dir)) }}
+  {{/* .File, not .Path: Page.Path is the logical path since Hugo 0.146, so
+       path.Base of its Dir is the literal "authors" and this lookup missed
+       for everyone -- every card on the People page lost its profile link. */}}
+  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Clean .File.Dir))) }}
     {{ $link = .RelPermalink }}
   {{ end }}
   <div class="col-12 col-sm-4 people-person">

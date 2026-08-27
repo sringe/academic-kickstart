@@ -28,7 +28,7 @@
     {{/* Correct the title and URL for author profile pages. */}}
     {{- if eq .Section "authors" -}}
       {{- $title = .Params.name -}}
-      {{- $username := path.Base (path.Split .Path).Dir -}}
+      {{- $username := path.Base (path.Clean .File.Dir) -}}{{/* .File, not .Path -- Hugo 0.146 */}}
       {{- with site.GetPage (printf "/authors/%s" $username) -}}
         {{- $permalink = .Permalink -}}
         {{- $rel_permalink = .RelPermalink -}}

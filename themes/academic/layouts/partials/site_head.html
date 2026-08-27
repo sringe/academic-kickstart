@@ -13,7 +13,9 @@
   {{ $superuser_role := "" }}
   {{ range first 1 (where (where site.Pages "Section" "authors") "Params.superuser" true) }}
     {{ $superuser_name = .Params.name }}
-    {{ $superuser_username = path.Base (path.Split .Path).Dir }}
+    {{/* .File, not .Path -- same Hugo 0.146 change as in the people widget.
+         This fed page_author.html, which then looked for /authors/authors. */}}
+    {{ $superuser_username = path.Base (path.Clean .File.Dir) }}
     {{ $superuser_role = .Params.role }}
   {{ end }}
   {{ $scr.Set "superuser_username" $superuser_username }}{{/* Set superuser globally for page_author.html. */}}

@@ -14,7 +14,12 @@
     {{/* Show the About widget if an account exists for this user. */}}
     {{ if .File }}
       {{ $widget := "widgets/about.html" }}
-      {{ $username := (path.Base (path.Split .Path).Dir) }}{{/* Alternatively, use `index .Params.authors 0` */}}
+      {{/* From .File, not .Path: since Hugo 0.146 Page.Path is the logical
+           page path ("/authors/admin"), so (path.Split .Path).Dir is
+           "/authors/" and path.Base of that is the literal "authors" -- every
+           profile then looked up /authors/authors and the build failed. The
+           publications block below already derives the username this way. */}}
+      {{ $username := path.Base (path.Clean .File.Dir) }}
       {{ $params := dict "root" $ "page" . "author" $username }}
       {{ partial $widget $params }}
     {{end}}
