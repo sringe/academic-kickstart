@@ -97,7 +97,10 @@
           <div class="dropdown-menu">
             {{ range .Children }}
               {{ $child_active := hasPrefix $current_page.RelPermalink (.URL | relLangURL) }}
-              <a class="dropdown-item{{ if $child_active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+              {{/* The child pointing at the same page as its parent is the
+                   section's overview; it is set apart from the sub-pages. */}}
+              {{ $is_overview := eq .URL $parent_url }}
+              <a class="dropdown-item{{ if $child_active }} active{{ end }}{{ if $is_overview }} is-overview{{ end }}" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
                 {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
               </a>
             {{ end }}

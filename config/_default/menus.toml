@@ -114,16 +114,28 @@
   hasChildren = true
   identifier = "softwareitems"
 
-[[main]]
-  name = "MPBE/FHI-aims"
-  url = "software/mpbe/"
+  [[main]]
+  name = "Software Overview"
+  url = "development/"
   weight = 1
   parent = "softwareitems"
 
-[[main]]
+  [[main]]
+  name = "CatmapInterface.jl"
+  url = "software/catmapinterface/"
+  weight = 2
+  parent = "softwareitems"
+
+  [[main]]
   name = "CatINT/COMSOL"
   url = "software/catint/"
-  weight = 2
+  weight = 3
+  parent = "softwareitems"
+
+  [[main]]
+  name = "MPBE/FHI-aims"
+  url = "software/mpbe/"
+  weight = 4
   parent = "softwareitems"
 
 [[main]]

@@ -2486,3 +2486,130 @@ body.has-home-tabs .video-card-caption {
     overflow: visible;
   }
 }
+
+/* The overview entry in a dropdown points at the same page as its parent, so it
+   is set apart from the sub-pages below it rather than reading as a sibling. */
+#navbar-main .dropdown-item.is-overview {
+  font-weight: 700;
+}
+
+#navbar-main .dropdown-item.is-overview + .dropdown-item {
+  margin-top: 0.3rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.dark #navbar-main .dropdown-item.is-overview + .dropdown-item {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ===========================================================================
+   Gallery: album headings smaller than the page title.
+   =========================================================================== */
+/* The site's root font is 21px, so 1.25rem was still 26px against a 31.5px
+   title -- too close to read as a different level. */
+.wg-blank h2.headline:not(:first-child) {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.wg-blank h2.headline:not(:first-child) .headline-date {
+  font-size: 0.78em;
+}
+
+/* ===========================================================================
+   Simulations panel: less dead space above the cards, bigger posters.
+
+   The subtitle sat under the panel's own top padding with a 2rem margin below
+   it, which pushed the videos down and left the posters smaller than the space
+   allowed.
+   =========================================================================== */
+body.has-home-tabs .home-tabs ~ .home-section {
+  padding-top: 0.9rem;
+}
+
+body.has-home-tabs .video-section-subtitle {
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+body.has-home-tabs .video-grid {
+  gap: 1.1rem;
+}
+
+/* Give the poster the room freed above: it is the part worth seeing. */
+body.has-home-tabs .video-card-poster,
+body.has-home-tabs .video-card-player {
+  aspect-ratio: 4 / 3;
+  max-height: calc(100vh - var(--home-tabs-offset, 143px) - 17rem);
+}
+
+body.has-home-tabs .video-card-caption {
+  -webkit-line-clamp: 2;
+}
+
+/* ===========================================================================
+   Overview pages that should sit on one screen.
+
+   Research, Software and Contact are each a single section, so they can be made
+   to fit rather than scroll. The tall element on each is bounded against the
+   window: the subgroup figures, and the map. Everything else is trimmed
+   spacing, so no content is hidden.
+   =========================================================================== */
+.wg-subgroups,
+.wg-contact {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.wg-subgroups .subgroups-intro {
+  margin-bottom: 1.1rem;
+  font-size: 0.96rem;
+}
+
+.wg-subgroups .subgroup-grid {
+  gap: 1.1rem;
+}
+
+.wg-subgroups .subgroup-head {
+  padding: 0.8rem 1rem 0.9rem;
+}
+
+/* The figure is the tall part of a card; let it scale with the window. */
+.wg-subgroups .subgroup-figure {
+  margin-bottom: 0.6rem;
+  padding: 0.35rem;
+}
+
+.wg-subgroups .subgroup-figure img {
+  max-height: 18vh;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wg-subgroups .subgroup-more {
+  margin-top: 0.55rem;
+}
+
+/* Contact: the map is 350px of the 636px widget. */
+.wg-contact .leaflet-container {
+  height: clamp(180px, calc(100vh - 38rem), 350px) !important;
+}
+
+.wg-contact .fa-ul li {
+  margin-bottom: 0.2rem;
+}
+
+/* The map clamp bottoms out at its 180px minimum on a short window, so the last
+   few pixels have to come from the section itself. */
+.wg-contact {
+  padding-bottom: 1rem !important;
+}
+
+@media screen and (max-width: 767px) {
+  /* On a phone these pages scroll anyway; give the figures and map their size
+     back rather than squeezing them into a short viewport. */
+  .wg-subgroups .subgroup-figure img { max-height: none; }
+  .wg-contact .leaflet-container { height: 300px !important; }
+}
