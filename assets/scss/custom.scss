@@ -2384,26 +2384,38 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 /* The logo is a lockup, so the icon and the wordmark scale together and one
    height has to serve both. It is set from the wordmark: the menu links are
    bold 20px Baloo 2, whose capital measures a 12.69px cap, and in
-   assets/images/logo.png the wordmark's capital L is 229 of the image's 757px,
-   i.e. 0.3025 of the height. 41px therefore renders a 12.63px cap -- measured
-   by drawing the resized bitmap into a canvas and scanning the glyph, not just
-   calculated -- so the brand reads at the same size as Home, Members, Research
-   beside it.
+   assets/images/logo.png the wordmark's capital L is 229 of the image's 757px.
+   42.5px renders it at a 13.13px cap against the menu's 13.19px, a 10.50px
+   x-height against 10.50, and a 14.25px ascender against 14.13 -- so the brand
+   reads at the same size as Home, Members, Research beside it on all three.
 
-   Two traps in that measurement. Scan a capital that clears the rule, not the
-   R: the horizontal line out of the icon runs underneath R through to 0.71 of
-   the width, and a scan of the R's columns picks the rule up as part of the
-   glyph and reads 26% tall. And scan the *resized* bitmap: while navbar.html
-   still asked get_logo for 70px, the downscale bled the thin strokes enough to
-   measure 5% tall, which put this rule at 40px. It asks for 160 now.
+   Three traps, each of which produced a wrong answer before this one.
 
-   The icon is the full height of the image, so this puts it at 41px in a 70px
-   bar. Each successive lockup has drawn the icon larger against the wordmark --
-   1.63x the cap height, then 2.57x, now 3.31x -- so matching the wordmark to
-   the menu buys a bigger icon each time: 30px, then 32px, now 41px. */
+   Compare like with like. Measuring the menu with the font's own
+   actualBoundingBoxAscent (12.69px) and the logo by scanning pixels reads the
+   logo as matched when it is 4% small: the font metric is geometric and the
+   scan includes the antialiased edge. Both are scanned here, same threshold,
+   same 8x supersample, which is why the numbers above are cap-to-cap.
+
+   Scan a capital that clears the rule, not the R. The line out of the icon
+   runs underneath R through to 0.71 of the width, so a scan of the R's columns
+   counts the rule as part of the glyph and reads 26% tall.
+
+   Scan the resized bitmap, not the source. While navbar.html asked get_logo
+   for 70px, the downscale to 41 bled the thin strokes enough to measure 5%
+   tall. It asks for 160 now, 3.9x the rendered height.
+
+   The icon is the full height of the image, so this puts it at 42.5px in a
+   70px bar. Each successive lockup has drawn the icon larger against the
+   wordmark -- 1.63x the cap height, then 2.57x, now 3.31x -- so pinning the
+   wordmark to the menu buys a bigger icon each time: 30px, then 32px, now 42.5.
+
+   What is left is weight, not size: the wordmark is drawn lighter than the
+   menu's 700, so it still reads a little quieter at the same measured size.
+   That is in the artwork, not in this rule. */
 .navbar-brand .navbar-logo {
   display: inline-block;
-  height: 41px;
+  height: 42.5px;
   width: auto;
   vertical-align: middle;
 }
