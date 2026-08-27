@@ -11,6 +11,17 @@
   {{ $logo = (partial "functions/get_logo" (dict "constraint" "max_height" "size" 160)) }}
 {{ end }}
 
+{{/* The mobile brand is centred across the full width of the bar, so the
+     lockup's wordmark ran straight over the search icon -- at 320px it
+     overlapped it by 24px, and even at 375px there were only 4px to spare.
+     Below lg the brand is the icon on its own instead: square, so centring it
+     cannot reach either the toggle or the search. Falls back to the lockup if
+     assets/images/logo_icon.png is ever removed. */}}
+{{ $mobile_logo := $logo }}
+{{ with resources.Get "images/logo_icon.png" }}
+  {{ $mobile_logo = .Resize "x160" }}
+{{ end }}
+
 <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">
 
 <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
@@ -59,7 +70,7 @@
     <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
       <a class="navbar-brand" href="{{ "/" | relLangURL }}">
       {{- if $has_logo -}}
-        <img src="{{ $logo.RelPermalink }}" alt="{{ site.Title }}">
+        <img class="navbar-logo-icon" src="{{ $mobile_logo.RelPermalink }}" alt="{{ site.Title }}">
       {{- else -}}
       <!--{{- site.Title -}}
       <span style="font-family: 'Baloo 2', cursive;font-size:28px;text-align: center;">Ringe<span style="color: #b0b0b0">Lab</span></span>
