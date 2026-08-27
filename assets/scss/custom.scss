@@ -2355,3 +2355,83 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
   .navbar-brand .navbar-logo { height: 24px; }
   .navbar-tagline { display: none; }
 }
+
+/* ===========================================================================
+   Space between the navbar and a page's first heading.
+
+   A section already carries its own top padding, and `h2.headline` adds a
+   2.5rem top margin for separating one section from the next. On the first
+   heading of a page the two stacked up: 50px of padding plus 52.5px of margin
+   left a 103px gap under the fixed navbar. The margin is only wanted between
+   sections, so it goes when the heading is the first thing in its container.
+   =========================================================================== */
+h2.headline:first-child,
+.page-title:first-child {
+  margin-top: 0;
+}
+
+/* The first section of a widget page sits directly under the navbar and does
+   not need the full inter-section padding above it. */
+.home-section:first-of-type {
+  padding-top: 1.75rem;
+}
+
+@media screen and (max-width: 767px) {
+  .home-section:first-of-type {
+    padding-top: 1.25rem;
+  }
+}
+
+/* ===========================================================================
+   Hero sized so the homepage fills exactly one screen on load: navbar, hero,
+   and the section tab bar sitting on the bottom edge.
+
+   --home-tabs-offset is the navbar plus the tab bar, measured and published by
+   assets/js/section_tabs.js, so this follows both across breakpoints. The
+   2.25rem is the hero section's own padding (1.75 top + 0.5 bottom).
+   =========================================================================== */
+body.has-home-tabs .wg-hero-card .hero-panel-main img {
+  height: calc(100vh - var(--home-tabs-offset, 143px) - 2.25rem);
+  max-height: none;
+  min-height: 240px;
+}
+
+@media screen and (max-width: 767px) {
+  /* On a phone the tab bar can sit below the fold; a hero taller than this
+     leaves nothing else visible. */
+  body.has-home-tabs .wg-hero-card .hero-panel-main img {
+    height: auto;
+    max-height: 260px;
+    min-height: 0;
+  }
+}
+
+/* ===========================================================================
+   Tabbed panels: fit without an inner scrollbar.
+
+   Measured at 1280x860, only Simulations overflowed, by 35px — Welcome and the
+   word cloud already fitted exactly and News is meant to scroll. These trims
+   are scoped to the tabbed homepage so the same widgets keep their normal
+   spacing wherever else they appear.
+
+   `overflow-y: auto` stays on the panel as a safety net: on a short window
+   nothing would fit, and a scrollbar is better than unreachable content.
+   =========================================================================== */
+body.has-home-tabs .video-section-subtitle {
+  margin-bottom: 0.9rem;
+}
+
+body.has-home-tabs .video-section-cta {
+  margin-top: 0;
+}
+
+/* A slightly shallower poster is the largest single saving available, and the
+   posters are crops either way. */
+body.has-home-tabs .video-card-poster,
+body.has-home-tabs .video-card-player {
+  aspect-ratio: 16 / 9;
+}
+
+body.has-home-tabs .video-card-body {
+  padding: 0.85rem 1rem 0.95rem;
+}
