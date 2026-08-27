@@ -2014,3 +2014,41 @@ body.has-home-tabs .rowcover[hidden] + br {
     font-size: 1.5rem;
   }
 }
+
+/* ===========================================================================
+   Homepage scroll snapping.
+
+   Scrolling down from the hero settles with the tab bar docked under the
+   navbar, rather than stopping halfway; scrolling up snaps back to the hero.
+
+   `proximity`, not `mandatory`: the News panel is around twice the height of
+   the space below the bar, and a mandatory container with a single snap point
+   at the top of a tall panel drags the reader back to that point every time
+   they try to read further down it.
+
+   Each panel is also given the full remaining height, so for the short ones
+   (Welcome, What we work on) there is genuinely nothing below the fold and
+   scrolling down does nothing at all.
+   =========================================================================== */
+html.has-home-tabs {
+  scroll-snap-type: y proximity;
+}
+
+body.has-home-tabs .home-section.wg-hero-card,
+body.has-home-tabs .home-tabs {
+  scroll-snap-align: start;
+  scroll-margin-top: var(--navbar-h, 70px);
+}
+
+body.has-home-tabs .home-tabs ~ .home-section {
+  min-height: calc(100vh - var(--home-tabs-offset, 143px));
+}
+
+/* A snap point per panel would fight the reader inside a long one. */
+body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
+  scroll-snap-align: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.has-home-tabs { scroll-snap-type: none; }
+}

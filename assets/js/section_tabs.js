@@ -58,9 +58,12 @@
     var model = build();
     if (!model) return;
 
-    // Lets the stylesheet drop the now-duplicated panel headings and tighten
-    // the spacing, but only when the tabs actually exist.
+    // Lets the stylesheet drop the now-duplicated panel headings, tighten the
+    // spacing and enable scroll snapping -- but only when the tabs exist. The
+    // class goes on <html> too because scroll-snap-type has to sit on the
+    // scrolling element itself.
     document.body.classList.add('has-home-tabs');
+    document.documentElement.classList.add('has-home-tabs');
 
     var bar = document.createElement('nav');
     bar.className = 'home-tabs';
@@ -107,6 +110,21 @@
     var firstSection = model.targets[model.order[0]][0];
     var anchor = hero || (firstSection.closest('section.home-section') || firstSection);
     anchor.parentNode.insertBefore(bar, anchor.nextSibling);
+
+    // Publish the height of the fixed navbar plus the tab bar, so the panel
+    // below can be told to fill exactly the rest of the window and the snap
+    // points can clear the navbar. Measured rather than hard-coded: both change
+    // between breakpoints.
+    function measure() {
+      var nav = document.querySelector('#navbar-main');
+      var navH = nav ? Math.round(nav.getBoundingClientRect().height) : 0;
+      var barH = Math.round(bar.getBoundingClientRect().height);
+      var root = document.documentElement.style;
+      root.setProperty('--navbar-h', navH + 'px');
+      root.setProperty('--home-tabs-offset', (navH + barH) + 'px');
+    }
+    measure();
+    window.addEventListener('resize', measure);
 
     // Honour a fragment such as #simulations on load.
     var want = model.order[0];

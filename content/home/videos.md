@@ -36,13 +36,13 @@ cta_text = "More on our research"
   title = "Ion solvation"
   video = "media/videos/ion-solvation.mp4"
   poster = "media/videos/ion-solvation.jpg"
-  caption = "A solvated ion pair in explicit water, used to parameterise how the electrolyte screens charge near an electrode."
+  caption = "A solvated Lithium-Acetate ion pair in explicit water, simulated via machine-learning-accelerated quantum chemically accurate molecular dynamics."
   badge = "Unpublished"
 
 [[item]]
   title = "Adsorbates on a metal surface"
   video = "media/videos/adsorbate-dynamics.mp4"
   poster = "media/videos/adsorbate-dynamics.jpg"
-  caption = "Adsorbate motion across a close-packed metal surface, the elementary step behind coverage and selectivity in electrocatalysis."
+  caption = "Carbon monoxide adsorbate distribution on Copper (111) surface, determining selectivity in electrochemical CO$_2$ reduction, simulated via machine-learning-accelerated Monte Carlo sampling."
   badge = "Unpublished"
 +++
