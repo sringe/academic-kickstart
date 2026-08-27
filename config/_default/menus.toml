@@ -5,7 +5,10 @@
 
 [[main]]
   name = "Home"
-  url = "#about"
+  # Was "#about", but the About widget is `active = false` in content/home/, so
+  # nothing on the page carries id="about" and the link went nowhere. "/" lands
+  # on the homepage, which opens on its first tab.
+  url = "/"
   weight = 1
 
 #[[main]]
@@ -138,20 +141,23 @@
   weight = 4
   parent = "softwareitems"
 
-[[main]]
-  name = "Publications"  # Title of the link.
-  url = "my-publications/"  # Widget Page folder name.
-  weight = 6  # Position of the link in the navigation bar.
-
+# Gallery is 6 and Publications 7 -- the order they already render in. Both
+# used to be weight 6, which left the order between them to Hugo's tie-break
+# rather than to this file.
 [[main]]
   name = "Gallery"  # Title of the link.
   url = "gallery/"  # Widget Page folder name.
   weight = 6  # Position of the link in the navigation bar.
 
 [[main]]
+  name = "Publications"  # Title of the link.
+  url = "my-publications/"  # Widget Page folder name.
+  weight = 7  # Position of the link in the navigation bar.
+
+[[main]]
   name = "Contact"  # Title of the link.
   url = "contact/"  # Widget Page folder name.
-  weight = 7  # Position of the link in the navigation bar.
+  weight = 8  # Position of the link in the navigation bar.
 
 #[[main]]
 #  name = "Publications"
