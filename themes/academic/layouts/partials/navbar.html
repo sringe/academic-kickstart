@@ -5,7 +5,10 @@
 {{ $has_logo := fileExists "assets/images/logo.png" | or (fileExists "assets/images/logo.svg") }}
 {{ $logo := "" }}
 {{ if $has_logo }}
-  {{ $logo = (partial "functions/get_logo" (dict "constraint" "max_height" "size" 70)) }}
+  {{/* 70px was only 1.75x the 40px the navbar renders the logo at, so the
+       lockup was soft on any 2x display and its thin strokes bled enough to
+       measure ~5% taller than they are. 160 gives 4x. */}}
+  {{ $logo = (partial "functions/get_logo" (dict "constraint" "max_height" "size" 160)) }}
 {{ end }}
 
 <link href="https://fonts.googleapis.com/css?family=Baloo+2&display=swap" rel="stylesheet">

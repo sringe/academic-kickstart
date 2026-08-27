@@ -2384,25 +2384,26 @@ body.has-home-tabs .home-tabs ~ .home-section [data-home-tab] {
 /* The logo is a lockup, so the icon and the wordmark scale together and one
    height has to serve both. It is set from the wordmark: the menu links are
    bold 20px Baloo 2, whose capital measures a 12.69px cap, and in
-   assets/images/logo.png the wordmark's capital L is 294 of the image's 757px,
-   i.e. 0.3884 of the height. 32px therefore renders a 12.75px cap -- measured
-   off the rendered bitmap, not just calculated -- so the brand reads at the
-   same size as Home, Members, Research beside it.
+   assets/images/logo.png the wordmark's capital L is 229 of the image's 757px,
+   i.e. 0.3025 of the height. 41px therefore renders a 12.63px cap -- measured
+   by drawing the resized bitmap into a canvas and scanning the glyph, not just
+   calculated -- so the brand reads at the same size as Home, Members, Research
+   beside it.
 
-   Measure a capital that clears the rule, not the R: the horizontal line out
-   of the icon runs underneath R through to 0.67 of the width, and including it
-   makes the R scan 26% taller than it is.
+   Two traps in that measurement. Scan a capital that clears the rule, not the
+   R: the horizontal line out of the icon runs underneath R through to 0.71 of
+   the width, and a scan of the R's columns picks the rule up as part of the
+   glyph and reads 26% tall. And scan the *resized* bitmap: while navbar.html
+   still asked get_logo for 70px, the downscale bled the thin strokes enough to
+   measure 5% tall, which put this rule at 40px. It asks for 160 now.
 
-   The icon is the full height of the image, so this puts it at 32px in a 70px
-   bar -- larger than the 30px it had, and much more prominent relative to the
-   text than before: this lockup draws the icon at 2.57x the cap height where
-   the previous one had 1.63x. At the old 30px that previous logo rendered an
-   18.4px cap, half again the size of the menu, which is what made the brand
-   look oversized. Sizing the icon past this point means splitting the lockup
-   into an icon element and real text. */
+   The icon is the full height of the image, so this puts it at 41px in a 70px
+   bar. Each successive lockup has drawn the icon larger against the wordmark --
+   1.63x the cap height, then 2.57x, now 3.31x -- so matching the wordmark to
+   the menu buys a bigger icon each time: 30px, then 32px, now 41px. */
 .navbar-brand .navbar-logo {
   display: inline-block;
-  height: 32px;
+  height: 41px;
   width: auto;
   vertical-align: middle;
 }
