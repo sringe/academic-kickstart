@@ -129,8 +129,15 @@
   {{ $sass_template := resources.Get "scss/main.scss" }}
   {{ $style := $sass_template | resources.ExecuteAsTemplate "main_parsed.scss" . | toCSS $css_options }}
   {{ $style := slice $css_bundle_head $style | resources.Concat "css/academic.css" }}
+  {{/* Fingerprint the stylesheet in development too, minifying only for
+       production. The JS bundle has always been fingerprinted, so script
+       changes showed up at once, while the CSS was served from
+       /css/academic.css with no hash and browsers kept handing back a cached
+       copy -- edits appeared to have no effect until a hard refresh. */}}
   {{- if (eq (getenv "HUGO_ENV") "production") -}}
     {{- $style = $style | minify | fingerprint "md5" -}}
+  {{- else -}}
+    {{- $style = $style | fingerprint "md5" -}}
   {{- end -}}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 

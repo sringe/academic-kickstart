@@ -44,7 +44,10 @@
 
 [[main]]
   name = "Research"  # Title of the link.
-  url = "project/"  # Widget Page folder name.
+  # research/ is the overview page with the three subgroups. `project/` is
+  # Hugo's own section listing, which just prints "Projects" and every project
+  # in a flat list -- that is where this used to land.
+  url = "research/"  # Widget Page folder name.
   weight = 4  # Position of the link in the navigation bar.
   hasChildren = true
   identifier = "researchitems"
