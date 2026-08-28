@@ -1,0 +1,18 @@
+# Project-level strings, merged over the theme's own i18n/en.yaml.
+#
+# These were hardcoded English in the widget templates. They have to be
+# translatable because they are the homepage tab labels: the label a visitor
+# clicks and the data-home-tab attribute that groups the panels are the same
+# string, so a Korean page needs a Korean one.
+- id: home_tab_group
+  translation: "Group"
+- id: home_tab_welcome
+  translation: "Welcome"
+- id: heading_welcome
+  translation: "WELCOME"
+- id: heading_news
+  translation: "NEWS"
+- id: subgroup_details
+  translation: "Details"
+- id: subgroup_members
+  translation: "Members"

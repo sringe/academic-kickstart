@@ -5,7 +5,21 @@
 # Configure the English version of the site.
 [en]
   languageCode = "en-us"
-  # contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  weight = 1
+  # No contentDir: the Korean pages are translations by filename
+  # (`subgroups.ko.md` beside `subgroups.md`), so the English tree stays exactly
+  # where it is and nothing had to be moved into content/en.
+
+# Korean. Served from /ko/, written by hand -- see scripts/sync_korean.py, which
+# reports which Korean files have fallen behind their English source. Pages with
+# no .ko.md simply do not exist in Korean; the switcher hides itself there
+# rather than offering a dead link.
+[ko]
+  languageCode = "ko-kr"
+  weight = 2
+  title = "RingeLab"
+  [ko.params]
+    description = "고려대학교 화학과 및 IBS 분자분광학·동력학 연구단의 전기화학 계면 계산 모델링 연구실"
 
 # Uncomment the lines below to configure your website in a second language.
 #[zh]

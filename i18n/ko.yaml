@@ -1,0 +1,16 @@
+# 한국어 / Korean, merged over the theme's own i18n/ko.yaml.
+#
+# The homepage tab labels. "인사말" rather than a literal "환영" for Welcome:
+# it is what a Korean site conventionally calls the greeting section.
+- id: home_tab_group
+  translation: "연구실"
+- id: home_tab_welcome
+  translation: "인사말"
+- id: heading_welcome
+  translation: "인사말"
+- id: heading_news
+  translation: "소식"
+- id: subgroup_details
+  translation: "자세히"
+- id: subgroup_members
+  translation: "구성원"

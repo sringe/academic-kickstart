@@ -41,7 +41,7 @@
           </span>
 
           <span class="subgroup-more" aria-hidden="true">
-            <span class="subgroup-more-label">Details</span>
+            <span class="subgroup-more-label">{{ i18n "subgroup_details" }}</span>
             <span class="subgroup-chevron"></span>
           </span>
         </button>
@@ -72,7 +72,7 @@
             {{/* People in this subgroup, resolved from their profile pages. */}}
             {{ with $g.members }}
             <div class="subgroup-people">
-              <span class="subgroup-people-label">Members</span>
+              <span class="subgroup-people-label">{{ i18n "subgroup_members" }}</span>
               {{ range . }}
                 {{ with site.GetPage (printf "/authors/%s" .) }}
                 <a class="subgroup-person" href="{{ .RelPermalink }}">{{ .Params.name | default .Title | markdownify }}</a>

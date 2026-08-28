@@ -1867,12 +1867,10 @@ h2.headline > span::after {
   white-space: nowrap;
 }
 
-/* Google injects a toolbar and shifts the whole document down by 40px, which
-   pushes a fixed navbar off the top of the window. */
-body.is-translating .skiptranslate iframe { display: none !important; }
-body.is-translating { top: 0 !important; }
-
-#google_translate_element { display: none; }
+/* The Google Website Translator rules that used to live here are gone with the
+   widget: it injected a toolbar that shifted the document down by 40px and
+   pushed the fixed navbar off the top of the window. Korean is served as real
+   pages now, so nothing is injected. */
 
 /* ===========================================================================
    Homepage section tabs (assets/js/section_tabs.js)

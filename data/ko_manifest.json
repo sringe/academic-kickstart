@@ -1,0 +1,158 @@
+{
+  "content/alumni/index.md": {
+    "@body": "c797138dc386a2d2",
+    "title": "d10ccefc6d3a23b2"
+  },
+  "content/contact/contact.md": {
+    "title": "2b5c3d26721ae9c3"
+  },
+  "content/development/overview.md": {
+    "group.0.description": "5fa107931c868afb",
+    "group.0.links.0.name": "66e7f0257ecb13eb",
+    "group.0.summary": "24ea25f24cd77443",
+    "group.0.title": "66e7f0257ecb13eb",
+    "group.0.topics.0": "3bca19722af3cc17",
+    "group.0.topics.1": "5e84fa04264cf8cb",
+    "group.0.topics.2": "925a5ba05b7d7130",
+    "group.0.topics.3": "32035c498bd8f2e3",
+    "group.1.description": "ecfb4f0aca721860",
+    "group.1.links.0.name": "af128a76fb4ef4fc",
+    "group.1.summary": "0fc3bd52e9f3b8e7",
+    "group.1.title": "af128a76fb4ef4fc",
+    "group.1.topics.0": "c9b4cd88c4bfad17",
+    "group.1.topics.1": "aa13c77a131c1b4f",
+    "group.1.topics.2": "1e0ac01d191abcd2",
+    "group.1.topics.3": "d4485f36a6d06f76",
+    "group.2.description": "4d336afb12e86c6a",
+    "group.2.links.0.name": "2229784ac1f63252",
+    "group.2.summary": "409588eedaf3126a",
+    "group.2.title": "496d0de3815ff471",
+    "group.2.topics.0": "9ed13a79d055e4ed",
+    "group.2.topics.1": "ce5da92879811dc5",
+    "group.2.topics.2": "1b1f9321a2e654c2",
+    "group.2.topics.3": "40752f04df379a85",
+    "subtitle": "2b429b1d6064c8b2",
+    "title": "9b3289a385a5301e"
+  },
+  "content/gallery/gallery.md": {
+    "title": "352cfc749e55222e"
+  },
+  "content/home/contact.md": {
+    "title": "2b5c3d26721ae9c3"
+  },
+  "content/home/hero_card.md": {
+    "alt": "a0a13b99ae1fc6d9",
+    "cta_text": "fa48f6ea6f1d7922",
+    "slides.0.alt": "2df765ccfe8f7538",
+    "slides.1.alt": "0fa1b296c5fe05ea",
+    "slides.2.alt": "5641b981423c1f60",
+    "subtitle": "b261fb2fb1efee4a"
+  },
+  "content/home/posts.md": {
+    "title": "69752f2313b2f017",
+    "welcome_links.0.name": "115e410f01dc4013",
+    "welcome_links.1.name": "48db60c4dba93f19",
+    "welcome_links.2.name": "82b2eb07aaea1da8",
+    "welcomemessage": "4ad71b91b37154cd"
+  },
+  "content/home/videos.md": {
+    "cta_text": "acbe635f46a0b10f",
+    "item.0.title": "ed7c169e2f6610b6",
+    "item.1.title": "4611fbf70afa11bf",
+    "item.2.title": "180d84ac85a74fcc",
+    "subtitle": "f140c0989bf77f03",
+    "title": "078a864ea0f18c55"
+  },
+  "content/home/wordcloud.md": {
+    "caption": "4eb2b9f513199d04",
+    "cta_text": "6158400714869aae",
+    "subtitle": "7a43faa0729a7433",
+    "title": "0cf350c704e27eea"
+  },
+  "content/my-publications/publications.md": {
+    "subtitle": "cf0c8b1e611e31c1",
+    "title": "82b2eb07aaea1da8"
+  },
+  "content/people/people.md": {
+    "title": "1044a4c056d0d685"
+  },
+  "content/professor/about.md": {
+    "title": "942dbeda91719a57"
+  },
+  "content/project/materialscreening/index.md": {
+    "projectimagecaption": "2e3219fe6294c94e",
+    "projectimagecaptionshort": "9e07f0e703b0ff7c",
+    "projecttext": "c6e22d0eb07277e0",
+    "summary": "4bfdd39cf0615418",
+    "title": "93e97ce2c94c8087"
+  },
+  "content/project/multiscalemodeling/index.md": {
+    "projectimagecaption": "2aadde8f0be8b467",
+    "projectimagecaptionshort": "d45ae14fdf9d0235",
+    "projecttext": "3d044462c709bc5d",
+    "summary": "11ced6b64cb3ffd6",
+    "title": "ac6c2348c387634e"
+  },
+  "content/project/solvationandelectrifiedinterfaces/index.md": {
+    "projectimagecaption": "a125b0718f940755",
+    "projectimagecaptionshort": "3f6df9128f35873e",
+    "projecttext": "527147e543e9c0c8",
+    "summary": "ad88cfd0a7283311",
+    "title": "d7c3d6a6606869f1"
+  },
+  "content/research/subgroups.md": {
+    "group.0.description": "16e166a0c9601edc",
+    "group.0.links.0.name": "f8f3ab6f1c3e1076",
+    "group.0.summary": "7dbd7cf2480f331f",
+    "group.0.title": "fd10a146e9625bfd",
+    "group.0.topics.0": "f4b8ede1f0cbdf55",
+    "group.0.topics.1": "affafa4a645bbb8e",
+    "group.0.topics.2": "717eb516629b2070",
+    "group.0.topics.3": "80264197b8f44df5",
+    "group.0.topics.4": "95013b6b52a2a96f",
+    "group.1.description": "ba3712fed926ac92",
+    "group.1.links.0.name": "ebba0c1a1a29ff17",
+    "group.1.links.1.name": "390905d7f93e7db0",
+    "group.1.summary": "27cf060e705717cb",
+    "group.1.title": "874aa5bc41e1a0f6",
+    "group.1.topics.0": "f8ba7a516906ee3b",
+    "group.1.topics.1": "d5edce2d0ca1ea86",
+    "group.1.topics.2": "d8a85d3cd013d7a2",
+    "group.1.topics.3": "f602f0aed645e12a",
+    "group.1.topics.4": "aaceed0bcd3688af",
+    "group.2.description": "4dde6374f0da98ff",
+    "group.2.links.0.name": "ac6c2348c387634e",
+    "group.2.links.1.name": "66e7f0257ecb13eb",
+    "group.2.links.2.name": "af128a76fb4ef4fc",
+    "group.2.summary": "a03586a300d9437a",
+    "group.2.title": "ac6c2348c387634e",
+    "group.2.topics.0": "348fcb3330449334",
+    "group.2.topics.1": "ff10a8e5cf4e1658",
+    "group.2.topics.2": "5d15d5fbde332df4",
+    "group.2.topics.3": "9a9aaeef025b8527",
+    "group.2.topics.4": "661b22d39c18167f",
+    "subtitle": "33a9aa39d2123c29",
+    "title": "979d6300fd9884ff"
+  },
+  "content/software/CatINT/index.md": {
+    "projectimagecaption": "d6ea84b7f5de1adc",
+    "projectimagecaptionshort": "a455fb5a166e8377",
+    "projecttext": "2e1affd3a212b731",
+    "summary": "eb9f87a38ff446c0",
+    "title": "a4a1769a5b109315"
+  },
+  "content/software/CatmapInterface/index.md": {
+    "projectimagecaption": "f4b30d5db93dc8a5",
+    "projectimagecaptionshort": "dd90a79023598477",
+    "projecttext": "ddd30ed158bee57b",
+    "summary": "2d8354d8b8ae957f",
+    "title": "66e7f0257ecb13eb"
+  },
+  "content/software/MPBE/index.md": {
+    "projectimagecaption": "5dc587c0f9238b9f",
+    "projectimagecaptionshort": "c0b1e7a399321ffc",
+    "projecttext": "8c805be777271335",
+    "summary": "060fd393ad1aa95f",
+    "title": "d70cb3dbe8cbc657"
+  }
+}

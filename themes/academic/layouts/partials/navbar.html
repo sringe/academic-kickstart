@@ -186,25 +186,29 @@
       </li>
       {{ end }}
 
-      {{/* Korean/English toggle, driven by assets/js/translate.js. Google's
-           translate script is fetched only once this is clicked, so no
-           third-party JavaScript loads for visitors who never use it. */}}
-      {{ with site.Params.translate }}
-      {{ if .enable }}
+      {{/* Language switcher.
+
+           This used to be a button that loaded Google's Website Translator and
+           let it machine-translate the DOM. The Korean it produced was poor, so
+           the site now carries hand-written Korean as real pages (`*.ko.md`
+           beside the English) and this links to them.
+
+           It is a link to *this* page's translation, not to the Korean home
+           page, so the reader stays where they are. `.Translations` is empty on
+           a page that has no counterpart yet, and then nothing is rendered --
+           better than offering a link that 404s. `notranslate` stays: a browser
+           translating the page would otherwise render the way back to English
+           as "영어". */}}
+      {{ range .Translations }}
       <li class="nav-item nav-item-translate">
-        {{/* notranslate: without it Google translates the toggle's own label, so
-             the way back to English ends up reading "영어". */}}
-        <button type="button" class="nav-link js-translate-toggle notranslate"
-                translate="no" aria-pressed="false"
-                data-source="{{ .source | default "en" }}"
-                data-target="{{ .target | default "ko" }}"
-                data-label-target="{{ .label_target | default "한국어" }}"
-                data-label-original="{{ .label_original | default "EN" }}">
+        <a class="nav-link js-lang-switch notranslate" translate="no"
+           href="{{ .RelPermalink }}" hreflang="{{ .Lang }}"
+           rel="alternate"
+           title="{{ if eq .Lang "ko" }}이 페이지를 한국어로 보기{{ else }}Read this page in English{{ end }}">
           <i class="fas fa-language" aria-hidden="true"></i>
-          <span class="js-translate-label">{{ .label_target | default "한국어" }}</span>
-        </button>
+          <span>{{ if eq .Lang "ko" }}한국어{{ else }}English{{ end }}</span>
+        </a>
       </li>
-      {{ end }}
       {{ end }}
 
       {{ if site.Params.day_night }}
@@ -213,7 +217,12 @@
       </li>
       {{ end }}
 
-      {{ if .IsTranslated }}
+      {{/* The theme's own language dropdown is suppressed: it appears as soon as
+           a second language exists, and would sit next to the per-page switcher
+           above doing the same job. That one is better here -- it is a plain
+           link to this page's counterpart rather than a dropdown, and it hides
+           itself on pages that have no translation instead of offering one. */}}
+      {{ if false }}
       <li class="nav-item dropdown i18n-dropdown">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
           <i class="fas fa-globe mr-1" aria-hidden="true"></i><span class="d-none d-lg-inline">{{ index site.Data.i18n.languages .Lang }}</span>

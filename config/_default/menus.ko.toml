@@ -1,0 +1,109 @@
+# Korean navigation.
+#
+# Same structure, weights and URLs as menus.toml -- the theme runs every menu
+# URL through relLangURL, so these relative paths pick up the /ko/ prefix on
+# their own and must NOT be written with it. Only `name` is translated.
+#
+# Keep this file in step with menus.toml: scripts/sync_korean.py checks that the
+# two have the same identifiers and weights and reports any that drift.
+
+[[main]]
+  name = "홈"
+  url = "/"
+  weight = 1
+
+[[main]]
+  name = "구성원"
+  url = "people/"
+  weight = 3
+  hasChildren = true
+  identifier = "members"
+
+  [[main]]
+  name = "현재 구성원"
+  url = "people/"
+  weight = 1
+  parent = "members"
+
+  [[main]]
+  name = "졸업생"
+  url = "alumni/"
+  weight = 2
+  parent = "members"
+
+[[main]]
+  name = "연구"
+  url = "research/"
+  weight = 4
+  hasChildren = true
+  identifier = "researchitems"
+
+  [[main]]
+  name = "연구 개요"
+  url = "research/"
+  weight = 1
+  parent = "researchitems"
+
+  [[main]]
+  name = "용매화 및 전기화학 계면"
+  url = "project/solvationandelectrifiedinterfaces/"
+  weight = 2
+  parent = "researchitems"
+
+  [[main]]
+  name = "소재 스크리닝"
+  url = "project/materialscreening/"
+  weight = 3
+  parent = "researchitems"
+
+  [[main]]
+  name = "다중스케일 모델링"
+  url = "project/multiscalemodeling/"
+  weight = 4
+  parent = "researchitems"
+
+[[main]]
+  name = "소프트웨어"
+  url = "development/"
+  weight = 5
+  hasChildren = true
+  identifier = "softwareitems"
+
+  [[main]]
+  name = "소프트웨어 개요"
+  url = "development/"
+  weight = 1
+  parent = "softwareitems"
+
+  [[main]]
+  name = "CatmapInterface.jl"
+  url = "software/catmapinterface/"
+  weight = 2
+  parent = "softwareitems"
+
+  [[main]]
+  name = "CatINT/COMSOL"
+  url = "software/catint/"
+  weight = 3
+  parent = "softwareitems"
+
+  [[main]]
+  name = "MPBE/FHI-aims"
+  url = "software/mpbe/"
+  weight = 4
+  parent = "softwareitems"
+
+[[main]]
+  name = "갤러리"
+  url = "gallery/"
+  weight = 6
+
+[[main]]
+  name = "논문"
+  url = "my-publications/"
+  weight = 7
+
+[[main]]
+  name = "연락처"
+  url = "contact/"
+  weight = 8

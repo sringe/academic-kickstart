@@ -18,8 +18,14 @@
 
   var ATTR = 'data-home-tab';
 
+  // Keep letters and digits in any script, not just a-z: the Korean tabs are
+  // named 연구실, 인사말, 소식 ... and stripping every non-ASCII character
+  // slugged all five of them to the empty string.
   function slug(s) {
-    return s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    return s.toLowerCase().trim()
+      .replace(/[\s/]+/g, '-')
+      .replace(/[^\p{L}\p{N}-]+/gu, '')
+      .replace(/^-+|-+$/g, '');
   }
 
   function build() {
@@ -168,10 +174,14 @@
     measure();
     window.addEventListener('resize', measure);
 
-    // Honour a fragment such as #simulations on load.
+    // Honour a fragment such as #simulations on load. The `if (frag)` matters:
+    // without it an empty fragment compared equal to every empty slug, so the
+    // loop ran to the end and the *last* tab opened instead of the first.
     var want = model.order[0];
-    var frag = (location.hash || '').replace('#', '');
-    model.order.forEach(function (n) { if (slug(n) === frag) want = n; });
+    var frag = decodeURIComponent((location.hash || '').replace('#', ''));
+    if (frag) {
+      model.order.forEach(function (n) { if (slug(n) === frag) want = n; });
+    }
     select(want, false);
   }
 

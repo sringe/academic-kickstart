@@ -9,7 +9,7 @@ active = true
 weight = 1
 
 title = "RingeLab"
-subtitle = "Computational modeling of electrified interfaces — Korea University / IBS"
+subtitle = "Multi-scale modeling for next-generation energy systems — Korea University"
 
 # Paths relative to `assets/media/`.
 image = "headers/hero_center.jpg"
