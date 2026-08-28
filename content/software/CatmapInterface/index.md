@@ -4,7 +4,7 @@
 title: "CatmapInterface.jl"
 summary: "Julia package turning a CatMAP microkinetic specification into rate constants, as part of a coupled kinetics and transport stack."
 
-authors: [admin]
+authors: [admin,sumin-choi,byungmin-chun]
 tags: []
 categories: []
 date: 2026-08-27T10:00:00+09:00

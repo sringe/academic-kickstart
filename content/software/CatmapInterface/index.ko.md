@@ -11,7 +11,7 @@
 title: "CatmapInterface.jl"
 summary: "CatMAP 미시반응속도 명세를 속도 상수로 바꾸어 주는 Julia 패키지로, 반응 속도론과 물질 전달을 결합한 스택의 한 부분입니다."
 
-authors: [admin]
+authors: [admin,sumin-choi,byungmin-chun]
 tags: []
 categories: []
 date: 2026-08-27T10:00:00+09:00
