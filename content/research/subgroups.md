@@ -16,10 +16,10 @@ subtitle = "We work across three connected scales, from the electronic structure
   title = "Materials"
   color = "#b07a5c"
   image = "research/subgroup_materials_circle.png"
-  summary = "What the catalyst is made of, and how it changes while it works."
-  description = "Electronic-structure calculations of the catalyst itself: which sites are active, how adsorbates bind, and how the surface reorganises under reaction conditions. The questions that set everything downstream are decided here — activity and selectivity descriptors, the reaction mechanism, and whether a material stays intact at operating potential."
+  summary = "How the catalyst works, and how it changes while it works."
+  description = "Machine-learning-driven quantum chemically accurate calculations of the catalyst itself: which sites are active, how adsorbates bind, and how the surface reorganises under reaction conditions. The questions that set everything downstream are decided here — activity and selectivity descriptors, the reaction mechanism, and whether a material stays intact at operating potential."
   topics = [
-    "Adsorption and reaction energetics from density functional theory",
+    "Adsorption and reaction energetics from chemically accurate quantum chemistry",
     "Implicit solvation and the reaction environment of the double layer",
     "Transient oxidation states and sub-surface oxygen",
     "Grain boundaries and surface reconstruction",
@@ -28,7 +28,7 @@ subtitle = "We work across three connected scales, from the electronic structure
   members = ["han-seungchang", "chanjin-kim", "suyeon", "dongwonkim"]
 
   [[group.links]]
-    name = "Materials screening"
+    name = "Materials"
     url = "/project/materialscreening/"
     primary = true
 
@@ -36,14 +36,14 @@ subtitle = "We work across three connected scales, from the electronic structure
   title = "Reactive solid–liquid interfaces"
   color = "#3f9184"
   image = "research/subgroup_interfaces_circle.png"
-  summary = "The electrified interface where the reaction actually happens."
-  description = "The region between catalyst and electrolyte, where the electric double layer, the local pH and the ion distribution together decide the rate. We model the interface explicitly and with continuum theory, and connect the two so that the atomistic picture can be carried into conditions an experiment can reach."
+  summary = "The electrified interface where chemistry happens."
+  description = "The region between catalyst and electrolyte, where the electric double layer, the local pH and the ion distribution together decide the rate. We model the interface by combining high-level quantum chemistry with multi-scale modeling techniques (many body expansion and machine learning potentials), deriving a predictive, atomistic picture of the interface and reaction processes."
   topics = [
-    "Electric double layer structure and surface charging models",
+    "Electric double layer structure and surface charging",
     "Cation and field effects on reaction kinetics",
     "Local pH, chemical reactions and buffer equilibria",
     "Ion diffusion, migration and steric repulsion",
-    "Implicit solvent methods for electrified interfaces",
+    "Proton-coupled electron transfer",
   ]
   members = ["horbatenko-yevhen", "dianwei-hou", "juhee", "shuran-xu", "bosung", "sayeon-lee", "sahar"]
 
