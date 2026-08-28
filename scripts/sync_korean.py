@@ -6,6 +6,13 @@
     python3 scripts/sync_korean.py --apply FILE     # splice translations back in
     python3 scripts/sync_korean.py --accept         # mark everything current, no edits
 
+Korean is currently NOT published
+---------------------------------
+config/_default/config.toml carries `disableLanguages = ["ko"]`, so /ko/ is not
+built. Everything else is in place; empty that list to turn it back on. This
+script still works while Korean is off -- it reads files, not the built site --
+so the translations can be kept current, or checked before reactivating.
+
 What this is for
 ----------------
 The Korean pages are `*.ko.md` files sitting beside their English originals, so
@@ -384,6 +391,12 @@ def main() -> int:
     g.add_argument("--accept", action="store_true",
                    help="record current English hashes without editing anything")
     args = ap.parse_args()
+
+    if '"ko"' in open(os.path.join(ROOT, "config/_default/config.toml"),
+                      encoding="utf-8").read().split("disableLanguages")[-1][:40]:
+        print("note: Korean is disabled in config.toml (disableLanguages), so "
+              "/ko/ is not built.\n      The files below are still tracked; "
+              "empty that list to publish them again.\n")
 
     manifest, rows = survey()
     if args.worklist:

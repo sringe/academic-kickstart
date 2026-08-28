@@ -30,6 +30,22 @@ enableGitInfo = false
 defaultContentLanguage = "en"
 hasCJKLanguage = true  # Korean: without this Hugo counts CJK runs as one word, so summaries and reading times come out wrong.
 defaultContentLanguageInSubdir = false
+
+# Korean is written and working but not published for now.
+#
+# Deactivate/reactivate here and nowhere else: emptying this list turns /ko/
+# back on, with the translations, the Korean menu and the language switcher all
+# already in place. Everything else stays as it is -- the *.ko.md files, i18n/
+# ko.yaml, config/_default/menus.ko.toml, data/ko_manifest.json and
+# scripts/sync_korean.py.
+#
+# Why disableLanguages rather than commenting out the [ko] block in
+# languages.toml: Hugo only reads the `.ko` in `posts.ko.md` as a language when
+# ko is a *configured* language. Remove the block and those 19 files stop being
+# translations and become ordinary pages named "posts.ko" instead -- which, for
+# the headless widget files, means the homepage renders every widget twice, once
+# in each language. Disabling keeps ko configured and simply does not build it.
+disableLanguages = ["ko"]
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
 paginate = 10  # Number of items per page in paginated lists.
