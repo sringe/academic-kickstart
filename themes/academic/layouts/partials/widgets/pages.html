@@ -21,6 +21,15 @@ file path {{ .File.Path }}
 {{/* Query */}}
 {{ $query := where site.RegularPages "Type" $items_type }}
 {{ $archive_page := site.GetPage "Section" $items_type }}
+{{/* Publications, posts and talks are not translated, so on /ko/ this query is
+     empty and the widget rendered a heading with nothing under it. Fall back to
+     the default-language site -- and to its archive page too, or the filter
+     intersections below would empty the list again. */}}
+{{ if not $query }}
+  {{ $default := partial "default_site" . }}
+  {{ $query = where $default.RegularPages "Type" $items_type }}
+  {{ $archive_page = $default.GetPage "Section" $items_type }}
+{{ end }}
 
 <!--
 HERE are the scratch modifications

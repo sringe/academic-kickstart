@@ -2,8 +2,25 @@
 
 {{/* Author profile page. */}}
 
-{{/* If an account has not been created for this user, just display their name as the title. */}}
-{{ if not .File }}
+{{/* The username, which is the folder the profile bundle lives in.
+
+     On a language that does not translate the author profiles -- Korean here --
+     this page exists only as a taxonomy term, with no .File at all, and the
+     whole profile rendered blank: no name, no avatar, no publications, just a
+     heading. So fall back to the term, and let the blocks below resolve the
+     real profile out of the default-language site. */}}
+{{ $username := "" }}
+{{ with .File }}{{ $username = path.Base (path.Clean .Dir) }}{{ end }}
+{{ if not $username }}{{ $username = .Data.Term | default (path.Base .RelPermalink) }}{{ end }}
+
+{{/* Does a real profile exist for them, in any language? */}}
+{{ $profile := site.GetPage (printf "/authors/%s" $username) }}
+{{ if or (not $profile) (not $profile.File) }}
+  {{ $profile = (partial "default_site" .).GetPage (printf "/authors/%s" $username) }}
+{{ end }}
+
+{{/* If no account has been created for this user, just display their name. */}}
+{{ if or (not $profile) (not $profile.File) }}
 <div class="universal-wrapper pt-3">
   <h1>{{ .Title }}</h1>
 </div>
@@ -11,17 +28,12 @@
 
 <section id="profile-page" class="pt-5">
   <div class="container">
-    {{/* Show the About widget if an account exists for this user. */}}
-    {{ if .File }}
-      {{ $widget := "widgets/about.html" }}
-      {{/* From .File, not .Path: since Hugo 0.146 Page.Path is the logical
-           page path ("/authors/admin"), so (path.Split .Path).Dir is
-           "/authors/" and path.Base of that is the literal "authors" -- every
-           profile then looked up /authors/authors and the build failed. The
-           publications block below already derives the username this way. */}}
-      {{ $username := path.Base (path.Clean .File.Dir) }}
-      {{ $params := dict "root" $ "page" . "author" $username }}
-      {{ partial $widget $params }}
+    {{/* Show the About widget if an account exists for this user. `page` is
+         the resolved profile rather than `.`, so on a language without
+         translated profiles the widget still gets the real bundle -- with its
+         avatar, interests and social links -- instead of an empty term page. */}}
+    {{ if and $profile $profile.File }}
+      {{ partial "widgets/about.html" (dict "root" $ "page" $profile "author" $username) }}
     {{end}}
 
     <!--
@@ -48,8 +60,7 @@
          stores display names rather than usernames. Members with no publications
          get no heading at all. `volume` is used for the number slot: it is filled
          on 49 of 50 papers, whereas `issue` is set on only 2. */}}
-    {{ with .File }}
-      {{ $username := path.Base (path.Clean .Dir) }}
+    {{ if $username }}
       {{/* Stefan co-authors every paper, so a list on his profile says nothing. */}}
       {{ if not (in site.Params.publications.hide_profile_list $username) }}
         {{ with site.Data.pubmeta }}
@@ -65,7 +76,13 @@
                  including the BibTeX/citation switch and the live count. */}}
             <ol class="pub-list pub-list-numbered">
             {{ range $slug := . }}
-              {{ with site.GetPage (printf "/publication/%s" $slug) }}
+              {{/* Publications are not translated, so resolve them out of the
+                   default-language site when this one has none. */}}
+              {{ $pub := site.GetPage (printf "/publication/%s" $slug) }}
+              {{ if not $pub }}
+                {{ $pub = (partial "default_site" $).GetPage (printf "/publication/%s" $slug) }}
+              {{ end }}
+              {{ with $pub }}
               <li class="pub-list-item">
                 <a class="pub-list-title" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
                 <div class="article-metadata pub-citation">

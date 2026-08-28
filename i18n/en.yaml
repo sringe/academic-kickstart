@@ -16,3 +16,23 @@
   translation: "Details"
 - id: subgroup_members
   translation: "Members"
+- id: user_group_professor
+  translation: "Professor"
+- id: user_group_administrative-staff
+  translation: "Administrative Staff"
+- id: user_group_postdocs
+  translation: "Postdocs"
+- id: user_group_phd-students
+  translation: "PhD Students"
+- id: user_group_integrated-master-and-phd-students
+  translation: "Integrated Master and PhD Students"
+- id: user_group_master-students
+  translation: "Master Students"
+- id: user_group_co-supervised-members
+  translation: "Co-supervised Members"
+- id: user_group_undergrads-and-interns
+  translation: "Undergrads and Interns"
+- id: user_group_visitors
+  translation: "Visitors"
+- id: user_group_alumni
+  translation: "Alumni"

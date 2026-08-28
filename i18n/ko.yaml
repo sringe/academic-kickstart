@@ -14,3 +14,23 @@
   translation: "자세히"
 - id: subgroup_members
   translation: "구성원"
+- id: user_group_professor
+  translation: "교수"
+- id: user_group_administrative-staff
+  translation: "행정직원"
+- id: user_group_postdocs
+  translation: "박사후연구원"
+- id: user_group_phd-students
+  translation: "박사과정"
+- id: user_group_integrated-master-and-phd-students
+  translation: "석·박사 통합과정"
+- id: user_group_master-students
+  translation: "석사과정"
+- id: user_group_co-supervised-members
+  translation: "공동지도 구성원"
+- id: user_group_undergrads-and-interns
+  translation: "학부연구생 및 인턴"
+- id: user_group_visitors
+  translation: "방문연구원"
+- id: user_group_alumni
+  translation: "졸업생"

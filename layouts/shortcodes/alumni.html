@@ -14,7 +14,13 @@
      inventing a machine-readable end date.
 */}}
 
+{{/* Not translated -- see partials/default_site. Test the result, not the
+     section: the Korean site has author term pages without user_groups. */}}
 {{ $people := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice "Alumni") }}
+{{ if not $people }}
+  {{ $d := partial "default_site" . }}
+  {{ $people = where (where $d.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice "Alumni") }}
+{{ end }}
 
 {{ if not $people }}
   <p>No alumni are listed yet.</p>

@@ -1,0 +1,13 @@
+{{/* The site to read never-translated content from.
+
+     Author profiles, publications, posts and talks have no *.ko.md: names and
+     paper titles stay in English on the Korean pages by design. Hugo scopes
+     `site.Pages` to the current language, so on /ko/ those collections are
+     empty and the Members and Publications pages rendered as a heading with
+     nothing underneath.
+
+     site.Sites is ordered by language weight, and languages.toml gives en
+     weight 1 and ko weight 2, so index 0 is the default-language site. Callers
+     use this only when the current language has nothing of the kind they want,
+     so if any of that content is ever translated the translation still wins. */}}
+{{ return (index site.Sites 0) }}

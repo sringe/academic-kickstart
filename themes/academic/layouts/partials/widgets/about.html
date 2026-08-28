@@ -10,6 +10,12 @@
 
 {{ $person_page_path := (printf "/authors/%s" (anchorize $author)) }}
 {{ $person_page := site.GetPage $person_page_path }}
+{{/* Author profiles are not translated: on /ko/ this resolves to an empty
+     taxonomy term with no front matter, so fall back to the default-language
+     bundle. See partials/default_site. */}}
+{{ if or (not $person_page) (not $person_page.File) }}
+  {{ $person_page = (partial "default_site" .).GetPage $person_page_path }}
+{{ end }}
 {{ if not $person_page }}
   {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://sourcethemes.com/academic/docs/page-builder/#about " $person_page_path }}
 {{end}}
