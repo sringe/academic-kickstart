@@ -247,9 +247,8 @@ h2.headline > span::after {
   margin-bottom: 0.9rem;
 }
 
-#profile-page .pub-list-item .article-metadata {
-  margin-bottom: 0;
-}
+/* Superseded by the `.pub-list-numbered .article-metadata` rule further down,
+   which does this for every page the numbered list appears on. */
 
 #profile-page .pub-citation-count {
   margin-left: 0.4em;
@@ -629,10 +628,23 @@ h2.headline > span::after {
   font-weight: 600;
 }
 
-/* The shared page_links partial ships `btn-sm` buttons; tighten the row. */
+/* The shared page_links partial ships `btn-sm` buttons; tighten the row.
+
+   Scoped to the numbered list rather than to #profile-page, which is where the
+   tightening used to live: the same list now appears on the project and
+   software pages, and there it kept `.article-metadata`'s 20px bottom margin
+   and the theme's 10px `.pub-list-item .btn-links` padding, so the citation sat
+   35px above its own buttons against 19px on a profile. One rule for both, and
+   tighter than either -- the buttons belong to the citation above them, so they
+   should read as part of that entry rather than as a separate block. */
+.pub-list-numbered .article-metadata {
+  margin-bottom: 0;
+}
+
 .pub-list-links {
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
   margin-bottom: 0 !important;
+  padding-top: 0 !important;   /* beats .pub-list-item .btn-links in the theme */
 }
 
 .pub-list-links .btn {
