@@ -22,7 +22,7 @@ topics = [ "밀도범함수이론으로 계산하는 흡착 및 반응 에너지
 members = [ "han-seungchang", "chanjin-kim", "suyeon", "dongwonkim",]
 [[group.links]]
 name = "소재 스크리닝"
-url = "/project/materialscreening/"
+url = "/project/materials/"
 primary = true
 
 

@@ -8,6 +8,12 @@ authors: [admin,han-seungchang,chanjin-kim,suyeon,dongwonkim]
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
+
+# This page moved from /project/materialscreening/, which had been public and
+# indexed. Hugo writes a redirect stub at the old path so existing links and
+# search results keep working.
+aliases: ["/project/materialscreening/"]
+
 relatedpublications: [beomil-2026, yujin-2025, soyeon-2025,ringe-2025,beomgyun-2025, ji-2024, sejun-2024, ringe-2023-screening, park-2023, beomil-2023, hong-2023, hoon-2023, jae-2022, patra-2022, kim-2022-sv, tetteh-2022-rm, song-2021-xo, kim-2021-mw, ludwig-2020-atomistic, sa-2020-thermal, lee-2020, xia-2020-ld,gauthier-2019-us,gauthier-2019-ig,ringe-2019-dm,wu-2019-bq,clark-2019-xk,ludwig-2019-gt,gauthier-2019-wt,patel-2018-tq]
 relatedfunds: ["NRF-DFG matching fund, RS-2025-02317654","중견창의연구 NRF research fund, RS-2025-23525637","Samsung Electronics collaboration fund"]
 

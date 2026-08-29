@@ -52,7 +52,7 @@
 
   [[main]]
   name = "소재 스크리닝"
-  url = "project/materialscreening/"
+  url = "project/materials/"
   weight = 3
   parent = "researchitems"
 

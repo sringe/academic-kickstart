@@ -1,35 +1,51 @@
-{{/* Display list of related publications. */}}
-<br>
-<b><span> Related publications: </span></b><br>
-{{ $taxonomy := "relatedpublications" }}
-{{ $dateformat := site.Params.publications.date_format }}
-<!-->
-{{ with .Param $taxonomy }}
-<-->
-  {{ $link_relatedpublications := site.Params.link_relatedpublications | default true }}
-  <!--> for list-->
-  <ul>
-  {{ range $index, $value := . }}
-    {{- $profile_page := site.GetPage (printf "/%s/%s" "publication" (. | anchorize)) -}}
-    {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
-    <!--
-    {{- if gt $index 0 }} <br>{{ end -}}
-    -->
-    {{ with site.GetPage (printf "%s" $name) }}
-    {{ $date := .Date.Format ($dateformat | default "2006") }}
-    <li>
-    <span>
-    <a href="../../publication/{{$name}}">{{ index .Params.authors 0 | markdownify }} <i>et al.</i>, <i>{{.Title | markdownify}}</i>, <i>{{.Params.publication | markdownify}}</i> <b> {{$date | markdownify}}</b>, {{.Params.volume}}, {{.Params.pages}}.</a>
-    </span>
+{{/* Related publications on a project or software page.
+
+     Same presentation as the list on a member's profile: numbered newest-first,
+     the paper's own title as the link, a Nature-style citation under it, and the
+     Cite / DOI / Cited by buttons from `page_links` -- so a paper looks the same
+     wherever it is listed on the site.
+
+     This replaces a hand-rolled <ul> that had been rendering nothing at all: it
+     resolved each slug to a page, read `.Params.name` off it (publications have
+     no such param), fell back to the slug, then passed that bare slug to
+     site.GetPage with no section in front of it, which never matched. The
+     heading printed and the list under it was always empty.
+*/}}
+{{ $page := . }}
+
+{{/* Resolve every slug to its publication page, dropping any that no longer
+     exists rather than rendering a dead entry. Publications are not translated,
+     so fall back to the default-language site -- see partials/default_site. */}}
+{{ $pubs := slice }}
+{{ range $slug := $page.Params.relatedpublications }}
+  {{ $pub := site.GetPage (printf "/publication/%s" $slug) }}
+  {{ if not $pub }}
+    {{ $pub = (partial "default_site" $page).GetPage (printf "/publication/%s" $slug) }}
+  {{ end }}
+  {{ with $pub }}{{ $pubs = $pubs | append . }}{{ end }}
+{{ end }}
+
+{{ with $pubs }}
+{{/* Newest first, so [1] is the most recent paper, matching the profile lists.
+     The front-matter order is a hand-maintained list and not reliably sorted. */}}
+{{ $sorted := sort . "Date" "desc" }}
+<div class="article-widget content-widget-hr">
+  <h3>
+    {{ i18n "related_publications" | default "Related publications" }}
+    <span class="pub-count">{{ len $sorted }}</span>
+  </h3>
+  <ol class="pub-list pub-list-numbered">
+    {{ range $sorted }}
+    <li class="pub-list-item">
+      <a class="pub-list-title" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <div class="article-metadata pub-citation">
+        {{ partial "citation_nature.html" . }}
+      </div>
+      <div class="btn-links pub-list-links">
+        {{ partial "page_links" (dict "page" . "is_list" 1) }}
+      </div>
     </li>
     {{ end }}
-  <!-->
-  central dot
-  <br>
-  <span>&#183;</span>
-  -->
-  {{- end -}}
-  </ul>
-<!-->
+  </ol>
+</div>
 {{ end }}
-<-->

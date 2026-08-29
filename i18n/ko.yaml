@@ -34,3 +34,5 @@
   translation: "방문연구원"
 - id: user_group_alumni
   translation: "졸업생"
+- id: related_publications
+  translation: "관련 논문"

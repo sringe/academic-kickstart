@@ -29,7 +29,7 @@ subtitle = "We work across three connected scales, from the electronic structure
 
   [[group.links]]
     name = "Materials"
-    url = "/project/materialscreening/"
+    url = "/project/materials/"
     primary = true
 
 [[group]]

@@ -36,3 +36,5 @@
   translation: "Visitors"
 - id: user_group_alumni
   translation: "Alumni"
+- id: related_publications
+  translation: "Related publications"

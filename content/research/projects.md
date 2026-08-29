@@ -98,7 +98,7 @@ width=75% class="center" alt=""
 -->
 <img src="featured.png" usemap="#image-map" width="75%" class="center">
 <map name="image-map">
-    <area href="../project/materialscreening/" alt="material screening" title="material screening" coords="10,300,240,590" shape="rect">
+    <area href="../project/materials/" alt="material screening" title="material screening" coords="10,300,240,590" shape="rect">
     <area href="../project/solvationandelectrifiedinterfaces/" alt="solvation &amp; electrified interfaces" title="solvation &amp; electrified interfaces" coords="250,300,550,590" shape="rect">
     <area href="../project/multiscalemodeling/" alt="kinetics &amp; mass transport" title="kinetics &amp; mass transport" coords="560,300,800,590" shape="rect">
 </map>

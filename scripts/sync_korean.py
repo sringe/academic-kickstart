@@ -95,7 +95,7 @@ FIELDS: dict[str, list[str]] = {
     # a body: `projecttext` is the page, and the two captions sit under the
     # figure. YAML front matter here, TOML above -- parse_front_matter handles
     # both.
-    "content/project/materialscreening/index.md": PROJECT_FIELDS,
+    "content/project/materials/index.md": PROJECT_FIELDS,
     "content/project/multiscalemodeling/index.md": PROJECT_FIELDS,
     "content/project/solvationandelectrifiedinterfaces/index.md": PROJECT_FIELDS,
     "content/software/CatINT/index.md":          PROJECT_FIELDS,

@@ -19,7 +19,7 @@ image:
   focal_point: ""
   preview_only: true
 
-url_code: ""
+url_code: "https://github.com/j-fu/CatmapInterface.jl"
 url_pdf: ""
 url_slides: ""
 url_video: ""
@@ -30,7 +30,7 @@ projecttext: "CatmapInterface.jl reads a CatMAP microkinetic specification and t
 <br>
 It is one layer of a Julia stack. Catalyst.jl expresses the reaction network — once for the electrified solid-liquid interface with potential-dependent rates, once for the bulk buffer equilibria with potential-independent ones — and LiquidElectrolytes.jl solves the resulting generalised Poisson-Nernst-Planck problem on a Voronoi finite-volume grid. Energies enter from electronic-structure calculations of slab configurations with implicit solvation and vibrational frequencies.<br>
 <br>
-This page is new: please check the description and add the repository and documentation links.
+This page is new: please check the description and add a documentation link.
 "
 projectimage: "catmap-scheme.png"
 projectimagecaption: "The Julia stack for coupled microkinetics and transport. CatmapInterface.jl supplies rate constants from a CatMAP specification, Catalyst.jl expresses the reaction networks, and LiquidElectrolytes.jl solves the electrolyte transport problem."
