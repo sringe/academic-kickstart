@@ -8,7 +8,7 @@ authors: [admin,horbatenko-yevhen,dianwei-hou,sayeon-lee,sahar,juhee,shuran-xu,b
 tags: []
 categories: []
 date: 2022-04-05T10:52:49+09:00
-relatedpublications: [dianwei-2026, sourav-2026, minha-2026, ringe-2023-cation, islam-2023, shin-2022-ks, ringe-2022-xd, ringe-2021-xd, ringe-2019-dm,wu-2019-bq,hille-2019-fn,ringe-2017-dm,ringe-2016-ti]
+relatedpublications: [jinlee-2026, dianwei-2026, sourav-2026, minha-2026, ringe-2023-cation, islam-2023, shin-2022-ks, ringe-2022-xd, ringe-2021-xd, ringe-2019-dm,wu-2019-bq,hille-2019-fn,ringe-2017-dm,ringe-2016-ti]
 relatedfunds: ["NRF (한국연구재단) Grant No. 2021R1C1C1008776 (신진연구)","Institute for Basic Science (IBS) for Molecular Spectroscopy and Dynamics"]
 
 # Optional external URL for project (replaces project detail page).

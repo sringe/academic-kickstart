@@ -80,6 +80,7 @@
    "beomil-2026"
   ],
   "horbatenko-yevhen": [
+   "jinlee-2026",
    "dianwei-2026"
   ],
   "kim-sejun": [
@@ -359,6 +360,23 @@
      "bib": "Kim, Seo Young",
      "display": "<b>S. Y. Kim</b>†",
      "slug": "seoyeong-kim"
+    },
+    {
+     "bib": "Ringe, Stefan",
+     "display": "<b>S. Ringe</b>*",
+     "slug": "admin"
+    }
+   ]
+  },
+  "jinlee-2026": {
+   "citations": 0,
+   "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=15640558609965508185",
+   "doi": "10.1021/acs.jpclett.6c02155",
+   "members": [
+    {
+     "bib": "Horbatenko, Yevhen",
+     "display": "<b>Y. Horbatenko</b>",
+     "slug": "horbatenko-yevhen"
     },
     {
      "bib": "Ringe, Stefan",
