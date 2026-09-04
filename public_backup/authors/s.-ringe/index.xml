@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>S. Ringe* | RingeLab</title>
+    <link>http://localhost:1313/authors/s.-ringe/</link>
+      <atom:link href="http://localhost:1313/authors/s.-ringe/index.xml" rel="self" type="application/rss+xml" />
+    <description>S. Ringe*</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:1313/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>S. Ringe*</title>
+      <link>http://localhost:1313/authors/s.-ringe/</link>
+    </image>
+    
+    <item>
+      <title>First-principles multi-scale design of gas diffusion electrodes for electrochemical CO&lt;sub&gt;2&lt;/sub&gt; reduction</title>
+      <link>http://localhost:1313/publication/adith-2026-ees/</link>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publication/adith-2026-ees/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

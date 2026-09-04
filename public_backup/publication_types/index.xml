@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publication_types | RingeLab</title>
+    <link>https://ringelab.com/publication_types/</link>
+      <atom:link href="https://ringelab.com/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publication_types</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ringelab.com/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>Publication_types</title>
+      <link>https://ringelab.com/publication_types/</link>
+    </image>
+    
+  </channel>
+</rss>

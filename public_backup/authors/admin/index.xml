@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RingeLab</title>
+    <link>https://ringelab.com/authors/admin/</link>
+      <atom:link href="https://ringelab.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <description>RingeLab</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 27 Aug 2026 10:00:00 +0900</lastBuildDate>
+    <image>
+      <url>https://ringelab.com/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>RingeLab</title>
+      <link>https://ringelab.com/authors/admin/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://ringelab.com/authors/admin/</link>
+      <pubDate>Thu, 27 Aug 2026 10:00:00 +0900</pubDate>
+      <guid>https://ringelab.com/authors/admin/</guid>
+      <description>&lt;p&gt;Stefan Ringe is an Assistant Professor at the Department of Chemistry at Korea University and a research fellow at the IBS Center for Molecular Spectroscopy and Dynamics. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CatmapInterface.jl</title>
+      <link>https://ringelab.com/software/catmapinterface/</link>
+      <pubDate>Thu, 27 Aug 2026 10:00:00 +0900</pubDate>
+      <guid>https://ringelab.com/software/catmapinterface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Check out my talk in the IPAM Workshop!</title>
+      <link>https://ringelab.com/post/7th_post/</link>
+      <pubDate>Fri, 31 Oct 2025 10:20:10 +0900</pubDate>
+      <guid>https://ringelab.com/post/7th_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Happy to host Prof. Wenxing Yang from Westlake University, China!</title>
+      <link>https://ringelab.com/post/4th_post/</link>
+      <pubDate>Thu, 16 Oct 2025 10:20:10 +0900</pubDate>
+      <guid>https://ringelab.com/post/4th_post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>High-throughput computational search for high performance energy materials</title>
+      <link>https://ringelab.com/project/materials/</link>
+      <pubDate>Tue, 05 Apr 2022 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/project/materials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-scale modeling</title>
+      <link>https://ringelab.com/project/multiscalemodeling/</link>
+      <pubDate>Tue, 05 Apr 2022 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/project/multiscalemodeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tackling electrified interfaces using density functional theory and machine learning</title>
+      <link>https://ringelab.com/project/solvationandelectrifiedinterfaces/</link>
+      <pubDate>Tue, 05 Apr 2022 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/project/solvationandelectrifiedinterfaces/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>(Size-modified) Poisson-Boltzmann implicit solvation module in FHI-aims -- (S)MPBE</title>
+      <link>https://ringelab.com/software/mpbe/</link>
+      <pubDate>Wed, 20 May 2020 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/software/mpbe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-scale electrochemical modeling</title>
+      <link>https://ringelab.com/software/catint/</link>
+      <pubDate>Thu, 13 Feb 2020 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/software/catint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research interest and motivation</title>
+      <link>https://ringelab.com/project_general/generalresearchgoals/</link>
+      <pubDate>Thu, 13 Feb 2020 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/project_general/generalresearchgoals/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Please follow Prof. Stefan Ringe on [&lt;span style=&#39;color: #4C98C8;&#39;&gt;Linkedin&lt;/span&gt;](https://www.linkedin.com/in/stefan-ringe-7b604877/)</title>
+      <link>https://ringelab.com/post/1st_post/</link>
+      <pubDate>Thu, 13 Feb 2020 10:20:10 +0900</pubDate>
+      <guid>https://ringelab.com/post/1st_post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

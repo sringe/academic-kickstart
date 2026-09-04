@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yevhen | RingeLab</title>
+    <link>https://ringelab.com/authors/yevhen/</link>
+      <atom:link href="https://ringelab.com/authors/yevhen/index.xml" rel="self" type="application/rss+xml" />
+    <description>Yevhen</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 24 Apr 2026 10:20:10 +0900</lastBuildDate>
+    <image>
+      <url>https://ringelab.com/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>Yevhen</title>
+      <link>https://ringelab.com/authors/yevhen/</link>
+    </image>
+    
+    <item>
+      <title></title>
+      <link>https://ringelab.com/authors/horbatenko-yevhen/</link>
+      <pubDate>Fri, 24 Apr 2026 10:20:10 +0900</pubDate>
+      <guid>https://ringelab.com/authors/horbatenko-yevhen/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

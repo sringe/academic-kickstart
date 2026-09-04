@@ -8,10 +8,10 @@ abstract: "Electrochemical CO<sub>2</sub> reduction in copper offers a route to 
 featured: false
 publication: "*Energy Environ. Sci.*"
 doi: "10.1039/d6ee02654k"
-volume: ""
-cover: ""
+volume: "19"
+cover: "cover.png"
 highlight: ""
 hot: ""
-pages: ""
+pages: "5651-5662"
 ---
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project_generals | RingeLab</title>
+    <link>https://ringelab.com/project_general/</link>
+      <atom:link href="https://ringelab.com/project_general/index.xml" rel="self" type="application/rss+xml" />
+    <description>Project_generals</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 13 Feb 2020 10:52:49 +0900</lastBuildDate>
+    <image>
+      <url>https://ringelab.com/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>Project_generals</title>
+      <link>https://ringelab.com/project_general/</link>
+    </image>
+    
+    <item>
+      <title>Research interest and motivation</title>
+      <link>https://ringelab.com/project_general/generalresearchgoals/</link>
+      <pubDate>Thu, 13 Feb 2020 10:52:49 +0900</pubDate>
+      <guid>https://ringelab.com/project_general/generalresearchgoals/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

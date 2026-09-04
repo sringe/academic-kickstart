@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>T. Ishihara | RingeLab</title>
+    <link>https://ringelab.com/authors/t.-ishihara/</link>
+      <atom:link href="https://ringelab.com/authors/t.-ishihara/index.xml" rel="self" type="application/rss+xml" />
+    <description>T. Ishihara</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 20 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://ringelab.com/images/logo_hu_512b219fdaa8c8ee.png</url>
+      <title>T. Ishihara</title>
+      <link>https://ringelab.com/authors/t.-ishihara/</link>
+    </image>
+    
+    <item>
+      <title>Understanding Electrochemical CO&lt;sub&gt;2&lt;/sub&gt; Reduction Selectivity of Cu Binary Alloys from Electronic Structure Descriptors</title>
+      <link>https://ringelab.com/publication/yujin-2025/</link>
+      <pubDate>Mon, 20 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>https://ringelab.com/publication/yujin-2025/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
