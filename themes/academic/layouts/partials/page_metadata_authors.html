@@ -33,22 +33,26 @@
 {{ with .Param $taxonomy }}
   {{ $link_authors := site.Params.link_authors | default true }}
   {{ range $index, $value := . }}
-    {{- $profile_page := site.GetPage (printf "/%s/%s" $taxonomy (. | anchorize)) -}}
-    {{- $name := $profile_page.Params.name | default ($value|markdownify) -}}
+    {{- $has_name := findRE `[A-Za-z]` (printf "%v" $value | plainify) -}}
+    {{- $profile_page := false -}}
+    {{- if $has_name -}}
+      {{- $profile_page = site.GetPage (printf "/%s/%s" $taxonomy ($value | anchorize)) -}}
+    {{- end -}}
+    {{- $name := $value | markdownify -}}
+    {{- with $profile_page }}{{ with .Params.name }}{{ $name = . | markdownify }}{{ end }}{{ end -}}
     {{- if gt $index 0 }}, {{ end -}}
     {{- $member := index $members $value -}}
     <span>
-      {{- if and $member $link_authors -}}
-        {{/* Keep the paper's own spelling of the name, just make it a link. */}}
+      {{- if and $has_name $member $link_authors -}}
         {{- with site.GetPage (printf "/%s/%s" $taxonomy $member) -}}
           <a href="{{ .RelPermalink }}">{{ $value | markdownify }}</a>
         {{- else -}}
           {{ $value | markdownify }}
         {{- end -}}
       {{- else if and $profile_page $link_authors -}}
-        <a href="{{$profile_page.RelPermalink}}">{{$name | markdownify}}</a>
+        <a href="{{ $profile_page.RelPermalink }}">{{ $name }}</a>
       {{- else -}}
-        {{$name | markdownify}}
+        {{ $name }}
       {{- end -}}
     </span>
   {{- end -}}

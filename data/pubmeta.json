@@ -16,7 +16,10 @@
    "won-2024"
   ],
   "admin": [
+   "steffen-2026",
+   "jinlee-2026",
    "adith-2026-ees",
+   "abbott-2026",
    "beomil-2026",
    "dianwei-2026",
    "sourav-2026",
@@ -104,14 +107,28 @@
   ],
   "shuran-xu": [
    "minha-2026"
+  ],
+  "sumin-choi": [
+   "steffen-2026"
   ]
  },
  "meta": {
   "citations_source": "OpenAlex (cited_by_count), refreshed live in the browser by assets/js/citations.js",
-  "generated": "2026-08-26",
+  "generated": "2026-10-06",
   "script": "scripts/sync_publications.py"
  },
  "publications": {
+  "abbott-2026": {
+   "citations": 1,
+   "doi": "10.1088/2516-1075/ae8067",
+   "members": [
+    {
+     "bib": "Ringe, Stefan",
+     "display": "S. Ringe",
+     "slug": "admin"
+    }
+   ]
+  },
   "adith-2026-ees": {
    "citations": 0,
    "doi": "10.1039/d6ee02654k",
@@ -123,12 +140,12 @@
     },
     {
      "bib": "Asghar, Kamal",
-     "display": "K. Asghar",
+     "display": "<b>K. Asghar</b>",
      "slug": "ashgar-kamal"
     },
     {
      "bib": "Ringe, Stefan",
-     "display": "S. Ringe*",
+     "display": "<b>S. Ringe</b>*",
      "slug": "admin"
     }
    ]
@@ -156,7 +173,7 @@
    ]
   },
   "beomil-2023": {
-   "citations": 75,
+   "citations": 81,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8737579107100521716",
    "doi": "10.1021/acsenergylett.3c00418",
    "members": [
@@ -178,7 +195,7 @@
    ]
   },
   "beomil-2026": {
-   "citations": 5,
+   "citations": 6,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7697746081435974978,16709141793982071482,3915476959573409499,18442172296159202482",
    "doi": "10.1038/s41929-026-01526-7",
    "members": [
@@ -195,7 +212,7 @@
    ]
   },
   "byun-2022": {
-   "citations": 15,
+   "citations": 16,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7317735393524896803",
    "doi": "10.1002/eem2.12509",
    "members": [
@@ -207,7 +224,7 @@
    ]
   },
   "clark-2019-xk": {
-   "citations": 188,
+   "citations": 196,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10758560818228698712",
    "doi": "10.1021/acscatal.9b00260",
    "members": [
@@ -253,7 +270,7 @@
    ]
   },
   "gauthier-2019-us": {
-   "citations": 166,
+   "citations": 169,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14161680438257572272,4589232601846049318",
    "doi": "10.1021/acs.jctc.9b00717",
    "members": [
@@ -265,7 +282,7 @@
    ]
   },
   "gauthier-2019-wt": {
-   "citations": 271,
+   "citations": 277,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=15447189684392602697",
    "doi": "10.1021/acscatal.8b02793",
    "members": [
@@ -277,7 +294,7 @@
    ]
   },
   "hille-2019-fn": {
-   "citations": 62,
+   "citations": 63,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9860667512006524630",
    "doi": "10.1063/1.5050938",
    "members": [
@@ -306,7 +323,7 @@
    ]
   },
   "hoon-2023": {
-   "citations": 20,
+   "citations": 21,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=985741171736974739",
    "doi": "10.1039/d2ta09110k",
    "members": [
@@ -323,7 +340,7 @@
    ]
   },
   "islam-2023": {
-   "citations": 134,
+   "citations": 142,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13305430480599481603,17862148230758346487,16303934810820098266",
    "doi": "10.1063/5.0176308",
    "members": [
@@ -335,7 +352,7 @@
    ]
   },
   "jae-2022": {
-   "citations": 223,
+   "citations": 232,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8532174924863766517,9371320162777759188,8803739327410451105",
    "doi": "10.1038/s41467-022-33199-8",
    "members": [
@@ -386,7 +403,7 @@
    ]
   },
   "kastlunger-2022-uy": {
-   "citations": 159,
+   "citations": 164,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=6280963925512515969",
    "doi": "10.1021/acscatal.1c05520",
    "members": [
@@ -398,7 +415,7 @@
    ]
   },
   "kim-2021-mw": {
-   "citations": 240,
+   "citations": 246,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1296832703784041839",
    "doi": "10.1038/s41467-021-22147-7",
    "members": [
@@ -415,7 +432,7 @@
    ]
   },
   "kim-2021-qz": {
-   "citations": 49,
+   "citations": 53,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2834940465904662300",
    "doi": "10.1002/adfm.202107349",
    "members": [
@@ -444,7 +461,7 @@
    ]
   },
   "lee-2020": {
-   "citations": 57,
+   "citations": 59,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=3558850402430169866",
    "doi": "10.1021/acsenergylett.0c01387",
    "members": [
@@ -456,7 +473,7 @@
    ]
   },
   "liu-2019-ng": {
-   "citations": 628,
+   "citations": 637,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=434340269877787949",
    "doi": "10.1038/s41467-018-07970-9",
    "members": [
@@ -468,7 +485,7 @@
    ]
   },
   "ludwig-2019-gt": {
-   "citations": 95,
+   "citations": 97,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10428105626086387538",
    "doi": "10.1021/acs.jpcc.8b11571",
    "members": [
@@ -480,7 +497,7 @@
    ]
   },
   "ludwig-2020-atomistic": {
-   "citations": 40,
+   "citations": 41,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4275753652092456890",
    "doi": "10.1021/acs.jpcc.0c07004",
    "members": [
@@ -492,7 +509,7 @@
    ]
   },
   "minha-2026": {
-   "citations": 2,
+   "citations": 4,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11942118811113111522",
    "doi": "10.1002/aenm.202505450",
    "members": [
@@ -521,7 +538,7 @@
    ]
   },
   "patel-2018-tq": {
-   "citations": 115,
+   "citations": 117,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14964579512151439473",
    "doi": "10.1021/acs.jpcc.8b09430",
    "members": [
@@ -533,13 +550,13 @@
    ]
   },
   "patra-2022-ln": {
-   "citations": 124,
+   "citations": 130,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=11130068497891263843",
    "doi": "10.1021/acscatal.2c02669",
    "members": [
     {
      "bib": "Abbas, Hafiz Ghulam",
-     "display": "H. G.  Abbas",
+     "display": "<b>H. G.  Abbas</b>",
      "slug": "abbas"
     },
     {
@@ -550,7 +567,7 @@
    ]
   },
   "ringe-2016-ti": {
-   "citations": 88,
+   "citations": 89,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=16199676875704404123",
    "doi": "10.1021/acs.jctc.6b00435",
    "members": [
@@ -574,7 +591,7 @@
    ]
   },
   "ringe-2019-dm": {
-   "citations": 825,
+   "citations": 874,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7593604340492991539,15556948353393644307,17768505040222989954,12807117108855698980,9499783731250413716",
    "doi": "10.1039/c9ee01341e",
    "members": [
@@ -586,7 +603,7 @@
    ]
   },
   "ringe-2020-yl": {
-   "citations": 386,
+   "citations": 394,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10567423626724019250",
    "doi": "10.1038/s41467-019-13777-z",
    "members": [
@@ -610,7 +627,7 @@
    ]
   },
   "ringe-2022-xd": {
-   "citations": 297,
+   "citations": 306,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13042548347132668631",
    "doi": "10.1021/acs.chemrev.1c00675",
    "members": [
@@ -622,7 +639,7 @@
    ]
   },
   "ringe-2023-cation": {
-   "citations": 64,
+   "citations": 65,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=9544315898559406002",
    "doi": "10.1016/j.coelec.2023.101268",
    "members": [
@@ -634,7 +651,7 @@
    ]
   },
   "ringe-2023-screening": {
-   "citations": 108,
+   "citations": 114,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5461019771005854818,15298358788854052125",
    "doi": "10.1038/s41467-023-37929-4",
    "members": [
@@ -670,7 +687,7 @@
    ]
   },
   "sa-2020-thermal": {
-   "citations": 129,
+   "citations": 130,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13946832306819424633",
    "doi": "10.1021/acscatal.0c02325",
    "members": [
@@ -699,7 +716,7 @@
    ]
   },
   "shin-2022-ks": {
-   "citations": 308,
+   "citations": 326,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1609538805677554192,4879597973784660470",
    "doi": "10.1038/s41467-021-27909-x",
    "members": [
@@ -739,7 +756,7 @@
    ]
   },
   "soyeon-2025": {
-   "citations": 15,
+   "citations": 18,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14233860711154526969",
    "doi": "10.1021/acs.nanolett.5c00529",
    "members": [
@@ -760,8 +777,24 @@
     }
    ]
   },
+  "steffen-2026": {
+   "citations": 0,
+   "doi": "10.1016/j.electacta.2026.149932",
+   "members": [
+    {
+     "bib": "Sumin Choi",
+     "display": "<b>S. Choi</b>†",
+     "slug": "sumin-choi"
+    },
+    {
+     "bib": "Stefan Ringe",
+     "display": "<b>S. Ringe*</b>",
+     "slug": "admin"
+    }
+   ]
+  },
   "tetteh-2022-rm": {
-   "citations": 67,
+   "citations": 68,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4615610459459857816",
    "doi": "10.1021/acsami.2c00398",
    "members": [
@@ -778,7 +811,7 @@
    ]
   },
   "won-2024": {
-   "citations": 11,
+   "citations": 13,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=2249145128636117595",
    "doi": "10.1002/anie.202411260",
    "members": [
@@ -812,7 +845,7 @@
    ]
   },
   "xia-2020-ld": {
-   "citations": 485,
+   "citations": 491,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=4400984497698167050",
    "doi": "10.1038/s41929-019-0402-8",
    "members": [
@@ -824,7 +857,7 @@
    ]
   },
   "yjung-2025": {
-   "citations": 3,
+   "citations": 4,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10765413622349216166,13946395547981619509",
    "doi": "10.1016/j.nanoen.2025.111602",
    "members": [
@@ -841,7 +874,7 @@
    ]
   },
   "yujin-2025": {
-   "citations": 37,
+   "citations": 41,
    "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=967374093254961170",
    "doi": "10.1021/jacs.5c14093",
    "members": [

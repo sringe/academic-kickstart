@@ -29,7 +29,7 @@ education:
   courses:
   - course: MS
     institution: ESE, DGIST
-    year: 2021 - (ongoing)
+    year: 2021 - 2023
   - course: BS
     institution: DGIST
     year: 2021

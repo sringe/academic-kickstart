@@ -4,6 +4,41 @@
 % The entry key becomes the URL slug (content/publication/<key>/).
 % Regenerated from the per-paper cite.bib files on 2026-08-26.
 
+@article{steffen-2026,
+title = {Fully integrated, finite-volume-based, time-dependent multi-scale modeling of electrochemical CO2 reduction},
+journal = {Electrochimica Acta},
+volume = {578},
+pages = {149932},
+year = {2026},
+issn = {0013-4686},
+doi = {https://doi.org/10.1016/j.electacta.2026.149932},
+url = {https://www.sciencedirect.com/science/article/pii/S0013468626018190},
+author = {Steffen Maaß and Sumin Choi and Jürgen Fuhrmann and Stefan Ringe},
+keywords = {Multi-scale modeling, Electrochemistry, CO reduction, Kinetics, Electric double layer},
+abstract = {Electrochemical systems couple reaction kinetics and mass transport across multiple temporal and spatial scales. To address this multiscale coupling, we present an integrated Julia-based simulation framework for defining and solving complex kinetic–transport models. Specifically, CatmapInterface.jl enables the construction of mean-field reaction networks with adsorbate–adsorbate interactions and electric double layer charging-corrected electrochemical kinetics, while LiquidElectrolytes.jl enables detailed electric double layer and mass-transport models. The resulting equations are solved monolithically using the finite-volume package VoronoiFVM.jl, yielding mass-conservative and numerically robust solutions under strong transport–kinetics coupling. As an example, we study CO2 reduction on gold, for which steady-state simulations show consistent results with a previous finite-element-based implementation but improved numerical stability. Time-dependent cyclic-voltammetry simulations further provide an explanation for the experimentally observed double peak in CO re-oxidation during the anodic sweep as arising from hydroxide depletion and delayed buffer equilibration. The framework thus provides a powerful tool for nonequilibrium multiscale simulations of complex electrochemical systems.}
+}
+
+@article{jinlee-2026,
+    author = {Lee, Kwang Jin and An, Mai Ngoc and Horbatenko, Yevhen and Lee, Jong Suk and Moon, Yoon-Jong and Lim, Jong Min and Park, Hong-Gyu and Gong, Su-Hyun and Ringe, Stefan and Jeong, Kwang Seob and Cho, Minhaeng},
+    title = {Intermaterial Hybridization as a Mechanism for Tunable Second-Harmonic Generation in Quantum Dot–Monolayer MoS2 Systems},
+    journal = {The Journal of Physical Chemistry Letters},
+    volume = {17},
+    number = {34},
+    pages = {9877-9885},
+    year = {2026},
+    month = {08},
+    abstract = {Coherent hybridization between distinct material systems can fundamentally reshape the optical response, yet its quantitative influence on nonlinear susceptibility has remained largely unexplored. Here, we demonstrate that coherent coupling between CdSe-based quantum dots and monolayer MoS2 governs second-harmonic generation (SHG), giving rise to both a pronounced non-monotonic distance dependence and orders
+of magnitude enhancement in SHG intensity. By systematically tuning the interfacial separation, we uncovered a robust non-monotonic evolution of the SHG. This behavior cannot be explained by previously suggested incoherent mechanisms such as energy transfer or charge transfer,
+which predict strictly monotonic scaling and fail to account for the dramatic amplification observed. First-principles calculations reveal substantial conduction-band wave function delocalization across the heterogeneous interface, providing microscopic evidence of coherent
+electronic hybridization. Guided by this insight, we developed a rigorous intermaterial coherent hybridization (ICH) model in which the SHG response is governed by the mixing angle of hybridized eigenstates. The ICH model accurately reproduces both the non-monotonic distance
+dependence and the large enhancement of SHG without invoking dominant incoherent processes, establishing a deterministic hybridization framework for second-order nonlinear susceptibility at material interfaces. These results identify coherent electronic hybridization as a universal
+route for engineering a nonlinear optical response beyond intrinsic material limits, offering a new paradigm for interfacial nonlinear photonics.},
+    issn = {1948-7185},
+    doi = {10.1021/acs.jpclett.6c02155},
+    url = {https://doi.org/10.1021/acs.jpclett.6c02155},
+    eprint = {https://pubs.acs.org/jpclcd/article-pdf/17/34/9877/66527916/acs.jpclett.6c02155.pdf},
+}
+
 @article{adith-2026-ees,
     author = {Ramakrishnan Velmurugan, Adith and Asghar, Kamal and Wicks, Joshua and Sargent, Edward H. and Ringe, Stefan},
     title = {First-principles multi-scale design of gas diffusion electrodes for electrochemical CO2 reduction},
@@ -15,6 +50,16 @@
     doi = {10.1039/d6ee02654k},
     url = {https://doi.org/10.1039/d6ee02654k},
     eprint = {https://pubs.rsc.org/ee/article-pdf/doi/10.1039/d6ee02654k/13554931/d6ee02654k.pdf},
+}
+
+@misc{abbott-2026,
+      title={Roadmap on Advancements of the FHI-aims Software Package}, 
+      author={Joseph W. Abbott and Carlos Mera Acosta and Alaa Akkoush and Alberto Ambrosetti and Viktor Atalla and Alexej Bagrets and Jörg Behler and Daniel Berger and Hannah Bertschi and Björn Bieniek and Jonas Björk and Volker Blum and Saeed Bohloul and Connor L. Box and Nicholas Boyer and Danilo Simoes Brambila and Gabriel A. Bramley and Kyle R. Bryenton and María Camarasa-Gómez and Christian Carbogno and Fabio Caruso and Sucismita Chutia and Michele Ceriotti and Gábor Csányi and William Dawson and Francisco A. Delesma and Fabio Della Sala and Bernard Delley and Robert A. DiStasio Jr. and Maria Dragoumi and Sander Driessen and Marc Dvorak and Simon Erker and Ferdinand Evers and Eduardo Fabiano and Matthew R. Farrow and Florian Fiebig and Jakob Filser and Lucas Foppa and Lukas Gallandi and Alberto Garcia and Ralf Gehrke and Simiam Ghan and Luca M. Ghiringhelli and Mark Glass and Stefan Goedecker and Dorothea Golze and Matthias Gramzow and James A. Green and Andrea Grisafi and Andreas Grüneis and Jan Günzl and Stefan Gutzeit and Samuel J. Hall and Felix Hanke and Ville Havu and Xingtao He and Joscha Hekele and Olle Hellman and Uthpala Herath and Jan Hermann and Daniel Hernangómez-Pérez and Oliver T. Hofmann and Johannes Hoja and Simon Hollweger and Lukas Hörmann and Ben Hourahine and Wei Bin How and William P. Huhn and Marcel Hülsberg and Timo Jacob and Sara Panahian Jand and Hong Jiang and Erin R. Johnson and Werner Jürgens and J. Matthias Kahk and Yosuke Kanai and Kisung Kang and Petr Karpov and Elisabeth Keller and Roman Kempt and Danish Khan and Matthias Kick and Benedikt P. Klein and Jan Kloppenburg and Alexander Knoll and Florian Knoop and Franz Knuth and Simone S. Köcher and Jannis Kockläuner and Sebastian Kokott and Thomas Körzdörfer and Hagen-Henrik Kowalski and Peter Kratzer and Pavel Kůs and Raul Laasner and Bruno Lang and Björn Lange and Marcel F. Langer and Ask Hjorth Larsen and Hermann Lederer and Susi Lehtola and Maja-Olivia Lenz-Himmer and Moritz Leucke and Sergey Levchenko and Alan Lewis and O. Anatole von Lilienfeld and Konstantin Lion and Werner Lipsunen and Johannes Lischner and Yair Litman and Chi Liu and Qing-Long Liu and Songrui Liu and Andrew J. Logsdail and Michael Lorke and Zekun Lou and Iuliia Mandzhieva and Andreas Marek and Johannes T. Margraf and Reinhard J. Maurer and Tobias Melson and Florian Merz and Jörg Meyer and Georg S. Michelitsch and Teruyasu Mizoguchi and Evgeny Moerman and Dylan Morgan and Jack Morgenstein and Jonathan Moussa and Akhil S. Nair and Lydia Nemec and Harald Oberhofer and Alberto Otero-de-la-Roza and Ramón L. Panadés-Barrueta and Thanush Patlolla and Mariia Pogodaeva and Alexander Pöppl and Alastair J. A. Price and Thomas A. R. Purcell and Jingkai Quan and Nathaniel Raimbault and Markus Rampp and Karsten Rasim and Ronald Redmer and Xinguo Ren and Karsten Reuter and Norina A. Richter and Stefan Ringe and Patrick Rinke and Simon P. Rittmeyer and Herzain I. Rivera-Arrieta and Matti Ropo and Mariana Rossi and Victor Ruiz and Nikita Rybin and Andrea Sanfilippo and Matthias Scheffler and Christoph Scheurer and Christoph Schober and Franziska Schubert and Tonghao Shen and Christopher Shepard and Honghui Shang and Kiyou Shibata and Andrei Sobolev and Ruyi Song and Aloysius Soon and Daniel T. Speckhard and Pavel V. Stishenko and Elia Stocco and Muhammad N. Tahir and Izumi Takahara and Jun Tang and Zechen Tang and Thomas Theis and Franziska Theiss and Alexandre Tkatchenko and Milica Todorović and George Trenins and Oliver T. Unke and Álvaro Vázquez-Mayagoitia and Oscar van Vuren and Daniel Waldschmidt and Han Wang and Yanyong Wang and Jürgen Wieferink and Jan Wilhelm and Scott Woodley and Jianhang Xu and Yong Xu and Yi Yao and Yingyu Yao and Mina Yoon and Victor Wen-zhe Yu and Zhenkun Yuan and Marios Zacharias and Igor Ying Zhang and Min-Ye Zhang and Wentao Zhang and Xingchen Zhang and Rundong Zhao and Shuo Zhao and Ruiyi Zhou and Yuanyuan Zhou and Tong Zhu},
+      year={2026},
+      eprint={2505.00125},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.mtrl-sci},
+      url={https://arxiv.org/abs/2505.00125}, 
 }
 
 @article{beomil-2026,
