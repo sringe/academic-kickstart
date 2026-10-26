@@ -21,9 +21,13 @@ custom_css = ["css/custom.css"]
 {{< gallery album="2021_04_GroupDinner" >}}
 -->
 
+<h2 class="headline"><span>10/2026: Group outing</span></h2>
+{{< gallery album="2026_10_Group_outing" >}}
+
+<br>
 
 
-<h2 class="headline"><span>8/2026: Byungmin's research stay at WIAS Institute</span></h2>
+<h2 class="headline"><span>8/2026: Byungmin's research stay at WIAS Institute, Berlin, Germany</span></h2>
 {{< gallery album="2026_10_Byungminstay" >}}
 
 <br>
@@ -54,7 +58,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>4/2026: Saeyeon's stay in Prof. Paesani's group, UCSD </span></h2>
+<h2 class="headline"><span>4/2026: Saeyeon's stay in Prof. Paesani's group, UCSD, San Diego, USA </span></h2>
 {{< gallery album="2026_04_Saeyeon_UCSD_stay" >}}
 
 <br>
@@ -74,7 +78,7 @@ custom_css = ["css/custom.css"]
 
 <br>
 
-<h2 class="headline"><span>1/2026: Visit to Prof. Francesco Paesani's group, UCSD, San Diego </span></h2>
+<h2 class="headline"><span>1/2026: Visit to Prof. Francesco Paesani's group, UCSD, San Diego, USA </span></h2>
 {{< gallery album="2026_1_UCSD_Visit" >}}
 
 <br>
