@@ -16,8 +16,8 @@ role: Associate Professor of Chemistry
 organizations:
 - name: Korea University
   url: "https://www.korea.edu"
-- name: IBS Center for Molecular Spectroscopy and Dynamics
-  url: "https://cmsd.ibs.re.kr/html/cmsd_en/"
+- name: 
+  url: 
 
 ## Short bio (displayed in user profile at end of posts)
 #bio: My research interests include 
@@ -88,5 +88,5 @@ email: "sringe@korea.ac.kr"
 user_groups:
 - "Professor"
 ---
-Stefan Ringe is an Assistant Professor at the Department of Chemistry at Korea University and a research fellow at the IBS Center for Molecular Spectroscopy and Dynamics. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..
+Stefan Ringe is an Assistant Professor at the Department of Chemistry at Korea University. His research interest lies in computational modeling of energy systems, using quantum chemistry, multi-scale modeling and machine learning..
 
